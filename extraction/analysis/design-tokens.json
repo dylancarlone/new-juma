@@ -1,0 +1,65 @@
+{
+  "colors": {
+    "primary": "#e33a5e",
+    "secondary": "#434b82",
+    "accent": "#e95d00",
+    "ink": "#483f34",
+    "background": "#ffffff",
+    "muted": "#f9f1e6",
+    "neutral": {
+      "50": "#f9f1e6",
+      "100": "#f7f7f7",
+      "200": "#efefef",
+      "300": "#dedede",
+      "400": "#cccccc",
+      "500": "#898989",
+      "600": "#636363",
+      "700": "#53504c",
+      "800": "#333333",
+      "900": "#2c2c2a"
+    },
+    "extended": {
+      "primaryDeep": "#e13d60",
+      "primaryAlt": "#eb3c7f",
+      "secondaryAlt": "#4a5195",
+      "skyTint": "#9bdbf3",
+      "gold": "#fdbf51",
+      "footerBg": "#53504c",
+      "footerText": "#f9f1e6"
+    }
+  },
+  "fonts": {
+    "heading": "Montserrat",
+    "body": "franklin-gothic-atf",
+    "googleFonts": [
+      "Montserrat:400,700",
+      "Plus Jakarta Sans:400,500,600,700,800"
+    ],
+    "adobeFonts": {
+      "kitId": "hqo5vcf",
+      "kitUrl": "https://use.typekit.net/hqo5vcf.css",
+      "families": ["franklin-gothic-atf:300,400,600"]
+    }
+  },
+  "type": {
+    "baseFontSize": "Arial fallback in theme body; no explicit px base (inherits browser ~16px)",
+    "headings": {
+      "h1": "65px / line-height 1 / weight 700",
+      "h2": "30px / weight 700",
+      "h3": "22px / line-height 25px / weight 700",
+      "h4": "20px / weight 700"
+    },
+    "bodyLineHeight": "1.6",
+    "headingWeight": 700
+  },
+  "radius": "4px",
+  "buttons": {
+    "notes": "Buttons use Montserrat 700, text-transform: uppercase. Primary button (.btn-primary): white text on secondary navy #434b82 background, hover swaps to gold #fdbf51 bg with #e7ad47 border. Outline variant (.btn-news-read): navy text on white with navy border. Pink button variant (.btn-primary2): pink text #eb3c7f on white. Border-radius ~4px on large buttons (3px on inputs). Padding ~14px 25px on large, 10px on default."
+  },
+  "logo": {
+    "headerUrl": "https://juma.org/wp-content/uploads/2015/06/juma-logo1.png",
+    "footerUrl": "https://juma.org/wp-content/uploads/2026/05/JUMALogoSlogan-scaled.png",
+    "faviconUrl": "https://juma.org/wp-content/uploads/2015/06/favicon.png"
+  },
+  "notes": "Legacy site is WordPress on the 'Catholic Bulletin / church' ThemeForest theme with a 'church-child' child theme plus Elementor. The Elementor global color vars in post-6868.css (--e-global-color-primary:#6EC1E4, secondary:#54595F, accent:#61CE70, text:#7A7A7A) are Elementor's STOCK DEFAULTS and were NOT used as the real brand palette, so they are intentionally excluded. The real brand colors come from the theme stylesheets and inline page styles: brand pink/red appears as #e33a5e (15 inline uses on /our-program/, 9 on /the-juma-model/ -> chosen as 'primary'), with close variants #e13d60 and #eb3c7f used in nav/borders/buttons. Brand navy/indigo #434b82 (variant #4a5195) drives nav links and primary buttons -> 'secondary'. Hover accent orange #e95d00 (and gold #fdbf51) used for link/button hovers. Footer is dark warm-gray #53504c with cream #f9f1e6 text; #f9f1e6 doubles as a warm light background tint ('muted'). 'ink' #483f34 / #2c2c2a are the dark warm text tones. FONTS: Headings and buttons are clearly Montserrat 700 (loaded via Google Fonts and declared on h1-h6 and .btn). Body font is ambiguous: the parent theme body declares Arial fallback, but an Adobe Typekit kit (hqo5vcf) loading 'franklin-gothic-atf' is present site-wide and is almost certainly the intended brand body/sans face applied via Customizer/Elementor (FLAG: franklin-gothic-atf is not referenced in any static CSS font-family stack we fetched, so its exact assignment is inferred). Newer 2026 Elementor sections also inline 'Plus Jakarta Sans' and a one-off Georgia serif. RECOMMENDATION for the new build: heading = Montserrat (700), body = franklin-gothic-atf (Adobe) or Plus Jakarta Sans as a Google-Fonts-only alternative. radius ~4px (subtle). The footer logo URL is the newer 2026 JUMALogoSlogan-scaled.png (full logo+slogan, suitable for footer/brand mark); the in-DOM header logo is the older juma-logo1.png (FLAG: this header PNG is from 2015 and may be lower-res / may want replacing with the 2026 asset). All hex values were taken verbatim from fetched CSS/HTML; logo+favicon URLs all return HTTP 200."
+}

@@ -1,0 +1,31 @@
+---
+import Container from "@/components/Container.astro";
+
+interface Props {
+  stats: { value: string; label: string }[];
+  heading?: string;
+  variant?: "light" | "navy" | "brand";
+}
+const { stats, heading, variant = "light" } = Astro.props;
+if (!stats?.length) return null;
+
+const bg = variant === "navy" ? "bg-navy-900 text-white" : variant === "brand" ? "bg-brand-600 text-white" : "bg-cream";
+const valueColor = variant === "light" ? "text-brand-600" : "text-gold";
+const cols = stats.length <= 2 ? "sm:grid-cols-2" : stats.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2 lg:grid-cols-4";
+---
+
+<section class={bg}>
+  <Container class="py-14 md:py-20">
+    {heading && <h2 class="mb-10 text-center text-2xl md:text-3xl">{heading}</h2>}
+    <dl class={`grid grid-cols-1 gap-8 ${cols}`}>
+      {
+        stats.map((s) => (
+          <div class="text-center">
+            <dt class={`font-heading text-4xl font-bold md:text-5xl ${valueColor}`}>{s.value}</dt>
+            <dd class={`mt-2 text-sm font-medium ${variant === "light" ? "text-ink-soft" : "text-white/80"}`}>{s.label}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </Container>
+</section>

@@ -1,0 +1,28 @@
+---
+import Container from "@/components/Container.astro";
+
+interface Props {
+  groups: { title: string; items: string[] }[];
+}
+const { groups } = Astro.props;
+if (!groups?.length) return null;
+---
+
+<div class="bg-white">
+  <Container class="py-12 md:py-16">
+    <div class="space-y-12">
+      {
+        groups.map((g) => (
+          <div>
+            <h2 class="border-b border-navy-100 pb-3 text-xl md:text-2xl">{g.title}</h2>
+            <ul class="mt-6 grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-3 lg:grid-cols-4">
+              {g.items.map((item) => (
+                <li class="text-ink-soft">{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</div>

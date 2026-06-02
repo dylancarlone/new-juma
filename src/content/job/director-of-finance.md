@@ -1,0 +1,88 @@
+---
+jobTitle: Director of Finance
+locations:
+  - Seattle
+  - San Francisco
+  - San Jose
+department: Finance
+reportsTo: CEO
+employmentType: Full-time, Exempt
+salaryRange: $140-160k
+summary: The Finance Director will work under the direction of the CEO supervising the accounting team of two. This position will provide assistance to a national 501c(3) organization and works closely with all departments to maintain accurate and complete financial records for the agency. This role bridges high-level financial strategy with daily operations, ensuring the integrity of all financial records, driving cross-departmental collaboration, and maintaining the agility to support core accounting functions (including payroll, AP, and AR) as needed.
+responsibilities:
+  - "Strategic Analysis & Planning: Drive financial modeling and comprehensive analysis to optimize business performance and architect tools that empower executive decision-making."
+  - "Strategic Analysis & Planning: Direct the annual agency budget development process, training and guiding staff; execute rigorous mid-year budget reviews to forecast variances and implement strategic adjustments. Lead financial system improvements (e.g., NetSuite) to ensure compliance and optimize efficiency."
+  - "Strategic Analysis & Planning: Advise the CEO, providing actionable insights and recommendations in response to macroeconomic shifts and the organization's financial trajectory."
+  - "Communication / Liaison: Manage activities of finance team: senior accountant and payroll specialist."
+  - "Communication / Liaison: Assist CEO in development, establishment, and implementation of procedures needed to implement/reinforce fiscal policies developed by Board and or regulations and procedures required by funding sources."
+  - "Communication / Liaison: Direct the relationship with external auditors and orchestrate the annual audit process from end to end."
+  - "Communication / Liaison: Partner strategically with the Operations Team to negotiate and manage real estate relationships, including landlord and sublet agreements."
+  - "Communication / Liaison: Co-present high-level financial reporting at Board of Directors meetings alongside the CEO and Board Treasurer."
+  - "Monitoring: Maintain rigorous oversight of monthly agency expenditures, ensuring adherence to the approved budget and delivering comprehensive variance analysis to executive leadership."
+  - "Monitoring: Work with the Accounting team to develop monthly, quarterly, and annual financial reporting & statements for distribution & review by organization's CEO, executive team, and Board of Directors."
+  - "Monitoring: Command cash flow analysis, forecasting, and ongoing management to ensure organizational liquidity."
+  - "Monitoring: Support and monitor development and enterprise teams on timely receipt of accounts receivable."
+  - "Monitoring: Oversee preparation of tax documentation."
+  - "Monitoring: Interface with funding sources to insure up to date information on funding agency needs and possible funding changes; oversee allocations of expenses to restricted and unrestricted funding sources."
+  - "Monitoring: Exercise financial authority by partnering with the COO to evaluate out-of-budget expenses and independently approving expenditures over $10,000."
+  - "Other: Ability to fulfill basic accounting responsibility e.g. maintaining and paying off accounts payables in a timely manner or recording accounts receivables as needed."
+  - "Other: Fulfill general financial management needs as necessary."
+qualifications:
+  - Minimum Bachelor and/or Master's degree in accounting and/or finance.
+  - Minimum of five to seven (5-7) years in nonprofit financial management or a highly related field.
+  - Knowledge of government-funded program accounting procedures/requirements, multi-fund and non-profit accounting.
+  - Skilled in operating, using and managing computer accounting programs, e.g. NetSuite; advanced understanding of Excel.
+  - Understanding and experience with investing and risk management.
+  - Strong organizational skills and attention to detail.
+  - Experience and success in managing and motivating staff.
+  - Proven track record for problem solving, logistical analysis, and operational effectiveness.
+  - Excellent interpersonal & communication skills.
+  - Must be highly motivated, adaptable and organized.
+  - High professional and ethical standards for handling confidential information.
+  - "Commitment to Juma's core values: Youth First, Stronger Together, Transparent Integrity and Respect & Appreciation."
+  - LGBTQ, bicultural, and/or minority applicants as well as applicants experienced within foster care systems are especially encouraged to apply.
+  - All prospective staff will be fingerprinted and submit a criminal background check. Pursuant to the San Francisco Fair Chance Ordinance, we will consider for employment qualified applicants with arrest and conviction records.
+benefits:
+  - 100% paid medical, dental, vision and life insurance
+  - Dependents will receive coverage at the rate of 50% of the cost of their base plan
+  - 403B plan
+  - Accrue 15 vacation days per year, which increases with tenure
+  - 21 additional days off in a year - including federal holidays, "winter break" from Christmas Eve through New Year's Day, birthday, and half-day Fridays on the last Friday of each month
+  - FSA
+  - Pre-tax commuter benefits
+applyHref: mailto:operations@juma.org
+isOpen: true
+legacyId: 6769
+---
+
+## Organizational Profile
+
+Juma Ventures strives to break the cycle of poverty by paving the way to work, education and financial capability for youth across America. Founded in 1993 with a single Ben & Jerry's Shop in San Francisco, Juma's initial business, a social enterprise, was designed to give homeless youth the training and job experience they needed to transition from living on the streets to enjoying a stable adulthood. Since then, Juma has become a nationally recognized youth development organization focused on employment, financial capability, and career supportive services. Our vision is that all young people have the opportunity to succeed, advance and thrive in the career of their choice, competing in a job market that is inclusive, equitable, and diverse.
+
+Today, Juma operates over 20 concession businesses and employs more than 500 youth every year at major sports and entertainment venues across the West Coast (Sacramento, San Francisco, San Jose, and Seattle). Since 1993, Juma has employed more than 10,000 low-income youth who have earned $15.5 million in wages, saved $6.4 million for higher education, and generated more than $44 million in enterprise revenue to continue advancing Juma's mission.
+
+Juma's strong leadership, dedicated staff, effective service model and committed funding partners have led to numerous awards including the National Youth Employment Coalition's PEPNet Award for effective Practices and the National Organization of the Year award from the Social Enterprise Alliance. In 2017, Juma earned the Gold Award at the Seattle Business Magazine's Community Impact Awards for Youth Development Non-Profit of the Year. Juma Seattle and Juma Sacramento have both been selected as recipients of the prestigious Bank of America Neighborhood Builders Award. In 2018, as a member of the Obama Foundation's inaugural grant cohort, Juma led the first iteration of the My Brother's Keeper (MBK) Initiative, influencing local services for boys and young men of color and contributing nationwide. In January 2023, Juma presented at the Annual Mentoring Summit in Washington D.C. In December 2023, Juma received the Catalyzing Engagement Nonprofit Award. In recent years, 100% of youth participants indicated they would "recommend Juma to a friend" and our most recent staff satisfaction rate was 90%.
+
+Juma is looking for great people who share our passion for working with youth and for using business as a tool for sustainable social impact. Our workplace is supportive, open, inclusive and relevant, focused on youth, empowerment, dedication, and respect. Our four core values are Youth First, Stronger Together, Respect & Appreciation, and Integrity & Transparency. Juma commits to modeling diversity and inclusion for our youth, their communities, our employees and the institutions with whom we collaborate, maintaining an inclusive environment with equitable treatment and compassion, and actively creating meaningful change.
+
+## Job Details
+
+- **Reports to:** CEO
+- **Job Location:** Seattle, WA or San Francisco Bay Area, CA
+- **Starting Salary:** Salary range: $140-160k
+- **Classification:** Full-time, Exempt
+- **Hours/Week:** 40 hours
+- **Education:** Minimum Bachelor and/or Master's degree in accounting and/or finance. MBA preferred
+- **Years of Experience:** Minimum of five (5) years in nonprofit financial management or a highly related field
+
+## How to Apply
+
+Please submit the following to Juma's People Ops team at [operations@juma.org](mailto:operations@juma.org):
+
+- A thoughtful cover letter outlining your interest in the position and how your qualifications align with the above requirements and Juma's focus and mission
+- Current resume
+- Salary requirements
+
+Due to the volume of responses, only candidates selected for an interview will be contacted.
+
+If you have questions or concerns regarding the compliance of this job posting—including matters relating to the Equal Pay and Opportunities Act (EPOA), equal opportunity language, or other legal requirements—please contact the People Operations Team at operations@juma.org.

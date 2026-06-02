@@ -1,0 +1,125 @@
+# juma.org — Legacy Content Inventory
+
+Extracted 2026-06-02T07:19:17.855Z from https://juma.org (WordPress REST API + Yoast sitemaps).
+
+## Counts
+- Pages: **82**
+- Posts (blog/news): **196**
+- Media items: **519**
+- Categories: **18**, Tags: **59**, Authors: **4**
+- Events: **0**
+
+## Sitemap URL surface
+- post-sitemap: 196 urls
+- page-sitemap: 82 urls
+- attachment-sitemap: 328 urls
+- team-sitemap: 9 urls
+- tribe_events-sitemap: 29 urls
+- category-sitemap: 15 urls
+- post_tag-sitemap: 54 urls
+- wpa-stats-type-sitemap: 4 urls
+- author-sitemap: 4 urls
+
+## Page tree (by menu_order)
+- [Frontpage V1](https://juma.org/frontpagev1/)  `#21` slug=`frontpagev1`
+- [Leadership](https://juma.org/leadership/)  `#44` slug=`leadership`
+- [Causes](https://juma.org/causes/)  `#67` slug=`causes`
+- [Contact Us](https://juma.org/contact/)  `#98` slug=`contact`
+- [Our Mission &#038; History](https://juma.org/our-mission-historyv1/)  `#271` slug=`our-mission-historyv1`
+- [Our Partners &#038; Supporters](https://juma.org/our-partners-supporters/)  `#293` slug=`our-partners-supporters`
+- [Financials](https://juma.org/financials/)  `#300` slug=`financials`
+  - [2014 Form 990](https://juma.org/financials/2014-form-990/)  `#1092` slug=`2014-form-990`
+  - [2014 Annual Report](https://juma.org/financials/2014-annual-report/)  `#835` slug=`2014-annual-report`
+  - [2014 Audited Financial Statement](https://juma.org/financials/2014-audited-financial-statement/)  `#830` slug=`2014-audited-financial-statement`
+  - [2011 Form 990](https://juma.org/financials/2011-form-990/)  `#548` slug=`2011-form-990`
+  - [2012 Annual Report](https://juma.org/financials/2012-annual-report/)  `#546` slug=`2012-annual-report`
+  - [2013 Financial Statements](https://juma.org/financials/2013-financial-statements/)  `#544` slug=`2013-financial-statements`
+  - [2012 Audited Financial Statement](https://juma.org/financials/2012-audited-financial-statement/)  `#542` slug=`2012-audited-financial-statement`
+  - [2011 Audited Financial Statement](https://juma.org/financials/2011-audited-financial-statement/)  `#538` slug=`2011-audited-financial-statement`
+  - [2013 Form 990](https://juma.org/financials/2013-form-990/)  `#535` slug=`2013-form-990`
+  - [2013 Annual Report](https://juma.org/financials/2013-annual-report/)  `#531` slug=`2013-annual-report`
+  - [2012 Form 990](https://juma.org/financials/2012-form-990/)  `#528` slug=`2012-form-990`
+  - [2011 Annual Report](https://juma.org/financials/2011-annual-report/)  `#430` slug=`2011-annual-report`
+- [Our Program](https://juma.org/our-program/)  `#336` slug=`our-program`
+- [Board of Directors](https://juma.org/board-of-directors/)  `#352` slug=`board-of-directors`
+- [Press](https://juma.org/press/)  `#421` slug=`press`
+- [The Problem + Solution](https://juma.org/the-problem-solution/)  `#570` slug=`the-problem-solution`
+- [Impact &#038; Stories](https://juma.org/year-in-numbers/)  `#589` slug=`year-in-numbers`
+- [The Juma Model](https://juma.org/the-juma-model/)  `#610` slug=`the-juma-model`
+- [San Francisco](https://juma.org/san-francisco/)  `#614` slug=`san-francisco`
+- [Seattle](https://juma.org/seattle-old/)  `#631` slug=`seattle-old`
+- [San Jose](https://juma.org/san-jose/)  `#639` slug=`san-jose`
+- [Adriane Gamble Armstrong](https://juma.org/adriane-gamble-armstrong/)  `#927` slug=`adriane-gamble-armstrong`
+- [For Youth](https://juma.org/apply/)  `#937` slug=`apply`
+- [Who We Serve](https://juma.org/who-we-serve/)  `#960` slug=`who-we-serve`
+- [Interest Form](https://juma.org/interest-form/)  `#963` slug=`interest-form`
+- [Newsletter](https://juma.org/newsletter/)  `#966` slug=`newsletter`
+- [Denise Evans](https://juma.org/deniseevans/)  `#1082` slug=`deniseevans`
+- [Subscription Confirmation](https://juma.org/subscription-confirmation/)  `#1285` slug=`subscription-confirmation`
+- [Sacramento](https://juma.org/sacramento-old/)  `#1391` slug=`sacramento-old`
+- [For Employers](https://juma.org/employer/)  `#1551` slug=`employer`
+- [Cassandra Yee](https://juma.org/cassandra-yee/)  `#1599` slug=`cassandra-yee`
+- [Alexander&#8217;s Story](https://juma.org/alexanders-story/)  `#1622` slug=`alexanders-story`
+- [Anthony&#8217;s Story](https://juma.org/anthonys-story/)  `#1625` slug=`anthonys-story`
+- [Jasenia’s Story](https://juma.org/jasenias-story/)  `#1629` slug=`jasenias-story`
+- [Donor Privacy Policy](https://juma.org/donor-privacy-policy/)  `#1668` slug=`donor-privacy-policy`
+- [Work For Juma](https://juma.org/work-for-juma/)  `#1726` slug=`work-for-juma`
+- [For Volunteers](https://juma.org/volunteer/)  `#1844` slug=`volunteer`
+  - [Seattle](https://juma.org/volunteer/seattle/)  `#1944` slug=`seattle`
+  - [San Jose](https://juma.org/volunteer/san-jose/)  `#1935` slug=`san-jose`
+- [Volunteer Listserve](https://juma.org/listserve-form/)  `#2034` slug=`listserve-form`
+- [Social Enterprise](https://juma.org/social-enterprise/)  `#2280` slug=`social-enterprise`
+- [Programs](https://juma.org/programs-3/)  `#2397` slug=`programs-3`
+- [Pathways](https://juma.org/pathways/)  `#2401` slug=`pathways`
+- [YouthConnect](https://juma.org/youthconnect/)  `#2410` slug=`youthconnect`
+- [Donna](https://juma.org/donna/)  `#2434` slug=`donna`
+- [Stephen Norris](https://juma.org/stephen-norris/)  `#2517` slug=`stephen-norris`
+- [Alexis Gunn](https://juma.org/alexis-gunn/)  `#2712` slug=`alexis-gunn`
+- [Donate](https://juma.org/donate/)  `#3077` slug=`donate`
+- [Jess Lewis](https://juma.org/jess-lewis/)  `#3149` slug=`jess-lewis`
+- [Alvin Yu](https://juma.org/alvin-yu/)  `#3472` slug=`alvin-yu`
+- [Recent Posts](https://juma.org/news/)  `#3683` slug=`news`
+- [Seattle](https://juma.org/seattle/)  `#3696` slug=`seattle`
+- [Programs](https://juma.org/programsv1/)  `#3764` slug=`programsv1`
+- [2017 Annual Report](https://juma.org/2017-annual-report/)  `#3852` slug=`2017-annual-report`
+- [Meet Connor](https://juma.org/meet-connor/)  `#3887` slug=`meet-connor`
+- [Get to Know Juma Seattle](https://juma.org/get-know-juma-seattle/)  `#3893` slug=`get-know-juma-seattle`
+- [Get to Know Juma San Jose](https://juma.org/get-know-juma-san-jose/)  `#4130` slug=`get-know-juma-san-jose`
+- [Sanobar Sajan](https://juma.org/sanobar-sajan/)  `#4135` slug=`sanobar-sajan`
+- [Director of Development](https://juma.org/director-of-development/)  `#4235` slug=`director-of-development`
+- [Lisa Chin](https://juma.org/lisa-chin/)  `#4273` slug=`lisa-chin`
+- [Sacramento](https://juma.org/sacramento/)  `#4293` slug=`sacramento`
+- [Get to Know Juma Sacramento](https://juma.org/get-know-juma-sacramento/)  `#4297` slug=`get-know-juma-sacramento`
+- [Meet Steven](https://juma.org/meet-steven/)  `#4301` slug=`meet-steven`
+- [30](https://juma.org/30-years/)  `#5448` slug=`30-years`
+- [Claire Wheeler](https://juma.org/claire-wheeler/)  `#6283` slug=`claire-wheeler`
+- [Michael Rivera](https://juma.org/michael-rivera/)  `#6285` slug=`michael-rivera`
+- [Megan Hover](https://juma.org/megan-hover/)  `#6289` slug=`megan-hover`
+- [Director of Finance (San Francisco, San Jose, Seattle)](https://juma.org/director-of-finance-jd/)  `#6769` slug=`director-of-finance-jd`
+- [San Jose Development Director, Major Gifts](https://juma.org/san-jose-development-director-major-gifts/)  `#6849` slug=`san-jose-development-director-major-gifts`
+- [Our Programs](https://juma.org/programs/)  `#7044` slug=`programs`
+- [Mission, Vision &#038; History](https://juma.org/our-mission-history/)  `#7065` slug=`our-mission-history`
+- [HR &amp; People Operations Manager (San Francisco, Sacramento, San Jose)](https://juma.org/hr-people-operations-manager/)  `#7092` slug=`hr-people-operations-manager`
+- [Director of Major Gifts](https://juma.org/directorofmajorgifts/)  `#7106` slug=`directorofmajorgifts`
+- [Director of Institutional Giving](https://juma.org/directorofinstitutionalgiving/)  `#7110` slug=`directorofinstitutionalgiving`
+- [Home](https://juma.org/)  `#7147` slug=`frontpage2026`
+
+## Categories
+- Uncategorized (170) — slug `uncategorized`
+- Youth jobs (10) — slug `youth-jobs`
+- Seattle (7) — slug `seattle`
+- Youth stories (7) — slug `youth-stories`
+- Opportunity Youth (6) — slug `opportunity-youth`
+- Atlanta (5) — slug `atlanta`
+- San Francisco (5) — slug `san-francisco`
+- Sacramento (3) — slug `sacramento`
+- Houston (2) — slug `houston`
+- Dallas (1) — slug `dallas`
+- Expansion (1) — slug `expansion`
+- Financial Capability (1) — slug `financial-capability`
+- New York (1) — slug `new-york`
+- Oakland (1) — slug `oakland`
+- San Jose (1) — slug `san-jose`
+- april (0) — slug `april`
+- nowember (0) — slug `nowember`
+- september (0) — slug `september`

@@ -1,0 +1,88 @@
+{
+  "hero": {
+    "eyebrow": "",
+    "heading": "We believe in the power of work and the potential of young people.",
+    "subheading": "Juma Ventures is a nonprofit social enterprise that breaks the cycle of poverty by paving the way to work, education, and financial capability for youth across America. We operate businesses at major sports and entertainment venues — employing young people ages 16–24 who face significant barriers to opportunity.",
+    "image": "7389-JumaLINK_2025-4-of-160-Medium.jpeg",
+    "ctaLabel": "Donate",
+    "ctaHref": "/donate/"
+  },
+  "intro": "Juma Ventures is a nonprofit social enterprise that breaks the cycle of poverty by paving the way to work, education, and financial capability for youth across America. We operate businesses at major sports and entertainment venues — employing young people ages 16–24 who face significant barriers to opportunity.",
+  "pillars": [
+    {
+      "title": "Earn",
+      "body": "Youth earn a real paycheck working at iconic venues like Oracle Park, Lumen Field, and Levi's Stadium, building professional experience in a supportive, mentorship-driven environment."
+    },
+    {
+      "title": "Learn",
+      "body": "Through workshops and on-the-job mentorship, youth develop financial literacy, teamwork, and professional communication skills proven to help them overcome barriers and thrive."
+    },
+    {
+      "title": "Connect",
+      "body": "Juma connects youth to their next job or education opportunity, setting them on a lasting path to career success and economic independence."
+    }
+  ],
+  "locationsHeading": "Four Communities. One Mission.",
+  "locationsIntro": "From Seattle to San Jose, our youth are showing up and making a difference. Explore each location to learn more.",
+  "locations": [
+    {
+      "name": "San Francisco",
+      "image": "7162-San-Francisco-Photo-JumaVentures_MarketingShoot_OraclePark-40-of-79-scaled.jpg"
+    },
+    {
+      "name": "Sacramento",
+      "image": "7209-Sacramento-Photo-Juma_G1_05441-scaled.jpg"
+    },
+    {
+      "name": "Seattle",
+      "image": "7169-Seattle-Photo-_MG_6994-scaled.jpg"
+    },
+    {
+      "name": "San Jose",
+      "image": "7230-San-Jose-Photo-Juma-Levi_s-Stadium-5.17.17_571-scaled.jpg"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Before Juma, I struggled to acquire a job. I am very quiet, but Juma has allowed me to open up in the workspace and learn skills for future jobs.",
+      "name": "Marco",
+      "role": "Juma Youth"
+    },
+    {
+      "quote": "Since I became a member of Juma, my skills have increased. Juma helped me become more responsible, respectful, and more productive.",
+      "name": "Avery",
+      "role": "Juma Youth"
+    },
+    {
+      "quote": "I am so thankful that Juma has been supporting me. All of my family lives in Louisiana and being on my own as a young woman is hard.",
+      "name": "Ta'Shayla",
+      "role": "Juma Youth"
+    },
+    {
+      "quote": "I always like to lead with the mindset that we are becoming the person we needed most when we were young.",
+      "name": "Daniel Luu",
+      "role": "Juma Alum"
+    }
+  ],
+  "ctas": [
+    {
+      "label": "Donate",
+      "href": "/donate/"
+    },
+    {
+      "label": "Learn More About Our Programs",
+      "href": "/programs/"
+    },
+    {
+      "label": "Apply Now",
+      "href": "/apply/#locations"
+    },
+    {
+      "label": "Subscribe to Our Newsletter",
+      "href": "/newsletter/"
+    }
+  ],
+  "testimonialsHeading": "Youth Voices",
+  "testimonialsSubheading": "What our youth say about Juma",
+  "body": ""
+}

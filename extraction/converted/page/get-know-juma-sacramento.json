@@ -1,0 +1,20 @@
+{
+  "slug": "get-know-juma-sacramento",
+  "title": "Get to Know Juma Sacramento",
+  "kind": "video",
+  "hero": {
+    "heading": "Get to Know Juma Sacramento",
+    "subheading": "",
+    "image": ""
+  },
+  "videoUrl": "https://player.vimeo.com/video/387162646",
+  "intro": "In this video, Juma Sacramento staff, youth, and partners discuss the pivotal question: why Juma? Learn more about our approach to breaking the cycle of poverty and why we believe in the power of work and the potential of young people.",
+  "ctas": [
+    {
+      "label": "Back to Juma Sacramento",
+      "href": "/sacramento/"
+    }
+  ],
+  "legacyId": 4297,
+  "body": ""
+}

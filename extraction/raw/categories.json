@@ -1,0 +1,2162 @@
+[
+  {
+    "id": 6,
+    "count": 0,
+    "description": "",
+    "link": "https://juma.org/category/april/",
+    "name": "april",
+    "slug": "april",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>april Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/april/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"april Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/april/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/april\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/april\\/\",\"name\":\"april Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/april\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/april\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"april\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "april Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/april/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "april Archives - Juma",
+      "og_url": "https://juma.org/category/april/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/april/",
+            "url": "https://juma.org/category/april/",
+            "name": "april Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/april/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/april/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "april"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/6",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=6"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 94,
+    "count": 5,
+    "description": "",
+    "link": "https://juma.org/category/atlanta/",
+    "name": "Atlanta",
+    "slug": "atlanta",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Atlanta Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/atlanta/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Atlanta Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/atlanta/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/atlanta\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/atlanta\\/\",\"name\":\"Atlanta Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/atlanta\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/atlanta\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Atlanta\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Atlanta Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/atlanta/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Atlanta Archives - Juma",
+      "og_url": "https://juma.org/category/atlanta/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/atlanta/",
+            "url": "https://juma.org/category/atlanta/",
+            "name": "Atlanta Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/atlanta/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/atlanta/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Atlanta"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/94",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=94"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 114,
+    "count": 1,
+    "description": "",
+    "link": "https://juma.org/category/dallas/",
+    "name": "Dallas",
+    "slug": "dallas",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Dallas Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/dallas/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Dallas Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/dallas/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/dallas\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/dallas\\/\",\"name\":\"Dallas Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/dallas\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/dallas\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Dallas\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Dallas Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/dallas/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Dallas Archives - Juma",
+      "og_url": "https://juma.org/category/dallas/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/dallas/",
+            "url": "https://juma.org/category/dallas/",
+            "name": "Dallas Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/dallas/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/dallas/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Dallas"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/114",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=114"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 78,
+    "count": 1,
+    "description": "",
+    "link": "https://juma.org/category/expansion/",
+    "name": "Expansion",
+    "slug": "expansion",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Expansion Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/expansion/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Expansion Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/expansion/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/expansion\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/expansion\\/\",\"name\":\"Expansion Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/expansion\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/expansion\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Expansion\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Expansion Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/expansion/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Expansion Archives - Juma",
+      "og_url": "https://juma.org/category/expansion/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/expansion/",
+            "url": "https://juma.org/category/expansion/",
+            "name": "Expansion Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/expansion/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/expansion/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Expansion"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/78",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=78"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 143,
+    "count": 1,
+    "description": "",
+    "link": "https://juma.org/category/financial-capability/",
+    "name": "Financial Capability",
+    "slug": "financial-capability",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Financial Capability Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/financial-capability/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Financial Capability Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/financial-capability/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/financial-capability\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/financial-capability\\/\",\"name\":\"Financial Capability Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/financial-capability\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/financial-capability\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Financial Capability\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Financial Capability Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/financial-capability/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Financial Capability Archives - Juma",
+      "og_url": "https://juma.org/category/financial-capability/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/financial-capability/",
+            "url": "https://juma.org/category/financial-capability/",
+            "name": "Financial Capability Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/financial-capability/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/financial-capability/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Financial Capability"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/143",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=143"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 115,
+    "count": 2,
+    "description": "",
+    "link": "https://juma.org/category/houston/",
+    "name": "Houston",
+    "slug": "houston",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Houston Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/houston/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Houston Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/houston/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/houston\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/houston\\/\",\"name\":\"Houston Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/houston\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/houston\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Houston\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Houston Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/houston/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Houston Archives - Juma",
+      "og_url": "https://juma.org/category/houston/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/houston/",
+            "url": "https://juma.org/category/houston/",
+            "name": "Houston Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/houston/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/houston/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Houston"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/115",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=115"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 95,
+    "count": 1,
+    "description": "",
+    "link": "https://juma.org/category/new-york/",
+    "name": "New York",
+    "slug": "new-york",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>New York Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/new-york/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"New York Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/new-york/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/new-york\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/new-york\\/\",\"name\":\"New York Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/new-york\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/new-york\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"New York\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "New York Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/new-york/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "New York Archives - Juma",
+      "og_url": "https://juma.org/category/new-york/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/new-york/",
+            "url": "https://juma.org/category/new-york/",
+            "name": "New York Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/new-york/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/new-york/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "New York"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/95",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=95"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "count": 0,
+    "description": "",
+    "link": "https://juma.org/category/nowember/",
+    "name": "nowember",
+    "slug": "nowember",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>nowember Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/nowember/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"nowember Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/nowember/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/nowember\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/nowember\\/\",\"name\":\"nowember Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/nowember\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/nowember\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"nowember\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "nowember Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/nowember/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "nowember Archives - Juma",
+      "og_url": "https://juma.org/category/nowember/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/nowember/",
+            "url": "https://juma.org/category/nowember/",
+            "name": "nowember Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/nowember/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/nowember/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "nowember"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/7",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=7"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 93,
+    "count": 1,
+    "description": "",
+    "link": "https://juma.org/category/oakland/",
+    "name": "Oakland",
+    "slug": "oakland",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Oakland Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/oakland/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Oakland Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/oakland/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/oakland\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/oakland\\/\",\"name\":\"Oakland Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/oakland\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/oakland\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Oakland\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Oakland Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/oakland/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Oakland Archives - Juma",
+      "og_url": "https://juma.org/category/oakland/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/oakland/",
+            "url": "https://juma.org/category/oakland/",
+            "name": "Oakland Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/oakland/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/oakland/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Oakland"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/93",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=93"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 96,
+    "count": 6,
+    "description": "",
+    "link": "https://juma.org/category/opportunity-youth/",
+    "name": "Opportunity Youth",
+    "slug": "opportunity-youth",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Opportunity Youth Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/opportunity-youth/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Opportunity Youth Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/opportunity-youth/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/opportunity-youth\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/opportunity-youth\\/\",\"name\":\"Opportunity Youth Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/opportunity-youth\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/opportunity-youth\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Opportunity Youth\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Opportunity Youth Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/opportunity-youth/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Opportunity Youth Archives - Juma",
+      "og_url": "https://juma.org/category/opportunity-youth/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/opportunity-youth/",
+            "url": "https://juma.org/category/opportunity-youth/",
+            "name": "Opportunity Youth Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/opportunity-youth/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/opportunity-youth/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Opportunity Youth"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/96",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=96"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 142,
+    "count": 3,
+    "description": "",
+    "link": "https://juma.org/category/sacramento/",
+    "name": "Sacramento",
+    "slug": "sacramento",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Sacramento Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/sacramento/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Sacramento Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/sacramento/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/sacramento\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/sacramento\\/\",\"name\":\"Sacramento Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/sacramento\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/sacramento\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Sacramento\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Sacramento Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/sacramento/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Sacramento Archives - Juma",
+      "og_url": "https://juma.org/category/sacramento/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/sacramento/",
+            "url": "https://juma.org/category/sacramento/",
+            "name": "Sacramento Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/sacramento/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/sacramento/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Sacramento"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/142",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=142"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 62,
+    "count": 5,
+    "description": "",
+    "link": "https://juma.org/category/san-francisco/",
+    "name": "San Francisco",
+    "slug": "san-francisco",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>San Francisco Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/san-francisco/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"San Francisco Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/san-francisco/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/san-francisco\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/san-francisco\\/\",\"name\":\"San Francisco Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/san-francisco\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/san-francisco\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"San Francisco\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "San Francisco Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/san-francisco/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "San Francisco Archives - Juma",
+      "og_url": "https://juma.org/category/san-francisco/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/san-francisco/",
+            "url": "https://juma.org/category/san-francisco/",
+            "name": "San Francisco Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/san-francisco/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/san-francisco/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "San Francisco"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/62",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=62"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 144,
+    "count": 1,
+    "description": "",
+    "link": "https://juma.org/category/san-jose/",
+    "name": "San Jose",
+    "slug": "san-jose",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>San Jose Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/san-jose/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"San Jose Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/san-jose/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/san-jose\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/san-jose\\/\",\"name\":\"San Jose Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/san-jose\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/san-jose\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"San Jose\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "San Jose Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/san-jose/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "San Jose Archives - Juma",
+      "og_url": "https://juma.org/category/san-jose/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/san-jose/",
+            "url": "https://juma.org/category/san-jose/",
+            "name": "San Jose Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/san-jose/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/san-jose/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "San Jose"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/144",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=144"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 61,
+    "count": 7,
+    "description": "",
+    "link": "https://juma.org/category/seattle/",
+    "name": "Seattle",
+    "slug": "seattle",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Seattle Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/seattle/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Seattle Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/seattle/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/seattle\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/seattle\\/\",\"name\":\"Seattle Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/seattle\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/seattle\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Seattle\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Seattle Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/seattle/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Seattle Archives - Juma",
+      "og_url": "https://juma.org/category/seattle/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/seattle/",
+            "url": "https://juma.org/category/seattle/",
+            "name": "Seattle Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/seattle/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/seattle/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Seattle"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/61",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=61"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "count": 0,
+    "description": "",
+    "link": "https://juma.org/category/september/",
+    "name": "september",
+    "slug": "september",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>september Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/september/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"september Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/september/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/september\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/september\\/\",\"name\":\"september Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/september\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/september\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"september\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "september Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/september/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "september Archives - Juma",
+      "og_url": "https://juma.org/category/september/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/september/",
+            "url": "https://juma.org/category/september/",
+            "name": "september Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/september/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/september/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "september"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/8",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=8"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 1,
+    "count": 170,
+    "description": "",
+    "link": "https://juma.org/category/uncategorized/",
+    "name": "Uncategorized",
+    "slug": "uncategorized",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Uncategorized Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/uncategorized/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Uncategorized Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/uncategorized/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/uncategorized\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/uncategorized\\/\",\"name\":\"Uncategorized Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/uncategorized\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/uncategorized\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Uncategorized\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Uncategorized Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/uncategorized/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Uncategorized Archives - Juma",
+      "og_url": "https://juma.org/category/uncategorized/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/uncategorized/",
+            "url": "https://juma.org/category/uncategorized/",
+            "name": "Uncategorized Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/uncategorized/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/uncategorized/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Uncategorized"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/1",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=1"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 79,
+    "count": 10,
+    "description": "",
+    "link": "https://juma.org/category/youth-jobs/",
+    "name": "Youth jobs",
+    "slug": "youth-jobs",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Youth jobs Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/youth-jobs/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Youth jobs Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/youth-jobs/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/youth-jobs\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/youth-jobs\\/\",\"name\":\"Youth jobs Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/youth-jobs\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/youth-jobs\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Youth jobs\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Youth jobs Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/youth-jobs/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Youth jobs Archives - Juma",
+      "og_url": "https://juma.org/category/youth-jobs/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/youth-jobs/",
+            "url": "https://juma.org/category/youth-jobs/",
+            "name": "Youth jobs Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/youth-jobs/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/youth-jobs/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Youth jobs"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/79",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=79"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  },
+  {
+    "id": 85,
+    "count": 7,
+    "description": "",
+    "link": "https://juma.org/category/youth-stories/",
+    "name": "Youth stories",
+    "slug": "youth-stories",
+    "taxonomy": "category",
+    "parent": 0,
+    "meta": [],
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Youth stories Archives - Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/category/youth-stories/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Youth stories Archives - Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/category/youth-stories/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https:\\/\\/juma.org\\/category\\/youth-stories\\/\",\"url\":\"https:\\/\\/juma.org\\/category\\/youth-stories\\/\",\"name\":\"Youth stories Archives - Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/category\\/youth-stories\\/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/category\\/youth-stories\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Youth stories\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Youth stories Archives - Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/category/youth-stories/",
+      "og_locale": "en_US",
+      "og_type": "article",
+      "og_title": "Youth stories Archives - Juma",
+      "og_url": "https://juma.org/category/youth-stories/",
+      "og_site_name": "Juma",
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "CollectionPage",
+            "@id": "https://juma.org/category/youth-stories/",
+            "url": "https://juma.org/category/youth-stories/",
+            "name": "Youth stories Archives - Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/category/youth-stories/#breadcrumb"
+            },
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/category/youth-stories/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Youth stories"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          }
+        ]
+      }
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories/85",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/categories"
+        }
+      ],
+      "about": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/taxonomies/category"
+        }
+      ],
+      "wp:post_type": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/posts?categories=85"
+        }
+      ],
+      "curies": [
+        {
+          "name": "wp",
+          "href": "https://api.w.org/{rel}",
+          "templated": true
+        }
+      ]
+    }
+  }
+]

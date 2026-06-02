@@ -1,0 +1,22 @@
+---
+title: "Exploring and Inspiring: Juma Life Outside of the Ballpark"
+publishDate: 2019-09-09T15:51:23
+updatedDate: 2019-09-11T11:38:03
+author: Juma
+heroImage: 4187-6223091221086194726_IMG_5014-2.jpg
+heroImageAlt: "Exploring and Inspiring: Juma Life Outside of the Ballpark"
+excerpt: Through Juma’s Earn, Learn, and Connect approach to youth development, young people earn a paycheck while learning to manage their finances and developing crucial skills like responsibility, teamwork, and […]
+legacyId: 4186
+---
+
+![](/media/6223091221086194726-img-5014-2-1024x683-jpg)
+
+Through Juma’s Earn, Learn, and Connect approach to youth development, young people earn a paycheck while learning to manage their finances and developing crucial skills like responsibility, teamwork, and workplace communication. They also learn about different industries and what possible career pathways offer, all with the goal of giving youth an important chance to explore what opportunities are out there and to be inspired to take on new challenges. Ultimately, their new skills and learnings enable them to step forward toward a career of their choice with knowledge on the skills and experience needed to be successful.
+
+**JumaINSPIRES** career panels offer young people a chance to connect to professionals working in jobs a young person might aspire to. “It’s really about meeting youth where they’re at,” says Lainie Farmer, Juma Seattle Recruitment and Partnerships Manager. “We were very invested in this idea of a panel that is reflective of the young people we serve. We wanted them to be able to see themselves in these panelists so that they can recognize these goals as truly achievable if they take the right steps.” At Seattle’s recent **JumaINSPIRES** small business panel, youth met with five local entrepreneurs of color from a range of industries including real-estate, cosmetics, greeting card design, philanthropy, and catering. Following the panel, youth participated in a workshop led by local nonprofit, Ventures, where they learned the steps to starting a small business, including accessing local resources.
+
+Another way youth are exposed to possible career options is through **JumaEXPLORES**, a workplace tour program aimed at breaking down barriers. With guidance from Juma staff, tours are designed to be inclusive, entertaining, and informative. “**JumaEXPLORES** seeks to expose youth, and get them excited about long-term career opportunities that are available to them, but they may not know about,” explains Lindsey Coonan, Juma Director of Strategic Partnerships. Our youth frequently struggle to envision what economic success can look like for them, or career paths that excite them, because they live in communities that experience racial and socio-economic marginalization. **JumaEXPLORES** seeks to visit workplaces and speak with employees who have come from similar backgrounds as Juma youth, and are now succeeding in the workplace. We want to show Juma youth that adults who have faced a similar barrier, such as childhood poverty, involvement with the foster care or juvenile justice systems, experienced homelessness, or pursued a non-traditional education path through community college or vocational programs, go on to achieve great things.
+
+**JumaLINK**, an event open to both current and former Juma youth, offers young people a chance to meet and network with professionals from a variety of employers and sectors in a semi-structured environment built to foster connection. “**JumaLINK** is a unique experience for our Juma youth and supporters to come together and share valuable expertise on various professional sectors or business pro-tips,” Jasenia Quintana, Juma Alumni & Savings Program Manager explains. “At our most recent **JumaLINK** event, our volunteers had the opportunity to work 1:1 with youth to strengthen their resumes and cover letters, and develop their 2-minute pitch. At this event, youth are challenged to lean into discomfort to build up self-confidence about all about all of the things that makes them special.”
+
+The many options for youth to connect to new career pathways–from **JumaLINK**, to **JumaINSPIRES** and **JumaEXPLORES**–offer participants a chance to be inspired, explore and ultimately set a plan for their futures. We look forward to a future where all young people are prepared to succeed, advance and thrive in the career of their choice competing in a job market that is inclusive, equitable, and diverse.

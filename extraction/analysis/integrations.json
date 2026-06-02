@@ -1,0 +1,95 @@
+{
+  "donate": {
+    "url": "https://juma.org/donate/",
+    "amounts": [25, 50, 100, 200, 300, 500],
+    "recurring": true,
+    "fields": [
+      "preset amount buttons ($25/$50/$100/$200/$300/$500)",
+      "Other / custom amount input",
+      "one-time vs monthly frequency toggle"
+    ],
+    "notes": "IMPORTANT: The live https://juma.org/donate/ now 301-redirects to GoFundMe (https://giving.gofundme.com/campaign/757612/donate, GoFundMe orgId 26672, campaignId 757612, 'General Funds Project' designation). Donations have already been migrated OFF the legacy WP Simple Pay/Stripe form to GoFundMe (powered by Every.org). The WP REST API page content (page id 3077, template page-donate.php) still contains the OLD WP Simple Pay (Stripe) markup: two forms -- form 3082 (product prod_JI0lK85CFdRnhY, recurring monthly, invoice_limit 12) and form 3092 (product prod_JI0lVUu5HKfHTM, one-time) -- both with a 'Custom Amount' tel input and a 'Pay with Card' Stripe button (stripe-button-el). The legacy Stripe defaults render only $1.00 min in the API (real tiers were configured in WP Simple Pay admin, not exposed via REST). LIVE GoFundMe one-time preset tiers: $25, $50, $100, $200, $300, $500 + Other. LIVE monthly/recurring preset tiers: $20, $25, $30, $50, $70, $90 + Other (recurringEnabled=true, monthly interval). GoFundMe page also links to Every.org for stock/crypto donations via https://tinyurl.com/supportjuma. For the rebuild: replace with Stripe Checkout / Payment Links + env-configured amounts list. Recommended env amounts: one-time [25,50,100,200,300,500]; monthly [20,25,30,50,70,90]; both with a custom 'Other' option."
+  },
+  "forms": [
+    {
+      "name": "Contact Form (general inquiries)",
+      "page": "https://juma.org/contact/",
+      "fields": [
+        {"label": "Your Name", "type": "text", "required": true},
+        {"label": "Your Email", "type": "email", "required": true},
+        {"label": "Subject", "type": "text", "required": false},
+        {"label": "Your Message", "type": "textarea", "required": false}
+      ],
+      "deliverTo": "unknown (CF7 form id 7, mail recipient configured server-side in WP admin; page text routes specific topics to devadmin@juma.org for donations/receipts, operations@juma.org for HR, meganh@juma.org for corporate partnerships, and the form itself for 'all other inquiries')"
+    },
+    {
+      "name": "Work for Juma (job application)",
+      "page": "https://juma.org/work-for-juma/",
+      "fields": [
+        {"label": "First Name", "type": "text", "required": true},
+        {"label": "Last Name", "type": "text", "required": true},
+        {"label": "Email Address", "type": "email", "required": true},
+        {"label": "Phone Number", "type": "text", "required": false},
+        {"label": "Which site(s) are you interested in joining? (San Francisco CA / San Jose CA / Sacramento CA / Seattle WA)", "type": "checkbox", "required": false},
+        {"label": "Which team(s) are you most interested in joining? (Marketing / Youth Programming / Partnerships & Business Development / Ballpark Enterprise Management / IT support / Human Resources/Legal Operations / Development/Fundraising / Finance / Volunteer Management / Other w/ free text)", "type": "checkbox", "required": false},
+        {"label": "How did you hear about Juma?", "type": "text", "required": true},
+        {"label": "Why are you interested in joining Juma", "type": "text", "required": true},
+        {"label": "Please attach your resume and cover letter below", "type": "file", "required": true}
+      ],
+      "deliverTo": "unknown (CF7 form id 1884, file upload enabled; recipient configured server-side. Likely operations@juma.org / People Operations Team per contact page guidance)"
+    },
+    {
+      "name": "Interest Form (youth job application interest)",
+      "page": "https://juma.org/interest-form/",
+      "fields": [
+        {"label": "First Name", "type": "text", "required": true},
+        {"label": "Last Name", "type": "text", "required": true},
+        {"label": "Age (jobs are for youth 16-24)", "type": "text", "required": false},
+        {"label": "Referred By (Partner Organization)", "type": "text", "required": false},
+        {"label": "Phone Number", "type": "text", "required": false},
+        {"label": "Email Address", "type": "email", "required": true},
+        {"label": "Comments", "type": "textarea", "required": false},
+        {"label": "Which site are you interested in applying to? (San Francisco / Oakland / Seattle / Houston / San Jose / Atlanta / Sacramento)", "type": "checkbox", "required": true}
+      ],
+      "deliverTo": "unknown (CF7 form id 969; recipient configured server-side in WP admin)"
+    },
+    {
+      "name": "Listserve / Volunteer Interest Form",
+      "page": "https://juma.org/listserve-form/",
+      "fields": [
+        {"label": "First Name", "type": "text", "required": true},
+        {"label": "Last Name", "type": "text", "required": true},
+        {"label": "Email Address", "type": "email", "required": true},
+        {"label": "Which site are you interested in volunteering at? (San Francisco / Seattle / Sacramento / San Jose)", "type": "checkbox", "required": true}
+      ],
+      "deliverTo": "unknown (CF7 form id 2033; recipient configured server-side in WP admin)"
+    }
+  ],
+  "newsletter": {
+    "provider": "Mailchimp",
+    "action": "https://juma.us2.list-manage.com/subscribe/post?u=335885ccfee96c7678831b8f8&id=1cdc01eea9&f_id=001ecae1f0",
+    "notes": "Mailchimp embedded 'classic' signup form on https://juma.org/newsletter/ (page id 966, template page-newsletter.php). Account/audience: u=335885ccfee96c7678831b8f8, list id=1cdc01eea9, tag value 99248. Loads //s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js and //cdn-images.mailchimp.com/embedcode/classic-061523.css. Fields: Email Address (required), First Name (required), Last Name (required), City (MMERGE4, required), State (MMERGE8, required), Zip Code (MMERGE6, optional), Street Address (MMERGE3, optional). Includes honeypot field b_335885ccfee96c7678831b8f8_1cdc01eea9. There is also a subscription-confirmation page (id 1285) used as the post-signup thank-you. Replace with a Mailchimp API subscribe call from an Astro API route (or keep Mailchimp audience), or swap to Resend audiences."
+  },
+  "social": [
+    {"platform": "Instagram", "url": "https://instagram.com/juma_ventures"},
+    {"platform": "Facebook", "url": "https://www.facebook.com/jumaventures"},
+    {"platform": "Twitter/X", "url": "https://twitter.com/jumaventures"},
+    {"platform": "LinkedIn (company)", "url": "https://www.linkedin.com/company/juma-ventures"},
+    {"platform": "LinkedIn (school)", "url": "https://www.linkedin.com/school/juma-ventures/"},
+    {"platform": "YouTube", "url": "https://www.youtube.com/channel/UCTQR2CosvNd8-dP8qENfrsg"}
+  ],
+  "analytics": {
+    "notes": "Multiple trackers active on the homepage. (1) Google Analytics 4 via gtag: G-Y1HTPMJSNZ (gtag('config','G-Y1HTPMJSNZ')). (2) Legacy Universal Analytics property reference: UA-69640501-1 (analytics.js present). (3) Two Google Tag Manager containers: GTM-W32SKDR and GTM-K3R78HH (both with gtm.js script + ns.html noscript iframe). (4) Facebook Pixel via connect.facebook.net, fbq('init','607603186104630'). No Google Site Kit plugin signature detected (GA/GTM injected manually or via theme). For the rebuild: consolidate to a single GA4 property (G-Y1HTPMJSNZ) and optionally the FB Pixel, configured via env vars; drop the duplicate GTM container and the dead UA property."
+  },
+  "other": [
+    "The Events Calendar (plugin: wp-content/plugins/the-events-calendar) is installed and powers /events/ and individual /event/<slug>/ pages. tribe_events-sitemap lists ~25+ historical/recurring events (e.g. Paths to Possibility gala, Match the Promise, All-Star Match/Benefit, Pave the Way, 30th Anniversary celebrations). extraction/raw/events.json is empty -> no current/upcoming events at extraction time; this is mostly a past-events archive. Rebuild option: static events collection (Astro content) or drop if no upcoming events.",
+    "Apply page (https://juma.org/apply/) does NOT use a native form -- it links out to four Google Forms (forms.gle) by location: SF https://forms.gle/6FiveuybZR6sAM767, Seattle https://forms.gle/ydf1qXLve8GfsbM9A, San Jose https://forms.gle/nEZ9YDPye4SryxzG7, Sacramento https://forms.gle/H19aUL8WrWNy1ZCu8. Embeds a YouTube video (youtube.com/embed/ajPd6zpKFtM).",
+    "Volunteer page (https://juma.org/volunteer/) embeds a Google Form iframe (docs.google.com/forms/d/e/1FAIpQLSe6hyxyQUhaQtHoks2DJfCg_Yh7WPCe1M9rWBmHCqMt9Tp2Dg/viewform); fallback contact oliviah@juma.org. Note: there are ALSO CF7-based volunteer/listserve forms (interest-form, listserve-form) -- the rebuild should reconcile which volunteer intake is authoritative (live volunteer page = Google Form).",
+    "reCAPTCHA (g-recaptcha) is wired into Contact Form 7 submissions site-wide -- need a spam-protection replacement (e.g. Cloudflare Turnstile or hCaptcha) on the new Astro API routes.",
+    "Donations migrated to GoFundMe (Every.org) -- the /donate/ slug 301-redirects offsite; the WP Simple Pay/Stripe forms in the DB are legacy/unused on the live site.",
+    "Every.org link for stock & cryptocurrency donations: https://tinyurl.com/supportjuma (referenced from the GoFundMe donate page).",
+    "Other active WP plugins detected in homepage assets: Elementor (page builder), Revolution Slider (revslider), janzeman-shared-albums-for-google-photos (Google Photos shared album embeds), wp-accessibility.",
+    "Contact info is plain text (no embedded Google Maps iframe found on homepage or contact page). Offices listed: Main/San Francisco 131 Steuart Street Suite 202, SF CA 94105 (415.371.0727); Sacramento 815 S Street, Sacramento CA 95811 (504.233.9838); Seattle 900 1st Avenue South Suite 102, Seattle WA 98134 (206.557.5613); San Jose (listed with SF address -- likely a content error to flag).",
+    "Topic-routed contact emails (from /contact/): donations/tax receipts -> devadmin@juma.org; HR/employment verification -> operations@juma.org; corporate partnerships -> meganh@juma.org (Megan Hover, Chief Development Officer)."
+  ]
+}

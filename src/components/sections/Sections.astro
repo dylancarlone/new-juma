@@ -1,0 +1,33 @@
+---
+import Container from "@/components/Container.astro";
+import Markdown from "@/components/Markdown.astro";
+import Media from "@/components/Media.astro";
+
+interface Props {
+  sections: { id?: string; heading?: string; body?: string; image?: string }[];
+}
+const { sections } = Astro.props;
+if (!sections?.length) return null;
+---
+
+<div class="bg-white">
+  {
+    sections.map((s, i) => (
+      <section id={s.id} class="border-b border-navy-50 last:border-0">
+        <Container class="py-12 md:py-16">
+          <div class:list={["grid items-center gap-10", s.image ? "lg:grid-cols-2" : ""]}>
+            <div class={s.image && i % 2 === 1 ? "lg:order-2" : ""}>
+              {s.heading && <h2 class="text-2xl md:text-3xl">{s.heading}</h2>}
+              {s.body && <Markdown content={s.body} class="mt-4" />}
+            </div>
+            {s.image && (
+              <div class={i % 2 === 1 ? "lg:order-1" : ""}>
+                <Media src={s.image} alt={s.heading ?? ""} class="w-full rounded-2xl shadow-[var(--shadow-card)]" fit="cover" />
+              </div>
+            )}
+          </div>
+        </Container>
+      </section>
+    ))
+  }
+</div>

@@ -1,0 +1,185 @@
+{
+  "generatedAt": "2026-06-02",
+  "source": {
+    "posts": "extraction/raw/posts.json",
+    "categories": "extraction/raw/categories.json",
+    "tags": "extraction/raw/tags.json",
+    "users": "extraction/raw/users.json",
+    "mediaManifest": "extraction/raw/media-manifest.json",
+    "mediaLocalMap": "extraction/raw/media-local-map.json"
+  },
+  "totals": {
+    "posts": 196,
+    "allStatus": "publish",
+    "allType": "post",
+    "categoriesDefined": 18,
+    "categoriesUsed": 15,
+    "tagsDefined": 59,
+    "tagsUsedDistinct": 54,
+    "authorsDefined": 4,
+    "authorsUsed": 4
+  },
+
+  "dateRange": {
+    "field": "post.date (local, non-GMT)",
+    "earliest": "2015-10-12T15:22:48",
+    "latest": "2026-05-28T13:13:12",
+    "spanYears": "2015-2026"
+  },
+
+  "perYear": {
+    "2015": 6,
+    "2016": 7,
+    "2017": 20,
+    "2018": 20,
+    "2019": 19,
+    "2020": 22,
+    "2021": 20,
+    "2022": 21,
+    "2023": 18,
+    "2024": 19,
+    "2025": 19,
+    "2026": 5
+  },
+
+  "categories": {
+    "note": "usage = number of posts referencing the category id. 170/196 posts are only 'Uncategorized' (id 1). Most categories are city/program taxonomies, not editorial sections.",
+    "breakdown": [
+      { "id": 1,   "name": "Uncategorized",        "slug": "uncategorized",        "usage": 170 },
+      { "id": 79,  "name": "Youth jobs",            "slug": "youth-jobs",            "usage": 10 },
+      { "id": 61,  "name": "Seattle",               "slug": "seattle",               "usage": 7 },
+      { "id": 85,  "name": "Youth stories",         "slug": "youth-stories",         "usage": 7 },
+      { "id": 96,  "name": "Opportunity Youth",     "slug": "opportunity-youth",     "usage": 6 },
+      { "id": 62,  "name": "San Francisco",         "slug": "san-francisco",         "usage": 5 },
+      { "id": 94,  "name": "Atlanta",               "slug": "atlanta",               "usage": 5 },
+      { "id": 142, "name": "Sacramento",            "slug": "sacramento",            "usage": 3 },
+      { "id": 115, "name": "Houston",               "slug": "houston",               "usage": 2 },
+      { "id": 78,  "name": "Expansion",             "slug": "expansion",             "usage": 1 },
+      { "id": 93,  "name": "Oakland",               "slug": "oakland",               "usage": 1 },
+      { "id": 95,  "name": "New York",              "slug": "new-york",              "usage": 1 },
+      { "id": 114, "name": "Dallas",                "slug": "dallas",                "usage": 1 },
+      { "id": 143, "name": "Financial Capability",  "slug": "financial-capability",  "usage": 1 },
+      { "id": 144, "name": "San Jose",              "slug": "san-jose",              "usage": 1 }
+    ],
+    "definedButUnused": [
+      "3 of the 18 defined categories have zero post usage (orphan/parent taxonomy terms)."
+    ]
+  },
+
+  "tags": {
+    "note": "Tags are very sparsely used: 180 of 196 posts have NO tags at all; only 16 posts are tagged. 54 distinct tag ids appear, each on 1-4 posts. Tags add little organizational value and could be dropped or merged into categories during the rebuild.",
+    "postsWithNoTags": 180,
+    "postsWithTags": 16,
+    "topTags": [
+      { "id": 84,  "name": "Opportunity Youth",  "slug": "opportunity-youth",  "usage": 4 },
+      { "id": 63,  "name": "Juma",               "slug": "juma",               "usage": 3 },
+      { "id": 71,  "name": "Social Enterprise",  "slug": "social-enterprise",  "usage": 3 },
+      { "id": 80,  "name": "youth jobs",         "slug": "youth-jobs",         "usage": 3 },
+      { "id": 66,  "name": "Seattle",            "slug": "seattle",            "usage": 2 },
+      { "id": 83,  "name": "Juma Ventures",      "slug": "juma-ventures",      "usage": 2 },
+      { "id": 91,  "name": "AT&T Park",          "slug": "att-park",           "usage": 2 },
+      { "id": 97,  "name": "My Brother's Keeper","slug": "my-brothers-keeper", "usage": 2 },
+      { "id": 105, "name": "Makers4Good",        "slug": "makers4good",        "usage": 2 },
+      { "id": 106, "name": "Alite Designs",      "slug": "alite-designs",      "usage": 2 }
+    ]
+  },
+
+  "authors": {
+    "note": "author = post.author id, resolved against users.json. 'Ren' (9) and 'Juma Ventures' (3) are the two real editorial accounts and cover 193 of 196 posts. All should likely collapse to a single 'Juma' byline on the new site.",
+    "map": {
+      "3":  { "name": "Juma Ventures",  "slug": "juma-ventures", "postsAuthored": 94 },
+      "9":  { "name": "Ren",            "slug": "ren",           "postsAuthored": 99 },
+      "10": { "name": "Lucia",          "slug": "lucia",         "postsAuthored": 1 },
+      "14": { "name": "Byron McGovern", "slug": "byron",         "postsAuthored": 2 }
+    }
+  },
+
+  "featuredImageCount": {
+    "postsWithFeaturedMediaId": 126,
+    "postsWithFeaturedMediaPct": 64.3,
+    "featuredMediaResolvableViaManifest": 125,
+    "featuredMediaNotInManifest": 1,
+    "notInManifestExample": { "id": 1094, "slug": "2014-annual-report", "featured_media": 1100 },
+    "postsWithoutFeaturedButWithYoastOgImage": 18,
+    "combinedHeroCoverage": 144,
+    "combinedHeroCoveragePct": 73.5,
+    "postsWithNoHeroSourceAtAll": 52,
+    "resolution": {
+      "primary": "post.featured_media (int id) -> look up id in media-manifest.json -> use .sizes.full (or .url). Each manifest entry also has alt, width, height, and named size variants (medium/thumbnail/causes/full).",
+      "fallback1": "If featured_media is 0 or not in the manifest, use yoast_head_json.og_image[0].url (covers id 1094 and 18 featured-less posts). This is a remote juma.org URL.",
+      "localFiles": "media-local-map.json maps the remote juma.org URL -> a downloaded local path (e.g. 'extraction/media/7251-JUMALogoSlogan-scaled.png'). 519 assets already downloaded. For the MDX rebuild, prefer resolving featured_media -> manifest url -> media-local-map.json local path so hero images are bundled locally.",
+      "noHero": "52 posts have neither a featured_media nor an og_image; these are mostly 'Thank You to Our Funders' donor-list posts, job postings, and board-announcement posts. The rebuild should supply a category/default placeholder hero or render them without a hero."
+    }
+  },
+
+  "contentShapeNotes": {
+    "summary": "Post bodies are NOT Elementor-built. Zero posts contain elementor / elementor-widget / data-elementor markup (Elementor is used on Pages, not Posts). Post content is plain WordPress HTML: classic-editor <p> prose for the bulk of older posts, and Gutenberg block HTML (wp-block-image, wp-block-spacer, has-medium-font-size, figure/aligncenter) on ~21-22 recent posts. Average rendered length ~3,185 chars (min 182, max 35,588).",
+    "editorMix": {
+      "elementorPosts": 0,
+      "gutenbergBlockPosts": 21,
+      "classicProsePosts": "~175 (mostly bare <p> paragraphs)"
+    },
+    "htmlArtifactsToClean": [
+      "HTML entities throughout: &#8217; (curly apostrophe), &#8220;/&#8221; (curly quotes), &#8212; (em dash), &amp;, &nbsp;, &#8230;. Decode to unicode when converting to MDX.",
+      "Gutenberg wrapper classes on ~22 posts: <div class=\"wp-block-image\">, <figure class=\"aligncenter size-full is-resized\">, <div class=\"wp-block-spacer\">, <p class=\"has-medium-font-size\">. Strip wrappers/classes; convert <figure>+<img> to a Markdown image or an Astro <Image> component.",
+      "<img> tags carry WordPress-specific noise: width/height/srcset/sizes/decoding/fetchpriority/loading attrs, class=\"wp-image-XXXX\" (11 posts), and inline style=\"width:840px;height:auto\" (47 posts with inline style). Drop srcset/sizes/class/style; keep src + alt; rewrite src through media-local-map.json.",
+      "Image src hosts: ~53 inline images point at juma.org/wp-content/uploads (rewrite to local), but ~16 images are hot-linked from Google (ci3/ci4/ci5.googleusercontent.com, lh5.googleusercontent.com) on the donor 'Thank You' posts (ids 4892, 4791, 4605, 4479, 4476, 4446, 4437, 4420, 4415, 4411, 4406, 4373, 2847). Those Google URLs WILL rot and must be re-downloaded or removed.",
+      "Video embeds: 8 posts contain <iframe> (5 Vimeo player.vimeo.com, 3 youtube.com). Convert to a responsive embed component. Note Bootstrap leftover wrappers <div class=\"container/row/col-md-12\"> and <div class=\"video-container\"> around some embeds (e.g. id 4366).",
+      "Leftover shortcode/placeholder text: id 2040 has a literal '[VIDEO]' placeholder in prose. id 3716 contains Outlook/MSO conditional-comment junk ('[if lt IE 9]', 'mso-' styles) that must be stripped.",
+      "The bracketed-text scan produced mostly false-positive 'shortcodes' (e.g. '[For youth]', '[Juma]') that are ordinary prose in square brackets and should be left as-is.",
+      "Donor 'Thank You to Our Funders' posts are long <br>-separated name lists inside a single <p>; convert to a clean list or keep as a single block.",
+      "updatedDate: 59 of 196 posts have post.modified on a different calendar day than post.date; map post.modified -> updatedDate (omit when equal to publishDate)."
+    ],
+    "conversionEffort": "Low-to-moderate and largely mechanical. Recommended pipeline: (1) decode HTML entities; (2) strip Gutenberg/Bootstrap/MSO wrapper divs and WP-specific img attributes; (3) convert HTML -> Markdown (e.g. rehype/turndown), preserving <p>, <a>, <strong>/<em>, lists, blockquotes; (4) rewrite juma.org image src -> local asset paths via media-local-map.json and re-host or drop googleusercontent images; (5) turn iframes into an Astro embed component; (6) lift hero image out of body when it duplicates featured_media."
+  },
+
+  "proposedSchema": {
+    "collection": "post",
+    "language": "Astro Content Collections (Zod via 'astro:content' defineCollection)",
+    "zod": "import { z, defineCollection } from 'astro:content';\n\nconst post = defineCollection({\n  type: 'content', // MDX files in src/content/post/\n  schema: ({ image }) => z.object({\n    title: z.string(),\n    slug: z.string(), // preserve original WP slug for redirects\n    publishDate: z.coerce.date(), // from post.date\n    updatedDate: z.coerce.date().optional(), // from post.modified when it differs from publishDate\n    author: z.enum(['Juma', 'Ren', 'Lucia', 'Byron McGovern']).default('Juma'),\n    categories: z.array(z.string()).default([]), // human-readable names; drop bare 'Uncategorized'\n    tags: z.array(z.string()).default([]), // sparse; 180/196 empty\n    heroImage: image().optional(), // resolved from featured_media -> manifest -> local file, else yoast og_image\n    heroImageAlt: z.string().optional(), // from media-manifest .alt\n    excerpt: z.string().optional(), // from excerpt.rendered, entity-decoded & detagged\n    draft: z.boolean().default(false), // all source posts are status 'publish' -> false\n    legacyId: z.number().optional(), // original WP post id, for redirect/traceability\n  }),\n});\n\nexport const collections = { post };",
+    "fieldNotes": {
+      "title": "From post.title.rendered, HTML-entity-decoded.",
+      "slug": "From post.slug. Two slugs are URL-encoded and need cleanup: id 5157 'atlanta-assistant-enterprise-manager-part-time%ef%bf%bc' (stray U+FFFF) and the generic 'juma-' (id 225).",
+      "publishDate": "post.date.",
+      "updatedDate": "post.modified, only emitted when its calendar day differs from publishDate (59 posts).",
+      "author": "Collapse 4 WP accounts; 'Juma Ventures' -> 'Juma'. Most posts are org-authored.",
+      "categories": "Map category ids -> names. Recommend dropping the catch-all 'Uncategorized' and keeping only the city/program terms.",
+      "tags": "Optional; consider dropping entirely given 92% of posts are untagged.",
+      "heroImage": "Use Astro image() so hero is a local optimized asset. Resolution order: featured_media -> media-manifest -> media-local-map local path; fallback yoast og_image.",
+      "excerpt": "post.excerpt.rendered, stripped of <p> and decoded. 1 post has an empty excerpt -> make optional/auto-generate.",
+      "draft": "All 196 source posts are publish; default false."
+    }
+  },
+
+  "nonArticlePosts": {
+    "note": "These are typed 'post' in WordPress but are structural/operational/landing content rather than editorial blog articles. Recommend routing them OUT of the blog collection (job board, RFP archive, donor acknowledgements, or simple pages) during the rebuild.",
+    "jobPostings": [
+      { "id": 6421, "slug": "seattle-development-manager", "title": "Seattle Development Manager" },
+      { "id": 6134, "slug": "data-coordinator", "title": "Data Coordinator" },
+      { "id": 5316, "slug": "enterprise-manager", "title": "Enterprise Manager" },
+      { "id": 5181, "slug": "youth-recruitment-specialist", "title": "Youth Recruitment Specialist" },
+      { "id": 5157, "slug": "atlanta-assistant-enterprise-manager-part-time%ef%bf%bc", "title": "Atlanta Assistant Enterprise Manager (Part Time)" },
+      { "id": 5042, "slug": "seattle-program-coordinator", "title": "Seattle Program Coordinator" },
+      { "id": 4821, "slug": "seattle-assistant-enterprise-manager-part-time", "title": "Seattle Assistant Enterprise Manager (Part Time)" }
+    ],
+    "rfpProcurement": [
+      { "id": 5270, "slug": "juma-ventures-external-evaluator-rfp-bidders-conference-10-31-2022-slides-and-video", "title": "Juma Ventures External Evaluator RFP Bidders Conference 10/31/2022 - Slides and Video" },
+      { "id": 5264, "slug": "juma-ventures-request-for-proposal-rfp-for-calvip-grant", "title": "Juma Ventures Request For Proposal (RFP) for CalVIP grant" }
+    ],
+    "videoEmbedOnlyLanding": [
+      { "id": 4366, "slug": "paving_the_way_with_adriane", "title": "Paving the Way ... with Juma CEO Adriane Armstrong", "reason": "Body is only a Bootstrap-wrapped Vimeo iframe; no prose, no excerpt, no featured image." }
+    ],
+    "thinAnnouncementCandidates": [
+      { "id": 6099, "slug": "our-san-francisco-office-has-moved", "title": "Our San Francisco Office has Moved!", "reason": "182-char address-change notice." },
+      { "id": 1094, "slug": "2014-annual-report", "title": "2014 Annual Report is Now Available Online", "reason": "Short pointer to a downloadable report on /financials/." }
+    ],
+    "donorAcknowledgementSeries": {
+      "note": "33 near-identical 'Thank You to Our (Recent) Funders' posts (recurring quarterly donor lists). Editorial value is low; consider a single rolling 'Funders' page or excluding from the article feed. Most have no hero image.",
+      "ids": [6572, 6542, 6492, 6361, 6315, 6198, 6132, 6074, 6006, 5889, 5734, 5346, 5283, 5234, 5164, 5075, 4956, 4899, 4849, 4789, 4631, 4517, 4479, 4420, 4245, 4194, 4064, 3966, 3721, 3255, 3036, 2040, 2632]
+    },
+    "boardAnnouncementSeries": {
+      "note": "Recurring 'Juma welcomes ... to National Board of Directors' announcements; borderline news, keep if a 'News' section exists, otherwise demote.",
+      "ids": [6434, 6203, 5887, 5000, 4851, 4422, 3946, 3859, 3280]
+    }
+  }
+}

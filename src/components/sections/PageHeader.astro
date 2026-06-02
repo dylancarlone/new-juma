@@ -1,0 +1,22 @@
+---
+import Container from "@/components/Container.astro";
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  align?: "left" | "center";
+}
+const { eyebrow, title, description, align = "left" } = Astro.props;
+const a = align === "center" ? "text-center mx-auto" : "";
+---
+
+<section class="border-b border-navy-100 bg-cream/50">
+  <Container class="py-12 md:py-16">
+    <div class={`max-w-3xl ${a}`}>
+      {eyebrow && <p class="font-heading text-xs font-bold uppercase tracking-widest text-brand-600">{eyebrow}</p>}
+      <h1 class="mt-2 text-3xl md:text-5xl">{title}</h1>
+      {description && <p class="mt-4 text-lg text-ink-soft">{description}</p>}
+    </div>
+  </Container>
+</section>

@@ -1,0 +1,25 @@
+---
+import Container from "@/components/Container.astro";
+
+interface Props {
+  people: { name: string; role?: string; org?: string }[];
+}
+const { people } = Astro.props;
+if (!people?.length) return null;
+---
+
+<div class="bg-white">
+  <Container class="py-12 md:py-16">
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        people.map((p) => (
+          <div class="rounded-[var(--radius-card)] border border-navy-100 bg-cream/40 p-6">
+            <p class="font-heading text-lg font-bold text-navy-900">{p.name}</p>
+            {p.role && <p class="mt-1 text-sm font-medium text-brand-600">{p.role}</p>}
+            {p.org && <p class="mt-0.5 text-sm text-warmgray">{p.org}</p>}
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</div>

@@ -1,0 +1,1655 @@
+{
+  "archetypes": [
+    {
+      "key": "home",
+      "title": "Home / Front Page",
+      "description": "The site landing page. Pillar overview (Earn/Learn/Connect), location teasers, youth testimonial carousel, latest-news feed, and primary donate/about CTAs. frontpage2026 is current; frontpagev1 is the legacy version.",
+      "hasBody": false,
+      "schema": [
+        {
+          "field": "eyebrow",
+          "type": "z.string()",
+          "required": false,
+          "note": "Small label above the headline (e.g. 'ABOUT JUMA')"
+        },
+        {
+          "field": "heading",
+          "type": "z.string()",
+          "required": true,
+          "note": "Main hero headline"
+        },
+        {
+          "field": "subheading",
+          "type": "z.string()",
+          "required": false,
+          "note": "Supporting hero paragraph / lede"
+        },
+        {
+          "field": "image",
+          "type": "z.string()",
+          "required": false,
+          "note": "Hero background or feature image path"
+        },
+        {
+          "field": "ctaLabel",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA button text"
+        },
+        {
+          "field": "ctaHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA destination URL/path"
+        },
+        {
+          "field": "intro",
+          "type": "z.string()",
+          "required": false,
+          "note": "Mission lede paragraph below hero"
+        },
+        {
+          "field": "pillars",
+          "type": "z.array(z.object({ icon: z.string().optional(), title: z.string(), body: z.string() }))",
+          "required": true,
+          "note": "Earn / Learn / Connect value pillars"
+        },
+        {
+          "field": "locationsHeading",
+          "type": "z.string()",
+          "required": false,
+          "note": "Heading for the locations teaser block (e.g. 'Four Communities. One Mission.')"
+        },
+        {
+          "field": "locations",
+          "type": "z.array(z.object({ name: z.string(), href: z.string(), image: z.string().optional() }))",
+          "required": false,
+          "note": "Location teaser cards linking to location pages"
+        },
+        {
+          "field": "testimonials",
+          "type": "z.array(z.object({ quote: z.string(), name: z.string(), role: z.string().optional() }))",
+          "required": false,
+          "note": "Youth Voices quotes"
+        },
+        {
+          "field": "ctas",
+          "type": "z.array(z.object({ label: z.string(), href: z.string() }))",
+          "required": false,
+          "note": "Secondary CTAs (Donate, Programs, etc.)"
+        },
+        {
+          "field": "showLatestNews",
+          "type": "z.boolean().default(true)",
+          "required": false,
+          "note": "Whether to render the dynamic latest-news feed"
+        }
+      ],
+      "pages": [
+        {
+          "id": 7147,
+          "slug": "frontpage2026",
+          "title": "Home"
+        },
+        {
+          "id": 21,
+          "slug": "frontpagev1",
+          "title": "Frontpage V1"
+        }
+      ]
+    },
+    {
+      "key": "location",
+      "title": "Location / Regional Page",
+      "description": "Per-city pages (San Francisco, San Jose, Seattle, Sacramento) plus legacy 'old' versions. Opens with a staff note + local need statistics, describes local venues/partners, includes a youth success quote, and three audience CTAs (For Youth / Employers / Volunteers).",
+      "hasBody": true,
+      "schema": [
+        {
+          "field": "city",
+          "type": "z.string()",
+          "required": true,
+          "note": "City / region name"
+        },
+        {
+          "field": "region",
+          "type": "z.enum(['san-francisco','san-jose','seattle','sacramento']).optional()",
+          "required": false,
+          "note": "Canonical region key"
+        },
+        {
+          "field": "eyebrow",
+          "type": "z.string()",
+          "required": false,
+          "note": "Small label above the headline (e.g. 'ABOUT JUMA')"
+        },
+        {
+          "field": "heading",
+          "type": "z.string()",
+          "required": true,
+          "note": "Main hero headline"
+        },
+        {
+          "field": "subheading",
+          "type": "z.string()",
+          "required": false,
+          "note": "Supporting hero paragraph / lede"
+        },
+        {
+          "field": "image",
+          "type": "z.string()",
+          "required": false,
+          "note": "Hero background or feature image path"
+        },
+        {
+          "field": "ctaLabel",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA button text"
+        },
+        {
+          "field": "ctaHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA destination URL/path"
+        },
+        {
+          "field": "noteFrom",
+          "type": "z.object({ name: z.string(), role: z.string() }).optional()",
+          "required": false,
+          "note": "Attribution for the opening 'A Note from...' staff intro"
+        },
+        {
+          "field": "stats",
+          "type": "z.array(z.object({ value: z.string(), label: z.string() }))",
+          "required": false,
+          "note": "Local need / impact statistics (e.g. youth disconnected, youth employed)"
+        },
+        {
+          "field": "venues",
+          "type": "z.array(z.string())",
+          "required": false,
+          "note": "Local stadiums / venues Juma operates in"
+        },
+        {
+          "field": "testimonial",
+          "type": "z.object({ quote: z.string(), name: z.string() }).optional()",
+          "required": false,
+          "note": "Featured local youth success quote"
+        },
+        {
+          "field": "contact",
+          "type": "z.object({ name: z.string(), role: z.string().optional(), email: z.string() }).optional()",
+          "required": false,
+          "note": "Local site manager contact"
+        },
+        {
+          "field": "audienceCtas",
+          "type": "z.array(z.object({ label: z.string(), href: z.string() }))",
+          "required": false,
+          "note": "For Youth / For Employers / For Volunteers links"
+        },
+        {
+          "field": "legacy",
+          "type": "z.boolean().default(false)",
+          "required": false,
+          "note": "True for the older 'seattle-old' / 'sacramento-old' versions"
+        }
+      ],
+      "pages": [
+        {
+          "id": 614,
+          "slug": "san-francisco",
+          "title": "San Francisco"
+        },
+        {
+          "id": 639,
+          "slug": "san-jose",
+          "title": "San Jose"
+        },
+        {
+          "id": 3696,
+          "slug": "seattle",
+          "title": "Seattle"
+        },
+        {
+          "id": 4293,
+          "slug": "sacramento",
+          "title": "Sacramento"
+        },
+        {
+          "id": 631,
+          "slug": "seattle-old",
+          "title": "Seattle"
+        },
+        {
+          "id": 1391,
+          "slug": "sacramento-old",
+          "title": "Sacramento"
+        }
+      ]
+    },
+    {
+      "key": "mission-content",
+      "title": "Mission / About Content Page",
+      "description": "Narrative about-style prose pages: mission, vision & history, problem+solution, the Juma model, who we serve. Long-form sections, optional stat blocks, demographic breakdowns. 'leadership' and 'causes' are currently empty placeholders kept here as content shells.",
+      "hasBody": true,
+      "schema": [
+        {
+          "field": "eyebrow",
+          "type": "z.string()",
+          "required": false,
+          "note": "Small label above the headline (e.g. 'ABOUT JUMA')"
+        },
+        {
+          "field": "heading",
+          "type": "z.string()",
+          "required": true,
+          "note": "Main hero headline"
+        },
+        {
+          "field": "subheading",
+          "type": "z.string()",
+          "required": false,
+          "note": "Supporting hero paragraph / lede"
+        },
+        {
+          "field": "image",
+          "type": "z.string()",
+          "required": false,
+          "note": "Hero background or feature image path"
+        },
+        {
+          "field": "ctaLabel",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA button text"
+        },
+        {
+          "field": "ctaHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA destination URL/path"
+        },
+        {
+          "field": "mission",
+          "type": "z.string()",
+          "required": false,
+          "note": "Mission statement"
+        },
+        {
+          "field": "vision",
+          "type": "z.string()",
+          "required": false,
+          "note": "Vision statement"
+        },
+        {
+          "field": "sections",
+          "type": "z.array(z.object({ heading: z.string(), body: z.string(), image: z.string().optional() }))",
+          "required": false,
+          "note": "Ordered prose sections (What We Do, Who We Serve, etc.)"
+        },
+        {
+          "field": "stats",
+          "type": "z.array(z.object({ value: z.string(), label: z.string() }))",
+          "required": false,
+          "note": "Headline stats (e.g. $93B economic cost)"
+        },
+        {
+          "field": "demographics",
+          "type": "z.array(z.object({ category: z.string(), items: z.array(z.object({ label: z.string(), value: z.string() })) })).optional()",
+          "required": false,
+          "note": "Demographic breakdowns (ethnicity, age) when present"
+        },
+        {
+          "field": "ctaLabel",
+          "type": "z.string()",
+          "required": false,
+          "note": "Closing CTA label (often 'Donate Now')"
+        },
+        {
+          "field": "ctaHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Closing CTA href"
+        }
+      ],
+      "pages": [
+        {
+          "id": 7065,
+          "slug": "our-mission-history",
+          "title": "Mission, Vision & History"
+        },
+        {
+          "id": 271,
+          "slug": "our-mission-historyv1",
+          "title": "Our Mission & History"
+        },
+        {
+          "id": 570,
+          "slug": "the-problem-solution",
+          "title": "The Problem + Solution"
+        },
+        {
+          "id": 610,
+          "slug": "the-juma-model",
+          "title": "The Juma Model"
+        },
+        {
+          "id": 960,
+          "slug": "who-we-serve",
+          "title": "Who We Serve"
+        },
+        {
+          "id": 67,
+          "slug": "causes",
+          "title": "Causes"
+        },
+        {
+          "id": 44,
+          "slug": "leadership",
+          "title": "Leadership"
+        }
+      ]
+    },
+    {
+      "key": "program",
+      "title": "Program / Offering Page",
+      "description": "Explainers for Juma's programs and audience offerings: Our Programs (YouthConnect), Our Program (legacy), Programs v1/v3, Pathways, YouthConnect, Social Enterprise, plus the audience pages For Youth / For Employers / For Volunteers. Pillar-driven structure with stats, eligibility, and benefit lists.",
+      "hasBody": true,
+      "schema": [
+        {
+          "field": "audience",
+          "type": "z.enum(['general','youth','employers','volunteers']).default('general')",
+          "required": false,
+          "note": "Who the page addresses"
+        },
+        {
+          "field": "eyebrow",
+          "type": "z.string()",
+          "required": false,
+          "note": "Small label above the headline (e.g. 'ABOUT JUMA')"
+        },
+        {
+          "field": "heading",
+          "type": "z.string()",
+          "required": true,
+          "note": "Main hero headline"
+        },
+        {
+          "field": "subheading",
+          "type": "z.string()",
+          "required": false,
+          "note": "Supporting hero paragraph / lede"
+        },
+        {
+          "field": "image",
+          "type": "z.string()",
+          "required": false,
+          "note": "Hero background or feature image path"
+        },
+        {
+          "field": "ctaLabel",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA button text"
+        },
+        {
+          "field": "ctaHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA destination URL/path"
+        },
+        {
+          "field": "approach",
+          "type": "z.string()",
+          "required": false,
+          "note": "Program philosophy / approach paragraph"
+        },
+        {
+          "field": "stats",
+          "type": "z.array(z.object({ value: z.string(), label: z.string() }))",
+          "required": false,
+          "note": "Program outcome stats (avg earned, wages, hours)"
+        },
+        {
+          "field": "pillars",
+          "type": "z.array(z.object({ icon: z.string().optional(), title: z.string(), body: z.string() }))",
+          "required": false,
+          "note": "Earn / Learn / Connect (or program component) pillars"
+        },
+        {
+          "field": "eligibility",
+          "type": "z.array(z.string())",
+          "required": false,
+          "note": "Who can apply / who we serve bullet list"
+        },
+        {
+          "field": "benefits",
+          "type": "z.array(z.object({ title: z.string(), body: z.string().optional() }))",
+          "required": false,
+          "note": "Benefit / 'Juma Provides' / 'employers will' lists"
+        },
+        {
+          "field": "ctaLabel",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA (Apply Now / Donate Now)"
+        },
+        {
+          "field": "ctaHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA href"
+        }
+      ],
+      "pages": [
+        {
+          "id": 7044,
+          "slug": "programs",
+          "title": "Our Programs"
+        },
+        {
+          "id": 336,
+          "slug": "our-program",
+          "title": "Our Program"
+        },
+        {
+          "id": 3764,
+          "slug": "programsv1",
+          "title": "Programs"
+        },
+        {
+          "id": 2397,
+          "slug": "programs-3",
+          "title": "Programs"
+        },
+        {
+          "id": 2401,
+          "slug": "pathways",
+          "title": "Pathways"
+        },
+        {
+          "id": 2410,
+          "slug": "youthconnect",
+          "title": "YouthConnect"
+        },
+        {
+          "id": 937,
+          "slug": "apply",
+          "title": "For Youth"
+        },
+        {
+          "id": 1551,
+          "slug": "employer",
+          "title": "For Employers"
+        },
+        {
+          "id": 1844,
+          "slug": "volunteer",
+          "title": "For Volunteers"
+        },
+        {
+          "id": 2280,
+          "slug": "social-enterprise",
+          "title": "Social Enterprise"
+        }
+      ]
+    },
+    {
+      "key": "staff-bio",
+      "title": "Staff / Leadership Bio",
+      "description": "Individual leadership & staff profile pages. Each has a role title, narrative bio, and often an email. Designed as a collection so a Leadership/Team index can render them.",
+      "hasBody": true,
+      "schema": [
+        {
+          "field": "name",
+          "type": "z.string()",
+          "required": true,
+          "note": "Person's full name"
+        },
+        {
+          "field": "role",
+          "type": "z.string()",
+          "required": true,
+          "note": "Job title (e.g. Chief Executive Officer, Senior Advisor)"
+        },
+        {
+          "field": "photo",
+          "type": "z.string()",
+          "required": false,
+          "note": "Headshot image path"
+        },
+        {
+          "field": "email",
+          "type": "z.string()",
+          "required": false,
+          "note": "Contact email if published"
+        },
+        {
+          "field": "isAlum",
+          "type": "z.boolean().default(false)",
+          "required": false,
+          "note": "True when the staff member is also a Juma program alum"
+        },
+        {
+          "field": "order",
+          "type": "z.number().optional()",
+          "required": false,
+          "note": "Sort order within leadership listings"
+        }
+      ],
+      "pages": [
+        {
+          "id": 927,
+          "slug": "adriane-gamble-armstrong",
+          "title": "Adriane Gamble Armstrong"
+        },
+        {
+          "id": 1082,
+          "slug": "deniseevans",
+          "title": "Denise Evans"
+        },
+        {
+          "id": 1599,
+          "slug": "cassandra-yee",
+          "title": "Cassandra Yee"
+        },
+        {
+          "id": 2517,
+          "slug": "stephen-norris",
+          "title": "Stephen Norris"
+        },
+        {
+          "id": 2712,
+          "slug": "alexis-gunn",
+          "title": "Alexis Gunn"
+        },
+        {
+          "id": 3149,
+          "slug": "jess-lewis",
+          "title": "Jess Lewis"
+        },
+        {
+          "id": 3472,
+          "slug": "alvin-yu",
+          "title": "Alvin Yu"
+        },
+        {
+          "id": 4135,
+          "slug": "sanobar-sajan",
+          "title": "Sanobar Sajan"
+        },
+        {
+          "id": 4273,
+          "slug": "lisa-chin",
+          "title": "Lisa Chin"
+        },
+        {
+          "id": 6283,
+          "slug": "claire-wheeler",
+          "title": "Claire Wheeler"
+        },
+        {
+          "id": 6285,
+          "slug": "michael-rivera",
+          "title": "Michael Rivera"
+        },
+        {
+          "id": 6289,
+          "slug": "megan-hover",
+          "title": "Megan Hover"
+        }
+      ]
+    },
+    {
+      "key": "youth-story",
+      "title": "Youth / Alumni Story",
+      "description": "First-person or narrative success stories of Juma youth and alumni (Alexander, Anthony, Jasenia, Donna, Connor, Steven). Primarily a personal quote/narrative with light metadata; powers a stories index and home testimonial pulls.",
+      "hasBody": true,
+      "schema": [
+        {
+          "field": "name",
+          "type": "z.string()",
+          "required": true,
+          "note": "Youth/alum first name or display name"
+        },
+        {
+          "field": "photo",
+          "type": "z.string()",
+          "required": false,
+          "note": "Portrait image path"
+        },
+        {
+          "field": "location",
+          "type": "z.string()",
+          "required": false,
+          "note": "Associated city/site (e.g. Sacramento)"
+        },
+        {
+          "field": "pullQuote",
+          "type": "z.string()",
+          "required": false,
+          "note": "Short headline quote for cards/carousels"
+        },
+        {
+          "field": "outcome",
+          "type": "z.string()",
+          "required": false,
+          "note": "One-line outcome (e.g. 'Heading to community college')"
+        },
+        {
+          "field": "isFirstPerson",
+          "type": "z.boolean().default(true)",
+          "required": false,
+          "note": "Whether the body is a first-person testimonial"
+        }
+      ],
+      "pages": [
+        {
+          "id": 1622,
+          "slug": "alexanders-story",
+          "title": "Alexander’s Story"
+        },
+        {
+          "id": 1625,
+          "slug": "anthonys-story",
+          "title": "Anthony’s Story"
+        },
+        {
+          "id": 1629,
+          "slug": "jasenias-story",
+          "title": "Jasenia’s Story"
+        },
+        {
+          "id": 2434,
+          "slug": "donna",
+          "title": "Donna"
+        },
+        {
+          "id": 3887,
+          "slug": "meet-connor",
+          "title": "Meet Connor"
+        },
+        {
+          "id": 4301,
+          "slug": "meet-steven",
+          "title": "Meet Steven"
+        }
+      ]
+    },
+    {
+      "key": "job-posting",
+      "title": "Open Job Posting",
+      "description": "Individual open-position descriptions (Director of Major Gifts, Director of Institutional Giving, Director of Development, Director of Finance, HR & People Operations Manager, San Jose Development Director). Structured posting: org profile, summary, responsibilities, qualifications, comp, how-to-apply.",
+      "hasBody": true,
+      "schema": [
+        {
+          "field": "jobTitle",
+          "type": "z.string()",
+          "required": true,
+          "note": "Position title"
+        },
+        {
+          "field": "locations",
+          "type": "z.array(z.string())",
+          "required": false,
+          "note": "Eligible office locations (SF, San Jose, Seattle...)"
+        },
+        {
+          "field": "department",
+          "type": "z.string()",
+          "required": false,
+          "note": "Team / department (e.g. Development)"
+        },
+        {
+          "field": "reportsTo",
+          "type": "z.string()",
+          "required": false,
+          "note": "Reporting manager title"
+        },
+        {
+          "field": "employmentType",
+          "type": "z.string()",
+          "required": false,
+          "note": "Full-time / part-time / exempt"
+        },
+        {
+          "field": "salaryRange",
+          "type": "z.string()",
+          "required": false,
+          "note": "Posted compensation range if listed"
+        },
+        {
+          "field": "summary",
+          "type": "z.string()",
+          "required": false,
+          "note": "Position summary paragraph"
+        },
+        {
+          "field": "responsibilities",
+          "type": "z.array(z.string())",
+          "required": false,
+          "note": "Duties & responsibilities"
+        },
+        {
+          "field": "qualifications",
+          "type": "z.array(z.string())",
+          "required": false,
+          "note": "Required/preferred qualifications"
+        },
+        {
+          "field": "benefits",
+          "type": "z.array(z.string())",
+          "required": false,
+          "note": "Benefits / what we offer"
+        },
+        {
+          "field": "applyHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Application link or instructions URL"
+        },
+        {
+          "field": "isOpen",
+          "type": "z.boolean().default(true)",
+          "required": false,
+          "note": "Whether the posting is currently active"
+        }
+      ],
+      "pages": [
+        {
+          "id": 4235,
+          "slug": "director-of-development",
+          "title": "Director of Development"
+        },
+        {
+          "id": 6769,
+          "slug": "director-of-finance-jd",
+          "title": "Director of Finance (San Francisco, San Jose, Seattle)"
+        },
+        {
+          "id": 6849,
+          "slug": "san-jose-development-director-major-gifts",
+          "title": "San Jose Development Director, Major Gifts"
+        },
+        {
+          "id": 7092,
+          "slug": "hr-people-operations-manager",
+          "title": "HR & People Operations Manager (San Francisco, Sacramento, San Jose)"
+        },
+        {
+          "id": 7106,
+          "slug": "directorofmajorgifts",
+          "title": "Director of Major Gifts"
+        },
+        {
+          "id": 7110,
+          "slug": "directorofinstitutionalgiving",
+          "title": "Director of Institutional Giving"
+        }
+      ]
+    },
+    {
+      "key": "careers-landing",
+      "title": "Careers Landing / Jobs Index",
+      "description": "Work For Juma overview: employer-of-choice culture ('We Are' / 'You Are'), best-in-class benefits, growth opportunities, and a list of current openings linking to individual job postings.",
+      "hasBody": true,
+      "schema": [
+        {
+          "field": "eyebrow",
+          "type": "z.string()",
+          "required": false,
+          "note": "Small label above the headline (e.g. 'ABOUT JUMA')"
+        },
+        {
+          "field": "heading",
+          "type": "z.string()",
+          "required": true,
+          "note": "Main hero headline"
+        },
+        {
+          "field": "subheading",
+          "type": "z.string()",
+          "required": false,
+          "note": "Supporting hero paragraph / lede"
+        },
+        {
+          "field": "image",
+          "type": "z.string()",
+          "required": false,
+          "note": "Hero background or feature image path"
+        },
+        {
+          "field": "ctaLabel",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA button text"
+        },
+        {
+          "field": "ctaHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA destination URL/path"
+        },
+        {
+          "field": "weAre",
+          "type": "z.string()",
+          "required": false,
+          "note": "Culture description ('We Are' section)"
+        },
+        {
+          "field": "youAre",
+          "type": "z.array(z.string())",
+          "required": false,
+          "note": "Ideal-candidate traits ('You Are' bullets)"
+        },
+        {
+          "field": "benefits",
+          "type": "z.array(z.object({ title: z.string(), body: z.string() }))",
+          "required": false,
+          "note": "Benefit categories (Health & Wellness, Growth, etc.)"
+        },
+        {
+          "field": "openingsHeading",
+          "type": "z.string()",
+          "required": false,
+          "note": "Heading above the openings list"
+        },
+        {
+          "field": "openings",
+          "type": "z.array(z.object({ title: z.string(), href: z.string() }))",
+          "required": false,
+          "note": "Links to current job-posting pages (can be derived from collection)"
+        }
+      ],
+      "pages": [
+        {
+          "id": 1726,
+          "slug": "work-for-juma",
+          "title": "Work For Juma"
+        }
+      ]
+    },
+    {
+      "key": "donate",
+      "title": "Donate / Giving Page",
+      "description": "Donation page driven by an embedded giving widget (recurring + one-time amounts, card checkout). Mostly a CTA/embed shell with supporting copy.",
+      "hasBody": false,
+      "schema": [
+        {
+          "field": "eyebrow",
+          "type": "z.string()",
+          "required": false,
+          "note": "Small label above the headline (e.g. 'ABOUT JUMA')"
+        },
+        {
+          "field": "heading",
+          "type": "z.string()",
+          "required": true,
+          "note": "Main hero headline"
+        },
+        {
+          "field": "subheading",
+          "type": "z.string()",
+          "required": false,
+          "note": "Supporting hero paragraph / lede"
+        },
+        {
+          "field": "image",
+          "type": "z.string()",
+          "required": false,
+          "note": "Hero background or feature image path"
+        },
+        {
+          "field": "ctaLabel",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA button text"
+        },
+        {
+          "field": "ctaHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA destination URL/path"
+        },
+        {
+          "field": "intro",
+          "type": "z.string()",
+          "required": false,
+          "note": "Supporting giving copy"
+        },
+        {
+          "field": "embedProvider",
+          "type": "z.string()",
+          "required": false,
+          "note": "Donation platform identifier (e.g. Stripe/Classy/Givebutter)"
+        },
+        {
+          "field": "embedId",
+          "type": "z.string()",
+          "required": false,
+          "note": "Embed / form identifier"
+        },
+        {
+          "field": "suggestedAmounts",
+          "type": "z.array(z.number()).optional()",
+          "required": false,
+          "note": "Preset donation amounts if configured"
+        }
+      ],
+      "pages": [
+        {
+          "id": 3077,
+          "slug": "donate",
+          "title": "Donate"
+        }
+      ]
+    },
+    {
+      "key": "contact",
+      "title": "Contact Page",
+      "description": "Contact Us: routed email contacts by purpose, an inquiry form, and office addresses for each location.",
+      "hasBody": true,
+      "schema": [
+        {
+          "field": "eyebrow",
+          "type": "z.string()",
+          "required": false,
+          "note": "Small label above the headline (e.g. 'ABOUT JUMA')"
+        },
+        {
+          "field": "heading",
+          "type": "z.string()",
+          "required": true,
+          "note": "Main hero headline"
+        },
+        {
+          "field": "subheading",
+          "type": "z.string()",
+          "required": false,
+          "note": "Supporting hero paragraph / lede"
+        },
+        {
+          "field": "image",
+          "type": "z.string()",
+          "required": false,
+          "note": "Hero background or feature image path"
+        },
+        {
+          "field": "ctaLabel",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA button text"
+        },
+        {
+          "field": "ctaHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA destination URL/path"
+        },
+        {
+          "field": "contactRoutes",
+          "type": "z.array(z.object({ purpose: z.string(), email: z.string(), note: z.string().optional() }))",
+          "required": false,
+          "note": "Purpose-specific email routing (donations, HR, partnerships...)"
+        },
+        {
+          "field": "offices",
+          "type": "z.array(z.object({ name: z.string(), address: z.string(), phone: z.string().optional(), fax: z.string().optional() }))",
+          "required": false,
+          "note": "Office locations"
+        },
+        {
+          "field": "showForm",
+          "type": "z.boolean().default(true)",
+          "required": false,
+          "note": "Whether to render the general inquiry form"
+        }
+      ],
+      "pages": [
+        {
+          "id": 98,
+          "slug": "contact",
+          "title": "Contact Us"
+        }
+      ]
+    },
+    {
+      "key": "form",
+      "title": "Form / Sign-up Page",
+      "description": "Standalone form pages: youth Interest Form, Newsletter sign-up, Volunteer Listserve, and per-region Volunteer pages (San Jose, Seattle) listing volunteer opportunities + intro. Captures form purpose, site options, and opportunity list.",
+      "hasBody": true,
+      "schema": [
+        {
+          "field": "eyebrow",
+          "type": "z.string()",
+          "required": false,
+          "note": "Small label above the headline (e.g. 'ABOUT JUMA')"
+        },
+        {
+          "field": "heading",
+          "type": "z.string()",
+          "required": true,
+          "note": "Main hero headline"
+        },
+        {
+          "field": "subheading",
+          "type": "z.string()",
+          "required": false,
+          "note": "Supporting hero paragraph / lede"
+        },
+        {
+          "field": "image",
+          "type": "z.string()",
+          "required": false,
+          "note": "Hero background or feature image path"
+        },
+        {
+          "field": "ctaLabel",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA button text"
+        },
+        {
+          "field": "ctaHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA destination URL/path"
+        },
+        {
+          "field": "formType",
+          "type": "z.enum(['interest','newsletter','volunteer-listserve','volunteer-region'])",
+          "required": true,
+          "note": "Which form this page hosts"
+        },
+        {
+          "field": "intro",
+          "type": "z.string()",
+          "required": false,
+          "note": "Lead-in copy above the form"
+        },
+        {
+          "field": "siteOptions",
+          "type": "z.array(z.string())",
+          "required": false,
+          "note": "Selectable sites/locations in the form"
+        },
+        {
+          "field": "opportunities",
+          "type": "z.array(z.object({ title: z.string(), body: z.string(), details: z.string().optional() }))",
+          "required": false,
+          "note": "Volunteer opportunity descriptions (region pages)"
+        },
+        {
+          "field": "contact",
+          "type": "z.object({ name: z.string(), role: z.string().optional(), email: z.string() }).optional()",
+          "required": false,
+          "note": "Regional contact for volunteer pages"
+        },
+        {
+          "field": "embedId",
+          "type": "z.string()",
+          "required": false,
+          "note": "External form/embed id (Mailchimp, etc.)"
+        }
+      ],
+      "pages": [
+        {
+          "id": 963,
+          "slug": "interest-form",
+          "title": "Interest Form"
+        },
+        {
+          "id": 966,
+          "slug": "newsletter",
+          "title": "Newsletter"
+        },
+        {
+          "id": 2034,
+          "slug": "listserve-form",
+          "title": "Volunteer Listserve"
+        },
+        {
+          "id": 1935,
+          "slug": "san-jose",
+          "title": "San Jose"
+        },
+        {
+          "id": 1944,
+          "slug": "seattle",
+          "title": "Seattle"
+        }
+      ]
+    },
+    {
+      "key": "partners-supporters",
+      "title": "Partners & Supporters / Board Listing",
+      "description": "Grouped-list reference pages: Our Partners & Supporters (venues, teams, concessionaires, brand & corporate/foundation donors) and the Board of Directors roster. Both are categorized lists of named entities/people.",
+      "hasBody": false,
+      "schema": [
+        {
+          "field": "eyebrow",
+          "type": "z.string()",
+          "required": false,
+          "note": "Small label above the headline (e.g. 'ABOUT JUMA')"
+        },
+        {
+          "field": "heading",
+          "type": "z.string()",
+          "required": true,
+          "note": "Main hero headline"
+        },
+        {
+          "field": "subheading",
+          "type": "z.string()",
+          "required": false,
+          "note": "Supporting hero paragraph / lede"
+        },
+        {
+          "field": "image",
+          "type": "z.string()",
+          "required": false,
+          "note": "Hero background or feature image path"
+        },
+        {
+          "field": "ctaLabel",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA button text"
+        },
+        {
+          "field": "ctaHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA destination URL/path"
+        },
+        {
+          "field": "groups",
+          "type": "z.array(z.object({ title: z.string(), items: z.array(z.string()) }))",
+          "required": false,
+          "note": "Categorized lists of partner/venue/donor names"
+        },
+        {
+          "field": "people",
+          "type": "z.array(z.object({ name: z.string(), role: z.string().optional(), org: z.string().optional() })).optional()",
+          "required": false,
+          "note": "Named people for board-of-directors roster"
+        }
+      ],
+      "pages": [
+        {
+          "id": 293,
+          "slug": "our-partners-supporters",
+          "title": "Our Partners & Supporters"
+        },
+        {
+          "id": 352,
+          "slug": "board-of-directors",
+          "title": "Board of Directors"
+        }
+      ]
+    },
+    {
+      "key": "press-news",
+      "title": "Press & News Index",
+      "description": "Aggregation pages: Press (list of external media mentions/links) and Recent Posts (dynamic blog feed). Mostly an index shell; news pulls from the posts collection.",
+      "hasBody": false,
+      "schema": [
+        {
+          "field": "eyebrow",
+          "type": "z.string()",
+          "required": false,
+          "note": "Small label above the headline (e.g. 'ABOUT JUMA')"
+        },
+        {
+          "field": "heading",
+          "type": "z.string()",
+          "required": true,
+          "note": "Main hero headline"
+        },
+        {
+          "field": "subheading",
+          "type": "z.string()",
+          "required": false,
+          "note": "Supporting hero paragraph / lede"
+        },
+        {
+          "field": "image",
+          "type": "z.string()",
+          "required": false,
+          "note": "Hero background or feature image path"
+        },
+        {
+          "field": "ctaLabel",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA button text"
+        },
+        {
+          "field": "ctaHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA destination URL/path"
+        },
+        {
+          "field": "feedType",
+          "type": "z.enum(['press','posts'])",
+          "required": true,
+          "note": "External press clippings vs internal blog feed"
+        },
+        {
+          "field": "clippings",
+          "type": "z.array(z.object({ title: z.string(), outlet: z.string().optional(), href: z.string().optional(), date: z.string().optional() }))",
+          "required": false,
+          "note": "External media mentions (press page)"
+        },
+        {
+          "field": "showPostFeed",
+          "type": "z.boolean().default(false)",
+          "required": false,
+          "note": "Render dynamic post feed (news page)"
+        }
+      ],
+      "pages": [
+        {
+          "id": 421,
+          "slug": "press",
+          "title": "Press"
+        },
+        {
+          "id": 3683,
+          "slug": "news",
+          "title": "Recent Posts"
+        }
+      ]
+    },
+    {
+      "key": "financials-index",
+      "title": "Financials / Transparency Index",
+      "description": "Financials hub: a year-by-year matrix linking to Annual Report, Form 990, and Audited Financial Statement documents. Best modeled as a list referencing the document-link collection.",
+      "hasBody": false,
+      "schema": [
+        {
+          "field": "eyebrow",
+          "type": "z.string()",
+          "required": false,
+          "note": "Small label above the headline (e.g. 'ABOUT JUMA')"
+        },
+        {
+          "field": "heading",
+          "type": "z.string()",
+          "required": true,
+          "note": "Main hero headline"
+        },
+        {
+          "field": "subheading",
+          "type": "z.string()",
+          "required": false,
+          "note": "Supporting hero paragraph / lede"
+        },
+        {
+          "field": "image",
+          "type": "z.string()",
+          "required": false,
+          "note": "Hero background or feature image path"
+        },
+        {
+          "field": "ctaLabel",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA button text"
+        },
+        {
+          "field": "ctaHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA destination URL/path"
+        },
+        {
+          "field": "years",
+          "type": "z.array(z.object({ year: z.number(), annualReport: z.string().optional(), form990: z.string().optional(), auditedStatement: z.string().optional() }))",
+          "required": true,
+          "note": "Per-year document links"
+        }
+      ],
+      "pages": [
+        {
+          "id": 300,
+          "slug": "financials",
+          "title": "Financials"
+        }
+      ]
+    },
+    {
+      "key": "document-link",
+      "title": "Document / PDF Link Page",
+      "description": "Thin pages whose sole purpose is to expose a downloadable PDF (annual reports, Form 990s, audited financial statements). Many legacy ones have an empty body; the canonical data is the document URL + year + type.",
+      "hasBody": false,
+      "schema": [
+        {
+          "field": "docTitle",
+          "type": "z.string()",
+          "required": true,
+          "note": "Document display title"
+        },
+        {
+          "field": "docType",
+          "type": "z.enum(['annual-report','form-990','audited-financial-statement'])",
+          "required": true,
+          "note": "Kind of document"
+        },
+        {
+          "field": "year",
+          "type": "z.number()",
+          "required": true,
+          "note": "Fiscal/report year"
+        },
+        {
+          "field": "fileUrl",
+          "type": "z.string()",
+          "required": false,
+          "note": "PDF download URL (may be missing on legacy stubs)"
+        },
+        {
+          "field": "ctaLabel",
+          "type": "z.string().default('Download')",
+          "required": false,
+          "note": "Download button text"
+        }
+      ],
+      "pages": [
+        {
+          "id": 430,
+          "slug": "2011-annual-report",
+          "title": "2011 Annual Report"
+        },
+        {
+          "id": 528,
+          "slug": "2012-form-990",
+          "title": "2012 Form 990"
+        },
+        {
+          "id": 531,
+          "slug": "2013-annual-report",
+          "title": "2013 Annual Report"
+        },
+        {
+          "id": 535,
+          "slug": "2013-form-990",
+          "title": "2013 Form 990"
+        },
+        {
+          "id": 538,
+          "slug": "2011-audited-financial-statement",
+          "title": "2011 Audited Financial Statement"
+        },
+        {
+          "id": 542,
+          "slug": "2012-audited-financial-statement",
+          "title": "2012 Audited Financial Statement"
+        },
+        {
+          "id": 544,
+          "slug": "2013-financial-statements",
+          "title": "2013 Financial Statements"
+        },
+        {
+          "id": 546,
+          "slug": "2012-annual-report",
+          "title": "2012 Annual Report"
+        },
+        {
+          "id": 548,
+          "slug": "2011-form-990",
+          "title": "2011 Form 990"
+        },
+        {
+          "id": 830,
+          "slug": "2014-audited-financial-statement",
+          "title": "2014 Audited Financial Statement"
+        },
+        {
+          "id": 835,
+          "slug": "2014-annual-report",
+          "title": "2014 Annual Report"
+        },
+        {
+          "id": 1092,
+          "slug": "2014-form-990",
+          "title": "2014 Form 990"
+        },
+        {
+          "id": 3852,
+          "slug": "2017-annual-report",
+          "title": "2017 Annual Report"
+        }
+      ]
+    },
+    {
+      "key": "video",
+      "title": "Video Spotlight Page",
+      "description": "'Get to Know Juma <City>' pages built around a single embedded video plus a short blurb and a back-link to the location page.",
+      "hasBody": false,
+      "schema": [
+        {
+          "field": "eyebrow",
+          "type": "z.string()",
+          "required": false,
+          "note": "Small label above the headline (e.g. 'ABOUT JUMA')"
+        },
+        {
+          "field": "heading",
+          "type": "z.string()",
+          "required": true,
+          "note": "Main hero headline"
+        },
+        {
+          "field": "subheading",
+          "type": "z.string()",
+          "required": false,
+          "note": "Supporting hero paragraph / lede"
+        },
+        {
+          "field": "image",
+          "type": "z.string()",
+          "required": false,
+          "note": "Hero background or feature image path"
+        },
+        {
+          "field": "ctaLabel",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA button text"
+        },
+        {
+          "field": "ctaHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA destination URL/path"
+        },
+        {
+          "field": "videoUrl",
+          "type": "z.string()",
+          "required": true,
+          "note": "Embedded video URL (YouTube/Vimeo)"
+        },
+        {
+          "field": "blurb",
+          "type": "z.string()",
+          "required": false,
+          "note": "Short description below the video"
+        },
+        {
+          "field": "backLinkLabel",
+          "type": "z.string()",
+          "required": false,
+          "note": "Back-link text (e.g. 'Back to Juma Sacramento')"
+        },
+        {
+          "field": "backLinkHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Back-link destination"
+        }
+      ],
+      "pages": [
+        {
+          "id": 3893,
+          "slug": "get-know-juma-seattle",
+          "title": "Get to Know Juma Seattle"
+        },
+        {
+          "id": 4130,
+          "slug": "get-know-juma-san-jose",
+          "title": "Get to Know Juma San Jose"
+        },
+        {
+          "id": 4297,
+          "slug": "get-know-juma-sacramento",
+          "title": "Get to Know Juma Sacramento"
+        }
+      ]
+    },
+    {
+      "key": "legal-notice",
+      "title": "Legal / Notice Page",
+      "description": "Static policy and confirmation pages: Donor Privacy Policy (legal prose) and Subscription Confirmation (post-signup thank-you). Simple title + body.",
+      "hasBody": true,
+      "schema": [
+        {
+          "field": "heading",
+          "type": "z.string()",
+          "required": true,
+          "note": "Page heading"
+        },
+        {
+          "field": "noticeType",
+          "type": "z.enum(['policy','confirmation']).default('policy')",
+          "required": false,
+          "note": "Legal policy vs transactional confirmation message"
+        },
+        {
+          "field": "lastUpdated",
+          "type": "z.string().optional()",
+          "required": false,
+          "note": "Policy revision date if shown"
+        }
+      ],
+      "pages": [
+        {
+          "id": 1668,
+          "slug": "donor-privacy-policy",
+          "title": "Donor Privacy Policy"
+        },
+        {
+          "id": 1285,
+          "slug": "subscription-confirmation",
+          "title": "Subscription Confirmation"
+        }
+      ]
+    },
+    {
+      "key": "campaign",
+      "title": "Campaign / Anniversary Microsite",
+      "description": "The 30-Years anniversary microsite: a long, section-rich landing page (journey timeline, gala, youth/alumni spotlights, 30-for-30 campaign, donate CTA). One-off, section-driven layout.",
+      "hasBody": true,
+      "schema": [
+        {
+          "field": "eyebrow",
+          "type": "z.string()",
+          "required": false,
+          "note": "Small label above the headline (e.g. 'ABOUT JUMA')"
+        },
+        {
+          "field": "heading",
+          "type": "z.string()",
+          "required": true,
+          "note": "Main hero headline"
+        },
+        {
+          "field": "subheading",
+          "type": "z.string()",
+          "required": false,
+          "note": "Supporting hero paragraph / lede"
+        },
+        {
+          "field": "image",
+          "type": "z.string()",
+          "required": false,
+          "note": "Hero background or feature image path"
+        },
+        {
+          "field": "ctaLabel",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA button text"
+        },
+        {
+          "field": "ctaHref",
+          "type": "z.string()",
+          "required": false,
+          "note": "Primary CTA destination URL/path"
+        },
+        {
+          "field": "sections",
+          "type": "z.array(z.object({ id: z.string().optional(), heading: z.string(), body: z.string().optional(), image: z.string().optional() }))",
+          "required": true,
+          "note": "Ordered campaign sections (Journey, Gala, Spotlights, 30-for-30)"
+        },
+        {
+          "field": "timeline",
+          "type": "z.array(z.object({ year: z.string(), milestone: z.string() })).optional()",
+          "required": false,
+          "note": "Anniversary milestone timeline"
+        },
+        {
+          "field": "ctas",
+          "type": "z.array(z.object({ label: z.string(), href: z.string() }))",
+          "required": false,
+          "note": "Donate / event CTAs"
+        }
+      ],
+      "pages": [
+        {
+          "id": 5448,
+          "slug": "30-years",
+          "title": "30"
+        }
+      ]
+    },
+    {
+      "key": "stub-redirect",
+      "title": "Empty Stub / Redirect Placeholder",
+      "description": "Pages with no real content body, kept as navigation anchors or redirects. 'Impact & Stories' (year-in-numbers) currently has empty content.rendered and likely serves as a section landing/redirect; should be rebuilt as an index or pointed elsewhere.",
+      "hasBody": false,
+      "schema": [
+        {
+          "field": "heading",
+          "type": "z.string()",
+          "required": true,
+          "note": "Title to display"
+        },
+        {
+          "field": "redirectTo",
+          "type": "z.string().optional()",
+          "required": false,
+          "note": "Target path if this should redirect"
+        },
+        {
+          "field": "note",
+          "type": "z.string().optional()",
+          "required": false,
+          "note": "Migration note for whoever rebuilds it"
+        }
+      ],
+      "pages": [
+        {
+          "id": 589,
+          "slug": "year-in-numbers",
+          "title": "Impact & Stories"
+        }
+      ]
+    }
+  ],
+  "unassigned": []
+}

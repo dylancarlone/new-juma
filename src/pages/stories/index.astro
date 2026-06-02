@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import PageHeader from "@/components/sections/PageHeader.astro";
+import StoryCard from "@/components/cards/StoryCard.astro";
+import CTABanner from "@/components/sections/CTABanner.astro";
+
+const stories = (await getCollection("story", (s) => !s.data.draft)).sort(
+  (a, b) => (a.data.order ?? 99) - (b.data.order ?? 99)
+);
+---
+
+<BaseLayout title="Impact & Stories" description="Meet the young people whose lives have been transformed through Juma Ventures.">
+  <PageHeader eyebrow="Impact & Stories" title="Youth Voices" description="Behind every statistic is a young person writing their own success story." />
+  <Container class="py-14 md:py-20">
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        stories.map((s) => (
+          <StoryCard
+            href={`/stories/${s.id}/`}
+            name={s.data.name}
+            photo={s.data.photo}
+            pullQuote={s.data.pullQuote}
+            outcome={s.data.outcome}
+            location={s.data.location}
+          />
+        ))
+      }
+    </div>
+  </Container>
+  <CTABanner heading="Be part of the next success story." />
+</BaseLayout>

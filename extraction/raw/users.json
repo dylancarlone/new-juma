@@ -1,0 +1,614 @@
+[
+  {
+    "id": 14,
+    "name": "Byron McGovern",
+    "url": "",
+    "description": "",
+    "link": "https://juma.org/author/byron/",
+    "slug": "byron",
+    "avatar_urls": {
+      "24": "https://secure.gravatar.com/avatar/538890dd075d02f8cf816abfb9e21542c525c952dfcf114fbf80ab63cc9dc2ba?s=24&d=mm&r=g",
+      "48": "https://secure.gravatar.com/avatar/538890dd075d02f8cf816abfb9e21542c525c952dfcf114fbf80ab63cc9dc2ba?s=48&d=mm&r=g",
+      "96": "https://secure.gravatar.com/avatar/538890dd075d02f8cf816abfb9e21542c525c952dfcf114fbf80ab63cc9dc2ba?s=96&d=mm&r=g"
+    },
+    "meta": {
+      "simpay_dashboard_widget_report_range": {
+        "start": "2026-05-27 00:00:00",
+        "end": "2026-06-02 23:59:59",
+        "type": "7days"
+      },
+      "simpay_dashboard_widget_report_currency": "usd",
+      "simpay_activity_reports_range": {
+        "start": "2026-05-27 00:00:00",
+        "end": "2026-06-02 23:59:59",
+        "type": "7days"
+      },
+      "simpay_activity_reports_currency": "usd"
+    },
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Byron McGovern, Author at Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/author/byron/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"profile\" />\n<meta property=\"og:title\" content=\"Byron McGovern, Author at Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/author/byron/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta property=\"og:image\" content=\"https://secure.gravatar.com/avatar/538890dd075d02f8cf816abfb9e21542c525c952dfcf114fbf80ab63cc9dc2ba?s=500&d=mm&r=g\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"ProfilePage\",\"@id\":\"https:\\/\\/juma.org\\/author\\/byron\\/\",\"url\":\"https:\\/\\/juma.org\\/author\\/byron\\/\",\"name\":\"Byron McGovern, Author at Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/author\\/byron\\/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/juma.org\\/author\\/byron\\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/author\\/byron\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Archives for Byron McGovern\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Person\",\"@id\":\"https:\\/\\/juma.org\\/#\\/schema\\/person\\/87a39774c1aa7ab68f2e9ea5a45dbbae\",\"name\":\"Byron McGovern\",\"image\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/538890dd075d02f8cf816abfb9e21542c525c952dfcf114fbf80ab63cc9dc2ba?s=96&d=mm&r=g\",\"url\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/538890dd075d02f8cf816abfb9e21542c525c952dfcf114fbf80ab63cc9dc2ba?s=96&d=mm&r=g\",\"contentUrl\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/538890dd075d02f8cf816abfb9e21542c525c952dfcf114fbf80ab63cc9dc2ba?s=96&d=mm&r=g\",\"caption\":\"Byron McGovern\"},\"mainEntityOfPage\":{\"@id\":\"https:\\/\\/juma.org\\/author\\/byron\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Byron McGovern, Author at Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/author/byron/",
+      "og_locale": "en_US",
+      "og_type": "profile",
+      "og_title": "Byron McGovern, Author at Juma",
+      "og_url": "https://juma.org/author/byron/",
+      "og_site_name": "Juma",
+      "og_image": [
+        {
+          "url": "https://secure.gravatar.com/avatar/538890dd075d02f8cf816abfb9e21542c525c952dfcf114fbf80ab63cc9dc2ba?s=500&d=mm&r=g",
+          "type": "",
+          "width": "",
+          "height": ""
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfilePage",
+            "@id": "https://juma.org/author/byron/",
+            "url": "https://juma.org/author/byron/",
+            "name": "Byron McGovern, Author at Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/author/byron/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": [
+                  "https://juma.org/author/byron/"
+                ]
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/author/byron/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Archives for Byron McGovern"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://juma.org/#/schema/person/87a39774c1aa7ab68f2e9ea5a45dbbae",
+            "name": "Byron McGovern",
+            "image": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://secure.gravatar.com/avatar/538890dd075d02f8cf816abfb9e21542c525c952dfcf114fbf80ab63cc9dc2ba?s=96&d=mm&r=g",
+              "url": "https://secure.gravatar.com/avatar/538890dd075d02f8cf816abfb9e21542c525c952dfcf114fbf80ab63cc9dc2ba?s=96&d=mm&r=g",
+              "contentUrl": "https://secure.gravatar.com/avatar/538890dd075d02f8cf816abfb9e21542c525c952dfcf114fbf80ab63cc9dc2ba?s=96&d=mm&r=g",
+              "caption": "Byron McGovern"
+            },
+            "mainEntityOfPage": {
+              "@id": "https://juma.org/author/byron/"
+            }
+          }
+        ]
+      }
+    },
+    "elementor_introduction": {
+      "yoast-introduction-editor-v2": true
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/users/14",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/users"
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "name": "Juma Ventures",
+    "url": "",
+    "description": "",
+    "link": "https://juma.org/author/juma-ventures/",
+    "slug": "juma-ventures",
+    "avatar_urls": {
+      "24": "https://secure.gravatar.com/avatar/0fb51bcb290aa7bce4fffcf3867a95bb8ba58b3ccc95994f9449b23b377c2303?s=24&d=mm&r=g",
+      "48": "https://secure.gravatar.com/avatar/0fb51bcb290aa7bce4fffcf3867a95bb8ba58b3ccc95994f9449b23b377c2303?s=48&d=mm&r=g",
+      "96": "https://secure.gravatar.com/avatar/0fb51bcb290aa7bce4fffcf3867a95bb8ba58b3ccc95994f9449b23b377c2303?s=96&d=mm&r=g"
+    },
+    "meta": {
+      "simpay_dashboard_widget_report_range": {
+        "start": "2026-05-27 00:00:00",
+        "end": "2026-06-02 23:59:59",
+        "type": "7days"
+      },
+      "simpay_dashboard_widget_report_currency": "usd",
+      "simpay_activity_reports_range": {
+        "start": "2026-05-27 00:00:00",
+        "end": "2026-06-02 23:59:59",
+        "type": "7days"
+      },
+      "simpay_activity_reports_currency": "usd"
+    },
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Juma Ventures, Author at Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/author/juma-ventures/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"profile\" />\n<meta property=\"og:title\" content=\"Juma Ventures, Author at Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/author/juma-ventures/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta property=\"og:image\" content=\"https://secure.gravatar.com/avatar/0fb51bcb290aa7bce4fffcf3867a95bb8ba58b3ccc95994f9449b23b377c2303?s=500&d=mm&r=g\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"ProfilePage\",\"@id\":\"https:\\/\\/juma.org\\/author\\/juma-ventures\\/\",\"url\":\"https:\\/\\/juma.org\\/author\\/juma-ventures\\/\",\"name\":\"Juma Ventures, Author at Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/author\\/juma-ventures\\/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/juma.org\\/author\\/juma-ventures\\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/author\\/juma-ventures\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Archives for Juma Ventures\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Person\",\"@id\":\"https:\\/\\/juma.org\\/#\\/schema\\/person\\/40f9799e1a6c5cbffe8df9c5ed8e29f5\",\"name\":\"Juma Ventures\",\"image\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/0fb51bcb290aa7bce4fffcf3867a95bb8ba58b3ccc95994f9449b23b377c2303?s=96&d=mm&r=g\",\"url\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/0fb51bcb290aa7bce4fffcf3867a95bb8ba58b3ccc95994f9449b23b377c2303?s=96&d=mm&r=g\",\"contentUrl\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/0fb51bcb290aa7bce4fffcf3867a95bb8ba58b3ccc95994f9449b23b377c2303?s=96&d=mm&r=g\",\"caption\":\"Juma Ventures\"},\"mainEntityOfPage\":{\"@id\":\"https:\\/\\/juma.org\\/author\\/juma-ventures\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Juma Ventures, Author at Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/author/juma-ventures/",
+      "og_locale": "en_US",
+      "og_type": "profile",
+      "og_title": "Juma Ventures, Author at Juma",
+      "og_url": "https://juma.org/author/juma-ventures/",
+      "og_site_name": "Juma",
+      "og_image": [
+        {
+          "url": "https://secure.gravatar.com/avatar/0fb51bcb290aa7bce4fffcf3867a95bb8ba58b3ccc95994f9449b23b377c2303?s=500&d=mm&r=g",
+          "type": "",
+          "width": "",
+          "height": ""
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfilePage",
+            "@id": "https://juma.org/author/juma-ventures/",
+            "url": "https://juma.org/author/juma-ventures/",
+            "name": "Juma Ventures, Author at Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/author/juma-ventures/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": [
+                  "https://juma.org/author/juma-ventures/"
+                ]
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/author/juma-ventures/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Archives for Juma Ventures"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://juma.org/#/schema/person/40f9799e1a6c5cbffe8df9c5ed8e29f5",
+            "name": "Juma Ventures",
+            "image": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://secure.gravatar.com/avatar/0fb51bcb290aa7bce4fffcf3867a95bb8ba58b3ccc95994f9449b23b377c2303?s=96&d=mm&r=g",
+              "url": "https://secure.gravatar.com/avatar/0fb51bcb290aa7bce4fffcf3867a95bb8ba58b3ccc95994f9449b23b377c2303?s=96&d=mm&r=g",
+              "contentUrl": "https://secure.gravatar.com/avatar/0fb51bcb290aa7bce4fffcf3867a95bb8ba58b3ccc95994f9449b23b377c2303?s=96&d=mm&r=g",
+              "caption": "Juma Ventures"
+            },
+            "mainEntityOfPage": {
+              "@id": "https://juma.org/author/juma-ventures/"
+            }
+          }
+        ]
+      }
+    },
+    "elementor_introduction": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/users/3",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/users"
+        }
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "name": "Lucia",
+    "url": "",
+    "description": "",
+    "link": "https://juma.org/author/lucia/",
+    "slug": "lucia",
+    "avatar_urls": {
+      "24": "https://secure.gravatar.com/avatar/20b53f73393c8d66a8c20fbb959d8e294222e86eebb7c7422454a4861178967a?s=24&d=mm&r=g",
+      "48": "https://secure.gravatar.com/avatar/20b53f73393c8d66a8c20fbb959d8e294222e86eebb7c7422454a4861178967a?s=48&d=mm&r=g",
+      "96": "https://secure.gravatar.com/avatar/20b53f73393c8d66a8c20fbb959d8e294222e86eebb7c7422454a4861178967a?s=96&d=mm&r=g"
+    },
+    "meta": {
+      "simpay_dashboard_widget_report_range": {
+        "start": "2026-05-27 00:00:00",
+        "end": "2026-06-02 23:59:59",
+        "type": "7days"
+      },
+      "simpay_dashboard_widget_report_currency": "usd",
+      "simpay_activity_reports_range": {
+        "start": "2026-05-27 00:00:00",
+        "end": "2026-06-02 23:59:59",
+        "type": "7days"
+      },
+      "simpay_activity_reports_currency": "usd"
+    },
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Lucia, Author at Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/author/lucia/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"profile\" />\n<meta property=\"og:title\" content=\"Lucia, Author at Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/author/lucia/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta property=\"og:image\" content=\"https://secure.gravatar.com/avatar/bd66ea761f05baff1a00f980eabb5517?s=500&d=mm&r=g\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"ProfilePage\",\"@id\":\"https:\\/\\/juma.org\\/author\\/lucia\\/\",\"url\":\"https:\\/\\/juma.org\\/author\\/lucia\\/\",\"name\":\"Lucia, Author at Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/author\\/lucia\\/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/juma.org\\/author\\/lucia\\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/author\\/lucia\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Archives for Lucia\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Person\",\"@id\":\"https:\\/\\/juma.org\\/#\\/schema\\/person\\/b697ecab3b1990a961aad62e88c87607\",\"name\":\"Lucia\",\"image\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/20b53f73393c8d66a8c20fbb959d8e294222e86eebb7c7422454a4861178967a?s=96&d=mm&r=g\",\"url\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/20b53f73393c8d66a8c20fbb959d8e294222e86eebb7c7422454a4861178967a?s=96&d=mm&r=g\",\"contentUrl\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/20b53f73393c8d66a8c20fbb959d8e294222e86eebb7c7422454a4861178967a?s=96&d=mm&r=g\",\"caption\":\"Lucia\"},\"mainEntityOfPage\":{\"@id\":\"https:\\/\\/juma.org\\/author\\/lucia\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Lucia, Author at Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/author/lucia/",
+      "og_locale": "en_US",
+      "og_type": "profile",
+      "og_title": "Lucia, Author at Juma",
+      "og_url": "https://juma.org/author/lucia/",
+      "og_site_name": "Juma",
+      "og_image": [
+        {
+          "url": "https://secure.gravatar.com/avatar/bd66ea761f05baff1a00f980eabb5517?s=500&d=mm&r=g",
+          "type": "",
+          "width": "",
+          "height": ""
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfilePage",
+            "@id": "https://juma.org/author/lucia/",
+            "url": "https://juma.org/author/lucia/",
+            "name": "Lucia, Author at Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/author/lucia/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": [
+                  "https://juma.org/author/lucia/"
+                ]
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/author/lucia/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Archives for Lucia"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://juma.org/#/schema/person/b697ecab3b1990a961aad62e88c87607",
+            "name": "Lucia",
+            "image": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://secure.gravatar.com/avatar/20b53f73393c8d66a8c20fbb959d8e294222e86eebb7c7422454a4861178967a?s=96&d=mm&r=g",
+              "url": "https://secure.gravatar.com/avatar/20b53f73393c8d66a8c20fbb959d8e294222e86eebb7c7422454a4861178967a?s=96&d=mm&r=g",
+              "contentUrl": "https://secure.gravatar.com/avatar/20b53f73393c8d66a8c20fbb959d8e294222e86eebb7c7422454a4861178967a?s=96&d=mm&r=g",
+              "caption": "Lucia"
+            },
+            "mainEntityOfPage": {
+              "@id": "https://juma.org/author/lucia/"
+            }
+          }
+        ]
+      }
+    },
+    "elementor_introduction": "",
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/users/10",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/users"
+        }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "name": "Ren",
+    "url": "",
+    "description": "",
+    "link": "https://juma.org/author/ren/",
+    "slug": "ren",
+    "avatar_urls": {
+      "24": "https://secure.gravatar.com/avatar/4d4f3f03ef3037de02ad532647f010b1e1d7e75cf7aea5b7b52ea07c2fee718b?s=24&d=mm&r=g",
+      "48": "https://secure.gravatar.com/avatar/4d4f3f03ef3037de02ad532647f010b1e1d7e75cf7aea5b7b52ea07c2fee718b?s=48&d=mm&r=g",
+      "96": "https://secure.gravatar.com/avatar/4d4f3f03ef3037de02ad532647f010b1e1d7e75cf7aea5b7b52ea07c2fee718b?s=96&d=mm&r=g"
+    },
+    "meta": {
+      "simpay_dashboard_widget_report_range": {
+        "start": "2026-05-27 00:00:00",
+        "end": "2026-06-02 23:59:59",
+        "type": "7days"
+      },
+      "simpay_dashboard_widget_report_currency": "usd",
+      "simpay_activity_reports_range": {
+        "start": "2026-05-27 00:00:00",
+        "end": "2026-06-02 23:59:59",
+        "type": "7days"
+      },
+      "simpay_activity_reports_currency": "usd"
+    },
+    "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v27.7 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Ren, Author at Juma</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://juma.org/author/ren/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"profile\" />\n<meta property=\"og:title\" content=\"Ren, Author at Juma\" />\n<meta property=\"og:url\" content=\"https://juma.org/author/ren/\" />\n<meta property=\"og:site_name\" content=\"Juma\" />\n<meta property=\"og:image\" content=\"https://secure.gravatar.com/avatar/4d4f3f03ef3037de02ad532647f010b1e1d7e75cf7aea5b7b52ea07c2fee718b?s=500&d=mm&r=g\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"ProfilePage\",\"@id\":\"https:\\/\\/juma.org\\/author\\/ren\\/\",\"url\":\"https:\\/\\/juma.org\\/author\\/ren\\/\",\"name\":\"Ren, Author at Juma\",\"isPartOf\":{\"@id\":\"https:\\/\\/juma.org\\/#website\"},\"breadcrumb\":{\"@id\":\"https:\\/\\/juma.org\\/author\\/ren\\/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/juma.org\\/author\\/ren\\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/juma.org\\/author\\/ren\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/juma.org\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Archives for Ren\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/juma.org\\/#website\",\"url\":\"https:\\/\\/juma.org\\/\",\"name\":\"Juma\",\"description\":\"Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.\",\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/juma.org\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Person\",\"@id\":\"https:\\/\\/juma.org\\/#\\/schema\\/person\\/cf3a3d9a5ee344b01f939e1f96992e7d\",\"name\":\"Ren\",\"image\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/4d4f3f03ef3037de02ad532647f010b1e1d7e75cf7aea5b7b52ea07c2fee718b?s=96&d=mm&r=g\",\"url\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/4d4f3f03ef3037de02ad532647f010b1e1d7e75cf7aea5b7b52ea07c2fee718b?s=96&d=mm&r=g\",\"contentUrl\":\"https:\\/\\/secure.gravatar.com\\/avatar\\/4d4f3f03ef3037de02ad532647f010b1e1d7e75cf7aea5b7b52ea07c2fee718b?s=96&d=mm&r=g\",\"caption\":\"Ren\"},\"mainEntityOfPage\":{\"@id\":\"https:\\/\\/juma.org\\/author\\/ren\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+    "yoast_head_json": {
+      "title": "Ren, Author at Juma",
+      "robots": {
+        "index": "index",
+        "follow": "follow",
+        "max-snippet": "max-snippet:-1",
+        "max-image-preview": "max-image-preview:large",
+        "max-video-preview": "max-video-preview:-1"
+      },
+      "canonical": "https://juma.org/author/ren/",
+      "og_locale": "en_US",
+      "og_type": "profile",
+      "og_title": "Ren, Author at Juma",
+      "og_url": "https://juma.org/author/ren/",
+      "og_site_name": "Juma",
+      "og_image": [
+        {
+          "url": "https://secure.gravatar.com/avatar/4d4f3f03ef3037de02ad532647f010b1e1d7e75cf7aea5b7b52ea07c2fee718b?s=500&d=mm&r=g",
+          "type": "",
+          "width": "",
+          "height": ""
+        }
+      ],
+      "twitter_card": "summary_large_image",
+      "schema": {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfilePage",
+            "@id": "https://juma.org/author/ren/",
+            "url": "https://juma.org/author/ren/",
+            "name": "Ren, Author at Juma",
+            "isPartOf": {
+              "@id": "https://juma.org/#website"
+            },
+            "breadcrumb": {
+              "@id": "https://juma.org/author/ren/#breadcrumb"
+            },
+            "inLanguage": "en-US",
+            "potentialAction": [
+              {
+                "@type": "ReadAction",
+                "target": [
+                  "https://juma.org/author/ren/"
+                ]
+              }
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://juma.org/author/ren/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://juma.org/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Archives for Ren"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://juma.org/#website",
+            "url": "https://juma.org/",
+            "name": "Juma",
+            "description": "Juma strives to break the cycle of poverty by paving the way to work, education, and financial capability for youth across America.",
+            "potentialAction": [
+              {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://juma.org/?s={search_term_string}"
+                },
+                "query-input": {
+                  "@type": "PropertyValueSpecification",
+                  "valueRequired": true,
+                  "valueName": "search_term_string"
+                }
+              }
+            ],
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://juma.org/#/schema/person/cf3a3d9a5ee344b01f939e1f96992e7d",
+            "name": "Ren",
+            "image": {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://secure.gravatar.com/avatar/4d4f3f03ef3037de02ad532647f010b1e1d7e75cf7aea5b7b52ea07c2fee718b?s=96&d=mm&r=g",
+              "url": "https://secure.gravatar.com/avatar/4d4f3f03ef3037de02ad532647f010b1e1d7e75cf7aea5b7b52ea07c2fee718b?s=96&d=mm&r=g",
+              "contentUrl": "https://secure.gravatar.com/avatar/4d4f3f03ef3037de02ad532647f010b1e1d7e75cf7aea5b7b52ea07c2fee718b?s=96&d=mm&r=g",
+              "caption": "Ren"
+            },
+            "mainEntityOfPage": {
+              "@id": "https://juma.org/author/ren/"
+            }
+          }
+        ]
+      }
+    },
+    "elementor_introduction": {
+      "yoast-introduction-editor-v2": true
+    },
+    "_links": {
+      "self": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/users/9",
+          "targetHints": {
+            "allow": [
+              "GET"
+            ]
+          }
+        }
+      ],
+      "collection": [
+        {
+          "href": "https://juma.org/wp-json/wp/v2/users"
+        }
+      ]
+    }
+  }
+]

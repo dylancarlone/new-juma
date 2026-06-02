@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "team",
+    "name": "Team",
+    "role": "Team Archive (staff listing page)",
+    "group": "staff",
+    "bio": "Team archive/listing page that links to Juma Ventures staff member profiles (Lisa Chin, Cassandra Yee, Alvin Yu, Stephen Norris, Claire Wheeler, Michael Rivera, Megan Hover, and Denise Evans). This URL is the index, not an individual profile.",
+    "photoUrl": null,
+    "location": null,
+    "sourceUrl": "https://juma.org/team/"
+  },
+  {
+    "slug": "alvin-yu",
+    "name": "Alvin Yu",
+    "role": "Director of Venue Operations",
+    "group": "staff",
+    "bio": "Alvin Yu is a proud alumni of JUMA class of 2007. Prior to his return to the organization, Alvin was involved in banking and small business management and earned a degree in Business Management & Operations along the way. His very first role was as an assistant in the Social Enterprise Department where he thrived and advanced. He has a unique perspective on providing meaningful work experience and running a sustainable enterprise. Alvin is responsible for the execution of Juma Ventures’ nationally recognized Social Enterprise operation in four (4) markets: San Francisco, San Jose, Sacramento, and Seattle. Today, Juma holds staffing contracts with (25) Convention Centers and Professional Sports & Entertainment venues during Major League Baseball (MLB), National Football League (NFL), National Basketball Association (NBA), Major League Soccer (MLS) events. He oversees the Enterprise daily operations, training infrastructures, and business development for JUMA.",
+    "photoUrl": "https://juma.org/wp-content/uploads/2015/05/Noah-Halton-Website.png",
+    "location": null,
+    "sourceUrl": "https://juma.org/team/alvin-yu/"
+  },
+  {
+    "slug": "stephen-norris",
+    "name": "Stephen Norris",
+    "role": "California Government Contracts Director",
+    "group": "staff",
+    "bio": "Stephen Norris has been working in the youth development nonprofit field for 8 years. Prior to his current role, Stephen served as Juma’s Sacramento Director of Development where he continues to build up Juma’s presence in Sacramento and provide Sacramento’s opportunity youth with the skills needed to succeed in their chosen career. He started working with Juma in the spring of 2013 as the Seattle Enterprise Manager, working to train, employ, and supervise over 100 young adults per year across multiple venues. In 2016, Stephen moved to Texas to assist Juma in setting up brand new sites in both Dallas and Houston, where he built up relationships with multiple community based organizations to recruit Juma young adults, and employ them across multiple venues. Stephen graduated from the University of Virginia in 2007 with a degree in Economics. He started his path in the youth development field in 2009 as an Americorps Service Learning Fellow with The Choice Program, helping reduce recidivism for youth who had been through the juvenile justice system in Baltimore. He stayed with The Choice Program after his year of service was done and eventually became Assistant Director overseeing multiple teams of service providers. He currently resides in Sacramento.",
+    "photoUrl": "https://juma.org/wp-content/uploads/2015/05/Stephen_website.jpg",
+    "location": "California",
+    "sourceUrl": "https://juma.org/team/stephen-norris/"
+  },
+  {
+    "slug": "michael-rivera",
+    "name": "Michael Rivera",
+    "role": "Bay Area Site Director",
+    "group": "staff",
+    "bio": "Michael Rivera began his nonprofit journey with Juma in 2015 as Assistant Enterprise Manager. He soon earned a promotion to Enterprise Manager, where he led social enterprise operations in San Francisco until 2020. In 2023, Michael rejoined Juma as the Bay Area Site Director and is focused on driving the growth of social enterprise operations and deepening youth impact across San Francisco and San Jose. Michael holds a Bachelor’s Degree in Business Administration and Management from San Francisco State University and a Master’s Degree in Sport Management from the University of Francisco.",
+    "photoUrl": "https://juma.org/wp-content/uploads/2024/10/michael-rivera.jpg",
+    "location": "Bay Area",
+    "sourceUrl": "https://juma.org/team/michael-rivera/"
+  },
+  {
+    "slug": "cassandra-yee",
+    "name": "Cassandra Yee",
+    "role": "Chief People Officer & General Counsel",
+    "group": "staff",
+    "bio": "Cassandra Yee arrived at Juma with extensive experience in employment and labor law. She earned her J.D. from Santa Clara University School of Law, where she focused on labor law issues ranging from the private to public sector. Prior to her law practice, Cassandra actively assisted nonprofits throughout Northern and Southern California, seeking to resolve gaps in community educational resources, as well as, to provide crisis intervention and career support services for battered women. During law school, she provided legal services to low-income clients in disputes involving wage and hour claims, harassment, retaliation, discrimination and wrongful termination and gained additional experience serving several departments in the Office of the City Attorney, San Francisco. She now oversees the HR, legal compliance, and evaluation operations at Juma Ventures.",
+    "photoUrl": "https://juma.org/wp-content/uploads/2017/03/Cassandra_website.jpg",
+    "location": null,
+    "sourceUrl": "https://juma.org/team/cassandra-yee/"
+  },
+  {
+    "slug": "megan-hover",
+    "name": "Megan Hover",
+    "role": "Bay Area Development Director",
+    "group": "staff",
+    "bio": "Megan Hover has over a decade of experience as a fundraising professional advancing nonprofit organizations across the United States. Megan believes in the power of an inclusive society where everyone can explore their passions and thrive. Throughout her career, she has worked with organizations that support trauma-impacted communities, including children in foster care, low-income youth, and adults with disabilities. After relocating to the San Francisco Bay Area, Megan joined Juma, contributing to the organization’s grant efforts. From 2018 to 2023, Megan served as the Development Director at Creativity Explored, a San Francisco-based art studio that partners with local artists with disabilities. During this time, Megan was also an active member of Juma’s Young Professionals Board and the San Francisco Local Advisory Board. In 2023, Megan returned to Juma and now serves as the interim Chief Development Officer where she oversees philanthropic strategy and operations across Juma’s four sites, spearheads the planning and execution of the national fundraising gala, and leads a high‑performing development team. Megan holds a Bachelor’s Degree in Political Science from Rutgers University and a Master’s Degree in Public Administration from the Schar School of Policy and Government at George Mason University.",
+    "photoUrl": "https://juma.org/wp-content/uploads/2024/10/megan-hover.jpg",
+    "location": "Bay Area",
+    "sourceUrl": "https://juma.org/team/megan-hover/"
+  },
+  {
+    "slug": "lisa-chin",
+    "name": "Lisa Chin",
+    "role": "Chief Executive Officer",
+    "group": "staff",
+    "bio": "An accomplished corporate leader, CEO, and executive coach, Lisa brings to the table 20+ years of expertise helping organizations, boards, and executive teams achieve breakthrough results and successfully navigate through periods of intensive change. Her experience to date includes current service as the CEO of Juma Ventures, a non-profit dedicated to youth development and career advancement, along with a prior track record helping catalyze the success of numerous top public and private organizations including Treehouse, Year Up, Boys & Girls Clubs of King County, and Amazon.com. Lisa’s passion centers around helping leadership teams crystallize their vision, establish clear goals, modernize their practices, and embrace change during uncertain and/or turbulent times. A master change agent and communicator, she is highly skilled at addressing diverse stakeholder groups and guiding teams/leaders in effective methods for building engagement and enthusiasm among their workforce, donors, and strategic partners. Key facets of Lisa’s leadership roles to date include: Executive Coaching & Leadership Development Change Management, Turnarounds & Organizational Transformation Social Impact Consulting & Social Justice Advocacy Corporate Governance, Scaling & Capacity-Building Strategic Planning & Mission/Vision/Values Clarification Board Development, Recruitment & Relations Additionally, she is passionate about applying strengths-based models to help senior leaders (particularly women leaders and BIPOC executives) grow, develop, and excel in their roles — and has a deep background in executive coaching, emotional intelligence development, and multi-cultural team leadership. Lisa’s educational credentials include a Ph.D. in Education from UCLA, a B.A. Degree in Political Science and Art from Wellesley College, and current enrollment in the Executive Coaching Program at SeattleCoach (International Coaching Federation).",
+    "photoUrl": "https://juma.org/wp-content/uploads/2015/06/lisa-chin.jpg",
+    "location": null,
+    "sourceUrl": "https://juma.org/team/lisa-chin/"
+  },
+  {
+    "slug": "claire-wheeler",
+    "name": "Claire Wheeler",
+    "role": "Director of Impact",
+    "group": "staff",
+    "bio": "Claire Wheeler joined Juma in September 2016 and has since served in increasingly impactful roles, including Sacramento Enterprise Manager, Sacramento Site Manager, California Regional Manager, and currently serves as Director of Impact. In her current role, Claire oversees Juma’s national program development and implementation, providing leadership, training, and oversight to program staff and operations. Throughout her career, she has held various leadership and management positions across higher education, nonprofits, and service industries. Claire holds a Bachelor’s Degree in Psychology and a Master’s Degree in Organizational Leadership.",
+    "photoUrl": "https://juma.org/wp-content/uploads/2024/10/claire-wheeler.jpg",
+    "location": null,
+    "sourceUrl": "https://juma.org/team/claire-wheeler/"
+  },
+  {
+    "slug": "denise-evans",
+    "name": "Denise Evans",
+    "role": "Director of Finance",
+    "group": "staff",
+    "bio": "Denise Evans a nonprofit finance leader with more than a decade of experience building financial systems and organizational infrastructure that help mission-driven organizations thrive. As Director of Finance at Juma Ventures, Denise provides strategic leadership for financial planning, accounting, compliance, and operational decision-making in support of the organization’s workforce development mission. Prior to joining Juma Ventures, Denise served as Director of Accounting and Finance at Friends of Waterfront Park, where they led financial operations for the nonprofit steward of Seattle’s new 20-acre Waterfront Park. During their tenure, Denise strengthened financial systems, guided budgeting and forecasting, supported executive leadership and board decision-making, and helped position the organization for long-term sustainability as it transitioned from capital campaign completion to ongoing operations. Earlier in their career, Denise held finance and accounting roles across the nonprofit and private sectors, including positions with the National Asian Pacific Center on Aging, Raymond James & Associates, and Meeting Street. They hold a Bachelor of Science in Accounting from Johnson & Wales University.",
+    "photoUrl": "https://juma.org/wp-content/uploads/2026/06/Untitled-700-x-525-px.jpg",
+    "location": null,
+    "sourceUrl": "https://juma.org/team/denise-evans/"
+  }
+]

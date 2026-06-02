@@ -1,0 +1,39 @@
+---
+import Container from "@/components/Container.astro";
+import Button from "@/components/ui/Button.astro";
+
+interface Props {
+  heading?: string;
+  text?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+  variant?: "brand" | "navy";
+}
+const {
+  heading = "Help pave the way for opportunity youth.",
+  text = "Your support powers paid jobs, mentorship, and financial capability for young people across America.",
+  ctaLabel = "Donate",
+  ctaHref = "/donate/",
+  secondaryLabel = "Get Involved",
+  secondaryHref = "/volunteer/",
+  variant = "brand",
+} = Astro.props;
+const bg = variant === "brand" ? "bg-brand-600" : "bg-navy-900";
+---
+
+<section class={bg}>
+  <Container class="py-16 md:py-20">
+    <div class="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
+      <div class="max-w-2xl text-white">
+        <h2 class="text-3xl text-white md:text-4xl">{heading}</h2>
+        {text && <p class="mt-3 text-lg text-white/85">{text}</p>}
+      </div>
+      <div class="flex shrink-0 flex-wrap gap-4">
+        {ctaLabel && <Button href={ctaHref} variant="white" size="lg">{ctaLabel}</Button>}
+        {secondaryLabel && <Button href={secondaryHref} variant="outline" size="lg" class="border-white text-white hover:bg-white hover:text-navy-700">{secondaryLabel}</Button>}
+      </div>
+    </div>
+  </Container>
+</section>

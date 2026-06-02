@@ -1,0 +1,67 @@
+{
+  "slug": "programs",
+  "title": "Our Programs",
+  "kind": "program",
+  "hero": {
+    "eyebrow": "YouthConnect Program",
+    "heading": "Real Work. Real Skills. Real Futures.",
+    "subheading": "Juma combines employment, job training, financial capability, and career pathway support to help young people break the cycle of poverty.",
+    "ctaLabel": "Volunteer",
+    "ctaHref": "https://juma.org/volunteer"
+  },
+  "intro": "5 million young people nationally are disconnected from school and work. Juma is changing that.",
+  "pillars": [
+    {
+      "title": "Earn",
+      "body": "Youth earn real paychecks at Juma's social enterprises across San Francisco, San Jose, Seattle, and Sacramento — working at major league sports venues and other local businesses — gaining hands-on experience in customer service, sales, and business operations. 462 youth employed in 2025 / 53,475 hours worked."
+    },
+    {
+      "title": "Learn",
+      "body": "186 workshops in 2025 covering job skills, financial literacy, and career development. Youth complete mock interviews, build resumes, take career tours, and create personal Launch Plans for their futures. In 2025, youth reported significant improvement in Workplace Communication (92%), Customer Service (90%), and Critical Thinking (85%)."
+    },
+    {
+      "title": "Connect",
+      "body": "In 2025, Juma re-launched the Connect pillar with individualized coaching to help youth navigate life transitions. The new Juma Blueprint supports young people in aligning their aspirations with actionable steps toward education, employment, and entrepreneurship. Ongoing alumni and wraparound support."
+    }
+  ],
+  "stats": [
+    { "value": "$2,896", "label": "average earned per youth in 2025" },
+    { "value": "$1.3M", "label": "total wages and stipends earned in 2025" },
+    { "value": "117", "label": "avg hours worked per youth" },
+    { "value": "91%", "label": "signed up for direct deposit" },
+    { "value": "462", "label": "Youth employed in 2025" },
+    { "value": "53,475", "label": "Total hours worked" },
+    { "value": "186", "label": "Workshops held across all program areas" },
+    { "value": "4", "label": "Cities: Sacramento, SF Bay Area, San Jose, Seattle" },
+    { "value": "20+", "label": "Social enterprise locations" },
+    { "value": "10,000+", "label": "Youth employed since founding" },
+    { "value": "$15.5M", "label": "In wages generated for youth" },
+    { "value": "$44M", "label": "In total enterprise revenue generated" }
+  ],
+  "benefits": [
+    { "title": "95% feel confident talking about their skills", "body": "feel confident talking about the skills they gained at Juma with others" },
+    { "title": "95% feel more prepared", "body": "feel more prepared to balance work and school or other priorities" },
+    { "title": "94% more confident about their future", "body": "report Juma helped them become more confident making decisions for their future" },
+    { "title": "92% completed a mock interview", "body": "of new youth completed a mock interview" },
+    { "title": "90% completed a resume review", "body": "of new youth completed a resume review" },
+    { "title": "90% improved teamwork", "body": "report significant improvement in their teamwork skills" }
+  ],
+  "sections": [
+    {
+      "heading": "Employment is more than a paycheck.",
+      "body": "Work provides dignity, stability, and a path forward. Research shows that early work experience — paired with financial education and mentorship — helps young people escape poverty and build lasting careers.\n\nOur goal: every Juma youth reaches age 25 on a trajectory toward living-wage employment and economic prosperity."
+    },
+    {
+      "heading": "Where belonging and growth go hand in hand.",
+      "body": "A positive, connected workplace culture is part of what makes the program work.\n\n- 99% of youth report they enjoy coming to their Juma job most days\n- 98% report feeling connected to at least one peer at Juma\n- 90% report feeling connected to at least one adult at Juma\n- 90% report significant improvement in their teamwork skills"
+    },
+    {
+      "heading": "I was working hard, putting in my sweat equity, while building resiliency and the mindset that there are no shortcuts to success — and hard work is integral to success.",
+      "body": "— Daniel Luu, Juma Alum & Teacher",
+      "image": "https://juma.org/wp-content/uploads/2026/05/photo-teamwork-scaled.jpg"
+    }
+  ],
+  "legacyId": 7044,
+  "seoDescription": "Juma's YouthConnect program combines real employment, job training, financial capability, and career pathway support to help young people break the cycle of poverty.",
+  "body": ""
+}

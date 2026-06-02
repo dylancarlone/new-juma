@@ -1,0 +1,73 @@
+---
+title: Work for Juma
+kind: careers-landing
+hero:
+  eyebrow: ""
+  heading: Juma Ventures is looking for great people who share our passion for working with youth and for using business as a tool for sustainable social impact.
+  subheading: ""
+  image: banner2b.jpg
+intro: We're a collaborative and fast-paced team committed to the personal and professional development of our staff. We value teamwork, diversity, enthusiasm, commitment, and a results-oriented work ethic. We foster an inclusive workplace where all team members are valued and have the opportunity to reach their full potential.
+bullets:
+  - A leader unafraid of a challenge who can hit the ground running
+  - A problem-solver and able to own your role
+  - Innovative, entrepreneurial and driven
+  - Comfortable speaking your mind and willing to contribute to a collaborative culture
+  - Open-minded and inclusive of all
+benefits:
+  - title: Health & Wellness
+    body: |-
+      Our benefits are designed to promote wellness and a healthy work/life balance.
+
+      - 15 days paid vacation, grows with length of service
+      - 14 holidays average per year, which includes office closure between Christmas and New Years + Birthday Off + Monthly Half-Day Fridays
+      - 100% Paid Medical, Dental/Vision, Life Insurance
+      - Company-paid parental bonding time
+      - Pre-Tax Benefits
+      - 403(b) Retirement Plan Management
+  - title: Growth Opportunities
+    body: |-
+      Juma staff engage in a variety of year-round career advancement opportunities.
+
+      - Monthly trainings and online courses
+      - Performance-based bonuses & Awards
+      - Professional Development stipends
+  - title: Community
+    body: |-
+      Juma's work culture is dynamic & includes team building activities to connect with fellow coworkers and youth.
+
+      - Culture Committee
+      - Annual Staff Retreat & monthly events
+      - Recognitions
+sections:
+  - heading: Internships (High School and Undergraduate)
+    body: |-
+      Juma offers high school and college internships throughout the year that provide valuable experience in nonprofit development and social enterprise operations. Internships are generally available for:
+
+      - Fall (Late August – Late December)
+      - Spring (Early January – Mid May)
+      - Summer (Late May – Late August)
+
+      Interested? Reach out to **operations@juma.org** for more info.
+  - heading: Interest Form
+    body: |-
+      If you don't see a role that fits you, please fill out the interest form below, and we will reach out to you if we have an opportunity that might be a good fit.
+
+      For any questions, please contact **operations@juma.org**.
+
+      If you are a young person between the ages of **16-24** interested in part-time employment with Juma, please [apply here](https://juma.org/apply/#locations).
+  - heading: Equal Employment Opportunity (Anti-Discrimination)
+    body: |-
+      Juma Ventures is committed to diversity in the workplace. It is Juma Ventures' policy to provide equal employment opportunity for all applicants and employees. Juma Ventures is in accordance with the Americans with Disabilities Act (ADA). The Company does not unlawfully discriminate on the basis of race, color, religion, sex (including pregnancy, childbirth, or related medical conditions), national origin, citizenship, ancestry, age, physical or mental disability, legally protected medical condition, genetic information, parental or family care status, military and veteran status, marital status, sexual orientation, gender, gender identity, gender expression or any other basis protected by local, state or federal laws.
+
+      This policy also prohibits discrimination against an individual because of his or her known relationship or association with a member of a legally protected class. This policy applies to all areas of employment including recruitment, hiring, training, promotion, compensation, benefits, transfer, discipline and termination, as well as to company sponsored social and recreational programs. It is the responsibility of every supervisor and employee to conscientiously follow this policy.
+
+      Employees are expected to report every instance of unlawful discrimination to their supervisor or to the Human Resources Manager, regardless of whether the employee or someone else is the subject of the discrimination. Detailed reports, including names, descriptions, and actual events or statements will greatly enhance Juma Ventures' ability to investigate the situation.
+
+      Any employee having any questions regarding this policy should discuss them with the Human Resources Manager.
+
+      Juma Ventures also prohibits the harassment of any individual on any of the bases listed above. For information about the types of conduct that constitute impermissible harassment and the Company's internal procedures for addressing complaints of harassment, please refer to the Policy Against Harassment located below.
+legacyId: 1726
+seoDescription: Juma Ventures is looking for great people who share our passion for working with youth and for using business as a tool for sustainable social impact. Explore careers, benefits, and internships.
+---
+
+

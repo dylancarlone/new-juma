@@ -1,0 +1,29 @@
+{
+  "slug": "youthconnect",
+  "title": "YouthConnect",
+  "kind": "program",
+  "hero": {
+    "eyebrow": "",
+    "heading": "YouthConnect",
+    "subheading": "Reconnecting disconnected youth to the job market through a Juma job and career-focused support services.",
+    "image": "https://juma.org/wp-content/uploads/2015/06/JUMA_BrandStructureGraphics_YouthConnectProgram_graphic.jpg",
+    "ctaLabel": "Donate Now",
+    "ctaHref": "https://donatenow.networkforgood.org/juma-ventures-donate"
+  },
+  "intro": "Over five million young people across the nation are neither in school nor working. These disconnected youth lack opportunity, not talent. At the same time, there are millions of jobs going unfilled in the workplace as employers can't find qualified applicants.",
+  "stats": [
+    { "value": "5 million+", "label": "Young people nationally neither in school nor working" },
+    { "value": "6 months", "label": "Program duration with Job Coach support" },
+    { "value": "90 days", "label": "Case management support in a new job" }
+  ],
+  "benefits": [
+    { "title": "Employment", "body": "Youth are given a job working as vendors in our social enterprise while learning crucial soft skills to prepare them for future careers." },
+    { "title": "Job Coaching", "body": "Over the course of 6 months, youth are supported by Job Coaches to identify strengths-based (short and long-term) career and education goals. They create an Individual Development Plan and track progress toward their goals." },
+    { "title": "Professional Development", "body": "Focused first on retail and food/hospitality industries, Juma provides professional development, including support with job interviewing and resume-building to prepare youth for entry-level jobs with industry partners including Starbucks, UPS, Gap, Jamba Juice, Peet's Coffee & Tea, and Noah's Bagel." },
+    { "title": "Financial Capability", "body": "Juma opens a savings account for each youth in our program and provides youth with financial capability training to ensure they use those accounts wisely. Research shows that even small amounts of savings can help level the playing field for low-income youth, increasing both their aspirations and their likelihood of college matriculation." },
+    { "title": "Wraparound Support Services", "body": "Through 'collective impact' partnerships with local nonprofit organizations, our youth receive a full spectrum of social support services, including but not limited to housing, mental health counseling, and career-focused education supportive services (such as the completion of GED and/or trade credentials)." }
+  ],
+  "legacyId": 2410,
+  "seoDescription": "Juma's YouthConnect program helps disconnected youth re-enter the job market through a Juma job, job coaching, professional development, financial capability, and wraparound support.",
+  "body": "Juma's YouthConnect program provides these youth with an opportunity to re-enter the job market by leveraging the experience, training and learning that come through a Juma job, as well as career-focused support services to help youth overcome barriers to employment and provide a launchpad to future career and education pathways.\n\nOpportunity Youth are supported with case management for up to 90 days in their new job to ensure they understand how to progress from entry-level to middle skill jobs."
+}

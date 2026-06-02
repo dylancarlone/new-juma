@@ -1,0 +1,109 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Pillars from "@/components/sections/Pillars.astro";
+import CTABanner from "@/components/sections/CTABanner.astro";
+import PostCard from "@/components/cards/PostCard.astro";
+import Media from "@/components/Media.astro";
+import Button from "@/components/ui/Button.astro";
+import { getFeedPosts, postPath } from "@/lib/content";
+import home from "@/data/home.json";
+
+const slugFor: Record<string, string> = {
+  "San Francisco": "san-francisco",
+  "San Francisco / Bay Area": "san-francisco",
+  Sacramento: "sacramento",
+  Seattle: "seattle",
+  "San Jose": "san-jose",
+};
+
+const recent = (await getFeedPosts()).slice(0, 3);
+---
+
+<BaseLayout description={home.hero.subheading}>
+  <Hero
+    heading={home.hero.heading}
+    subheading={home.hero.subheading}
+    image={home.hero.image}
+    ctaLabel="Donate"
+    ctaHref="/donate/"
+    secondaryLabel="Our Programs"
+    secondaryHref="/programs/"
+  />
+
+  <Pillars heading="How Juma Works" intro="A proven Earn, Learn, Connect model that turns a first job into a lasting career path." pillars={home.pillars} />
+
+  <!-- Locations -->
+  <section class="bg-cream">
+    <Container class="py-16 md:py-24">
+      <div class="mx-auto mb-12 max-w-2xl text-center">
+        <h2 class="text-3xl md:text-4xl">{home.locationsHeading ?? "Four Communities. One Mission."}</h2>
+        {home.locationsIntro && <p class="mt-4 text-lg text-ink-soft">{home.locationsIntro}</p>}
+      </div>
+      <div class="grid grid-cols-2 gap-5 lg:grid-cols-4">
+        {
+          home.locations?.map((loc) => {
+            const slug = slugFor[loc.name] ?? slugFor[loc.name.split(" /")[0]];
+            return (
+              <a href={`/${slug}/`} class="group relative flex aspect-[3/4] items-end overflow-hidden rounded-[var(--radius-card)] bg-navy-900 shadow-[var(--shadow-card)] transition hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
+                <Media src={loc.image} alt={loc.name} class="absolute inset-0 h-full w-full transition duration-500 group-hover:scale-105" fit="cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-900/30 to-transparent" />
+                <h3 class="relative w-full p-5 font-heading text-xl font-bold text-white">{loc.name}</h3>
+              </a>
+            );
+          })
+        }
+      </div>
+    </Container>
+  </section>
+
+  <!-- Youth Voices -->
+  {
+    home.testimonials?.length > 0 && (
+      <section class="bg-navy-900 text-white">
+        <Container class="py-16 md:py-24">
+          <div class="mb-12 text-center">
+            <p class="font-heading text-sm font-bold uppercase tracking-widest text-gold">Youth Voices</p>
+            <h2 class="mt-2 text-3xl text-white md:text-4xl">In their own words</h2>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {home.testimonials.map((t) => (
+              <figure class="flex h-full flex-col rounded-[var(--radius-card)] bg-white/5 p-6 ring-1 ring-white/10">
+                <blockquote class="flex-1 text-navy-100">“{t.quote}”</blockquote>
+                <figcaption class="mt-4 font-heading font-bold text-gold">
+                  {t.name}
+                  {t.role && <span class="block text-xs font-medium text-navy-300">{t.role}</span>}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <div class="mt-10 text-center">
+            <Button href="/stories/" variant="brand" size="lg">Read youth stories</Button>
+          </div>
+        </Container>
+      </section>
+    )
+  }
+
+  <!-- Recent news -->
+  {
+    recent.length > 0 && (
+      <section class="bg-white">
+        <Container class="py-16 md:py-24">
+          <div class="mb-10 flex items-end justify-between">
+            <h2 class="text-3xl md:text-4xl">Latest News</h2>
+            <a href="/news/" class="hidden font-semibold text-brand-600 hover:underline sm:block">All news →</a>
+          </div>
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {recent.map((p) => (
+              <PostCard href={postPath(p)} title={p.data.title} excerpt={p.data.excerpt} date={p.data.publishDate} image={p.data.heroImage} imageAlt={p.data.heroImageAlt} categories={p.data.categories} />
+            ))}
+          </div>
+        </Container>
+      </section>
+    )
+  }
+
+  <CTABanner />
+</BaseLayout>

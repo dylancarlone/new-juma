@@ -1,0 +1,136 @@
+---
+import { getCollection, getEntry, render } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import Hero from "@/components/sections/Hero.astro";
+import StatGrid from "@/components/sections/StatGrid.astro";
+import CTABanner from "@/components/sections/CTABanner.astro";
+import Button from "@/components/ui/Button.astro";
+import Icon from "@/components/Icon.astro";
+import Markdown from "@/components/Markdown.astro";
+import { applyForms } from "@/lib/site";
+
+export async function getStaticPaths() {
+  const locations = await getCollection("location");
+  return locations.map((entry) => ({ params: { location: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+
+// Optional "Get to Know Juma <City>" video page in the page collection.
+const videoSlugs: Record<string, string> = {
+  seattle: "get-know-juma-seattle",
+  "san-jose": "get-know-juma-san-jose",
+  sacramento: "get-know-juma-sacramento",
+};
+const videoPage = videoSlugs[d.region] ? await getEntry("page", videoSlugs[d.region]).catch(() => undefined) : undefined;
+const applyHref = applyForms[d.region as keyof typeof applyForms];
+
+const audienceCtas = [
+  { label: "For Youth", href: "/apply/", icon: "graduation" },
+  { label: "For Employers", href: "/employer/", icon: "briefcase" },
+  { label: "For Volunteers", href: "/volunteer/", icon: "heart" },
+];
+---
+
+<BaseLayout title={`Juma ${d.city}`} description={d.intro} image={d.hero.image ? `/media/${d.hero.image}` : undefined}>
+  <Hero
+    eyebrow="Our Locations"
+    heading={d.hero.heading}
+    subheading={d.hero.subheading ?? d.intro}
+    image={d.hero.image}
+    ctaLabel={applyHref ? "Apply Now" : d.hero.ctaLabel}
+    ctaHref={applyHref ?? d.hero.ctaHref}
+    secondaryLabel="Donate"
+    secondaryHref="/donate/"
+  />
+
+  {d.stats.length > 0 && <StatGrid stats={d.stats} heading={`The need in ${d.city}`} variant="light" />}
+
+  {
+    (d.intro || d.noteFrom) && (
+      <section class="bg-white">
+        <Container size="narrow" class="py-14">
+          {d.noteFrom && <p class="font-heading text-sm font-bold uppercase tracking-wide text-brand-600">A note from {d.noteFrom.name}, {d.noteFrom.role}</p>}
+          {d.intro && <p class="mt-3 text-xl leading-relaxed text-ink-soft">{d.intro}</p>}
+          <div class="prose-juma mt-6"><Content /></div>
+        </Container>
+      </section>
+    )
+  }
+
+  {
+    d.venues.length > 0 && (
+      <section class="bg-cream">
+        <Container class="py-14">
+          <h2 class="text-2xl md:text-3xl">Where we work in {d.city}</h2>
+          <p class="mt-2 text-ink-soft">Juma youth earn paid work experience at venues including:</p>
+          <ul class="mt-6 flex flex-wrap gap-3">
+            {d.venues.map((v) => (
+              <li class="rounded-full bg-white px-5 py-2 text-sm font-semibold text-navy-800 shadow-[var(--shadow-card)]">{v}</li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+    )
+  }
+
+  {
+    d.testimonial && (
+      <section class="bg-navy-900 text-white">
+        <Container size="narrow" class="py-16 text-center">
+          <p class="font-heading text-2xl font-bold leading-snug md:text-3xl">“{d.testimonial.quote}”</p>
+          <p class="mt-5 text-gold">— {d.testimonial.name}</p>
+        </Container>
+      </section>
+    )
+  }
+
+  {
+    videoPage?.data.videoUrl && (
+      <section class="bg-white">
+        <Container class="py-14 text-center">
+          <h2 class="text-2xl md:text-3xl">Get to know Juma {d.city}</h2>
+          <div class="mt-6">
+            <Button href={`/${videoPage.id}/`} variant="primary" size="lg">Watch the video</Button>
+          </div>
+        </Container>
+      </section>
+    )
+  }
+
+  <section class="bg-cream">
+    <Container class="grid gap-8 py-14 lg:grid-cols-3">
+      {
+        audienceCtas.map((c) => (
+          <a href={c.href} class="group flex items-center gap-4 rounded-[var(--radius-card)] bg-white p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 group-hover:bg-brand-600 group-hover:text-white">
+              <Icon name={c.icon} size={24} />
+            </span>
+            <span class="font-heading text-lg font-bold text-navy-900">{c.label}</span>
+          </a>
+        ))
+      }
+    </Container>
+  </section>
+
+  {
+    d.contact && (
+      <section class="bg-white">
+        <Container size="narrow" class="py-12">
+          <div class="rounded-[var(--radius-card)] border border-navy-100 p-8">
+            <h2 class="text-xl">Connect with our {d.city} team</h2>
+            <p class="mt-3 font-semibold text-navy-900">{d.contact.name}{d.contact.role ? `, ${d.contact.role}` : ""}</p>
+            {d.contact.email && <p class="mt-1"><a href={`mailto:${d.contact.email}`} class="text-brand-600 hover:underline">{d.contact.email}</a></p>}
+            {d.contact.phone && <p class="mt-1 text-ink-soft">{d.contact.phone}</p>}
+            {d.contact.address && <p class="mt-1 text-ink-soft">{d.contact.address}</p>}
+          </div>
+        </Container>
+      </section>
+    )
+  }
+
+  <CTABanner heading={`Support opportunity youth in ${d.city}.`} />
+</BaseLayout>

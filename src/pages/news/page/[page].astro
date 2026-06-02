@@ -1,0 +1,48 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import PageHeader from "@/components/sections/PageHeader.astro";
+import PostCard from "@/components/cards/PostCard.astro";
+import { getFeedPosts, postPath } from "@/lib/content";
+
+export async function getStaticPaths() {
+  const PAGE_SIZE = 12;
+  const posts = await getFeedPosts();
+  const totalPages = Math.ceil(posts.length / PAGE_SIZE);
+  // Page 1 lives at /news/; generate 2..N here.
+  return Array.from({ length: Math.max(0, totalPages - 1) }, (_, i) => {
+    const page = i + 2;
+    const start = (page - 1) * PAGE_SIZE;
+    return {
+      params: { page: String(page) },
+      props: { items: posts.slice(start, start + PAGE_SIZE), page, totalPages },
+    };
+  });
+}
+
+const { items, page, totalPages } = Astro.props;
+---
+
+<BaseLayout title={`News — Page ${page}`} description="Stories, updates, and impact from Juma Ventures.">
+  <PageHeader eyebrow="Juma News" title="Stories & Updates" description={`Page ${page} of ${totalPages}.`} />
+  <Container class="py-12 md:py-16">
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {items.map((p) => (
+        <PostCard
+          href={postPath(p)}
+          title={p.data.title}
+          excerpt={p.data.excerpt}
+          date={p.data.publishDate}
+          image={p.data.heroImage}
+          imageAlt={p.data.heroImageAlt}
+          categories={p.data.categories}
+        />
+      ))}
+    </div>
+    <nav class="mt-12 flex items-center justify-center gap-4" aria-label="Pagination">
+      <a href={page === 2 ? "/news/" : `/news/page/${page - 1}/`} class="rounded-md border border-navy-200 px-5 py-2.5 text-sm font-semibold text-navy-700 transition hover:border-brand-400">← Prev</a>
+      <span class="text-sm text-warmgray">Page {page} of {totalPages}</span>
+      {page < totalPages && <a href={`/news/page/${page + 1}/`} class="rounded-md bg-navy-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-navy-700">Next →</a>}
+    </nav>
+  </Container>
+</BaseLayout>

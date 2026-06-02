@@ -1,0 +1,20 @@
+{
+  "slug": "get-know-juma-seattle",
+  "title": "Get to Know Juma Seattle",
+  "kind": "video",
+  "hero": {
+    "heading": "Get to Know Juma Seattle",
+    "subheading": "",
+    "image": ""
+  },
+  "videoUrl": "https://player.vimeo.com/video/320856035",
+  "intro": "In this video, Juma Seattle staff, youth, and partners discuss the pivotal question: why Juma? Learn more about our approach to breaking the cycle of poverty and why we believe in the power of work and the potential of young people.",
+  "ctas": [
+    {
+      "label": "Back to Juma Seattle",
+      "href": "/seattle/"
+    }
+  ],
+  "legacyId": 3893,
+  "body": ""
+}

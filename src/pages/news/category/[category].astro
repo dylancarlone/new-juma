@@ -1,0 +1,33 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import PageHeader from "@/components/sections/PageHeader.astro";
+import PostCard from "@/components/cards/PostCard.astro";
+import { getFeedPosts, getCategories, postPath, slugifyTag } from "@/lib/content";
+
+export async function getStaticPaths() {
+  const posts = await getFeedPosts();
+  const categories = await getCategories();
+  return categories.map((c) => ({
+    params: { category: c.slug },
+    props: {
+      name: c.name,
+      items: posts.filter((p) => p.data.categories.some((cat) => slugifyTag(cat) === c.slug)),
+    },
+  }));
+}
+
+const { name, items } = Astro.props;
+---
+
+<BaseLayout title={`${name} — News`} description={`Juma Ventures news in ${name}.`}>
+  <PageHeader eyebrow="Juma News" title={name} description={`${items.length} ${items.length === 1 ? "story" : "stories"} in this category.`} />
+  <Container class="py-12 md:py-16">
+    <a href="/news/" class="mb-8 inline-block font-semibold text-brand-600 hover:underline">← All news</a>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {items.map((p) => (
+        <PostCard href={postPath(p)} title={p.data.title} excerpt={p.data.excerpt} date={p.data.publishDate} image={p.data.heroImage} imageAlt={p.data.heroImageAlt} categories={p.data.categories} />
+      ))}
+    </div>
+  </Container>
+</BaseLayout>

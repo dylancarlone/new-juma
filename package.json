@@ -1,0 +1,46 @@
+{
+  "name": "new-juma",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Modern rebuild of juma.org — extracted from the legacy WordPress/Elementor site",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "astro": "astro",
+    "extract": "node scripts/extract-content.mjs",
+    "extract:media": "node scripts/download-media.mjs"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^6.0.1",
+    "@astrojs/react": "^5.0.6",
+    "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/vercel": "^10.0.8",
+    "@fontsource-variable/montserrat": "^5.2.8",
+    "@fontsource-variable/plus-jakarta-sans": "^5.2.8",
+    "@tailwindcss/vite": "^4.3.0",
+    "astro": "^6.4.2",
+    "marked": "^18.0.4",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "resend": "^6.12.4",
+    "tailwindcss": "^4.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
+    "@types/react": "^19.2.16",
+    "@types/react-dom": "^19.2.3",
+    "he": "^1.2.0",
+    "node-html-parser": "^7.1.0",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2",
+    "typescript": "^6.0.3",
+    "yaml": "^2.9.0"
+  },
+  "overrides": {
+    "vite": "^7"
+  }
+}

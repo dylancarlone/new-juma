@@ -1,0 +1,60 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import PageHeader from "@/components/sections/PageHeader.astro";
+import Icon from "@/components/Icon.astro";
+
+const docs = await getCollection("document");
+const byYear = new Map<number, { annual?: string; form990?: string; audit?: string }>();
+for (const doc of docs) {
+  const e = byYear.get(doc.data.year) ?? {};
+  if (doc.data.docType === "annual-report") e.annual = doc.data.fileUrl;
+  else if (doc.data.docType === "form-990") e.form990 = doc.data.fileUrl;
+  else e.audit = doc.data.fileUrl;
+  byYear.set(doc.data.year, e);
+}
+const years = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
+
+const DocLink = (href?: string) => href;
+---
+
+<BaseLayout title="Financials" description="Juma Ventures' annual reports, Form 990s, and audited financial statements.">
+  <PageHeader eyebrow="Transparency" title="Financials" description="We're proud to share our annual reports, IRS Form 990s, and audited financial statements. Juma holds a Candid Platinum Transparency rating." />
+
+  <Container class="py-12 md:py-16">
+    <div class="overflow-x-auto rounded-[var(--radius-card)] border border-navy-100">
+      <table class="w-full min-w-[640px] text-left">
+        <thead class="bg-cream">
+          <tr class="font-heading text-sm uppercase tracking-wide text-navy-800">
+            <th class="px-6 py-4">Year</th>
+            <th class="px-6 py-4">Annual Report</th>
+            <th class="px-6 py-4">Form 990</th>
+            <th class="px-6 py-4">Audited Statement</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-navy-100">
+          {
+            years.map(([year, e]) => (
+              <tr class="text-sm">
+                <td class="px-6 py-4 font-heading font-bold text-navy-900">{year}</td>
+                {[e.annual, e.form990, e.audit].map((href) => (
+                  <td class="px-6 py-4">
+                    {href ? (
+                      <a href={href} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 font-semibold text-brand-600 hover:underline">
+                        <Icon name="download" size={16} /> Download
+                      </a>
+                    ) : (
+                      <span class="text-navy-300">—</span>
+                    )}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-6 text-sm text-warmgray">Looking for something specific? <a href="/contact/" class="font-semibold text-brand-600 hover:underline">Contact us</a> and we'll be glad to help.</p>
+  </Container>
+</BaseLayout>

@@ -1,0 +1,30 @@
+---
+import Media from "@/components/Media.astro";
+
+interface Props {
+  href: string;
+  name: string;
+  photo?: string;
+  pullQuote?: string;
+  outcome?: string;
+  location?: string;
+}
+const { href, name, photo, pullQuote, outcome, location } = Astro.props;
+---
+
+<a
+  href={href}
+  class="group relative flex flex-col justify-end overflow-hidden rounded-[var(--radius-card)] bg-navy-900 shadow-[var(--shadow-card)] transition hover:-translate-y-1 hover:shadow-[var(--shadow-lift)] aspect-[3/4]"
+>
+  {
+    photo && (
+      <Media src={photo} alt={name} class="absolute inset-0 h-full w-full transition duration-500 group-hover:scale-105" fit="cover" />
+    )
+  }
+  <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-900/50 to-transparent"></div>
+  <div class="relative p-6 text-white">
+    {pullQuote && <p class="font-heading text-lg font-bold leading-snug">“{pullQuote}”</p>}
+    <p class="mt-3 text-sm font-semibold text-gold">{name}{location ? ` · ${location}` : ""}</p>
+    {outcome && <p class="mt-1 text-sm text-white/80">{outcome}</p>}
+  </div>
+</a>

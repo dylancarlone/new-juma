@@ -1,0 +1,25 @@
+---
+title: "Leslie’s Story: From Her First Shift to the Super Bowl"
+publishDate: 2026-03-24T11:51:56
+author: Juma
+heroImage: 6830-IMG_69381-scaled.jpg
+heroImageAlt: "Leslie’s Story: From Her First Shift to the Super Bowl"
+excerpt: For 21 year old UC Berkeley student Leslie, working Superbowl LX felt like an opportunity she couldn’t pass up. Despite having class Monday morning in Berkeley, Leslie woke up on […]
+legacyId: 6758
+---
+
+[![](/media/6830-IMG_69381-scaled.jpg)](/media/6830-IMG_69381-scaled.jpg)
+
+For 21 year old UC Berkeley student Leslie, working Superbowl LX felt like an opportunity she couldn’t pass up. Despite having class Monday morning in Berkeley, Leslie woke up on Sunday at 5am, ready to lead her team through a monumental shift at Levi’s Stadium.
+
+Leslie joined Juma during her sophomore year of high school. She was ready to find her first job while also juggling schoolwork and her busy schedule as a student athlete. She’s always been determined to maintain a busy life outside of school, so when Leslie’s childhood friend Nicole told her about Juma’s flexible work schedule, Leslie saw an opportunity to continue with her extracurriculars while earning an income. Juma started off as a way to pay for her sports uniforms, but as she approached her senior year, Juma became more than a job; it became an investment in her future.  
+
+As a first generation college student, Leslie needed help navigating the college application process when her school’s counseling services fell short. She knew she would need to save up her wages to pay for application fees, and her academic coordinator at Juma helped her figure out her path to higher education. Through weekly one on ones, Leslie’s academic coordinator asked her about her academic goals and aspirations, helped her fill out college applications, and helped her revise her essays. With the support system Leslie had from Juma, she was able to save up $1000 to cover her application fees and made it into the prestigious UC Berkeley. Once at UC Berkeley, Leslie realized that her Juma network could also help her with her application to the highly competitive Haas School of Business. She learned that the Director of Admissions was a former Juman, and reaching out for advice helped her overcome “imposter syndrome” and feel more confident throughout the rigorous application process.
+
+As a young person entering the workforce, Leslie didn’t always have the confidence she has now. When she started at Juma, Leslie describes herself as an “ambitious 16 year old who was nervous for her first shift” because she had never experienced the social interactions that come along with working in customer service. Once Leslie started getting to know her teammates and felt comfortable behind the register, her leadership skills really began to shine. Leslie explains how she’s taken the Haas School Of Business core value of “Confidence Without Attitude” to heart, saying, “The title for me is not what’s important, but the way I show up for others is.” Now, Leslie is a Youth Manager overseeing multiple concession stands, supporting younger people through their shifts, and stepping in during difficult customer interactions.
+
+Going into the Superbowl, Leslie put her leadership philosophy into practice throughout her 16 hour shift. She talks about the importance of leading with intentionality, and on this day, she set out with the intention to help her team perform well under pressure and to ease the stress of her Enterprise Manager, Jesus. She arrived early to prepare drinks, restock concession stands, and got to experience the fan amenities with her team before the doors opened to the public. Once it was game time, Leslie sprang into action as the Youth Manager her team needed to face the challenges of such a high-energy event.
+
+Thinking about the future, Leslie is looking forward to beginning an internship with Pepsico, graduating in 2027, and applying to MBA deferred programs. She sees herself thriving in a managerial role in the future because she says, “It takes one person to take initiative to change spaces, and while ‘corporate’ sounds intimidating, it doesn’t have to be. I want to be the person to change that environment and impact the people around me.” In the meantime, she hopes to make more time for friends while continuing her work with Juma, her work as Resident Assistant at UC Berkeley’s Residential Life, and her work as the Finance Director at _bridges_ Multicultural Resource Center. 
+
+When asked what she wants readers to take away from her story, Leslie says, “I am a testament to Juma’s mission… Juma is somewhere we can rely on people to support us. Through that support system, I and other people have gained lifelong friends, professional experience, and educational support. It’s a place I can rely on to financially support me, personally support me, and all of the above.” Leslie’s story shows us what can happen when we believe in the power of work and the potential of young people.

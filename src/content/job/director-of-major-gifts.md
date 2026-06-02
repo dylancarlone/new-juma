@@ -1,0 +1,94 @@
+---
+jobTitle: Director of Major Gifts
+locations:
+  - San Francisco
+department: Development
+reportsTo: Chief Development Officer
+employmentType: Full-time, Exempt
+salaryRange: $120,000 – $145,000
+summary: Juma Ventures (Juma), an award-winning youth workforce development nonprofit organization, seeks a Director of Major Gifts to lead our individual giving strategy, increasing financial and non-financial resources to support its critical youth work. The Director of Major Gifts is a senior leader on Juma's Development Team and reports directly to the Chief Development Officer. In partnership with the Chief Development Officer, the Director of Major Gifts is responsible for developing and executing a comprehensive strategy to grow and steward Juma's major gifts program, with a focus on cultivating transformative relationships with individual donors who give $5,000 and above. The Director of Major Gifts manages a portfolio of top-tier individual donors and prospects, leads major gift solicitation, manages the Individual Giving Manager and drives Juma's annual individual giving strategy to achieve ambitious revenue goals. The Director of Major Gifts works collaboratively and transparently with the Chief Development Officer, CEO, board members, and cross-functional staff to advance Juma's fundraising goals, deepen donor relationships, and create meaningful impact in the lives of young people nationwide.
+responsibilities:
+  - In partnership with the CDO, develops and executes Juma's national major gifts strategy, with a goal of growing the individual giving program significantly over the next 3-5 years.
+  - "Manages a dynamic portfolio of approximately 50–70 major gift donors and prospects, guiding each relationship through all stages of the donor cycle: identification, qualification, cultivation, solicitation, and stewardship."
+  - Leads all individual giving strategy, including setting goals by portfolio, tracking portfolio performance, and identifying opportunities to upgrade and acquire donors.
+  - Further establishes the foundational infrastructure for the major gifts program, including gift acceptance policies, portfolio management systems, and donor tracking protocols in Salesforce.
+  - Conducts proactive outreach, arranges meaningful touchpoints, and maintains consistent contact with major donors to deepen engagement and increase retention.
+  - Collaborates with the CDO, CEO, and board members to leverage relationships and facilitate major gift conversations.
+  - Partners with the Communications leader to develop compelling donor materials, impact reports, and personalized proposals in support of major gift solicitations.
+  - Oversees donor acknowledgment and recognition practices for the major gifts program, ensuring a best-in-class experience for Juma's most generous supporters.
+  - Leads prospect research efforts to identify and qualify new major gift prospects across Juma's four sites from existing donors, board networks, and community relationships.
+  - Builds and manages a robust prospect pipeline to ensure long-term portfolio health and revenue sustainability.
+  - Leads the major giving strategy for all Juma organizational special events, ensuring Juma is utilizing special events to do moves management and new major donor acquisition work.
+  - Directly supervises and mentors the Individual Giving Manager, who leads the annual fund work, providing strategic direction, professional development, and support in achieving annual fund and end-of-year campaign goals.
+  - Provides oversight of Juma's annual fund campaigns.
+  - Oversees the Individual Giving Manager's management of Juma's mid-level donor pipeline, ensuring a clear pathway for donors to move into the major gifts portfolio.
+  - Partners with the Individual Giving Manager to develop segmented, data-driven appeals and identify emerging major gift prospects from the annual fund base.
+  - Provides regular reports to the CDO on portfolio performance, revenue projections, and progress toward goals by giving tier.
+  - Maintains accurate and timely records of all donor interactions, proposals, and pipeline activity in Salesforce, ensuring data integrity across the individual giving program.
+  - Partners with program and finance teams to develop compelling funding priorities, gift opportunities, and impact narratives that support major gift solicitations.
+  - Collaborates with the institutional giving team to align individual and institutional giving strategies around shared funding priorities.
+  - Serves as an internal champion for a culture of philanthropy at Juma, engaging staff, board, and leadership in donor relationship-building.
+qualifications:
+  - Minimum of seven years of fundraising experience, with significant experience in major gifts, individual giving, or frontline fundraising, preferably in direct service or youth-serving organizations.
+  - Demonstrated success managing a major gifts portfolio and closing five- and six-figure gifts.
+  - Experience leading fundraising events, including galas or signature benefit events, with revenue goals of $250,000 or more.
+  - Management experience; prior experience supervising development staff is strongly preferred.
+  - Exceptional written and verbal communication skills, including the ability to craft compelling donor communications, proposals, and impact reports.
+  - Highly organized, with the ability to manage a large donor portfolio and multiple concurrent priorities with close attention to detail and deadlines.
+  - Previous experience with Salesforce or other CRM databases, strongly preferred.
+  - Collaborative team player with strong interpersonal skills and the ability to engage authentically with donors, board members, executives, and staff at all levels.
+  - Self-starter who is motivated, creative, and able to take initiative in a fast-paced, entrepreneurial, and mission-driven environment.
+  - Deep commitment to Juma's mission and a genuine belief in the potential of young people.
+  - Bachelor's degree or equivalent experience required.
+  - Must be willing to work part-time from the office, attend funder and donor meetings in person as required, and travel for fundraising events and meetings as necessary.
+  - All prospective staff will be fingerprinted and must pass a criminal background check.
+benefits:
+  - Medical insurance
+  - Dental insurance
+  - Vision insurance
+  - Life insurance
+  - 403B plan
+  - A significant paid time-off package
+applyHref: mailto:operations@juma.org
+isOpen: true
+legacyId: 7106
+---
+
+## Job Details
+
+- **Reports to:** Chief Development Officer
+- **Job Location:** San Francisco
+- **Starting Salary:** $120,000 – $145,000
+- **Classification:** Full-time, Exempt
+- **Hours/Week:** 40 hours; Hybrid (2 days/week in office)
+- **Education:** Bachelor's degree or equivalent experience required
+- **Years of Experience:** Minimum of seven years of fundraising experience preferably in direct service organizations
+- **Benefits Include:** Employee benefits include medical, dental, vision and life insurance, 403B plan, and a significant paid time-off package
+
+## How to Apply
+
+Please submit the following to **operations@juma.org**:
+
+1. A thoughtful cover letter outlining your interest in the position and how your qualifications align with the above requirements and Juma's focus and mission
+2. Current resume
+3. Salary requirements
+
+Due to the volume of responses, only candidates selected for an interview will be contacted.
+
+## Equal Opportunity
+
+Black, Indigenous and People of Color (BIPOC) individuals, LGBTQ+ and non-binary identities, women, persons with disabilities, military service members and veterans are strongly encouraged to apply.
+
+Pursuant to the San Francisco Fair Chance Ordinance, we will consider for employment.
+
+## Organizational Profile
+
+Juma Ventures strives to break the cycle of poverty by paving the way to work, education and financial capability for youth across America. Founded in 1993 with a single Ben & Jerry's Shop in San Francisco, Juma's initial business, a social enterprise, was designed to give homeless youth the training and job experience they needed to transition from living on the streets to enjoying a stable adulthood. Since then, Juma has become a nationally recognized youth development organization focused on employment, financial capability, and career supportive services. Our vision is that all young people have the opportunity to succeed, advance and thrive in the career of their choice, competing in a job market that is inclusive, equitable, and diverse.
+
+Today, Juma operates over 20 concession businesses and employs more than 500 youth every year at major sports and entertainment venues across the West Coast (Sacramento, San Francisco, San Jose, and Seattle). Since 1993, Juma has employed more than 10,000 low-income youth who have earned $15.5 million in wages, saved $6.4 million for higher education, and generated more than $44 million in enterprise revenue to continue advancing Juma's mission.
+
+Juma's strong leadership, dedicated staff, effective service model and committed funding partners have led to numerous awards including the National Youth Employment Coalition's PEPNet Award for effective Practices and the National Organization of the Year award from the Social Enterprise Alliance. In 2017, Juma earned the Gold Award at the Seattle Business Magazine's Community Impact Awards for Youth Development Non-Profit of the Year. Juma Seattle and Juma Sacramento have both been selected as recipients of the prestigious Bank of America Neighborhood Builders Award. In 2018, as a member of the Obama Foundation's inaugural grant cohort, Juma led the first iteration of the My Brother's Keeper (MBK) Initiative, influencing local services for boys and young men of color and contributing nationwide.
+
+In January 2023, Juma presented at the Annual Mentoring Summit in Washington D.C. In December 2023, Juma received the Catalyzing Engagement Nonprofit Award. In recent years, 100% of youth participants indicated they would "recommend Juma to a friend" and our most recent staff satisfaction rate was 90%.
+
+Juma is looking for great people who share our passion for working with youth and for using business as a tool for sustainable social impact. Our workplace is supportive, open, inclusive and relevant, focused on youth, empowerment, dedication, and respect. Our four core values are Youth First, Stronger Together, Respect & Appreciation, and Integrity & Transparency. Juma commits to modeling diversity and inclusion for our youth, their communities, our employees and the institutions with whom we collaborate, maintaining an inclusive environment with equitable treatment and compassion, and actively creating meaningful change.

@@ -1,0 +1,10 @@
+{
+  "slug": "subscription-confirmation",
+  "title": "Subscription Confirmation",
+  "kind": "legal",
+  "hero": {
+    "heading": "Subscription Confirmation"
+  },
+  "legacyId": 1285,
+  "body": "Thank you for subscribing to our newsletter."
+}

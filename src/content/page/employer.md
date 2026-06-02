@@ -1,0 +1,56 @@
+---
+title: For Employers
+kind: program
+hero:
+  eyebrow: ""
+  heading: For Employers
+  subheading: Juma offers a great opportunity to hire young people that are actively trying to make career dreams a reality.
+  image: juma-banner-2-1024x386.jpg
+  ctaLabel: Partner with Us
+  ctaHref: mailto:luciaf@juma.org
+intro: Juma offers a great opportunity to hire young people that are actively trying to make career dreams a reality. We train our youth to make them valuable employees. While employed at Juma's social enterprise they have the chance to build crucial workplace skills, save money for college, get connected to a network of support, and develop a plan for attaining a career plan.
+benefits:
+  - title: Hire Strong Talent
+    body: Benefit from well-trained candidates. Juma's program provides our youth with rigorous training and work experience, so upon completion they are "job ready" and well prepared to bring value to their next employer.
+  - title: Increase Retention
+    body: Juma's Career Coaches match your unique business needs with our applicants' skills and goals, carefully selecting the right candidate for the job.
+  - title: Enrich The Workplace
+    body: Diversify your staff to increase creativity, effectiveness and team morale.
+  - title: Strengthen Your Communities
+    body: By employing Juma youth, you will provide them with economic empowerment and positively impact the communities in which you operate.
+sections:
+  - heading: Why Juma?
+    body: |-
+      Juma offers a great opportunity to hire young people that are actively trying to make career dreams a reality. We train our youth to make them valuable employees. While employed at Juma's [social enterprise](https://juma.org/social-enterprise/) they have the chance to build crucial workplace skills, save money for college, get connected to a network of support, and develop a plan for attaining a career plan.
+
+      Through their work at our social enterprise youth learn about sales, money handling, customer service, critical thinking, problem solving, business operations, punctuality, attendance, accountability, teamwork, and communication. They also complete online training modules in sales of product, teamwork, retail basics, and retail tools and technology.
+    image: ""
+  - heading: Starbucks
+    body: |-
+      "Juma's rigorous workforce training program really prepares young adults to excel at Starbucks. They have the personalities to engage our customers, cultivate great teams, and enhance overall employee satisfaction."
+
+      — Jackie Liao, Director of Community Investments and Executive Director, The Starbucks Foundation
+    image: 1559-starbucks.jpg
+  - heading: Nestle
+    body: |-
+      "Over the last 10 years, we have built a strong business partnership with Juma. Their young adults show amazing grit, drive, and dedication to the work. We are thrilled to call them a preferred vendor."
+
+      — Brian Starsiak, West Regional Sales Manager, Nestle
+    image: 1561-nestle.jpg
+  - heading: Alexander's Story
+    body: Juma Ventures helped me transition to adulthood by offering me my first job at 16 years old selling ice cream and coffee at San Francisco's AT&T Park. I opened my first bank account, created a monthly budget, and completed financial literacy training. Their rigorous workforce and professional training program… [Read More](https://juma.org/alexanders-story/)
+    image: 1568-alex.jpg
+  - heading: Anthony's Story
+    body: Born to a teenage single mother and raised in South Central, Los Angeles, I learned the value of education, hard-work, and sacrifice early in life. I am determined to expand my knowledge of the world, uncover its systemic inequalities, and discover solutions to ending the cycle of poverty… [Read More](https://juma.org/anthonys-story/)
+    image: grad-anthony.jpg
+  - heading: Jasenia's Story
+    body: When I was growing up my family faced several challenges, including drug abuse and domestic violence. A college education didn't seem possible for me as it had not been for past generations in my family. In spite of this, as I approached my sophomore year in high school, I was determined to lead a different life… [Read More](https://juma.org/jasenias-story/)
+    image: grad-jasenia.jpg
+ctas:
+  - label: Partner with Us
+    href: mailto:luciaf@juma.org
+legacyId: 1551
+seoDescription: Juma offers a great opportunity to hire young people that are actively trying to make career dreams a reality.
+---
+
+To learn more about becoming an employer partner please contact us.

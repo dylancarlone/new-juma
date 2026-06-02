@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import PageHeader from "@/components/sections/PageHeader.astro";
+import TeamCard from "@/components/cards/TeamCard.astro";
+import CTABanner from "@/components/sections/CTABanner.astro";
+import Button from "@/components/ui/Button.astro";
+
+const team = (await getCollection("team", (t) => !t.data.draft)).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Leadership" description="Meet the team leading Juma Ventures' mission to pave the way for opportunity youth.">
+  <PageHeader eyebrow="Our Team" title="Leadership" description="The people driving Juma's mission across our four communities." />
+
+  <Container class="py-14 md:py-20">
+    <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
+      {team.map((m) => <TeamCard name={m.data.name} role={m.data.role} photo={m.data.photo} href={`/team/${m.id}/`} />)}
+    </div>
+
+    <div class="mt-16 rounded-[var(--radius-card)] bg-cream p-8 text-center md:p-12">
+      <h2 class="text-2xl md:text-3xl">Our Board of Directors</h2>
+      <p class="mx-auto mt-3 max-w-xl text-ink-soft">Juma is guided by a dedicated national board of community and industry leaders.</p>
+      <div class="mt-6">
+        <Button href="/board-of-directors/" variant="primary" size="md">Meet the Board</Button>
+      </div>
+    </div>
+  </Container>
+
+  <CTABanner heading="Want to join our team?" text="Explore open roles and help build pathways to opportunity." ctaLabel="View Openings" ctaHref="/work-for-juma/" secondaryLabel="" />
+</BaseLayout>

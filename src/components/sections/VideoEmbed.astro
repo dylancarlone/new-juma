@@ -1,0 +1,33 @@
+---
+interface Props {
+  url: string;
+  title?: string;
+}
+const { url, title = "Video" } = Astro.props;
+
+function toEmbed(u: string): string {
+  if (!u) return "";
+  if (/\/embed\//.test(u) || /player\.vimeo\.com/.test(u)) return u;
+  const yt = u.match(/(?:youtube\.com\/(?:watch\?v=|live\/)|youtu\.be\/)([\w-]{6,})/);
+  if (yt) return `https://www.youtube.com/embed/${yt[1]}`;
+  const vimeo = u.match(/vimeo\.com\/(\d+)/);
+  if (vimeo) return `https://player.vimeo.com/video/${vimeo[1]}`;
+  return u;
+}
+const src = toEmbed(url);
+---
+
+{
+  src && (
+    <div class="aspect-video w-full overflow-hidden rounded-2xl bg-navy-900 shadow-[var(--shadow-card)]">
+      <iframe
+        src={src}
+        title={title}
+        class="h-full w-full"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      />
+    </div>
+  )
+}

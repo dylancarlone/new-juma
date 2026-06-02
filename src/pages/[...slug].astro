@@ -1,0 +1,169 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import Hero from "@/components/sections/Hero.astro";
+import PageHeader from "@/components/sections/PageHeader.astro";
+import StatGrid from "@/components/sections/StatGrid.astro";
+import Pillars from "@/components/sections/Pillars.astro";
+import Sections from "@/components/sections/Sections.astro";
+import Groups from "@/components/sections/Groups.astro";
+import PeopleGrid from "@/components/sections/PeopleGrid.astro";
+import VideoEmbed from "@/components/sections/VideoEmbed.astro";
+import CTABanner from "@/components/sections/CTABanner.astro";
+import Markdown from "@/components/Markdown.astro";
+import Icon from "@/components/Icon.astro";
+import Button from "@/components/ui/Button.astro";
+
+export async function getStaticPaths() {
+  // Slugs handled by dedicated bespoke routes.
+  const BESPOKE = new Set(["work-for-juma"]);
+  const pages = await getCollection("page", (p) => !p.data.draft);
+  return pages
+    .filter((p) => !BESPOKE.has(p.id))
+    .map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+const isLegal = d.kind === "legal";
+const isVideo = d.kind === "video";
+const hero = d.hero ?? { heading: d.title };
+---
+
+<BaseLayout title={d.title} description={d.seoDescription ?? d.intro} image={hero.image ? `/media/${hero.image}` : undefined}>
+  {
+    isLegal ? (
+      <PageHeader title={d.title} eyebrow="Juma Ventures" />
+    ) : (
+      <Hero
+        eyebrow={hero.eyebrow}
+        heading={hero.heading}
+        subheading={hero.subheading}
+        image={hero.image}
+        ctaLabel={hero.ctaLabel}
+        ctaHref={hero.ctaHref}
+        size={isVideo ? "md" : "lg"}
+      />
+    )
+  }
+
+  {
+    d.intro && !isLegal && (
+      <section class="bg-white">
+        <Container size="narrow" class="py-12 text-center">
+          <p class="text-xl leading-relaxed text-ink-soft md:text-2xl">{d.intro}</p>
+        </Container>
+      </section>
+    )
+  }
+
+  {
+    (d.mission || d.vision) && (
+      <section class="bg-cream">
+        <Container class="grid gap-8 py-14 md:grid-cols-2">
+          {d.mission && (
+            <div class="rounded-[var(--radius-card)] bg-white p-8 shadow-[var(--shadow-card)]">
+              <h2 class="text-xl text-brand-600">Our Mission</h2>
+              <p class="mt-3 text-lg text-ink-soft">{d.mission}</p>
+            </div>
+          )}
+          {d.vision && (
+            <div class="rounded-[var(--radius-card)] bg-white p-8 shadow-[var(--shadow-card)]">
+              <h2 class="text-xl text-brand-600">Our Vision</h2>
+              <p class="mt-3 text-lg text-ink-soft">{d.vision}</p>
+            </div>
+          )}
+        </Container>
+      </section>
+    )
+  }
+
+  {isVideo && d.videoUrl && (
+    <section class="bg-white">
+      <Container size="narrow" class="py-12">
+        <VideoEmbed url={d.videoUrl} title={d.title} />
+      </Container>
+    </section>
+  )}
+
+  {d.pillars.length > 0 && <Pillars pillars={d.pillars} />}
+
+  {d.eligibility.length > 0 && (
+    <section class="bg-cream">
+      <Container size="narrow" class="py-14">
+        <h2 class="text-2xl md:text-3xl">Who Can Apply</h2>
+        <ul class="mt-6 space-y-3">
+          {d.eligibility.map((e) => (
+            <li class="flex gap-3 text-lg text-ink-soft">
+              <Icon name="chevronRight" size={22} class="mt-1 shrink-0 text-brand-600" />
+              <span>{e}</span>
+            </li>
+          ))}
+        </ul>
+      </Container>
+    </section>
+  )}
+
+  {d.bullets.length > 0 && (
+    <section class="bg-white">
+      <Container size="narrow" class="py-14">
+        <h2 class="text-2xl md:text-3xl">You Are…</h2>
+        <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+          {d.bullets.map((b) => (
+            <li class="flex gap-3 text-ink-soft">
+              <Icon name="chevronRight" size={20} class="mt-1 shrink-0 text-brand-600" />
+              <span>{b}</span>
+            </li>
+          ))}
+        </ul>
+      </Container>
+    </section>
+  )}
+
+  {d.benefits.length > 0 && (
+    <section class="bg-cream">
+      <Container class="py-14">
+        <h2 class="mb-8 text-center text-2xl md:text-3xl">Benefits</h2>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {d.benefits.map((b) => (
+            <div class="rounded-[var(--radius-card)] bg-white p-6 shadow-[var(--shadow-card)]">
+              <h3 class="text-lg">{b.title}</h3>
+              {b.body && <p class="mt-2 text-sm text-ink-soft">{b.body}</p>}
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
+  )}
+
+  {d.stats.length > 0 && <StatGrid stats={d.stats} variant="navy" />}
+
+  {d.groups.length > 0 && <Groups groups={d.groups} />}
+  {d.people.length > 0 && <PeopleGrid people={d.people} />}
+
+  {d.sections.length > 0 && <Sections sections={d.sections} />}
+
+  <section class="bg-white">
+    <Container size="narrow" class:list={["py-10", isLegal ? "" : ""]}>
+      <Content />
+    </Container>
+  </section>
+
+  {
+    d.ctas.length > 0 && (
+      <section class="bg-cream">
+        <Container class="flex flex-wrap items-center justify-center gap-4 py-12">
+          {d.ctas.map((c, i) => (
+            <Button href={c.href} variant={i === 0 ? "brand" : "outline"} size="lg" target={c.href.startsWith("http") ? "_blank" : undefined}>
+              {c.label}
+            </Button>
+          ))}
+        </Container>
+      </section>
+    )
+  }
+
+  {!isLegal && <CTABanner />}
+</BaseLayout>

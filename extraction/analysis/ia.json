@@ -1,0 +1,109 @@
+{
+  "_notes": {
+    "source": "https://juma.org homepage HTML fetched via curl 2026-06-02",
+    "header_structure": "The header contains TWO parallel WordPress menus rendered side by side: 'menu-top-menu' (Locations, Join Us, Events, standalone Donate) and 'menu-primary-menu' (For Youth, For Employers, For Volunteers, About). A duplicate mobile menu 'menu-top-menu-1' mirrors the top menu and is ignored here. Items below are listed in source order: top-menu items first, then primary-menu items. The standalone 'Donate' from menu-top-menu is treated as a utility button (see 'utility') and is NOT duplicated in 'header'.",
+    "slug_mapping": "Slugs resolved against extraction/raw/pages.json by normalized link/slug match. Hash anchors (#...) stripped before matching.",
+    "unmatched_navs": [
+      "Events > Paths to Possibility (href https://juma.org/P2P2026) has NO matching page in pages.json — appears to be a custom URL / redirect to an external or event page.",
+      "About > News (href https://juma.org/?post_type=post) is the WordPress 'post' archive listing, not a Page. No page slug matches; slug set to null. NOTE a separate page slug 'news' (id 3683, 'Recent Posts', https://juma.org/news/) exists but the nav does NOT link to it."
+    ],
+    "footer": "footer.footer-top is empty in rendered HTML (no widget columns/link lists). The only footer content is the .copyright bar: a tagline + copyright line with a Privacy Policy link, a Candid/GuideStar Platinum Transparency badge image, and a social icons list. Represented below as a single footer block."
+  },
+  "header": [
+    {
+      "label": "Locations",
+      "href": "#",
+      "slug": null,
+      "children": [
+        { "label": "Sacramento", "href": "https://juma.org/sacramento/", "slug": "sacramento" },
+        { "label": "San Francisco / Bay Area", "href": "https://juma.org/san-francisco/", "slug": "san-francisco" },
+        { "label": "San Jose", "href": "https://juma.org/san-jose/", "slug": "san-jose" },
+        { "label": "Seattle", "href": "https://juma.org/seattle/", "slug": "seattle" }
+      ]
+    },
+    {
+      "label": "Join Us",
+      "href": "#",
+      "slug": null,
+      "children": [
+        { "label": "Donate", "href": "https://juma.org/donate/", "slug": "donate" },
+        { "label": "Newsletter", "href": "https://juma.org/newsletter/", "slug": "newsletter" },
+        { "label": "Work For Juma", "href": "https://juma.org/work-for-juma/", "slug": "work-for-juma" },
+        { "label": "Contact Us", "href": "https://juma.org/contact/", "slug": "contact" }
+      ]
+    },
+    {
+      "label": "Events",
+      "href": "#",
+      "slug": null,
+      "children": [
+        { "label": "Paths to Possibility", "href": "https://juma.org/P2P2026", "slug": null }
+      ]
+    },
+    {
+      "label": "For Youth",
+      "href": "#",
+      "slug": null,
+      "children": [
+        { "label": "Why Juma", "href": "https://juma.org/apply/#why-juma-anchor", "slug": "apply" },
+        { "label": "Who Can Apply", "href": "https://juma.org/apply/#eligibility-link", "slug": "apply" },
+        { "label": "Apply Now", "href": "https://juma.org/apply/#locations", "slug": "apply" }
+      ]
+    },
+    {
+      "label": "For Employers",
+      "href": "#",
+      "slug": null,
+      "children": [
+        { "label": "Why Juma", "href": "https://juma.org/employer/", "slug": "employer" }
+      ]
+    },
+    {
+      "label": "For Volunteers",
+      "href": "https://juma.org/volunteer/",
+      "slug": "volunteer",
+      "children": []
+    },
+    {
+      "label": "About",
+      "href": "#",
+      "slug": null,
+      "children": [
+        {
+          "label": "Mission",
+          "href": "https://juma.org/our-mission-history",
+          "slug": "our-mission-history",
+          "children": [
+            { "label": "Programs", "href": "https://juma.org/programs/", "slug": "programs" },
+            { "label": "Impact & Stories", "href": "https://juma.org/year-in-numbers/", "slug": "year-in-numbers" },
+            { "label": "Social Enterprise", "href": "https://juma.org/social-enterprise/", "slug": "social-enterprise" }
+          ]
+        },
+        { "label": "Leadership", "href": "https://juma.org/leadership/", "slug": "leadership" },
+        { "label": "Board of Directors", "href": "https://juma.org/board-of-directors/", "slug": "board-of-directors" },
+        { "label": "Financials", "href": "https://juma.org/financials/", "slug": "financials" },
+        { "label": "News", "href": "https://juma.org/?post_type=post", "slug": null },
+        { "label": "Press", "href": "https://juma.org/press/", "slug": "press" },
+        { "label": "Partners & Supporters", "href": "https://juma.org/our-partners-supporters/", "slug": "our-partners-supporters" },
+        { "label": "Contact Us", "href": "https://juma.org/contact/", "slug": "contact" }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "heading": "Copyright Bar",
+      "links": [
+        { "label": "Privacy Policy", "href": "https://juma.org/donor-privacy-policy/" }
+      ]
+    }
+  ],
+  "social": [
+    { "platform": "facebook", "url": "https://www.facebook.com/jumaventures" },
+    { "platform": "instagram", "url": "https://instagram.com/juma_ventures/" },
+    { "platform": "linkedin", "url": "https://www.linkedin.com/school/juma-ventures/" },
+    { "platform": "youtube", "url": "https://www.youtube.com/channel/UCTQR2CosvNd8-dP8qENfrsg" }
+  ],
+  "utility": [
+    { "label": "Donate", "href": "https://juma.org/donate/" }
+  ]
+}

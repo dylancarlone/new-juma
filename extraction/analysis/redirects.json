@@ -1,0 +1,1818 @@
+{
+  "convention": {
+    "pages": "/<slug>/ (nested paths preserved, e.g. /financials/2014-annual-report/, /volunteer/seattle/); ugly job slugs remapped to /careers/<clean-slug>/; root person profiles folded into /team/<slug>/; v1/-old drafts redirected to their live equivalent",
+    "posts": "/news/<slug>/ (slug from WP post slug, sanitized; messy/encoded/duplicate WP slugs regenerated from the post title; collisions disambiguated)",
+    "categories": "/news/category/<slug>/",
+    "team": "/team/<slug>/ (index at /team/)",
+    "events": "/events/<slug>/ (index at /events/; events content currently empty, slugs preserved for URL parity)"
+  },
+  "redirects": [
+    {
+      "from": "https://juma.org/",
+      "to": "/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/our-program/",
+      "to": "/our-program/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/financials/2014-annual-report/",
+      "to": "/financials/2014-annual-report/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/financials/2014-audited-financial-statement/",
+      "to": "/financials/2014-audited-financial-statement/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/financials/2013-annual-report/",
+      "to": "/financials/2013-annual-report/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/financials/2013-form-990/",
+      "to": "/financials/2013-form-990/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/financials/2013-financial-statements/",
+      "to": "/financials/2013-financial-statements/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/financials/2012-annual-report/",
+      "to": "/financials/2012-annual-report/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/financials/2012-form-990/",
+      "to": "/financials/2012-form-990/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/financials/2012-audited-financial-statement/",
+      "to": "/financials/2012-audited-financial-statement/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/financials/2011-annual-report/",
+      "to": "/financials/2011-annual-report/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/financials/2011-form-990/",
+      "to": "/financials/2011-form-990/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/financials/2011-audited-financial-statement/",
+      "to": "/financials/2011-audited-financial-statement/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/financials/2014-form-990/",
+      "to": "/financials/2014-form-990/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/the-problem-solution/",
+      "to": "/the-problem-solution/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/subscription-confirmation/",
+      "to": "/subscription-confirmation/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/who-we-serve/",
+      "to": "/who-we-serve/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/the-juma-model/",
+      "to": "/the-juma-model/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/donor-privacy-policy/",
+      "to": "/donor-privacy-policy/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/youthconnect/",
+      "to": "/youthconnect/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/interest-form/",
+      "to": "/interest-form/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/causes/",
+      "to": "/causes/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/leadership/",
+      "to": "/leadership/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/donate/",
+      "to": "/donate/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/news/",
+      "to": "/news/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017-annual-report/",
+      "to": "/2017-annual-report/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/seattle-old/",
+      "to": "/seattle/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/year-in-numbers/",
+      "to": "/year-in-numbers/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/alexis-gunn/",
+      "to": "/team/alexis-gunn/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/sacramento-old/",
+      "to": "/sacramento/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/listserve-form/",
+      "to": "/listserve-form/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/director-of-development/",
+      "to": "/careers/director-of-development/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/employer/",
+      "to": "/employer/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/volunteer/san-jose/",
+      "to": "/volunteer/san-jose/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/programs-3/",
+      "to": "/programs/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/30-years/",
+      "to": "/30-years/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/cassandra-yee/",
+      "to": "/team/cassandra-yee/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/sanobar-sajan/",
+      "to": "/team/sanobar-sajan/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/alvin-yu/",
+      "to": "/team/alvin-yu/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/stephen-norris/",
+      "to": "/team/stephen-norris/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/claire-wheeler/",
+      "to": "/team/claire-wheeler/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/michael-rivera/",
+      "to": "/team/michael-rivera/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/newsletter/",
+      "to": "/newsletter/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/adriane-gamble-armstrong/",
+      "to": "/team/adriane-gamble-armstrong/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/megan-hover/",
+      "to": "/team/megan-hover/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/volunteer/",
+      "to": "/volunteer/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/apply/",
+      "to": "/apply/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/lisa-chin/",
+      "to": "/team/lisa-chin/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/jess-lewis/",
+      "to": "/team/jess-lewis/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/press/",
+      "to": "/press/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/financials/",
+      "to": "/financials/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/director-of-finance-jd/",
+      "to": "/careers/director-of-finance/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/volunteer/seattle/",
+      "to": "/volunteer/seattle/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/board-of-directors/",
+      "to": "/board-of-directors/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/contact/",
+      "to": "/contact/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/alexanders-story/",
+      "to": "/alexanders-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/anthonys-story/",
+      "to": "/anthonys-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/jasenias-story/",
+      "to": "/jasenias-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/pathways/",
+      "to": "/pathways/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/donna/",
+      "to": "/team/donna/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/social-enterprise/",
+      "to": "/social-enterprise/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/our-partners-supporters/",
+      "to": "/our-partners-supporters/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/meet-connor/",
+      "to": "/meet-connor/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/get-know-juma-seattle/",
+      "to": "/get-know-juma-seattle/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/get-know-juma-san-jose/",
+      "to": "/get-know-juma-san-jose/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/get-know-juma-sacramento/",
+      "to": "/get-know-juma-sacramento/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/meet-steven/",
+      "to": "/meet-steven/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/san-francisco/",
+      "to": "/san-francisco/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/san-jose/",
+      "to": "/san-jose/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/seattle/",
+      "to": "/seattle/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/sacramento/",
+      "to": "/sacramento/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/work-for-juma/",
+      "to": "/work-for-juma/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/directorofinstitutionalgiving/",
+      "to": "/careers/director-of-institutional-giving/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/directorofmajorgifts/",
+      "to": "/careers/director-of-major-gifts/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/san-jose-development-director-major-gifts/",
+      "to": "/careers/san-jose-development-director-major-gifts/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/hr-people-operations-manager/",
+      "to": "/careers/hr-people-operations-manager/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/programsv1/",
+      "to": "/programs/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/programs/",
+      "to": "/programs/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/our-mission-historyv1/",
+      "to": "/our-mission-history/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/our-mission-history/",
+      "to": "/our-mission-history/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/frontpagev1/",
+      "to": "/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/deniseevans/",
+      "to": "/team/denise-evans/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2016/04/13/opportunity-youth-join-the-workforce-in-new-york-/",
+      "to": "/news/opportunity-youth-join-the-workforce-in-new-york/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2016/04/13/batter-up-baseball-season-is-here/",
+      "to": "/news/batter-up-baseball-season-is-here/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2016/02/08/juma-changing-the-game-for-youth-across-america/",
+      "to": "/news/juma-changing-the-game-for-youth-across-america/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2015/11/09/reimagining-the-cost-of-college-in-the-u-s/",
+      "to": "/news/reimagining-the-cost-of-college-in-the-u-s/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2015/11/02/champions-for-social-enterprise/",
+      "to": "/news/champions-for-social-enterprise/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2015/11/02/juma-seattle-wins-silver-at-the-community-impact-awards/",
+      "to": "/news/juma-seattle-wins-silver-at-the-community-impact-awards/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2015/11/02/2014-annual-report/",
+      "to": "/news/2014-annual-report/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2015/10/12/juma-youth-jobs-thrive-at-levis-stadium/",
+      "to": "/news/juma-youth-jobs-thrive-at-levis-stadium/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2015/10/12/juma-/",
+      "to": "/news/juma-and-starbucks-provide-jobs-for-seattle-opportunity-youth/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2016/07/28/makers4good-x-juma-produce-innovative-bag-design-for-youth-ballpark-vendors/",
+      "to": "/news/makers4good-x-juma-produce-innovative-bag-design-for-youth-ballpark-vendors/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2016/11/03/juma-youth-joins-president-obama-in-north-carolina-student-forum/",
+      "to": "/news/juma-youth-joins-president-obama-in-north-carolina-student-forum/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2016/12/08/innovative-vendor-backpack-tested-by-juma-youth-at-att-park/",
+      "to": "/news/innovative-vendor-backpack-tested-by-juma-youth-at-att-park/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/01/27/a-new-year-two-new-cities-juma-creates-250-youth-jobs-in-texas/",
+      "to": "/news/a-new-year-two-new-cities-juma-creates-250-youth-jobs-in-texas/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/01/27/juma-/",
+      "to": "/news/juma-and-ups-partner-to-engage-atlanta-youth-in-high-growth-careers/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/01/30/juma-thanks-you/",
+      "to": "/news/juma-thanks-you/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/01/30/giving-tough-love-nW/",
+      "to": "/news/giving-tough-love-and-watching-confidence-grow-life-as-a-youth-career-coach/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/04/03/maintaining-safe-spaces-for-our-youth/",
+      "to": "/news/maintaining-safe-spaces-for-our-youth/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/04/03/houlay-lnWY6nnjX.lis/",
+      "to": "/news/houlay-lands-a-job-at-amazon-post-juma/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/04/03/thanks-to-our-recent-supporters/",
+      "to": "/news/thanks-to-our-recent-supporters/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/04/03/juma-joins-gap-inc-in-offering-first-job-experience-to-youth/",
+      "to": "/news/juma-joins-gap-inc-in-offering-first-job-experience-to-youth/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/08/16/juma-leadership-news/",
+      "to": "/news/juma-leadership-news/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/08/21/qa-with-lionel-shaw-founder/",
+      "to": "/news/qa-with-lionel-shaw-founder/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/07/24/bay-area-youth-july-recap/",
+      "to": "/news/bay-area-youth-july-recap/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/08/21/thanks-to-our-recent-supporters-2/",
+      "to": "/news/thanks-to-our-recent-supporters-2/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/08/21/getting-a-head-start-with-this-way-ahead/",
+      "to": "/news/getting-a-head-start-with-this-way-ahead/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/09/18/jumas-position-on-daca/",
+      "to": "/news/jumas-position-on-daca/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/08/29/update-on-our-juma-texas-family/",
+      "to": "/news/update-on-our-juma-texas-family/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/11/16/years-struggle-new-life-opportunity/",
+      "to": "/news/years-struggle-new-life-opportunity/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/11/16/juma-receives-kresge-foundation-grant/",
+      "to": "/news/juma-receives-kresge-foundation-grant/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/11/16/seattles-winning-streak/",
+      "to": "/news/seattles-winning-streak/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/11/16/thanks-recent-supporters/",
+      "to": "/news/thanks-recent-supporters/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2017/12/05/juma-ventures-announces-new-ceo-2/",
+      "to": "/news/juma-ventures-announces-new-ceo-2/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2016/02/18/building-career-success-among-out-of-school-out-of-work-youth/",
+      "to": "/news/building-career-success-among-out-of-school-out-of-work-youth/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/02/14/making-2018-best-year-ever/",
+      "to": "/news/making-2018-best-year-ever/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/02/14/juma-texas-look-back-first-anniversary/",
+      "to": "/news/juma-texas-look-back-first-anniversary/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/02/21/thank-recent-funders/",
+      "to": "/news/thank-recent-funders/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/02/21/lights-camera-juma/",
+      "to": "/news/lights-camera-juma/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/03/21/boba-tea-tap-safeco-field-juma-ventures-launches-latest-enterprise-creating-employment-youth-underserved-communities/",
+      "to": "/news/boba-tea-tap-safeco-field-juma-ventures-launches-latest-enterprise-creating-employment-youth-underserved-communities/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/04/06/honoring-past-looking-toward-future-juma-ventures/",
+      "to": "/news/honoring-past-looking-toward-future-juma-ventures/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/05/10/game-game-night-jumas-san-francisco-bay-area-youth/",
+      "to": "/news/game-game-night-jumas-san-francisco-bay-area-youth/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/05/22/thank-recent-funders-2/",
+      "to": "/news/thank-recent-funders-2/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/05/22/juma-sacramento-celebrates-end-sacramento-kings-season/",
+      "to": "/news/juma-sacramento-celebrates-end-sacramento-kings-season/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/05/22/offering-helping-hnW/",
+      "to": "/news/offering-a-helping-hand/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/05/22/four-new-board-members-join-jumas-national-board-directors/",
+      "to": "/news/four-new-board-members-join-jumas-national-board-directors/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/05/22/juma-volunteers-share-first-job-stories/",
+      "to": "/news/juma-volunteers-share-first-job-stories/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/11/15/juma-honored-obama-foundation-grant/",
+      "to": "/news/juma-honored-obama-foundation-grant/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/06/15/jumas-you-did-it/",
+      "to": "/news/jumas-you-did-it/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/11/29/making-possible-possible-since-1993/",
+      "to": "/news/making-possible-possible-since-1993/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/11/29/thank-recent-funders-3/",
+      "to": "/news/thank-recent-funders-3/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/11/29/alumnus-brendan-tells-juma-story-twenty-years-making/",
+      "to": "/news/alumnus-brendan-tells-juma-story-twenty-years-making/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/11/29/juma-seattle-celebrates-five-year-anniversary-connecting-youth-opportunities/",
+      "to": "/news/juma-seattle-celebrates-five-year-anniversary-connecting-youth-opportunities/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/12/12/connors-story/",
+      "to": "/news/connors-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/02/08/juma-welcomes-three-new-members-national-board-directors/",
+      "to": "/news/juma-welcomes-three-new-members-national-board-directors/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/03/19/board-announcements-march-2019/",
+      "to": "/news/board-announcements-march-2019/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/03/19/abby-looks-job-finds-career/",
+      "to": "/news/abby-looks-job-finds-career/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/03/19/thank-recent-funders-4/",
+      "to": "/news/thank-recent-funders-4/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/03/19/juma-houston-named-goodwills-employer-year/",
+      "to": "/news/juma-houston-named-goodwills-employer-year/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/03/19/juma-employer-partnerships-connecting-youth-opportunity/",
+      "to": "/news/juma-employer-partnerships-connecting-youth-opportunity/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/06/06/disrupting-poverty-inclusive-financial-capability/",
+      "to": "/news/disrupting-poverty-inclusive-financial-capability/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/06/06/accepting-support-planning-ahead-devoshars-juma-story/",
+      "to": "/news/accepting-support-planning-ahead-devoshars-juma-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/06/06/juma-sacramento-announces-exciting-grant-california-workforce-accelerator/",
+      "to": "/news/juma-sacramento-announces-exciting-grant-california-workforce-accelerator/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/06/06/thank-recent-funders-5/",
+      "to": "/news/thank-recent-funders-5/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/09/09/rewarding-resilience-responsibility/",
+      "to": "/news/rewarding-resilience-responsibility/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/09/09/thank-recent-funders-6/",
+      "to": "/news/thank-recent-funders-6/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/09/09/exploring-inspiring-juma-life-outside-ballpark/",
+      "to": "/news/exploring-inspiring-juma-life-outside-ballpark/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/09/09/looking-work-finding-self-confidence-stevens-juma-story/",
+      "to": "/news/looking-work-finding-self-confidence-stevens-juma-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/12/02/magic-mentorship-paths-possibility-2019/",
+      "to": "/news/magic-mentorship-paths-possibility-2019/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/12/02/learning-evaluation-holistic-scientific-approach-data/",
+      "to": "/news/learning-and-evaluation-a-holistic-scientific-approach-to-data/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/12/05/juma-welcomes-chief-development/",
+      "to": "/news/juma-welcomes-chief-development/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/12/05/thank-recent-funders-7/",
+      "to": "/news/thank-recent-funders-7/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2019/12/02/gap-inc-s-way-ahead-juma-working-together-build-bridges-opportunity/",
+      "to": "/news/gap-inc-s-way-ahead-juma-working-together-build-bridges-opportunity/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/03/06/paving_the_way_with_adriane/",
+      "to": "/news/paving-the-way-with-adriane/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/03/12/covid-19-update/",
+      "to": "/news/covid-19-update/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/03/24/these-are-very-real-needs/",
+      "to": "/news/these-are-very-real-needs/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/03/31/juma-youth-frontlines-uncertainty/",
+      "to": "/news/juma-youth-frontlines-uncertainty/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/04/08/way-youth-still-need/",
+      "to": "/news/way-youth-still-need/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/04/16/youth-need-alternatives-unemployment-insurance-stimulus-checks/",
+      "to": "/news/youth-need-alternatives-unemployment-insurance-stimulus-checks/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/04/23/together-bringing-back-youth-opportunity-earn-learn-connect-thank/",
+      "to": "/news/together-bringing-back-youth-opportunity-earn-learn-connect-thank/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/04/30/jumas-national-board-directors-welcomes-caroline-dechert-susan-hopkinson-lori-ri/",
+      "to": "/news/jumas-national-board-directors-welcomes-caroline-dechert-susan-hopkinson-lori-ri/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/05/01/support-making-impact/",
+      "to": "/news/support-making-impact/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/05/07/coming-together-crisis-good-news-juma/",
+      "to": "/news/coming-together-crisis-good-news-juma/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/06/03/support-face-injustice/",
+      "to": "/news/support-face-injustice/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/06/11/thank-supporting-juma-youth/",
+      "to": "/news/thank-supporting-juma-youth/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/07/27/juma-unites-creating-forum-youth-face-social-injustice/",
+      "to": "/news/juma-unites-creating-forum-youth-face-social-injustice/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/08/04/thank-recent-funders-8/",
+      "to": "/news/thank-recent-funders-8/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/07/27/exploring-new-employment-pathways-youth/",
+      "to": "/news/exploring-new-employment-pathways-youth/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/07/27/finding-flexibility-strength-hardship-taquishas-juma-story/",
+      "to": "/news/finding-flexibility-strength-hardship-taquishas-juma-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/10/30/jumas-new-and-exciting-micro-venture/",
+      "to": "/news/jumas-new-and-exciting-micro-venture/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/11/12/empowering-young-people-one-vote-at-a-time/",
+      "to": "/news/empowering-young-people-one-vote-at-a-time/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/11/12/an-exciting-new-microventure-from-juma/",
+      "to": "/news/an-exciting-new-microventure-from-juma/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/11/12/taking-a-chance-on-hope-cedricks-juma-story/",
+      "to": "/news/taking-a-chance-on-hope-cedricks-juma-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/11/12/thank-you-to-our-recent-funders/",
+      "to": "/news/thank-you-to-our-recent-funders/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2020/12/04/embracing-differences-with-juma-ceo-adriane-armstrong-on-career-curves-podcast/",
+      "to": "/news/embracing-differences-with-juma-ceo-adriane-armstrong-on-career-curves-podcast/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/03/15/when-hard-work-pays-off-brittanys-juma-story/",
+      "to": "/news/when-hard-work-pays-off-brittanys-juma-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/03/15/back-in-the-action-jumas-first-stadium-shift-of-2021/",
+      "to": "/news/back-in-the-action-jumas-first-stadium-shift-of-2021/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/03/15/unapologetically-black-juma-celebrates-black-history-month-with-inspiring-conversations-and-community/",
+      "to": "/news/unapologetically-black-juma-celebrates-black-history-month-with-inspiring-conversations-and-community/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/03/15/thank-you-to-our-recent-funders-2/",
+      "to": "/news/thank-you-to-our-recent-funders-2/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/03/18/standing-strong-against-violence/",
+      "to": "/news/standing-strong-against-violence/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/05/13/seattle-assistant-enterprise-manager-part-time/",
+      "to": "/news/seattle-assistant-enterprise-manager-part-time/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/05/31/thank-you-to-our-recent-funders-3/",
+      "to": "/news/thank-you-to-our-recent-funders-3/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/05/31/jumas-national-board-of-directors-welcomes-angela-du-and-cheryl-k-house/",
+      "to": "/news/jumas-national-board-of-directors-welcomes-angela-du-and-cheryl-k-house/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/05/31/imagining-the-paw-sibilities-kenneths-juma-story/",
+      "to": "/news/imagining-the-paw-sibilities-kenneths-juma-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/05/31/stronger-together-juma-and-seattle-good-business-network/",
+      "to": "/news/stronger-together-juma-and-seattle-good-business-network/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/08/04/a-new-social-enterprise-from-juma-steep-creamery/",
+      "to": "/news/a-new-social-enterprise-from-juma-steep-creamery/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/08/23/thank-you-to-our-recent-funders-4/",
+      "to": "/news/thank-you-to-our-recent-funders-4/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/08/24/when-its-ok-not-to-be-ok-juma-tackles-self-care-with-credible-mind/",
+      "to": "/news/when-its-ok-not-to-be-ok-juma-tackles-self-care-with-credible-mind/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/08/24/paying-it-forward-essences-juma-journey/",
+      "to": "/news/paying-it-forward-essences-juma-journey/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/08/24/girl-power-in-seattle/",
+      "to": "/news/girl-power-in-seattle/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/11/04/thank-you-to-our-recent-funders-5/",
+      "to": "/news/thank-you-to-our-recent-funders-5/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/11/04/stronger-together-building-better-opportunities-through-better-management-with-jumas-employer-training-series/",
+      "to": "/news/stronger-together-building-better-opportunities-through-better-management-with-jumas-employer-training-series/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/11/04/finding-the-silver-lining-daniels-juma-story/",
+      "to": "/news/finding-the-silver-lining-daniels-juma-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/11/04/investing-in-youth-together-juma-and-fedex/",
+      "to": "/news/investing-in-youth-together-juma-and-fedex/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2021/12/08/jumas-national-board-of-directors-welcomes-cynthia-burks-damaune-journey-and-lorenzo-f-robleto/",
+      "to": "/news/jumas-national-board-of-directors-welcomes-cynthia-burks-damaune-journey-and-lorenzo-f-robleto/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/02/07/seattle-program-coordinator/",
+      "to": "/news/seattle-program-coordinator/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/02/24/a-sweet-opportunity-for-youth-how-citi-foundations-support-is-making-possible-possible-at-steep/",
+      "to": "/news/a-sweet-opportunity-for-youth-how-citi-foundations-support-is-making-possible-possible-at-steep/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/02/24/welcoming-the-kraken-juma-seattles-new-venue-brings-new-opportunities/",
+      "to": "/news/welcoming-the-kraken-juma-seattles-new-venue-brings-new-opportunities/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/02/24/what-your-support-means-to-juma-youth/",
+      "to": "/news/what-your-support-means-to-juma-youth/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/02/28/thank-you-to-our-funders/",
+      "to": "/news/thank-you-to-our-funders/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/05/24/thank-you-to-our-funders-2/",
+      "to": "/news/thank-you-to-our-funders-2/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/05/24/allies-in-youth-development-creating-new-roles-to-meet-youth-where-theyre-at/",
+      "to": "/news/allies-in-youth-development-creating-new-roles-to-meet-youth-where-theyre-at/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/05/24/looking-for-a-job-and-finding-a-community-alexs-juma-story/",
+      "to": "/news/looking-for-a-job-and-finding-a-community-alexs-juma-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/06/13/youth-recruitment-specialist/",
+      "to": "/news/youth-recruitment-specialist/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/05/24/juma-and-mentor-empowering-youth-through-positive-relationships/",
+      "to": "/news/juma-and-mentor-empowering-youth-through-positive-relationships/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/05/18/atlanta-assistant-enterprise-manager-part-time%ef%bf%bc/",
+      "to": "/news/atlanta-assistant-enterprise-manager-part-time/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/08/05/bringing-boba-to-the-fans-steeps-expansion-into-levis-stadium/",
+      "to": "/news/bringing-boba-to-the-fans-steeps-expansion-into-levis-stadium/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/08/05/being-the-change-the-juma-youth-leadership-council/",
+      "to": "/news/being-the-change-the-juma-youth-leadership-council/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/08/05/learning-to-lead-trinidads-juma-story/",
+      "to": "/news/learning-to-lead-trinidads-juma-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/08/05/thank-you-to-our-funders-3/",
+      "to": "/news/thank-you-to-our-funders-3/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/11/01/juma-ventures-external-evaluator-rfp-bidders-conference-10-31-2022-slides-and-video/",
+      "to": "/news/juma-ventures-external-evaluator-rfp-bidders-conference-10-31-2022-slides-and-video/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/11/04/confidence-in-community-leslies-juma-story/",
+      "to": "/news/confidence-in-community-leslies-juma-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/11/08/thank-you-to-our-funders-4/",
+      "to": "/news/thank-you-to-our-funders-4/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/11/04/partners-in-exploration-learning-banking-with-salal-credit-union/",
+      "to": "/news/partners-in-exploration-learning-banking-with-salal-credit-union/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/11/04/partners-in-growth-making-communities-safer-with-3-strands-global-foundation/",
+      "to": "/news/partners-in-growth-making-communities-safer-with-3-strands-global-foundation/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/01/23/enterprise-manager/",
+      "to": "/news/enterprise-manager/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/02/08/thank-you-to-our-funders-5/",
+      "to": "/news/thank-you-to-our-funders-5/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/02/08/lean-on-me-the-role-of-case-managers-at-juma/",
+      "to": "/news/lean-on-me-the-role-of-case-managers-at-juma/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/02/08/finding-stability-in-community-biancas-juma-story/",
+      "to": "/news/finding-stability-in-community-biancas-juma-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/02/08/putting-youth-first-for-30-years-and-beyond/",
+      "to": "/news/putting-youth-first-for-30-years-and-beyond/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2022/10/21/juma-ventures-request-for-proposal-rfp-for-calvip-grant/",
+      "to": "/news/juma-ventures-request-for-proposal-rfp-for-calvip-grant/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/04/18/getting-hands-on-with-financial-literacy-juma-and-stash/",
+      "to": "/news/getting-hands-on-with-financial-literacy-juma-and-stash/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/04/18/juma-strong-engaging-youth-in-sacramento/",
+      "to": "/news/juma-strong-engaging-youth-in-sacramento/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/04/18/juma-mentorship-in-action-sophie-and-nash/",
+      "to": "/news/juma-mentorship-in-action-sophie-and-nash/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/04/18/thank-you-to-our-funders-6/",
+      "to": "/news/thank-you-to-our-funders-6/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/07/20/seeking-feedback-from-youth-provides-a-space-to-thrive/",
+      "to": "/news/seeking-feedback-from-youth-provides-a-space-to-thrive/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/07/20/jumas-national-board-of-directors-welcomes-andrew-bondale-and-terrell-davis/",
+      "to": "/news/jumas-national-board-of-directors-welcomes-andrew-bondale-and-terrell-davis/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/07/21/thank-you-to-our-recent-funders-6/",
+      "to": "/news/thank-you-to-our-recent-funders-6/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/07/20/triumphing-against-the-odds-gilbertos-juma-story/",
+      "to": "/news/triumphing-against-the-odds-gilbertos-juma-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/07/20/bringing-boba-for-good-to-the-mission/",
+      "to": "/news/bringing-boba-for-good-to-the-mission/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/11/02/pedaling-to-career-success-with-the-jobcycle-connect-program/",
+      "to": "/news/pedaling-to-career-success-with-the-jobcycle-connect-program/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/11/02/leading-the-way-anzhanes-juma-story/",
+      "to": "/news/leading-the-way-anzhanes-juma-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/11/02/thank-you-to-our-recent-funders-7/",
+      "to": "/news/thank-you-to-our-recent-funders-7/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2023/11/02/why-a-job-is-about-more-than-a-paycheck/",
+      "to": "/news/why-a-job-is-about-more-than-a-paycheck/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/03/04/gaining-the-confidence-to-invest-in-himself-anthonys-juma-story/",
+      "to": "/news/gaining-the-confidence-to-invest-in-himself-anthonys-juma-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/03/04/thank-you-to-our-funders-march-2024/",
+      "to": "/news/thank-you-to-our-funders-march-2024/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/03/04/leading-the-way-as-golden-state-warriors-guest-service-ambassadors/",
+      "to": "/news/leading-the-way-as-golden-state-warriors-guest-service-ambassadors/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/03/04/juma-celebrates-10-years-in-san-jose/",
+      "to": "/news/juma-celebrates-10-years-in-san-jose/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/04/16/our-san-francisco-office-has-moved/",
+      "to": "/news/our-san-francisco-office-has-moved/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/05/30/bringing-boba-for-good-to-paypal-park/",
+      "to": "/news/bringing-boba-for-good-to-paypal-park/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/05/30/the-nba-foundation-selects-juma-sacramento-for-support/",
+      "to": "/news/the-nba-foundation-selects-juma-sacramento-for-support/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/05/30/putting-it-into-practice-leslies-journey-from-juma-youth-to-juma-intern/",
+      "to": "/news/putting-it-into-practice-leslies-journey-from-juma-youth-to-juma-intern/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/06/03/thank-you-to-our-recent-funders-8/",
+      "to": "/news/thank-you-to-our-recent-funders-8/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/06/06/data-coordinator/",
+      "to": "/news/data-coordinator/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/09/23/bridging-the-tech-gap-the-new-juma-seattle-tech-lab/",
+      "to": "/news/bridging-the-tech-gap-the-new-juma-seattle-tech-lab/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/09/23/empowering-future-business-leaders-jumas-entrepreneurship-curriculum/",
+      "to": "/news/empowering-future-business-leaders-jumas-entrepreneurship-curriculum/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/09/23/from-high-school-student-to-future-entrepreneur-shaniyahs-juma-journey/",
+      "to": "/news/from-high-school-student-to-future-entrepreneur-shaniyahs-juma-journey/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/09/23/thank-you-to-our-recent-funders-9/",
+      "to": "/news/thank-you-to-our-recent-funders-9/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/11/21/juma-launches-youth-empowerment-emergency-fund-a-lifeline-for-times-of-crisis/",
+      "to": "/news/juma-launches-youth-empowerment-emergency-fund-a-lifeline-for-times-of-crisis/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/11/21/juma-honored-as-member-of-california-regional-initiative-for-social-enterprise-ca-rise/",
+      "to": "/news/juma-honored-as-member-of-california-regional-initiative-for-social-enterprise-ca-rise/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/11/21/facing-incredible-challenges-with-an-indomitable-spirit-luiss-juma-story/",
+      "to": "/news/facing-incredible-challenges-with-an-indomitable-spirit-luiss-juma-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/11/21/thank-you-to-our-recent-funders-10/",
+      "to": "/news/thank-you-to-our-recent-funders-10/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/02/27/thank-you-to-our-recent-funders-11/",
+      "to": "/news/thank-you-to-our-recent-funders-11/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/02/27/using-sports-to-promote-community-prosperity-juma-and-the-bay-area-host-committee/",
+      "to": "/news/using-sports-to-promote-community-prosperity-juma-and-the-bay-area-host-committee/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/02/27/combining-passion-for-sports-with-opportunity-reans-juma-story/",
+      "to": "/news/combining-passion-for-sports-with-opportunity-reans-juma-story/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/02/27/juma-seattle-wins-becus-peoples-choice-award/",
+      "to": "/news/juma-seattle-wins-becus-peoples-choice-award/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/04/22/seattle-development-manager/",
+      "to": "/news/seattle-development-manager/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2024/09/26/juma-welcomes-steve-carlson-and-jessica-santamaria-to-national-board-of-directors/",
+      "to": "/news/juma-welcomes-steve-carlson-and-jessica-santamaria-to-national-board-of-directors/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/05/29/juma-welcomes-matthew-forsythe-and-michael-wagner-to-national-board-of-directors/",
+      "to": "/news/juma-welcomes-matthew-forsythe-and-michael-wagner-to-national-board-of-directors/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/06/24/leadership-transition-at-juma-ventures/",
+      "to": "/news/leadership-transition-at-juma-ventures/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/06/30/juma-sacramento-deepened-supportive-staff-service-how-did-it-help-young-people/",
+      "to": "/news/juma-sacramento-deepened-supportive-staff-service-how-did-it-help-young-people/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/06/30/clareases-juma-journey/",
+      "to": "/news/clareases-juma-journey/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/06/30/strategic-planning-goals-achieved-paving-the-way-for-juma-youth-today-and-tomorrow/",
+      "to": "/news/strategic-planning-goals-achieved-paving-the-way-for-juma-youth-today-and-tomorrow/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/06/30/thank-you-to-our-recent-funders-12/",
+      "to": "/news/thank-you-to-our-recent-funders-12/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/09/29/leading-with-our-values-how-the-youth-voice-is-shaping-juma/",
+      "to": "/news/leading-with-our-values-how-the-youth-voice-is-shaping-juma/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/09/29/monses-journey-from-shy-student-to-confident-leader/",
+      "to": "/news/monses-journey-from-shy-student-to-confident-leader/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/09/29/paths-to-possibility-2025-supports-youth-in-their-next-chapters/",
+      "to": "/news/paths-to-possibility-2025-supports-youth-in-their-next-chapters/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/09/29/thank-you-to-our-recent-funders-13/",
+      "to": "/news/thank-you-to-our-recent-funders-13/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/11/19/the-empress-tavern-a-new-opportunity-for-juma-sacramento-youth/",
+      "to": "/news/the-empress-tavern-a-new-opportunity-for-juma-sacramento-youth/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/11/19/words-that-welcome-all-inclusive-language-at-juma/",
+      "to": "/news/words-that-welcome-all-inclusive-language-at-juma/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/11/19/a-path-to-leadership-hayleys-juma-journey/",
+      "to": "/news/a-path-to-leadership-hayleys-juma-journey/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2025/11/19/thank-you-to-our-recent-funders-14/",
+      "to": "/news/thank-you-to-our-recent-funders-14/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2026/01/02/juma-announces-new-ceo-to-propel-the-organization-into-its-next-era-of-growth/",
+      "to": "/news/juma-announces-new-ceo-to-propel-the-organization-into-its-next-era-of-growth/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2026/03/24/juma-ventures-repeats-super-bowl-success/",
+      "to": "/news/juma-ventures-repeats-super-bowl-success/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2026/03/24/leslies-story-from-her-first-shift-to-the-super-bowl/",
+      "to": "/news/leslies-story-from-her-first-shift-to-the-super-bowl/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/2018/06/11/another-day-another-jumadays/",
+      "to": "/news/another-day-another-jumadays/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/Article-May2026-MLBOpeningWeek",
+      "to": "/news/may2026-juma-youth-step-up-to-the-plate-at-mlb-stadiums/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/article-may2026-fionasstory",
+      "to": "/news/fionas-juma-journey-from-lattes-to-linguistics/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/category/atlanta/",
+      "to": "/news/category/atlanta/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/category/dallas/",
+      "to": "/news/category/dallas/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/category/expansion/",
+      "to": "/news/category/expansion/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/category/financial-capability/",
+      "to": "/news/category/financial-capability/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/category/houston/",
+      "to": "/news/category/houston/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/category/new-york/",
+      "to": "/news/category/new-york/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/category/oakland/",
+      "to": "/news/category/oakland/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/category/opportunity-youth/",
+      "to": "/news/category/opportunity-youth/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/category/sacramento/",
+      "to": "/news/category/sacramento/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/category/san-francisco/",
+      "to": "/news/category/san-francisco/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/category/san-jose/",
+      "to": "/news/category/san-jose/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/category/seattle/",
+      "to": "/news/category/seattle/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/category/uncategorized/",
+      "to": "/news/category/uncategorized/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/category/youth-jobs/",
+      "to": "/news/category/youth-jobs/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/category/youth-stories/",
+      "to": "/news/category/youth-stories/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/team/",
+      "to": "/team/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/team/alvin-yu/",
+      "to": "/team/alvin-yu/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/team/stephen-norris/",
+      "to": "/team/stephen-norris/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/team/michael-rivera/",
+      "to": "/team/michael-rivera/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/team/cassandra-yee/",
+      "to": "/team/cassandra-yee/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/team/megan-hover/",
+      "to": "/team/megan-hover/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/team/lisa-chin/",
+      "to": "/team/lisa-chin/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/team/claire-wheeler/",
+      "to": "/team/claire-wheeler/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/team/denise-evans/",
+      "to": "/team/denise-evans/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/events/",
+      "to": "/events/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/1st-annual-all-star-match/",
+      "to": "/events/1st-annual-all-star-match/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/match-the-promise/",
+      "to": "/events/match-the-promise/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/all-star-match/",
+      "to": "/events/all-star-match/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/match-the-promise-2/",
+      "to": "/events/match-the-promise-2/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/juma-ventures-all-star-benefit-2017/",
+      "to": "/events/juma-ventures-all-star-benefit-2017/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/juma-ypn-giving-tuesday-mixer/",
+      "to": "/events/juma-ypn-giving-tuesday-mixer/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/25/",
+      "to": "/events/25/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/seattle-star-benefit/",
+      "to": "/events/seattle-star-benefit/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/3662/",
+      "to": "/events/3662/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/juma-sacramento-bright-futures/",
+      "to": "/events/juma-sacramento-bright-futures/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/san-jose-stars-tomorrow/",
+      "to": "/events/san-jose-stars-tomorrow/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/paths-to-possibility/",
+      "to": "/events/paths-to-possibility/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/paths-possibility-2020-live-virtual-event/",
+      "to": "/events/paths-possibility-2020-live-virtual-event/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/cocktails-conversation-hosted-jumas-young-professionals-board/",
+      "to": "/events/cocktails-conversation-hosted-jumas-young-professionals-board/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/start-up-stand-up-for-youth/",
+      "to": "/events/start-up-stand-up-for-youth/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/paths-to-possibilities-2021/",
+      "to": "/events/paths-to-possibilities-2021/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/paths-to-possibility-2022-live-and-in-person/",
+      "to": "/events/paths-to-possibility-2022-live-and-in-person/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/juma-seattle-10-year-anniversary-celebration/",
+      "to": "/events/juma-seattle-10-year-anniversary-celebration/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/juma-30th-anniversary-community-kick-off-celebration/",
+      "to": "/events/juma-30th-anniversary-community-kick-off-celebration/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/pave-the-way-a-san-jose-community-celebration/",
+      "to": "/events/pave-the-way-a-san-jose-community-celebration/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/take-me-out-to-the-ballpark/",
+      "to": "/events/take-me-out-to-the-ballpark/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/take-me-out-to-the-ballpark-2/",
+      "to": "/events/take-me-out-to-the-ballpark-2/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/paths-to-possibility-30th-anniversary-gala/",
+      "to": "/events/paths-to-possibility-30th-anniversary-gala/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/pave-the-way-2024/",
+      "to": "/events/pave-the-way-2024/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/https-event-auctria-com-2668cfaf-4f4b-4904-bbd2-6fe4d155846c/",
+      "to": "/events/https-event-auctria-com-2668cfaf-4f4b-4904-bbd2-6fe4d155846c/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/paths-to-possibility-2025/",
+      "to": "/events/paths-to-possibility-2025/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/pour-with-purpose/",
+      "to": "/events/pour-with-purpose/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/event/ptw26/",
+      "to": "/events/ptw26/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/author/byron/",
+      "to": "/news/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/author/ren/",
+      "to": "/news/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/author/lucia/",
+      "to": "/news/",
+      "type": 301
+    },
+    {
+      "from": "https://juma.org/author/juma-ventures/",
+      "to": "/news/",
+      "type": 301
+    }
+  ],
+  "collisions": [
+    {
+      "type": "destination-collision",
+      "to": "/",
+      "from": [
+        "https://juma.org/",
+        "https://juma.org/frontpagev1/"
+      ]
+    },
+    {
+      "type": "destination-collision",
+      "to": "/news/",
+      "from": [
+        "https://juma.org/news/",
+        "https://juma.org/author/byron/",
+        "https://juma.org/author/ren/",
+        "https://juma.org/author/lucia/",
+        "https://juma.org/author/juma-ventures/"
+      ]
+    },
+    {
+      "type": "destination-collision",
+      "to": "/seattle/",
+      "from": [
+        "https://juma.org/seattle-old/",
+        "https://juma.org/seattle/"
+      ]
+    },
+    {
+      "type": "destination-collision",
+      "to": "/sacramento/",
+      "from": [
+        "https://juma.org/sacramento-old/",
+        "https://juma.org/sacramento/"
+      ]
+    },
+    {
+      "type": "destination-collision",
+      "to": "/programs/",
+      "from": [
+        "https://juma.org/programs-3/",
+        "https://juma.org/programsv1/",
+        "https://juma.org/programs/"
+      ]
+    },
+    {
+      "type": "destination-collision",
+      "to": "/team/cassandra-yee/",
+      "from": [
+        "https://juma.org/cassandra-yee/",
+        "https://juma.org/team/cassandra-yee/"
+      ]
+    },
+    {
+      "type": "destination-collision",
+      "to": "/team/alvin-yu/",
+      "from": [
+        "https://juma.org/alvin-yu/",
+        "https://juma.org/team/alvin-yu/"
+      ]
+    },
+    {
+      "type": "destination-collision",
+      "to": "/team/stephen-norris/",
+      "from": [
+        "https://juma.org/stephen-norris/",
+        "https://juma.org/team/stephen-norris/"
+      ]
+    },
+    {
+      "type": "destination-collision",
+      "to": "/team/claire-wheeler/",
+      "from": [
+        "https://juma.org/claire-wheeler/",
+        "https://juma.org/team/claire-wheeler/"
+      ]
+    },
+    {
+      "type": "destination-collision",
+      "to": "/team/michael-rivera/",
+      "from": [
+        "https://juma.org/michael-rivera/",
+        "https://juma.org/team/michael-rivera/"
+      ]
+    },
+    {
+      "type": "destination-collision",
+      "to": "/team/megan-hover/",
+      "from": [
+        "https://juma.org/megan-hover/",
+        "https://juma.org/team/megan-hover/"
+      ]
+    },
+    {
+      "type": "destination-collision",
+      "to": "/team/lisa-chin/",
+      "from": [
+        "https://juma.org/lisa-chin/",
+        "https://juma.org/team/lisa-chin/"
+      ]
+    },
+    {
+      "type": "destination-collision",
+      "to": "/our-mission-history/",
+      "from": [
+        "https://juma.org/our-mission-historyv1/",
+        "https://juma.org/our-mission-history/"
+      ]
+    },
+    {
+      "type": "destination-collision",
+      "to": "/team/denise-evans/",
+      "from": [
+        "https://juma.org/deniseevans/",
+        "https://juma.org/team/denise-evans/"
+      ]
+    }
+  ],
+  "seo": {
+    "pagesTotal": 82,
+    "postsTotal": 196,
+    "pagesWithDescription": 7,
+    "postsWithDescription": 1,
+    "pagesWithOgDescription": 62,
+    "postsWithOgDescription": 196,
+    "withDescription": 8,
+    "withOgImage": 187,
+    "pagesWithOgImage": 45,
+    "postsWithOgImage": 142,
+    "withCanonical": 278,
+    "notes": "Explicit Yoast meta-description is almost never set (pages=7/82, posts=1/196), but og_description is broadly populated (pages=62/82, posts=196/196 = all posts) and every record has a yoast title + canonical. og_image present on 45/82 pages and 142/196 posts. Astro approach: build a getMeta() helper that resolves description via a fallback chain yoast_head_json.description -> og_description -> excerpt.rendered (stripped of HTML, truncated ~155 chars). Resolve title from yoast_head_json.title (strip the ' - Juma' suffix and re-append a single site-name template), and og:image from yoast_head_json.og_image[0].url with a site-wide default fallback (the 45 pages/54 posts missing og_image, e.g. career/job pages, should inherit a branded default share image). Rewrite all canonical/og:url values from the old https://juma.org/<old> to the new path so canonicals point at the new convention, and emit the same fields via an Astro <SEO> component / Layout frontmatter at build time."
+  }
+}

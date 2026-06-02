@@ -1,0 +1,23 @@
+---
+title: "Putting it Into Practice: Leslie’s Journey from Juma Youth to Juma Intern"
+publishDate: 2024-05-30T16:39:12
+author: Juma
+heroImage: 6130-IMG_7404.jpg
+heroImageAlt: "Putting it Into Practice: Leslie’s Journey from Juma Youth to Juma Intern"
+excerpt: When Leslie began considering college applications as a high school sophomore, she realized the first roadblock she would need to overcome was paying application fees. While she did not qualify […]
+legacyId: 6129
+---
+
+When Leslie began considering college applications as a high school sophomore, she realized the first roadblock she would need to overcome was paying application fees. While she did not qualify for fee waivers, she knew her parents would not be able to pay those costs–and Leslie wanted to apply to fourteen schools. So she asked her longtime friend about her job with Juma. When her friend told her about all that Juma had to offer, Leslie was eager to join. Soon, she was working her way through Juma’s online curriculum and earning money while doing so–a lifeline for a young person who needed to find a first job during the pandemic.
+
+When stadiums reopened, Leslie experienced her first shifts at the ballpark. She quickly moved up in her roles at Juma, taking on more responsibility. She loved the outdoor work environment and the fast pace of shifts. She also loved working with her friends and meeting new ones. The flexibility and youth-first culture at Juma gave Leslie the space she needed to get involved in extracurricular activities like the Key Club, where she served as Vice President, and to work with Juma’s Education Coordinator, Becca, on college applications. She knew her hard work had paid off when she was accepted to her first choice of school: Berkeley.
+
+Before graduating high school, Leslie took on the biggest public speaking role she had yet faced when she agreed to tell her story at Juma’s 2022 Paths to Possibility Gala. Not only did Leslie hit a homerun with her speech–she also got to know some of Juma’s team behind the scenes. When she started her first year at Berkeley, she remembered those connections and knew who to reach out to at Juma to see if any internship opportunities were available. Thanks to her excellent  on-the-job performance and can-do attitude, the Juma marketing team was thrilled to find a role for her, and she began working as an intern in Spring of 2024.
+
+Since she began in her internship role, Leslie has not just learned from the Juma marketing team, but has also contributed her own special talents and knowledge. She took on the daunting task of planning Juma’s first-ever [Instagram Takeover](https://www.instagram.com/stories/highlights/17931659963736060/) to celebrate the opening of the new Steep Boba stand at PayPal Park. Her takeover was so successful that it set in motion plans to create further takeover opportunities for Leslie and other youth. She also has worked on a number of social media posts and even contributed to future plans for the Steep store. Perhaps her most useful contribution as a Juma intern has also been the one she enjoys the most–crafting video content to tell Juma stories, including her own. Leslie has created short-form videos for Steep and a recent one that [celebrates Alaska Airlines volunteers](https://www.instagram.com/reel/C5yvs5XP7d5/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D)  during a Juma day at Oracle Park. She’s currently working on a video to tell her own Juma story and considering other ways to use bite sized videos to help boost Steep’s presence as well as tell more Juma stories.
+
+While Leslie’s transition to college meant leaving behind her little sister, with whom she shares a deep bond and the familiarity of her hometown, she stepped into this period of her life with optimism and the same work ethic that drove her to succeed in high school. In her Juma marketing internship, Leslie hopes to try out a variety of skills and tasks to learn more about what she enjoys in the workforce. She also would like to continue practicing her skills in public speaking and relationship building.Leslie aspires to be a manager and a leader, one day; she wants to be a face for the Latina community. 
+
+“I feel like \[Latinas\] are not visible in those leadership spaces at all,” Leslie explains. “I want to advocate for more visible Latina leaders by speaking publicly and sharing my story.” 
+
+And with her dedication to her own growth as well as being a supportive member of any community she’s a part of, there is no doubt from anyone who gets the pleasure of knowing Leslie that she will succeed in whatever goals she sets for herself and that when she does, she will shine.

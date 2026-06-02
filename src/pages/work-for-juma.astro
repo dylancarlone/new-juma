@@ -1,0 +1,86 @@
+---
+import { getCollection, getEntry, render } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import Hero from "@/components/sections/Hero.astro";
+import CTABanner from "@/components/sections/CTABanner.astro";
+import Icon from "@/components/Icon.astro";
+
+const page = await getEntry("page", "work-for-juma");
+const d = page?.data;
+const { Content } = page ? await render(page) : { Content: null };
+const jobs = (await getCollection("job", (j) => j.data.isOpen)).sort((a, b) => a.data.jobTitle.localeCompare(b.data.jobTitle));
+---
+
+<BaseLayout title="Work for Juma" description={d?.intro ?? "Join a mission-driven team building pathways to opportunity for young people."}>
+  <Hero
+    eyebrow="Careers"
+    heading={d?.hero?.heading ?? "Work for Juma"}
+    subheading={d?.hero?.subheading ?? d?.intro}
+    image={d?.hero?.image}
+  />
+
+  {d?.intro && (
+    <section class="bg-white">
+      <Container size="narrow" class="py-12 text-center">
+        <p class="text-xl leading-relaxed text-ink-soft md:text-2xl">{d.intro}</p>
+      </Container>
+    </section>
+  )}
+
+  {d?.bullets && d.bullets.length > 0 && (
+    <section class="bg-cream">
+      <Container size="narrow" class="py-14">
+        <h2 class="text-2xl md:text-3xl">You Are…</h2>
+        <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+          {d.bullets.map((b) => <li class="flex gap-3 text-ink-soft"><Icon name="chevronRight" size={20} class="mt-1 shrink-0 text-brand-600" /><span>{b}</span></li>)}
+        </ul>
+      </Container>
+    </section>
+  )}
+
+  {d?.benefits && d.benefits.length > 0 && (
+    <section class="bg-white">
+      <Container class="py-14">
+        <h2 class="mb-8 text-center text-2xl md:text-3xl">Why work with us</h2>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {d.benefits.map((b) => (
+            <div class="rounded-[var(--radius-card)] border border-navy-100 bg-cream/40 p-6">
+              <h3 class="text-lg">{b.title}</h3>
+              {b.body && <p class="mt-2 text-sm text-ink-soft">{b.body}</p>}
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
+  )}
+
+  <!-- Open positions -->
+  <section class="bg-cream" id="openings">
+    <Container class="py-16">
+      <h2 class="text-2xl md:text-3xl">Open Positions</h2>
+      {
+        jobs.length === 0 ? (
+          <p class="mt-4 text-ink-soft">There are no open positions right now. Check back soon — or <a href="/newsletter/" class="font-semibold text-brand-600 hover:underline">join our newsletter</a> to hear about new roles.</p>
+        ) : (
+          <ul class="mt-8 divide-y divide-navy-100 overflow-hidden rounded-[var(--radius-card)] border border-navy-100 bg-white">
+            {jobs.map((j) => (
+              <li>
+                <a href={`/careers/${j.id}/`} class="flex flex-col gap-2 p-6 transition hover:bg-cream/60 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <h3 class="text-lg font-bold text-navy-900">{j.data.jobTitle}</h3>
+                    <p class="mt-1 text-sm text-warmgray">{[j.data.department, j.data.locations.join(" · ")].filter(Boolean).join("  •  ")}</p>
+                  </div>
+                  <span class="shrink-0 font-semibold text-brand-600">View role →</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+      {Content && <div class="prose-juma mt-10"><Content /></div>}
+    </Container>
+  </section>
+
+  <CTABanner heading="Don't see the right role?" text="We're always glad to meet mission-aligned people. Reach out anytime." ctaLabel="Contact Us" ctaHref="/contact/" secondaryLabel="" />
+</BaseLayout>

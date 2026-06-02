@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import { resolveMedia, isRemote } from "@/lib/media";
+
+interface Props {
+  src?: string;
+  alt?: string;
+  class?: string;
+  width?: number;
+  height?: number;
+  loading?: "eager" | "lazy";
+  sizes?: string;
+  fit?: "cover" | "contain";
+}
+
+const { src, alt = "", class: className, width, height, loading = "lazy", sizes, fit } = Astro.props;
+
+const loader = resolveMedia(src);
+let img: ImageMetadata | undefined;
+if (loader) img = (await loader()).default;
+
+const fitClass = fit === "cover" ? "object-cover" : fit === "contain" ? "object-contain" : "";
+const cls = [className, fitClass].filter(Boolean).join(" ");
+---
+
+{
+  img ? (
+    <Image
+      src={img}
+      alt={alt}
+      class={cls}
+      loading={loading}
+      sizes={sizes}
+      {...(width ? { width } : {})}
+      {...(height ? { height } : {})}
+    />
+  ) : src ? (
+    /* Unresolved local name or a remote URL — fall back to a plain img during migration. */
+    <img src={src} alt={alt} class={cls} loading={loading} decoding="async" data-remote={isRemote(src) ? "true" : undefined} />
+  ) : null
+}

@@ -1,0 +1,68 @@
+---
+import Container from "@/components/Container.astro";
+import Button from "@/components/ui/Button.astro";
+import Media from "@/components/Media.astro";
+
+interface Props {
+  eyebrow?: string;
+  heading: string;
+  subheading?: string;
+  image?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+  align?: "left" | "center";
+  size?: "lg" | "md";
+}
+const {
+  eyebrow,
+  heading,
+  subheading,
+  image,
+  ctaLabel,
+  ctaHref,
+  secondaryLabel,
+  secondaryHref,
+  align = "left",
+  size = "lg",
+} = Astro.props;
+
+const pad = size === "lg" ? "py-24 md:py-32" : "py-16 md:py-20";
+const alignCls = align === "center" ? "mx-auto text-center items-center" : "items-start";
+---
+
+<section class="relative overflow-hidden bg-navy-900 text-white">
+  {
+    image && (
+      <div class="absolute inset-0">
+        <Media src={image} alt="" class="h-full w-full" loading="eager" fit="cover" />
+        <div class="absolute inset-0 bg-gradient-to-tr from-navy-950 via-navy-900/85 to-brand-900/50" />
+      </div>
+    )
+  }
+  {!image && <div class="absolute inset-0 bg-gradient-to-br from-navy-900 via-navy-800 to-brand-800" />}
+  <Container class={`relative flex flex-col ${alignCls} ${pad}`}>
+    <div class={align === "center" ? "max-w-3xl" : "max-w-3xl"}>
+      {eyebrow && <p class="font-heading text-sm font-bold uppercase tracking-widest text-gold">{eyebrow}</p>}
+      <h1 class="mt-3 text-4xl text-white sm:text-5xl md:text-6xl">{heading}</h1>
+      {subheading && <p class="mt-5 text-lg leading-relaxed text-navy-100 md:text-xl">{subheading}</p>}
+      {
+        (ctaLabel || secondaryLabel) && (
+          <div class={`mt-8 flex flex-wrap gap-4 ${align === "center" ? "justify-center" : ""}`}>
+            {ctaLabel && ctaHref && (
+              <Button href={ctaHref} variant="brand" size="lg">
+                {ctaLabel}
+              </Button>
+            )}
+            {secondaryLabel && secondaryHref && (
+              <Button href={secondaryHref} variant="white" size="lg">
+                {secondaryLabel}
+              </Button>
+            )}
+          </div>
+        )
+      }
+    </div>
+  </Container>
+</section>

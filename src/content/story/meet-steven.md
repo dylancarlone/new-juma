@@ -1,0 +1,25 @@
+---
+name: Steven
+title: Meet Steven
+photo: juma-stephen.jpg
+location: Sacramento
+pullQuote: I was able to redefine who I was and for the first time in my life I felt confident.
+outcome: Starting classes at Sacramento City College, working as a Cart Lead at Juma
+isFirstPerson: false
+order: 6
+legacyId: 4301
+---
+
+Steven always thought he and his home city of Sacramento, California had one thing in common: they were both underdogs. With better known cities like Los Angeles and San Francisco nearby, California's capital city attracted less notoriety. Steven felt that he, too, was often overlooked. As a child, he was diagnosed with depression and anxiety. As a teen, he struggled with shyness, but like Sacramento's up and coming sports presence, Steven had all of the heart and potential he needed to succeed. He just needed someone to believe in him.
+
+At Juma, Steven found not only a team of supporters, but also the courage and confidence he needed to believe in himself. Steven describes his Juma coworkers as being like a family with an inherent understanding that everyone is rooting for you and on your side. "On my first day I was nervous to say the least. Meeting not only all the new Jumans but also the workers from the Golden 1 Center. But I had to step up, and got the hang of it pretty quickly," said Steven. Today, he works as a Cart Lead, where he sets the pace for a team of his peers at Sacramento's Golden 1 Center and Raley Field.
+
+For Steven, a major turning point came when he got to know his Juma Manager, Donna, who would become his mentor. "Donna said 'I believe in you and think you can do this,' even though, when I first met her, I was a nervous wreck – shaking and fidgeting all throughout the interview," recalled Steven. "So when she offered the promotion and I hesitated Donna asked: 'Are you comfortable with your current position?' And I said yes, so she said – 'Exactly – I don't want you to be comfortable. You have to learn to roll with the punches because you never know what life is going to throw at you. I believe in you.'"
+
+In becoming a Cart Lead, Steven took a risk that paid off, and in doing so, he learned the value of stepping outside his comfort zone. "Now, I believe in myself – I've never believed in myself much, but joining Juma and going through everything the program has to offer, both program-wise and work-wise, I was able to feel more comfortable in my skin. It changed everything for me. I was able to redefine who I was and for the first time in my life I felt confident."
+
+With his newfound confidence, Steven has been inspired to take on even bigger challenges. Steven, who once described himself as, 'extremely timid,' shared his story in a speech he delivered at Juma's annual Paths to Possibilities gala where he spoke in front of a crowd of over two-hundred of Juma's supporters. "At a young age I was diagnosed with anxiety and chronic depression so I was, and still am, very shy," said Steven. "Lots of people thought I couldn't succeed in life because of that. But, from where I'm standing right now, and seeing all these faces, I think I'm doing pretty well!"
+
+He's also looking to the future with bigger dreams to match his newfound abilities. "I still don't know what I'll do or how, but I know I want to help people," said Steven. "I want to make something I'm proud of. I was very indecisive before Juma but after six months at Juma I realized I want to connect with people. I want to hear their stories and relate to them or help them in any way I can. I want to be the voice of the voiceless and carry out Juma's mission."
+
+To help him to achieve his dreams, in February, Steven will begin classes at Sacramento City College. Thanks to the resources he was able to access through Juma and the confidence he built, Steven is full of hope for his future. He is already off to an amazing start on his mission to connect with people and help them; as a Cart Lead, he tells all of the new Jumans he meets, "Never get too comfortable in anything you do. I was told that the more you feel comfortable the less you challenge yourself. Always open new doors and try new things."

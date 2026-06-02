@@ -1,0 +1,27 @@
+{
+  "slug": "san-francisco",
+  "city": "San Francisco / Bay Area",
+  "region": "san-francisco",
+  "hero": {
+    "heading": "San Francisco",
+    "image": "https://juma.org/wp-content/uploads/2015/10/sf-4.png"
+  },
+  "intro": "Across the San Francisco Bay Area, 27,000 young people ages 16-24 are disconnected from the critical opportunity pathways of school and work. This figure is only sure to drastically increase after the economic impact of the COVID-19 pandemic is fully realized.",
+  "stats": [
+    { "value": "27,000", "label": "young people ages 16-24 disconnected from school and work" }
+  ],
+  "venues": [
+    "Oracle Park",
+    "Chase Center"
+  ],
+  "contact": {
+    "name": "Michael Rivera",
+    "role": "Bay Area Site Director",
+    "email": "michaelr@juma.org",
+    "phone": "415.371.0727",
+    "address": "131 Steuart Street, Suite 202, San Francisco, CA 94105"
+  },
+  "order": 1,
+  "legacyId": 614,
+  "body": "Most of them want to join the workforce but lack the skills, education, confidence, and social capital to achieve a living-wage job. Without opportunities to gain early work experience, develop professional skills and earn postsecondary credentials, the number of disconnected young people will continue to grow as they become further separated from the pathways that lead to economic stability and self-sufficiency.\n\nA nonprofit social enterprise, Juma operates concession businesses at San Francisco's Oracle Park and the new Chase Center with the purpose of providing youth employment and job training. Here youth learn the soft and hard skills critical for success in any career. Alongside the job, Juma ensures that youth develop short and long-term personal goals, learn to manage their money, explore careers in thriving industries, develop a resume and practice their interviewing skills. Ultimately, Juma supports youth in connecting to their next job and/or educational pathway where they can further develop the job skills and credentials necessary to achieve a long-term, living-wage career.\n\nJuma's long-term goal is to ensure that by age 25, youth are on a career trajectory toward a living wage, economic well-being, and prosperity; ultimately breaking out of the cycle of poverty in which many were raised.\n\nReducing the number of youth disconnected from school and work requires unique and innovative cross-sector partnerships. To join us in this work or for more information about Juma's San Francisco/Bay Area program, please contact Chief Development Officer, Megan Hover, at [meganh@juma.org](mailto:meganh@juma.org) or Bay Area Site Director, Michael Rivera, at [michaelr@juma.org](mailto:michaelr@juma.org).\n\n## San Francisco Office\n\nChief Development Officer: Megan Hover, [meganh@juma.org](mailto:meganh@juma.org)\n\nBay Area Site Director: Michael Rivera, [michaelr@juma.org](mailto:michaelr@juma.org)\n\n131 Steuart Street, Suite 202\nSan Francisco, CA 94105\nPhone: 415.371.0727\nFax: 415.371.1634"
+}

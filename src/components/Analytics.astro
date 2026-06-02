@@ -1,0 +1,46 @@
+---
+import { analytics } from "@/lib/site";
+const { ga4, fbPixel } = analytics;
+const enabled = import.meta.env.PROD && (ga4 || fbPixel);
+---
+
+{
+  enabled && ga4 && (
+    <>
+      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${ga4}`} />
+      <script is:inline define:vars={{ ga4 }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", ga4, { anonymize_ip: true });
+      </script>
+    </>
+  )
+}
+
+{
+  enabled && fbPixel && (
+    <script is:inline define:vars={{ fbPixel }}>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", fbPixel);
+      fbq("track", "PageView");
+    </script>
+  )
+}

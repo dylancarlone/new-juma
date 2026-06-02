@@ -1,0 +1,62 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import PageHeader from "@/components/sections/PageHeader.astro";
+import ContactForm from "@/components/ContactForm.tsx";
+import Icon from "@/components/Icon.astro";
+import { offices, contactRoutes } from "@/lib/site";
+---
+
+<BaseLayout title="Contact Us" description="Get in touch with the Juma Ventures team.">
+  <PageHeader eyebrow="Get in Touch" title="Contact Us" description="Questions, partnerships, or press? We'd love to hear from you." />
+
+  <Container class="grid gap-12 py-14 md:py-20 lg:grid-cols-[1.2fr_1fr]">
+    <div>
+      <h2 class="text-2xl">Send us a message</h2>
+      <p class="mt-2 text-ink-soft">Fill out the form and the right team will get back to you.</p>
+      <div class="mt-6">
+        <ContactForm client:load />
+      </div>
+    </div>
+
+    <div class="space-y-8">
+      <div>
+        <h2 class="text-xl">Who to reach</h2>
+        <ul class="mt-4 space-y-3">
+          {
+            contactRoutes.map((r) => (
+              <li class="flex items-start gap-3">
+                <Icon name="mail" size={20} class="mt-0.5 shrink-0 text-brand-600" />
+                <span>
+                  <span class="block text-sm font-semibold text-navy-800">{r.purpose}</span>
+                  <a href={`mailto:${r.email}`} class="text-sm text-brand-600 hover:underline">{r.email}</a>
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-xl">Our offices</h2>
+        <ul class="mt-4 space-y-5">
+          {
+            offices.map((o) => (
+              <li>
+                <p class="font-heading font-bold text-navy-900">{o.name}</p>
+                <p class="mt-1 flex items-start gap-2 text-sm text-ink-soft">
+                  <Icon name="mapPin" size={18} class="mt-0.5 shrink-0 text-warmgray" />
+                  {o.address}
+                </p>
+                <p class="mt-1 flex items-center gap-2 text-sm text-ink-soft">
+                  <Icon name="phone" size={16} class="shrink-0 text-warmgray" />
+                  {o.phone}
+                </p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </Container>
+</BaseLayout>

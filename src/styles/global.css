@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ *
+ * Juma design system — Tailwind v4 theme.
+ * Brand colors extracted from the legacy site (extraction/analysis/design-tokens.json):
+ *   pink #e33a5e (primary), navy #434b82 (secondary), orange #e95d00, gold #fdbf51,
+ *   warm ink #2c2c2a, cream #f9f1e6.
+ * Fonts: Montserrat (headings) + Plus Jakarta Sans (body), self-hosted via @fontsource.
+ * ------------------------------------------------------------------ */
+@theme {
+  --font-heading: "Montserrat Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand pink/red — primary */
+  --color-brand-50: #fdf2f5;
+  --color-brand-100: #fce7ec;
+  --color-brand-200: #f8c9d6;
+  --color-brand-300: #f29db2;
+  --color-brand-400: #ea6388;
+  --color-brand-500: #e33a5e;
+  --color-brand-600: #cf2350;
+  --color-brand-700: #ae1942;
+  --color-brand-800: #91183c;
+  --color-brand-900: #7c1838;
+  --color-brand-950: #450819;
+
+  /* Navy/indigo — secondary */
+  --color-navy-50: #f3f4f9;
+  --color-navy-100: #e6e8f2;
+  --color-navy-200: #c8cce2;
+  --color-navy-300: #9ba3c9;
+  --color-navy-400: #6b76aa;
+  --color-navy-500: #4d588f;
+  --color-navy-600: #434b82;
+  --color-navy-700: #383d68;
+  --color-navy-800: #313558;
+  --color-navy-900: #2b2e49;
+  --color-navy-950: #1c1e30;
+
+  /* Supporting accents */
+  --color-accent: #e95d00;
+  --color-accent-dark: #c44d00;
+  --color-gold: #fdbf51;
+  --color-sky: #9bdbf3;
+
+  /* Warm neutrals */
+  --color-ink: #2c2c2a;
+  --color-ink-soft: #483f34;
+  --color-cream: #f9f1e6;
+  --color-warmgray: #53504c;
+
+  --radius-card: 1rem;
+  --radius-btn: 0.5rem;
+
+  --shadow-card: 0 1px 2px rgb(43 46 73 / 0.04), 0 8px 24px -12px rgb(43 46 73 / 0.18);
+  --shadow-lift: 0 12px 40px -16px rgb(43 46 73 / 0.28);
+}
+
+/* ------------------------------------------------------------------ *
+ * Base layer
+ * ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background: #ffffff;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--color-navy-900);
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  a { color: inherit; }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Respect reduced-motion preferences. */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Reusable component utilities
+ * ------------------------------------------------------------------ */
+@layer components {
+  /* Long-form article body (blog posts, legal prose, MDX page bodies). */
+  .prose-juma {
+    @apply max-w-none leading-relaxed text-ink-soft;
+  }
+  .prose-juma > * + * { margin-top: 1.25em; }
+  .prose-juma h2 { @apply mt-12 mb-3 text-2xl md:text-3xl; }
+  .prose-juma h3 { @apply mt-8 mb-2 text-xl md:text-2xl; }
+  .prose-juma p { @apply text-base md:text-lg; }
+  .prose-juma a { @apply font-medium text-brand-600 underline decoration-brand-200 underline-offset-2 hover:text-brand-700 hover:decoration-brand-400; }
+  .prose-juma ul { @apply list-disc space-y-2 pl-6; }
+  .prose-juma ol { @apply list-decimal space-y-2 pl-6; }
+  .prose-juma blockquote { @apply border-l-4 border-brand-300 bg-cream/60 py-2 pl-5 pr-4 text-lg italic text-navy-800; }
+  .prose-juma img { @apply rounded-xl shadow-card; }
+  .prose-juma figcaption { @apply mt-2 text-center text-sm text-warmgray; }
+}

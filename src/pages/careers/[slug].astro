@@ -1,0 +1,66 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import PageHeader from "@/components/sections/PageHeader.astro";
+import Button from "@/components/ui/Button.astro";
+import Icon from "@/components/Icon.astro";
+
+export async function getStaticPaths() {
+  const jobs = await getCollection("job");
+  return jobs.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const d = entry.data;
+const { Content } = await render(entry);
+const apply = d.applyHref ?? "mailto:operations@juma.org?subject=Application: " + encodeURIComponent(d.jobTitle);
+---
+
+<BaseLayout title={d.jobTitle} description={d.summary} noindex={!d.isOpen}>
+  <PageHeader
+    eyebrow="Careers at Juma"
+    title={d.jobTitle}
+    description={[d.department, d.locations.join(" · "), d.employmentType].filter(Boolean).join("  •  ")}
+  />
+
+  <Container size="narrow" class="py-12">
+    <a href="/work-for-juma/" class="font-semibold text-brand-600 hover:underline">← All openings</a>
+
+    {!d.isOpen && <p class="mt-6 rounded-lg bg-cream px-4 py-3 text-sm text-warmgray">This position is no longer accepting applications.</p>}
+
+    {d.salaryRange && <p class="mt-6 text-lg"><span class="font-semibold">Compensation:</span> {d.salaryRange}</p>}
+    {d.summary && <p class="mt-6 text-lg text-ink-soft">{d.summary}</p>}
+
+    {d.responsibilities.length > 0 && (
+      <section class="mt-10">
+        <h2 class="text-2xl">Responsibilities</h2>
+        <ul class="mt-4 space-y-2">{d.responsibilities.map((r) => <li class="flex gap-3 text-ink-soft"><Icon name="chevronRight" size={20} class="mt-1 shrink-0 text-brand-600" /><span>{r}</span></li>)}</ul>
+      </section>
+    )}
+
+    {d.qualifications.length > 0 && (
+      <section class="mt-10">
+        <h2 class="text-2xl">Qualifications</h2>
+        <ul class="mt-4 space-y-2">{d.qualifications.map((q) => <li class="flex gap-3 text-ink-soft"><Icon name="chevronRight" size={20} class="mt-1 shrink-0 text-brand-600" /><span>{q}</span></li>)}</ul>
+      </section>
+    )}
+
+    {d.benefits.length > 0 && (
+      <section class="mt-10">
+        <h2 class="text-2xl">What we offer</h2>
+        <ul class="mt-4 space-y-2">{d.benefits.map((b) => <li class="flex gap-3 text-ink-soft"><Icon name="chevronRight" size={20} class="mt-1 shrink-0 text-brand-600" /><span>{b}</span></li>)}</ul>
+      </section>
+    )}
+
+    <div class="prose-juma mt-10"><Content /></div>
+
+    {d.isOpen && (
+      <div class="mt-12 rounded-[var(--radius-card)] bg-cream p-8 text-center">
+        <h2 class="text-2xl">Ready to apply?</h2>
+        <p class="mt-2 text-ink-soft">We'd love to hear from you.</p>
+        <div class="mt-5"><Button href={apply} variant="brand" size="lg" target={apply.startsWith("http") ? "_blank" : undefined}>Apply for this role</Button></div>
+      </div>
+    )}
+  </Container>
+</BaseLayout>

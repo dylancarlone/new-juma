@@ -1,0 +1,78 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Button from "@/components/ui/Button.astro";
+import { donate } from "@/lib/site";
+---
+
+<BaseLayout title="Donate" description="Your gift powers paid jobs, mentorship, and financial capability for opportunity youth across America.">
+  <Hero
+    eyebrow="Support Juma"
+    heading="Invest in a young person's future."
+    subheading="Every gift helps a young person earn a paycheck, build skills, and connect to a lasting career. 100% of your donation fuels opportunity for youth across our four communities."
+    align="center"
+  />
+
+  <Container size="narrow" class="py-14 md:py-20">
+    <div class="rounded-[var(--radius-card)] border border-navy-100 bg-white p-6 shadow-[var(--shadow-card)] md:p-10">
+      <!-- Frequency toggle -->
+      <div class="mx-auto flex w-full max-w-xs rounded-full bg-cream p-1" role="tablist">
+        <button id="tab-once" role="tab" aria-selected="true" class="freq-tab flex-1 rounded-full px-4 py-2 text-sm font-bold transition">One-time</button>
+        <button id="tab-monthly" role="tab" aria-selected="false" class="freq-tab flex-1 rounded-full px-4 py-2 text-sm font-bold transition">Monthly</button>
+      </div>
+
+      <div id="panel-once" class="mt-8">
+        <div class="grid grid-cols-3 gap-3 sm:grid-cols-3">
+          {donate.oneTimeAmounts.map((a) => (
+            <a href={donate.oneTimeUrl} target="_blank" rel="noopener noreferrer" class="rounded-xl border-2 border-navy-200 py-4 text-center font-heading text-lg font-bold text-navy-800 transition hover:border-brand-500 hover:bg-brand-50 hover:text-brand-600">${a}</a>
+          ))}
+        </div>
+      </div>
+
+      <div id="panel-monthly" class="mt-8 hidden">
+        <div class="grid grid-cols-3 gap-3">
+          {donate.monthlyAmounts.map((a) => (
+            <a href={donate.monthlyUrl} target="_blank" rel="noopener noreferrer" class="rounded-xl border-2 border-navy-200 py-4 text-center font-heading text-lg font-bold text-navy-800 transition hover:border-brand-500 hover:bg-brand-50 hover:text-brand-600">${a}<span class="block text-xs font-medium text-warmgray">/mo</span></a>
+          ))}
+        </div>
+      </div>
+
+      <div class="mt-8 text-center">
+        <Button href={donate.oneTimeUrl} variant="brand" size="lg" target="_blank">Donate Now</Button>
+        <p class="mt-3 text-xs text-warmgray">Securely processed via {donate.provider}.</p>
+      </div>
+    </div>
+
+    <div class="mt-10 grid gap-6 sm:grid-cols-2">
+      <div class="rounded-[var(--radius-card)] bg-cream p-6">
+        <h2 class="text-lg">Stock & cryptocurrency</h2>
+        <p class="mt-2 text-sm text-ink-soft">Give appreciated stock or crypto and maximize your impact.</p>
+        <a href={donate.stockCryptoUrl} target="_blank" rel="noopener noreferrer" class="mt-3 inline-block font-semibold text-brand-600 hover:underline">Give stock or crypto →</a>
+      </div>
+      <div class="rounded-[var(--radius-card)] bg-cream p-6">
+        <h2 class="text-lg">Other ways to give</h2>
+        <p class="mt-2 text-sm text-ink-soft">Corporate partnerships, employer matching, and planned giving.</p>
+        <a href="/contact/" class="mt-3 inline-block font-semibold text-brand-600 hover:underline">Contact our team →</a>
+      </div>
+    </div>
+  </Container>
+
+  <script>
+    const tabs = { once: document.getElementById("tab-once"), monthly: document.getElementById("tab-monthly") };
+    const panels = { once: document.getElementById("panel-once"), monthly: document.getElementById("panel-monthly") };
+    function select(key) {
+      for (const k of ["once", "monthly"]) {
+        const active = k === key;
+        tabs[k]?.setAttribute("aria-selected", String(active));
+        tabs[k]?.classList.toggle("bg-white", active);
+        tabs[k]?.classList.toggle("text-brand-600", active);
+        tabs[k]?.classList.toggle("shadow-sm", active);
+        panels[k]?.classList.toggle("hidden", !active);
+      }
+    }
+    tabs.once?.addEventListener("click", () => select("once"));
+    tabs.monthly?.addEventListener("click", () => select("monthly"));
+    select("once");
+  </script>
+</BaseLayout>

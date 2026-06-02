@@ -1,0 +1,10 @@
+---
+name: Lisa Chin
+role: Chief Executive Officer
+group: leadership
+photo: lisa-chin.jpg
+isAlum: false
+order: 5
+---
+
+An accomplished corporate leader, CEO, and executive coach, Lisa brings to the table 20+ years of expertise helping organizations, boards, and executive teams achieve breakthrough results and successfully navigate through periods of intensive change. Her experience to date includes current service as the CEO of Juma Ventures, a non-profit dedicated to youth development and career advancement, along with a prior track record helping catalyze the success of numerous top public and private organizations including Treehouse, Year Up, Boys & Girls Clubs of King County, and Amazon.com. Lisa’s passion centers around helping leadership teams crystallize their vision, establish clear goals, modernize their practices, and embrace change during uncertain and/or turbulent times. A master change agent and communicator, she is highly skilled at addressing diverse stakeholder groups and guiding teams/leaders in effective methods for building engagement and enthusiasm among their workforce, donors, and strategic partners. Key facets of Lisa’s leadership roles to date include: Executive Coaching & Leadership Development Change Management, Turnarounds & Organizational Transformation Social Impact Consulting & Social Justice Advocacy Corporate Governance, Scaling & Capacity-Building Strategic Planning & Mission/Vision/Values Clarification Board Development, Recruitment & Relations Additionally, she is passionate about applying strengths-based models to help senior leaders (particularly women leaders and BIPOC executives) grow, develop, and excel in their roles — and has a deep background in executive coaching, emotional intelligence development, and multi-cultural team leadership. Lisa’s educational credentials include a Ph.D. in Education from UCLA, a B.A. Degree in Political Science and Art from Wellesley College, and current enrollment in the Executive Coaching Program at SeattleCoach (International Coaching Federation).

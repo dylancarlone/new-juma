@@ -1,0 +1,45 @@
+---
+city: Sacramento
+region: sacramento
+hero:
+  heading: Sacramento
+  image: sacramento-topbar.jpg
+intro: Here in the state capital of California, 13.2% of youth aged 16-24 — 22,700 youth — are currently out of work and school. Many of these young people have also experienced foster care, juvenile justice involvement, and significant trauma. These youth come from neighborhoods with some of the highest rates of poverty such as Oak Park, Meadowview, the Del Paso Heights Area, and Mather Field. While they face real barriers, these young people are full of untapped potential and are eager to work. Unfortunately, they often lack the skills, education, and confidence to get and keep a job, which is where Juma comes in.
+noteFrom:
+  name: Stephen Norris and Claire Wheeler
+  role: California Government Contracts Director and Senior Director of Impact
+stats:
+  - value: 13.2%
+    label: of youth aged 16-24 are out of work and school
+  - value: 22,700
+    label: youth out of work and school
+venues:
+  - Golden 1 Center
+  - Sutter Health Park
+  - Empress Tavern
+  - Heart Health Park
+  - Toyota Amphitheatre
+testimonial:
+  quote: Joining Juma and going through everything the program has to offer, both program-wise and work-wise, I was able to feel more comfortable in my skin. It changed everything. I was able to redefine who I was. I never believed in myself much. At Juma, I’ve had a feeling that I can do this.
+  name: Steven
+contact:
+  name: Donna Franklin
+  role: Sacramento Site Manager
+  email: donnaf@juma.org
+order: 3
+legacyId: 4293
+---
+
+## A Note from California Government Contracts Director Stephen Norris and Senior Director of Impact Claire Wheeler
+
+Here in the state capital of California, 13.2% of youth aged 16-24 — 22,700 youth — are currently out of work and school. Many of these young people have also experienced foster care, juvenile justice involvement, and significant trauma. These youth come from neighborhoods with some of the highest rates of poverty such as Oak Park, Meadowview, the Del Paso Heights Area, and Mather Field. While they face real barriers, these young people are full of untapped potential and are eager to work. Unfortunately, they often lack the skills, education, and confidence to get and keep a job, which is where Juma comes in.
+
+In 2016, at the request of city officials, community leaders, the Sacramento Kings and Legends Hospitality, Juma launched operations with the opening of the Golden 1 Center. Since then we have expanded into Sutter Health Park, Empress Tavern, Heart Health Park, and the Toyota Amphitheatre.
+
+At Juma, it starts with a job in the stadiums, but our program and services are much more than that. We empower youth to set personal, professional, and financial goals and to discover their strengths. We explore potential low-barrier, high-demand careers and develop a plan for youth to get there. We help young people earn a paycheck and learn how to manage their money.
+
+Steven, one of our program participants, sums it up best: “Joining Juma and going through everything the program has to offer, both program-wise and work-wise, I was able to feel more comfortable in my skin. It changed everything. I was able to redefine who I was. I never believed in myself much. At Juma, I’ve had a feeling that I can do this.” Steven leveraged his meaningful job skills to get a promotion and is heading to Sacramento City community college this spring!
+
+Help support us in creating more success stories like Steven’s and join Juma in breaking the cycle of poverty! Learn more or contact Sacramento Site Manager Donna Franklin at [donnaf@juma.org](mailto:donnaf@juma.org).
+
+Audience links: [For Youth](https://juma.org/apply/) · [For Employers](https://juma.org/employer/) · [For Volunteers](https://juma.org/volunteer/)

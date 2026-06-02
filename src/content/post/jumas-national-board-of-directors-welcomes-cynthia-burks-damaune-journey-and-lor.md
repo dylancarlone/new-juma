@@ -1,0 +1,17 @@
+---
+title: Juma’s National Board of Directors Welcomes Cynthia Burks, Damaune Journey, and Lorenzo F. Robleto
+publishDate: 2021-12-08T09:15:00
+author: Juma
+excerpt: We are excited to welcome Cynthia Burks, Daumane Journey, and Lorenzo F. Robleto whose extensive experiences and passions will be crucial to helping Juma advance our mission to break the […]
+legacyId: 5000
+---
+
+We are excited to welcome Cynthia Burks, Daumane Journey, and Lorenzo F. Robleto whose extensive experiences and passions will be crucial to helping Juma advance our mission to break the cycle of poverty for youth across America.
+
+**Cynthia Burks** is the Chief People and Culture Officer for Genentech. In this role, she is responsible for leading people-related strategies for the organization, which include attracting, developing, and retaining the best people to advance its mission. Prior to coming to Genentech, Cynthia worked in other industries as both a consultant and HR Leader, including as vice president of HR for The San Francisco Chronicle. In addition to a Bachelor of Science in Business, Cynthia holds an MBA in International Business from Thunderbird Graduate School and a J.D. from the University of San Francisco School of Law. She is also a licensed attorney in the State of California. Cynthia is an executive committee member of the Bay Area Council and sits on the boards of Summer Search and Friends of Dogpatch Hub.
+
+  
+**Damaune Journey** is Global Chief Growth Officer for 72andSunny, Hecho Studios and Brand Citizens, a family of premier creative and strategic impact agencies. As CGO, Damaune is responsible for connecting client needs to the agency’s creative solutions for growth. Damaune’s extensive professional experience also includes several executive posts where he was responsible for revenue growth at various organizations such as Private Medical, a concierge medical practice serving UHNW families across the United States, Gavin de Becker & Associates (GDBA), a luxury personal security firm and ShotSpotter, a SaaS-based IoT company providing gunshot detection services designed to reduce community gun violence. Damaune has proudly served on board-level positions at the National Society of Black Engineers for more than 10 years and recently funded a scholarship for leaders in NSBE in his family’s name (The Journey Hill Family Fund). He serves as a board director for the AGB Foundation, which funds programs and provides mentorship for young Black men in the Oakland and greater Bay Area communities. Damaune has a Bachelor’s degree in Industrial & Operations Engineering from the University of Michigan-Ann Arbor and an MBA from Harvard Business School.
+
+  
+**Lorenzo F. Robleto** is a Juma Alum from 2005. He is currently the Legal Director of Privacy at DoorDash, where he oversees a team responsible for developing and implementing the company’s global privacy strategy. This requires him to partner closely with cross-functional teams, including product, engineering, and other business teams, to help ensure that privacy best practices are incorporated into all facets of the business. He frequently advises senior management on important privacy developments that impact the overall business. He is a graduate of the University of San Francisco School of Law where his focus on privacy earned him a certificate in Intellectual Property and Technology Law. He sees joining the Juma Board as a full-circle opportunity—a chance to apply his past experience with the organization to help youth achieve their life goals.

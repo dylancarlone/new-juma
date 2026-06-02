@@ -1,0 +1,539 @@
+---
+title: Our Partners & Supporters
+kind: partners
+hero:
+  heading: Our Partners & Supporters
+  subheading: ""
+  image: ""
+intro: ""
+groups:
+  - title: Sports & Partner Venues
+    items:
+      - Avaya Stadium
+      - CenturyLink Field
+      - Climate Pledge Arena
+      - Empress Tavern
+      - Golden 1 Center
+      - Heart Health Park
+      - Levi's Stadium
+      - Lumen Field
+      - Oracle Park
+      - PayPal Park
+      - SAP Center
+      - Tech CU Arena
+      - T-Mobile Park
+      - Toyota Amphitheatre
+      - University of Washington Husky Stadium
+  - title: Sports Teams
+    items:
+      - Sacramento Kings (NBA)
+      - Sacramento Republic FC (USL)
+      - Sacramento River Cats (AAA)
+      - San Francisco 49ers (NFL)
+      - San Francisco Giants (MLB)
+      - San Jose Earthquakes (MLS)
+      - San Jose Sharks (NHL)
+      - San Jose Barracuda's (AHL)
+      - Seattle Mariners (MLB)
+      - Seattle Seahawks (NFL)
+      - Seattle Sounders (MLS)
+      - Washington Huskies (NCAA)
+  - title: Concessionaire Partners
+    items:
+      - Bon Appetit
+      - Centerplate
+      - Legends
+      - Levy Restaurants
+  - title: Brand Partners
+    items:
+      - Peet's Coffee & Tea
+      - Dippin' Dots
+      - Steep Creamery & Tea
+      - Starbucks Coffee
+      - Organic Coup
+      - CREAM
+      - DOUGHP
+  - title: Corporate and Foundation Donors
+    items:
+      - Adobe
+      - Alaska Airlines
+      - Alpha Gamma Boule Foundation
+      - AmazonSmile
+      - Annie E. Casey Foundation
+      - Apple
+      - Ash Grove Charitable Foundation
+      - Auberge Resorts Solage
+      - Bank of America Foundation
+      - Bank of Montreal (formerly Bank of the West)
+      - Bay Area Discovery Museum
+      - BECU
+      - Ben & Jerry's
+      - Black Hammer Brewery
+      - BlackRock
+      - Bravo Foundation
+      - Bright Funds Foundation
+      - California Board of State and Community Corrections
+      - Camber Collective Household
+      - Charles Schwab Foundation
+      - City National Bank
+      - Corebridge Financial
+      - Costco Charitable Giving
+      - Deloitte Digital
+      - Dodge & Cox Funds
+      - eBay
+      - Equator Coffees
+      - Farallon Capital Management, LLC
+      - Fine Arts Museums of San Francisco
+      - Fountain Inc.
+      - Franklin and Catherine Johnson Foundation
+      - Gap Inc.
+      - Golden 1 Credit Union
+      - Hatchet Ventures
+      - HSBC Bank
+      - Human Services Bus Ticket Program
+      - Kaiser Permanente
+      - Kawabe Memorial Fund
+      - Kimball Foundation
+      - KKR
+      - LinkedIn
+      - May and Stanley Smith Charitable Trust
+      - MENTOR Washington
+      - Microsoft
+      - Mission City Community Fund
+      - Morrison & Foerster Foundation
+      - NASDAQ
+      - Oakland Zoo
+      - Oracle
+      - PNC Foundation
+      - PricewaterhouseCoopers (PwC)
+      - Project Redwood
+      - Quest Foundation
+      - Raley's
+      - REDF
+      - Rotary Club of Sacramento
+      - Rush Creek Lodge/ Evergreen Lodge
+      - Sacramento Kings
+      - Sacramento Municipal Utility District (SMUD)
+      - Sacramento Republic FC
+      - Safeco Insurance Fund
+      - Safeway Foundation
+      - Salal Credit Union
+      - Salesforce
+      - San Francisco Giants
+      - Seaplane Adventures
+      - Seattle Credit Union
+      - Stand Together
+      - Stanley S. Langendorf Foundation
+      - Sundt Foundation
+      - Sutter Health Foundation
+      - The Ballmer Group
+      - The Glaser Foundation
+      - The Helen Martha Schiff Foundation
+      - The Kelly Foundation
+      - The Medina Foundation
+      - The Pokemon Company
+      - TJX Foundation
+      - TK Foundation
+      - T-Mobile
+      - U.S. Bank
+      - Umpqua Bank
+      - United Way California Capital Region
+      - UPS Foundation
+      - Warriors Community Foundation
+      - Wells Fargo Foundation
+      - Wente Vineyards
+      - West Monroe
+      - William Randolph Hearst Foundation
+      - Windermere Foundation
+  - title: Individual Donors ($10,000+)
+    items:
+      - Michael and Adriane Armstrong
+      - Peggy and Willie Alford II
+      - Anonymous
+      - Cynthia Burks
+      - Dale and Katy Carlsen
+      - Steve and Ifen Carlson
+      - Ara Chackerian
+      - Paul and Angela Clemmons
+      - Evelyn and Lawrence Gamble
+      - Lockey Todd and Jim Guitteau
+      - Ahsha and Dylan Haggart
+      - William Kurt and Lizzee Hauser
+      - Damaune and Katrina Journey
+      - Jane Thornton
+      - Stephen Wolfe and Claire McConnell
+      - Lee and Perry Smith
+      - Kristopher Wong and Jennifer Walsh
+      - Michael and Victoria Winnick
+  - title: Individual Donors ($5,000-$10,000)
+    items:
+      - Keith Belling
+      - Peter Boneparth
+      - Norman and Linda Boone
+      - Mei and Herald Chen
+      - Rhona O'Leary and Eric Gard
+      - Scott and Erika Garell
+      - Nate and Carolina Grossman
+      - James and Katherine Hansen
+      - Susan Hopkinson
+      - Allen and Jennifer Koh
+      - Brian Elliott and Maureen McAvoy
+      - Cheryl House and Peter Meyn
+      - Jason and Nikki Pearl
+      - Jim and Vicki Penny
+      - Merritt Richmond and Fred Chung
+      - Maxwell and Randi Saffian
+      - Amy Schioldager
+      - Debra and Paul Underwood
+      - Abdiel and Jonathan Cerrud Waugh
+      - Sharon Wurtzel
+      - John and Liz Willingham
+      - Ron Zeff
+  - title: Individual Donors ($2,500-$5,000)
+    items:
+      - Kyle Bernhard
+      - Danny Briskin
+      - Susan A. and Robert Coen
+      - Rich Hake and Christine Colladay
+      - Caroline and Michael Dechert
+      - Shannon Fallon
+      - Eric and Erin Fish
+      - William Fleming
+      - Skip Folds
+      - Carole J. and Steve Gray
+      - Jason and Carine Gursky
+      - Cecyl Wilbert Hobbs and Katharine Jackson Hobbs
+      - David and Teresa Korol
+      - Karen Bals and Stephen Lockhart
+      - Brian Lowery
+      - Daniel Luu
+      - Gail Moody-Byrd
+      - Andrea Coen and Michael Neidert
+      - Ashley and Ted Paff
+      - Andy and Stacey Scott
+      - Rebecca Stafford
+      - Molly and David Wadhwani
+      - Josh Hannah and Denise Yamamoto
+  - title: Individual Donors ($1,000-$2,500)
+    items:
+      - Maura Abernathy
+      - Lauren and Harold Allen
+      - Eric and Heidi Altree
+      - Lizzie Pace Beck
+      - Tracy and Bob Blum
+      - Charles Bouch
+      - Jamie Brandt
+      - Jeremy and Joanna Brewer
+      - Teresa Briggs
+      - Ken and Jackie Broad
+      - Brian Burrell
+      - Andrew Chacharon
+      - Collen Chan
+      - Deb Cook
+      - Charles and Karen Couric
+      - Lucia Fernandez-Palacios and Matt Davis
+      - Terrell and Sherice Davis
+      - Dominic and Andrea DeVincenzi
+      - Karen Dielman
+      - David Meyer and Anna Fabian
+      - Franco and Michelle Finn
+      - Cynthia S. and Stanley G. Freimuth
+      - Jodi and Rich Foehr
+      - Matthew and Ayanna Forsythe
+      - Edward and Jacqueline Garcia
+      - Peter and Barbara Gleichenhaus
+      - Jolinda and Ken Gladstein
+      - Drew Gordon
+      - Rupa Gupta
+      - Tony and Angela Harris
+      - Stanley and Angie Hebert
+      - Sharon and Dave Herzer
+      - Carolyn and Kevin Holt
+      - Kathleen Hubner
+      - George and Leslie Hume
+      - Caroline Thomas Jacobs
+      - Francisco Kattan
+      - Catherine and John Kell
+      - Hugh and Kristin Klein
+      - Lesley Kohn
+      - Chris and Jennifer Kostanecki
+      - Julia and Reginald Lee
+      - Connie and Bob Lurie
+      - Elizabeth Majoch
+      - Amanda Martinez
+      - Roberta and Carter McConnell
+      - Alden and Autumn McDonald
+      - Matthew Thornton and Mo McGuire
+      - Ernest McNabb
+      - Joni and Michael Mindel
+      - Sonja Moelleken
+      - Andrew and June Monach
+      - Frederick and Kathryn Oshay
+      - Ali Pace
+      - Betsy and Bill Pace
+      - Paisley Family
+      - Matt and Deirdre Pharr
+      - Tina Phillips
+      - Patricia Duffy and Leslie Sherman
+      - Scott M. and Dina Smith
+      - Steve Smith
+      - Nicholas Sofroniew
+      - Michael Stallone
+      - Louis Stervinou
+      - Angela A Szymusiak
+      - Ken Thames
+      - Eileen Thau
+      - Jason Ting
+      - Charlotte Toksvig
+      - Libby and Adam Tracy
+      - Joe and Chris Trevino
+      - Steve and Susan Van Liere
+      - April Waldram
+      - Nancy and John Watkins
+      - Eileen and Thurman White
+      - Edward and Mary Lou Winnick
+      - Michael and Polly Wong
+      - Emily Yette
+      - Ting Zhang
+  - title: Individual Donors ($500-$1000)
+    items:
+      - Lupe Barraza
+      - Linda Behnke
+      - Azar Bolandgray
+      - Chris Boyd
+      - Howard and Saunjah Brantley
+      - Keo Buenpacifico
+      - Sean Cahoon
+      - Matt Childs
+      - Wanda Cole-Frieman
+      - Olga Dedikova
+      - Michael George
+      - Brandi Gleason
+      - Joy and Bruce Goldberg
+      - Craig Etlin and Erin Gordon
+      - Sasha Gourevitch
+      - William Greathouse
+      - Anne and Dennis Herrera
+      - Jenny Hoang
+      - Tionka Humphrey
+      - Larry and Karen Jackson
+      - Judy Klein
+      - Cary Koh
+      - Jody Lara
+      - Jon and Jennifer Lefferts
+      - John and Linnea Leonhardt
+      - Sabrina Lowell
+      - Theresa Noriega-Lum and Gary Lum
+      - Rachel Heit and Michael Magnuson
+      - Adam and Kristin Messer
+      - Liz and Jeff Minick
+      - Emily Mockett
+      - Mason and Amelia Moore
+      - Chelsea Munger
+      - Megan Hover and Cory Nelson
+      - Stephen Norris
+      - Stephen Norris Sr. and Mary Norris
+      - Manuel Ramos and Jinwei Nui
+      - Nani Ratnawati
+      - Anthony Rodriguez
+      - Tania and Kevin Scheer
+      - Rebecca Scherzer
+      - Sachin Sharma
+      - Susan Stone
+      - Laurie and Kevin Tempest
+      - Jeffrey Ting
+      - Kriss Deiglmeier and Samir Tuma
+      - Deryk and Karen Van Brunt
+      - Patrick Walker
+      - Bridget Waluch
+      - Joseph and April Wesley
+      - Barbara and Chris Wilson
+      - Xiaodi Zhang
+  - title: Individual Donors ($250-$500)
+    items:
+      - Kristi and Rodney Loo
+      - David Thornton and Ferit Albukrek
+      - Grace Ogata Beutler
+      - Martha and Jeffrey Blue
+      - Charles Brown
+      - Alena Byers and Byron Brummel
+      - Lisa Brydon
+      - Rebecca Clemmons
+      - Scott Collyer
+      - Kenneth Dechert
+      - Marisa Fernandez-Palacios
+      - Diane Flannery
+      - Alexander and Wendy Fraser
+      - Herbert and Gertrude Halverstadt
+      - Jessica Heim
+      - Andre Hill
+      - Ruby Iribarren
+      - Tomás and Nova Jimenez
+      - Alyssa Jones
+      - Talia Shani Kaufman
+      - Pierce and Emily Kilduff
+      - Temryss Lane
+      - John Killpack and Keith Lesnick
+      - Marie and Tom Lyons
+      - Lorena Martinez
+      - Jim Keddy and Gina Martinez-Keddy
+      - Adel Ojja
+      - Peter Ostrow
+      - Danny Pan
+      - Lori Rianda
+      - Gina Rudolph
+      - Traci Simon
+      - Ingrid Solares
+      - Lorna Thornton
+      - Amy Tovar
+      - Jeff Tucker
+      - Laura Upton
+      - Susan Wheeler
+      - Jami and Andrew Zakem
+      - Lee and Tali Zimmerman
+  - title: Individual Donors ($100-$250)
+    items:
+      - Mary and William Abkemeier
+      - Larissa Acosta
+      - Nicole Aguilar
+      - Tim Aldinger
+      - Damien Beasley
+      - Marc Andre Bergeron
+      - Saaleha Bey
+      - Robert Brown
+      - Elizabeth Calora
+      - Nathan Carzon
+      - Colleen Cassity
+      - Amanda Catala
+      - Teddy and Jackie Chin
+      - Arty Christianto
+      - Laura Congdon
+      - Marnie Curry
+      - Mark Heffenreffer and Jan Dalessandro
+      - Geri Delarosa
+      - Lanie Farmer
+      - Quinn and Tracey Finnigan
+      - Cynthia Friedman
+      - Catherine Geerhart
+      - Warren and Shelley Grafstein
+      - Ryann Greenberg
+      - Renae Griffin
+      - Francisco Guijarro
+      - Tim Harkin
+      - Amy Havens
+      - Janette Hernandez
+      - Katie Hobson
+      - Weslee Howell
+      - Whitney Kelly
+      - Tanya Khaiyanun
+      - Carmela Kirby
+      - Jeff Knorr
+      - Andrew Lee
+      - Julie Lewis
+      - Rick and Cynthia Lopes
+      - Jack and Cindy Love
+      - Billy Manning
+      - Fira and Arkady Ostrovsky
+      - Curtis Pabst
+      - Brandi Pearce
+      - Matt and Sara Beth Podolin
+      - Joshua Rai
+      - Anupriya Ramraj
+      - Tanya Razi
+      - Lorenzo and Julia Robleto
+      - Heidi and Brad Sanborn
+      - Maureen Sarewitz
+      - Maggie Smith
+      - Nicole Soluri
+      - Jennifer Sorrells
+      - Don Spradlin
+      - Jessica Sullivan
+      - Tara DeRosa and Paul Tackett
+      - Mary Beth Thomas
+      - Andrew Bondale and Michelle Tseng
+      - Andy Filpula and Claire Wheeler
+      - Nancy and Roy Wheeler
+      - Teri Williams
+      - Alison Wright
+      - Kelly Yu
+  - title: Individual Donors ($1-100)
+    items:
+      - Bahar Abullarade
+      - Shannon Acklen
+      - Sandy Acuna
+      - Alisha and Nick Amland
+      - Angela Arevalo
+      - Anastasha Barba
+      - Stuart and J.R. Beeson
+      - Betty Lou and Joseph Blumberg
+      - Pamela Boneparth
+      - Elijah Brown
+      - Kevin Burdick
+      - Jessica Cai
+      - John Caplinger
+      - Andrew Carr
+      - Trevonna Cassell
+      - Snigdha Chandra
+      - Michela Chatmon
+      - Samuel Chatoo
+      - Sharon Cortez
+      - Melissa Dawson
+      - LJ Deberry
+      - Matthew Decker
+      - Jonathan Delcid
+      - Trevor and Brittany Derrett
+      - Courtney Dulle
+      - Nancy Easterbrook
+      - Desiree Echols
+      - Sarah-Michael Gaston
+      - Kristen Gibson
+      - Trino Gonzalez
+      - Sandra and Miguel Govela
+      - Billy Handcock
+      - Wendy Hanson
+      - Margo Huang
+      - Rachel Huang
+      - Abbey Ibrahim
+      - Lee Johnson
+      - Natalie Johnson
+      - Jon Jones
+      - Erica Kashiri
+      - Venus Lieu-Scheurich
+      - Carrie Li
+      - Dejona Lopez
+      - Betty Low
+      - Kaley Martin
+      - Evelyn Milani
+      - Jenelle Nila
+      - Keilani Paneda
+      - Melissa Pearce
+      - Melissa Pedersen
+      - Christina Ramos
+      - Harrison Roday
+      - Claire Rogers
+      - Jim and Marjorie Shannon
+      - Essence Shelton
+      - Joy Shibata
+      - Quantrial Shields
+      - Alexandra Silva
+      - Dominic Silvestri
+      - Aislin Smith
+      - Bill Smoot
+      - Jon Anthony Sperring
+      - Nathan Torinus
+      - Mary Tran
+      - Tuyen Tran
+      - Nicole Trimble
+      - Samias Tsegay
+      - Steve Tyree
+      - Justin Valentine
+      - Jennifer Tice Walker
+      - Yvette Waters
+      - Kate Wheatley
+      - Christopher Whitney
+      - Anna Marie Will
+      - Jessica Yost
+legacyId: 293
+---
+
+

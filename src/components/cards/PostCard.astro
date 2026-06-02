@@ -1,0 +1,42 @@
+---
+import Media from "@/components/Media.astro";
+
+interface Props {
+  href: string;
+  title: string;
+  excerpt?: string;
+  date: Date;
+  image?: string;
+  imageAlt?: string;
+  categories?: string[];
+}
+const { href, title, excerpt, date, image, imageAlt, categories } = Astro.props;
+const dateStr = date.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+---
+
+<article class="group flex flex-col overflow-hidden rounded-[var(--radius-card)] border border-navy-100 bg-white shadow-[var(--shadow-card)] transition hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
+  <a href={href} class="block aspect-[16/10] overflow-hidden bg-cream">
+    {
+      image ? (
+        <Media src={image} alt={imageAlt ?? title} class="h-full w-full transition duration-500 group-hover:scale-105" fit="cover" />
+      ) : (
+        <div class="flex h-full w-full items-center justify-center bg-gradient-to-br from-navy-100 to-brand-100">
+          <span class="font-heading text-2xl font-bold text-navy-300">Juma</span>
+        </div>
+      )
+    }
+  </a>
+  <div class="flex flex-1 flex-col p-6">
+    <div class="mb-2 flex items-center gap-3 text-xs">
+      {categories && categories[0] && <span class="font-heading font-bold uppercase tracking-wide text-brand-600">{categories[0]}</span>}
+      <time datetime={date.toISOString()} class="text-warmgray">{dateStr}</time>
+    </div>
+    <h3 class="text-lg leading-snug">
+      <a href={href} class="transition hover:text-brand-600">{title}</a>
+    </h3>
+    {excerpt && <p class="mt-2 line-clamp-3 text-sm text-ink-soft">{excerpt}</p>}
+    <a href={href} class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-600 transition group-hover:gap-2">
+      Read more →
+    </a>
+  </div>
+</article>

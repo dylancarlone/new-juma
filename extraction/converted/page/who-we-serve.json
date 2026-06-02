@@ -1,0 +1,29 @@
+{
+  "slug": "who-we-serve",
+  "title": "Who We Serve",
+  "kind": "mission",
+  "hero": {
+    "eyebrow": "",
+    "heading": "Who We Serve",
+    "subheading": "",
+    "image": "https://juma.org/wp-content/uploads/2015/10/DSC_1612BW-1024x681.jpg",
+    "ctaLabel": "Donate Now",
+    "ctaHref": "https://donatenow.networkforgood.org/juma-ventures-donate"
+  },
+  "intro": "Juma serves youth from low-income families.",
+  "mission": "",
+  "vision": "",
+  "sections": [
+    {
+      "heading": "",
+      "body": "Juma serves youth from low-income families who are:\n\n- In high school and first in family to aspire to go to college (recruited in their sophomore year), or\n- Out of school and out of work for the last 6 months (Opportunity Youth), aged 16-24",
+      "image": "https://juma.org/wp-content/uploads/2015/10/DSC_1612BW-1024x681.jpg"
+    }
+  ],
+  "stats": [],
+  "navOrder": null,
+  "showInNav": false,
+  "legacyId": 960,
+  "seoDescription": "Juma serves low-income youth: high schoolers aspiring to be first in their family to attend college, and opportunity youth ages 16-24 who are out of school and work.",
+  "body": ""
+}

@@ -1,0 +1,22 @@
+---
+import { marked } from "marked";
+
+interface Props {
+  content?: string;
+  class?: string;
+  inline?: boolean;
+}
+const { content = "", class: className, inline = false } = Astro.props;
+
+marked.setOptions({ breaks: false, gfm: true });
+const html = content ? (inline ? marked.parseInline(content) : await marked.parse(content)) : "";
+---
+
+{
+  html &&
+    (inline ? (
+      <span class={className} set:html={html} />
+    ) : (
+      <div class:list={["prose-juma", className]} set:html={html} />
+    ))
+}
