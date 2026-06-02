@@ -2,7 +2,7 @@
 name: Lisa Chin
 role: Chief Executive Officer
 group: leadership
-photo: lisa-chin.jpg
+photo: LC-LinkedInPhoto.jpg
 isAlum: false
 order: 5
 ---

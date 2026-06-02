@@ -2,7 +2,7 @@
 name: Denise Evans
 role: Director of Finance
 group: leadership
-photo: 7415-Untitled-700-x-525-px.jpg
+photo: Untitled-700-x-525-px.jpg
 isAlum: false
 order: 27
 ---

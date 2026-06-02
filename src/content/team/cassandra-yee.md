@@ -2,7 +2,7 @@
 name: Cassandra Yee
 role: Chief People Officer & General Counsel
 group: leadership
-photo: 2322-Cassandra_website.jpg
+photo: Cassandra-Yee.jpg
 isAlum: false
 order: 13
 ---

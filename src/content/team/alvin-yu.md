@@ -2,7 +2,7 @@
 name: Alvin Yu
 role: Director of Venue Operations
 group: leadership
-photo: noah-halton-website.png
+photo: Alvin-Yu.png
 isAlum: true
 order: 20
 ---

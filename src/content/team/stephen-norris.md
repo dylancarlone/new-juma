@@ -2,7 +2,7 @@
 name: Stephen Norris
 role: California Government Contracts Director
 group: leadership
-photo: stephen-website.jpg
+photo: Stephen_Norris.jpg
 location: California
 isAlum: false
 order: 21
