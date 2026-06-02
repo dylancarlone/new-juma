@@ -15,7 +15,7 @@ const team = (await getCollection("team", (t) => !t.data.draft)).sort((a, b) => 
 
   <Container class="py-14 md:py-20">
     <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
-      {team.map((m) => <TeamCard name={m.data.name} role={m.data.role} photo={m.data.photo} href={`/team/${m.id}/`} />)}
+      {team.map((m) => <TeamCard name={m.data.name} role={m.data.role} photo={m.data.photo} href={`/team/${m.id}/`} position={m.data.photoPosition} />)}
     </div>
 
     <div class="mt-16 rounded-[var(--radius-card)] bg-cream p-8 text-center md:p-12">

@@ -20,7 +20,7 @@ const { Content } = await render(entry);
     <a href="/leadership/" class="font-semibold text-brand-600 hover:underline">← Back to Leadership</a>
     <div class="mt-8 grid gap-8 sm:grid-cols-[200px_1fr] sm:items-start">
       <div class="overflow-hidden rounded-2xl bg-cream shadow-[var(--shadow-card)]">
-        <Media src={d.photo} alt={d.name} class="aspect-square w-full" fit="cover" loading="eager" />
+        <Media src={d.photo} alt={d.name} class="aspect-square w-full" fit="cover" position={d.photoPosition ?? "center 25%"} loading="eager" />
       </div>
       <div>
         <h1 class="text-3xl md:text-4xl">{d.name}</h1>

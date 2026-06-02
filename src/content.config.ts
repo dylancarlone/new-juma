@@ -86,6 +86,8 @@ const team = defineCollection({
     role: z.string(),
     group: z.enum(["staff", "leadership", "board", "advisor"]).default("staff"),
     photo: z.string().optional(),
+    // CSS object-position for the headshot crop (e.g. "center 20%"); tune per person if a face sits off-center.
+    photoPosition: z.string().optional(),
     email: z.string().optional(),
     location: z.string().optional(),
     isAlum: z.boolean().default(false),

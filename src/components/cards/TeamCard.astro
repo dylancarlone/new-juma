@@ -6,15 +6,17 @@ interface Props {
   role: string;
   photo?: string;
   href?: string;
+  position?: string;
 }
-const { name, role, photo, href } = Astro.props;
+// Bias the square crop slightly toward the top so headshots center on the face.
+const { name, role, photo, href, position = "center 25%" } = Astro.props;
 ---
 
 <div class="group text-center">
   <div class="mx-auto aspect-square w-full max-w-[220px] overflow-hidden rounded-2xl bg-cream shadow-[var(--shadow-card)]">
     {
       photo ? (
-        <Media src={photo} alt={name} class="h-full w-full transition duration-500 group-hover:scale-105" fit="cover" />
+        <Media src={photo} alt={name} class="h-full w-full transition duration-500 group-hover:scale-105" fit="cover" position={position} />
       ) : (
         <div class="flex h-full w-full items-center justify-center bg-gradient-to-br from-navy-100 to-brand-100 font-heading text-3xl font-bold text-navy-300">
           {name.split(" ").map((n) => n[0]).slice(0, 2).join("")}

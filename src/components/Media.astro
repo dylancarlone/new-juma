@@ -12,9 +12,10 @@ interface Props {
   loading?: "eager" | "lazy";
   sizes?: string;
   fit?: "cover" | "contain";
+  position?: string;
 }
 
-const { src, alt = "", class: className, width, height, loading = "lazy", sizes, fit } = Astro.props;
+const { src, alt = "", class: className, width, height, loading = "lazy", sizes, fit, position } = Astro.props;
 
 const loader = resolveMedia(src);
 let img: ImageMetadata | undefined;
@@ -22,6 +23,7 @@ if (loader) img = (await loader()).default;
 
 const fitClass = fit === "cover" ? "object-cover" : fit === "contain" ? "object-contain" : "";
 const cls = [className, fitClass].filter(Boolean).join(" ");
+const style = position ? `object-position:${position}` : undefined;
 ---
 
 {
@@ -30,6 +32,7 @@ const cls = [className, fitClass].filter(Boolean).join(" ");
       src={img}
       alt={alt}
       class={cls}
+      style={style}
       loading={loading}
       sizes={sizes}
       {...(width ? { width } : {})}
@@ -37,6 +40,6 @@ const cls = [className, fitClass].filter(Boolean).join(" ");
     />
   ) : src ? (
     /* Unresolved local name or a remote URL — fall back to a plain img during migration. */
-    <img src={src} alt={alt} class={cls} loading={loading} decoding="async" data-remote={isRemote(src) ? "true" : undefined} />
+    <img src={src} alt={alt} class={cls} style={style} loading={loading} decoding="async" data-remote={isRemote(src) ? "true" : undefined} />
   ) : null
 }
