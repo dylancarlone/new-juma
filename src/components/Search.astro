@@ -1,0 +1,188 @@
+---
+/**
+ * Site-wide search — a ⌘K modal backed by Pagefind's static index.
+ * The index is generated at build time (`pagefind --site dist/client`),
+ * so search works with zero backend. In `astro dev` the index doesn't
+ * exist; the modal explains that gracefully.
+ *
+ * Open with: any element bearing [data-search-open], ⌘K / Ctrl+K, or "/".
+ */
+import Icon from "@/components/Icon.astro";
+---
+
+<div id="search-modal" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true" aria-label="Search the site">
+  <div id="search-backdrop" class="absolute inset-0 bg-navy-950/70 backdrop-blur-sm"></div>
+
+  <div class="relative mx-auto mt-[8vh] w-[min(44rem,calc(100vw-2rem))] overflow-hidden rounded-2xl bg-white shadow-[var(--shadow-lift)] ring-1 ring-navy-100">
+    <!-- Input row -->
+    <div class="flex items-center gap-3 border-b border-navy-100 px-5 py-4">
+      <Icon name="search" size={20} class="shrink-0 text-brand-500" />
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Search news, stories, people, jobs…"
+        autocomplete="off"
+        spellcheck="false"
+        class="w-full bg-transparent text-lg text-navy-900 outline-none placeholder:text-navy-300"
+      />
+      <button id="search-close" class="rounded-lg px-2 py-1 font-heading text-[0.65rem] font-bold uppercase tracking-wider text-navy-400 ring-1 ring-navy-200 transition hover:bg-navy-50 hover:text-navy-700" aria-label="Close search">Esc</button>
+    </div>
+
+    <!-- Results -->
+    <div id="search-results" class="max-h-[55vh] overflow-y-auto overscroll-contain p-2">
+      <p class="px-4 py-10 text-center text-sm text-warmgray">Type to search across all of juma.org — 200+ articles, stories, and pages.</p>
+    </div>
+
+    <!-- Footer hints -->
+    <div class="flex items-center justify-between border-t border-navy-100 bg-cream-soft px-5 py-2.5 text-[0.65rem] font-semibold text-warmgray">
+      <span class="flex items-center gap-3">
+        <span><kbd class="rounded bg-white px-1.5 py-0.5 font-bold shadow-sm ring-1 ring-navy-200">↑↓</kbd> navigate</span>
+        <span><kbd class="rounded bg-white px-1.5 py-0.5 font-bold shadow-sm ring-1 ring-navy-200">↵</kbd> open</span>
+      </span>
+      <span class="font-heading uppercase tracking-wider">Search by Pagefind</span>
+    </div>
+  </div>
+</div>
+
+<style is:global>
+  #search-results mark {
+    background: var(--color-gold-soft);
+    color: var(--color-navy-900);
+    border-radius: 2px;
+    padding: 0 1px;
+  }
+  #search-results .search-hit[aria-selected="true"] {
+    background: var(--color-cream);
+    outline: 2px solid var(--color-gold);
+    outline-offset: -2px;
+  }
+</style>
+
+<script>
+  const modal = document.getElementById("search-modal");
+  const input = document.getElementById("search-input");
+  const resultsEl = document.getElementById("search-results");
+
+  if (modal && input && resultsEl) {
+    let pagefind = null;
+    let hits = [];
+    let selected = 0;
+    let queryId = 0;
+
+    const SECTIONS = [
+      [/^\/news\//, "News", "bg-brand-50 text-brand-700"],
+      [/^\/stories\//, "Youth Story", "bg-gold-soft text-accent-dark"],
+      [/^\/team\//, "Our Team", "bg-navy-50 text-navy-700"],
+      [/^\/careers\/|^\/work-for-juma\//, "Careers", "bg-emerald-50 text-emerald-700"],
+      [/^\/(san-francisco|san-jose|seattle|sacramento)\//, "Location", "bg-sky/20 text-navy-700"],
+      [/^\/game\//, "Play", "bg-brand-50 text-brand-700"],
+    ];
+    const sectionFor = (url) => {
+      for (const [re, label, cls] of SECTIONS) if (re.test(url)) return { label, cls };
+      return { label: "Page", cls: "bg-navy-50 text-navy-600" };
+    };
+
+    async function ensurePagefind() {
+      if (pagefind) return pagefind;
+      try {
+        // Path is built at runtime so Vite/Rollup don't try to resolve it at
+        // build time — the index only exists in the published output.
+        const url = ["", "pagefind", "pagefind.js"].join("/");
+        pagefind = await import(/* @vite-ignore */ url);
+        await pagefind.init();
+      } catch {
+        pagefind = "unavailable";
+      }
+      return pagefind;
+    }
+
+    function openModal() {
+      modal.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+      input.focus();
+      input.select();
+      ensurePagefind();
+    }
+    function closeModal() {
+      modal.classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+
+    function msg(text) {
+      resultsEl.innerHTML = `<p class="px-4 py-10 text-center text-sm text-warmgray">${text}</p>`;
+      hits = [];
+    }
+
+    function renderHits(items, total, query) {
+      if (!items.length) {
+        msg(`No results for “<strong>${query.replace(/</g, "&lt;")}</strong>”. Try a different word — or <a class="font-semibold text-brand-600 underline" href="/contact/">ask us directly</a>.`);
+        return;
+      }
+      hits = items;
+      selected = 0;
+      resultsEl.innerHTML =
+        items
+          .map((d, i) => {
+            const s = sectionFor(d.url);
+            return `
+        <a href="${d.url}" class="search-hit block rounded-xl px-4 py-3 transition hover:bg-cream" data-idx="${i}" aria-selected="${i === 0}">
+          <span class="flex items-center gap-2">
+            <span class="rounded-full px-2 py-0.5 font-heading text-[0.6rem] font-bold uppercase tracking-wider ${s.cls}">${s.label}</span>
+            <span class="truncate font-heading text-sm font-bold text-navy-900">${d.meta?.title ?? d.url}</span>
+          </span>
+          <span class="mt-1 line-clamp-2 block text-xs leading-relaxed text-warmgray">${d.excerpt}</span>
+        </a>`;
+          })
+          .join("") +
+        (total > items.length
+          ? `<p class="px-4 py-2.5 text-center text-[0.65rem] font-semibold uppercase tracking-wider text-navy-300">Top ${items.length} of ${total} results</p>`
+          : "");
+    }
+
+    function paintSelection() {
+      resultsEl.querySelectorAll(".search-hit").forEach((el, i) => el.setAttribute("aria-selected", String(i === selected)));
+      const el = resultsEl.querySelector(`[data-idx="${selected}"]`);
+      el && el.scrollIntoView({ block: "nearest" });
+    }
+
+    let debounce = 0;
+    input.addEventListener("input", () => {
+      clearTimeout(debounce);
+      const q = input.value.trim();
+      if (!q) return msg("Type to search across all of juma.org — 200+ articles, stories, and pages.");
+      debounce = setTimeout(async () => {
+        const id = ++queryId;
+        const pf = await ensurePagefind();
+        if (pf === "unavailable") return msg("Search is available on the published site (the index is generated at build time).");
+        const res = await pf.search(q);
+        if (id !== queryId || !res) return;
+        const top = await Promise.all(res.results.slice(0, 8).map((r) => r.data()));
+        if (id !== queryId) return;
+        renderHits(top, res.results.length, q);
+      }, 160);
+    });
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowDown") { e.preventDefault(); if (hits.length) { selected = (selected + 1) % hits.length; paintSelection(); } }
+      else if (e.key === "ArrowUp") { e.preventDefault(); if (hits.length) { selected = (selected - 1 + hits.length) % hits.length; paintSelection(); } }
+      else if (e.key === "Enter") { const h = hits[selected]; if (h) window.location.href = h.url; }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        modal.classList.contains("hidden") ? openModal() : closeModal();
+      } else if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+        closeModal();
+      } else if (e.key === "/" && modal.classList.contains("hidden")) {
+        const t = e.target;
+        const typing = t instanceof HTMLElement && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable);
+        if (!typing) { e.preventDefault(); openModal(); }
+      }
+    });
+
+    document.querySelectorAll("[data-search-open]").forEach((b) => b.addEventListener("click", openModal));
+    document.getElementById("search-backdrop")?.addEventListener("click", closeModal);
+    document.getElementById("search-close")?.addEventListener("click", closeModal);
+  }
+</script>
