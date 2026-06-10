@@ -1,0 +1,372 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import Media from "@/components/Media.astro";
+import Button from "@/components/ui/Button.astro";
+import CTABanner from "@/components/sections/CTABanner.astro";
+
+/**
+ * "30 Years of Possible" — a scroll-driven timeline of Juma's history.
+ * Every milestone below is sourced from site content (mission/history,
+ * the 30-years campaign page, and the news archive).
+ */
+type Milestone = {
+  year: string;
+  title: string;
+  body: string;
+  image?: string;
+  href?: string;
+  linkLabel?: string;
+};
+type Era = {
+  num: string;
+  label: string;
+  years: string;
+  color: string; // tailwind text color for accents
+  bar: string; // gradient classes for the era chip bar
+  milestones: Milestone[];
+};
+
+const eras: Era[] = [
+  {
+    num: "01",
+    label: "The Scoop Shop Years",
+    years: "1993 – 1999",
+    color: "text-brand-500",
+    bar: "from-brand-500 to-brand-300",
+    milestones: [
+      {
+        year: "1993",
+        title: "One scoop shop, one big idea",
+        body: "Juma opens its first Ben & Jerry's location in San Francisco — pioneering the model of operating a real business specifically to employ and support opportunity youth. A first job, with support built in.",
+        image: "dsc-1612bw-1024x681.jpg",
+      },
+      {
+        year: "1990s",
+        title: "The model proves itself",
+        body: "Scoop by scoop, young people facing the steepest barriers earn real paychecks — and Juma pairs every job with financial capability training and matched savings for education. The blueprint for everything that follows is set.",
+      },
+    ],
+  },
+  {
+    num: "02",
+    label: "Into the Stadiums",
+    years: "Early 2000s",
+    color: "text-accent",
+    bar: "from-accent to-gold",
+    milestones: [
+      {
+        year: "2000s",
+        title: "From scoop shop to stadium",
+        body: "Juma grows beyond ice cream, forging partnerships with professional sports venues to operate concession businesses — creating more jobs and a richer training ground at some of the biggest stages in sports.",
+        image: "7162-San-Francisco-Photo-JumaVentures_MarketingShoot_OraclePark-40-of-79-scaled.jpg",
+      },
+      {
+        year: "2000s",
+        title: "Earn · Learn · Connect takes shape",
+        body: "Jobs alone aren't the goal — lasting pathways are. Paid work, financial literacy, and individualized coaching come together as the YouthConnect model that still powers Juma today.",
+        href: "/programs/",
+        linkLabel: "See the programs",
+      },
+    ],
+  },
+  {
+    num: "03",
+    label: "Going Multi-City",
+    years: "2010s",
+    color: "text-navy-500",
+    bar: "from-navy-600 to-sky",
+    milestones: [
+      {
+        year: "2010s",
+        title: "The West Coast expansion",
+        body: "Juma brings the YouthConnect model to Sacramento, San Jose, and Seattle — reaching thousands more young people from Lumen Field to Levi's Stadium to Golden 1 Center.",
+        image: "7169-Seattle-Photo-_MG_6994-scaled.jpg",
+        href: "/seattle/",
+        linkLabel: "Explore our cities",
+      },
+      {
+        year: "2018",
+        title: "25 years of making possible, possible",
+        body: "A quarter-century in, Juma celebrates thousands of first paychecks, millions saved for college, and a generation of alumni building careers of their choice.",
+        image: "3718-25-Years-of-Making-Possible-Possible-1.png",
+      },
+    ],
+  },
+  {
+    num: "04",
+    label: "The Next Generation",
+    years: "2020s – Today",
+    color: "text-gold",
+    bar: "from-gold to-brand-400",
+    milestones: [
+      {
+        year: "2023",
+        title: "30 years — and 10,000 youth strong",
+        body: "Juma marks its 30th anniversary at the Paths to Possibility Gala: more than 10,000 low-income youth employed, $13 million earned in wages, and $6.4 million saved for higher education.",
+        image: "30-gal-1.jpg",
+        href: "/30-years/",
+        linkLabel: "Relive the 30th",
+      },
+      {
+        year: "2024",
+        title: "The Youth Empowerment Emergency Fund",
+        body: "Juma launches an emergency fund — a lifeline that keeps a surprise crisis from knocking a young person off their path to stability.",
+        href: "/news/juma-launches-youth-empowerment-emergency-fund-a-lifeline-for-times-of-crisis/",
+        linkLabel: "Read the story",
+      },
+      {
+        year: "2025",
+        title: "Connect re-launched, Blueprint unveiled",
+        body: "Juma re-launches the Connect pillar with individualized coaching and the new Juma Blueprint — while 462 youth earn $1.3M across 20+ social enterprises in four cities.",
+        image: "7389-JumaLINK_2025-4-of-160-Medium.jpeg",
+        href: "/our-mission-history/",
+        linkLabel: "Where we are today",
+      },
+    ],
+  },
+];
+
+const finale = [
+  { value: 10000, prefix: "", suffix: "+", label: "Youth employed since 1993" },
+  { value: 15.5, prefix: "$", suffix: "M", decimals: 1, label: "In wages generated for youth" },
+  { value: 6.4, prefix: "$", suffix: "M", decimals: 1, label: "Saved for higher education" },
+  { value: 44, prefix: "$", suffix: "M", label: "In enterprise revenue for the mission" },
+];
+---
+
+<BaseLayout
+  title="30 Years of Possible — Our Timeline"
+  description="From a single Ben & Jerry's scoop shop in 1993 to 20+ social enterprises across four cities: scroll through three decades of Juma making possible, possible."
+>
+  <!-- Scroll progress bar -->
+  <div id="tl-progress" class="fixed inset-x-0 top-0 z-[60] h-1 origin-left scale-x-0 bg-gradient-to-r from-brand-500 via-accent to-gold" aria-hidden="true"></div>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white">
+    <div class="absolute inset-0 bg-dots-light opacity-40" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-brand-500/15 blur-[100px]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-gold/10 blur-[90px]" aria-hidden="true"></div>
+    <Container class="relative py-20 text-center md:py-28">
+      <p class="eyebrow eyebrow-center justify-center text-gold" data-reveal>Our story</p>
+      <h1 class="mt-4 text-4xl text-white md:text-6xl lg:text-7xl" data-reveal>
+        30 years of making<br />
+        <span class="mark-brand">possible, possible.</span>
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-navy-100 md:text-xl" data-reveal style="--reveal-delay: 100ms">
+        From a single Ben & Jerry's scoop shop in San Francisco to 20+ social enterprises across four cities —
+        scroll through three decades of first paychecks and lasting pathways.
+      </p>
+      <div class="mt-10 flex items-center justify-center gap-4 font-heading font-extrabold" data-reveal style="--reveal-delay: 200ms">
+        <span class="text-3xl text-brand-400 md:text-5xl">1993</span>
+        <span class="h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 to-gold md:w-28" aria-hidden="true"></span>
+        <span class="text-3xl text-gold md:text-5xl">Today</span>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Timeline -->
+  <section class="relative overflow-hidden bg-cream">
+    <div class="absolute inset-0 bg-dots-dark opacity-50" aria-hidden="true"></div>
+
+    <!-- Floating year marker -->
+    <div
+      id="tl-year"
+      class="pointer-events-none fixed bottom-4 left-3 z-40 hidden font-heading text-5xl font-extrabold tracking-tight text-brand-500/40 drop-shadow-sm transition-all duration-500 lg:bottom-6 lg:left-4 lg:text-8xl lg:text-brand-500/90"
+      aria-hidden="true"
+    >
+      1993
+    </div>
+
+    <Container class="relative py-16 md:py-24">
+      <div id="tl-track" class="relative mx-auto max-w-4xl">
+        <!-- Spine -->
+        <div class="absolute bottom-0 left-5 top-0 w-1 rounded-full bg-navy-200/60 md:left-1/2 md:-translate-x-1/2" aria-hidden="true"></div>
+        <div id="tl-spine" class="absolute left-5 top-0 w-1 origin-top scale-y-0 rounded-full bg-gradient-to-b from-brand-500 via-accent to-gold md:left-1/2 md:-translate-x-1/2" style="height: 100%" aria-hidden="true"></div>
+
+        {
+          eras.map((era) => (
+            <div class="relative">
+              <!-- Era header -->
+              <div class="relative py-10 pl-16 md:py-14 md:pl-0 md:text-center" data-era={era.years} data-era-year={era.milestones[0].year}>
+                <span class={`pointer-events-none absolute -top-2 right-0 select-none font-heading text-[7rem] font-extrabold leading-none text-navy-950/[0.05] md:left-1/2 md:right-auto md:-translate-x-1/2 md:text-[10rem]`} aria-hidden="true">
+                  {era.num}
+                </span>
+                <div class="relative inline-block rounded-full bg-white px-6 py-3 shadow-[var(--shadow-card)] ring-1 ring-navy-100" data-reveal>
+                  <span class={`absolute inset-x-6 top-0 h-1 rounded-b-full bg-gradient-to-r ${era.bar}`} aria-hidden="true" />
+                  <p class="font-heading text-sm font-extrabold uppercase tracking-widest text-navy-900 md:text-base">{era.label}</p>
+                  <p class={`font-heading text-xs font-bold uppercase tracking-[0.2em] ${era.color}`}>{era.years}</p>
+                </div>
+              </div>
+
+              {era.milestones.map((m, i) => (
+                <article class="tl-item relative pb-12 pl-16 md:grid md:grid-cols-2 md:gap-16 md:pb-16 md:pl-0" data-year={m.year}>
+                  <!-- Node -->
+                  <span class="tl-node absolute left-5 top-2 z-10 -translate-x-1/2 md:left-1/2" aria-hidden="true">
+                    <span class={`block h-5 w-5 rounded-full border-4 border-white shadow-[var(--shadow-card)] transition-colors duration-500 ${i % 2 ? "bg-navy-300" : "bg-navy-300"}`} data-node />
+                  </span>
+
+                  <div class={`${i % 2 === 0 ? "md:order-1 md:text-right" : "md:order-2"}`} data-reveal>
+                    <p class={`font-heading text-2xl font-extrabold ${era.color}`}>{m.year}</p>
+                    <h2 class="mt-1.5 text-2xl md:text-3xl">{m.title}</h2>
+                    <p class="mt-3 leading-relaxed text-ink-soft">{m.body}</p>
+                    {m.href && (
+                      <a href={m.href} class={`link-more mt-4 ${i % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
+                        {m.linkLabel ?? "Learn more"}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                      </a>
+                    )}
+                  </div>
+
+                  <div class={`${i % 2 === 0 ? "md:order-2" : "md:order-1"} ${m.image ? "mt-5 md:mt-0" : "hidden md:block"}`} data-reveal style="--reveal-delay: 120ms">
+                    {m.image && (
+                      <div class="card-lift overflow-hidden rounded-[var(--radius-card)] bg-white shadow-[var(--shadow-card)] ring-1 ring-navy-100">
+                        <Media src={m.image} alt={m.title} class="aspect-[16/10] w-full" fit="cover" />
+                      </div>
+                    )}
+                  </div>
+                </article>
+              ))}
+            </div>
+          ))
+        }
+
+        <!-- Spine end cap -->
+        <div class="relative pb-4 pl-16 md:pl-0 md:text-center">
+          <span class="absolute left-5 top-0 z-10 -translate-x-1/2 md:left-1/2" aria-hidden="true">
+            <span class="block h-7 w-7 animate-pulse rounded-full bg-gradient-to-br from-brand-500 to-gold shadow-[var(--shadow-glow)]"></span>
+          </span>
+          <p class="pt-10 font-heading text-xl font-extrabold text-navy-900 md:text-2xl">…and the next chapter starts with you.</p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Finale: count-up stats -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white">
+    <div class="absolute inset-0 bg-dots-light opacity-30" aria-hidden="true"></div>
+    <Container class="relative py-20 md:py-28">
+      <div class="mx-auto mb-14 max-w-2xl text-center" data-reveal>
+        <p class="eyebrow eyebrow-center justify-center text-gold">Three decades, by the numbers</p>
+        <h2 class="mt-3 text-3xl text-white md:text-5xl">The first 30 years were just the start</h2>
+      </div>
+      <dl class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+        {
+          finale.map((s, i) => (
+            <div class="text-center" data-reveal style={`--reveal-delay: ${i * 100}ms`}>
+              <dt
+                class="bg-gradient-to-br from-brand-400 to-gold bg-clip-text font-heading text-4xl font-extrabold tracking-tight text-transparent md:text-6xl"
+                data-countup
+                data-value={s.value}
+                data-prefix={s.prefix}
+                data-suffix={s.suffix}
+                data-decimals={s.decimals ?? 0}
+              >
+                {s.prefix}0{s.suffix}
+              </dt>
+              <dd class="mx-auto mt-3 max-w-[14rem] text-xs font-bold uppercase tracking-wider text-navy-200 md:text-sm">{s.label}</dd>
+            </div>
+          ))
+        }
+      </dl>
+      <div class="mt-14 text-center" data-reveal>
+        <Button href="/donate/" variant="brand" size="lg" arrow>Write the next chapter</Button>
+      </div>
+    </Container>
+  </section>
+
+  <CTABanner heading="Be part of the next 30 years." text="Every gift funds a first paycheck, a savings match, and a pathway that lasts." />
+</BaseLayout>
+
+<script>
+  // ---------- scroll progress bar + timeline spine fill ----------
+  const progress = document.getElementById("tl-progress");
+  const spine = document.getElementById("tl-spine");
+  const track = document.getElementById("tl-track");
+  const yearEl = document.getElementById("tl-year");
+
+  function onScroll() {
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - window.innerHeight;
+    if (progress && max > 0) progress.style.transform = `scaleX(${window.scrollY / max})`;
+
+    if (spine && track) {
+      const r = track.getBoundingClientRect();
+      const viewportAnchor = window.innerHeight * 0.55;
+      const filled = Math.min(Math.max((viewportAnchor - r.top) / r.height, 0), 1);
+      spine.style.transform = `scaleY(${filled})`;
+    }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  // ---------- floating year marker + node lighting ----------
+  const items = document.querySelectorAll(".tl-item");
+  if ("IntersectionObserver" in window && items.length && yearEl) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          const node = e.target.querySelector("[data-node]");
+          if (e.isIntersecting) {
+            yearEl.textContent = e.target.getAttribute("data-year") || "";
+            yearEl.classList.remove("hidden");
+            node && node.classList.add("!bg-brand-500");
+          }
+        }
+      },
+      { rootMargin: "-30% 0px -55% 0px" }
+    );
+    items.forEach((el) => io.observe(el));
+
+    // Hide the marker once past the timeline section.
+    const hideIo = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) if (!e.isIntersecting) yearEl.classList.add("hidden");
+      },
+      { rootMargin: "10% 0px 10% 0px" }
+    );
+    track && hideIo.observe(track);
+  }
+
+  // ---------- count-up stats ----------
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const fmt = (n, dec) => n.toLocaleString("en-US", { minimumFractionDigits: dec, maximumFractionDigits: dec });
+
+  function countUp(el) {
+    const value = parseFloat(el.dataset.value || "0");
+    const dec = parseInt(el.dataset.decimals || "0", 10);
+    const prefix = el.dataset.prefix || "";
+    const suffix = el.dataset.suffix || "";
+    if (reduceMotion) {
+      el.textContent = prefix + fmt(value, dec) + suffix;
+      return;
+    }
+    const dur = 1400;
+    const t0 = performance.now();
+    function step(t) {
+      const p = Math.min((t - t0) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = prefix + fmt(value * eased, dec) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const counters = document.querySelectorAll("[data-countup]");
+  if ("IntersectionObserver" in window && counters.length) {
+    const cio = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            countUp(e.target);
+            cio.unobserve(e.target);
+          }
+        }
+      },
+      { threshold: 0.4 }
+    );
+    counters.forEach((el) => cio.observe(el));
+  } else {
+    counters.forEach(countUp);
+  }
+</script>
