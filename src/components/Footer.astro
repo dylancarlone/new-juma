@@ -8,12 +8,28 @@ import Button from "@/components/ui/Button.astro";
 const year = new Date().getFullYear();
 ---
 
-<footer class="bg-navy-900 text-navy-100">
-  <div class="mx-auto max-w-7xl px-5 py-14 sm:px-6 lg:px-8">
+<footer class="relative overflow-hidden bg-navy-950 text-navy-100">
+  <!-- Brand accent strip -->
+  <div class="h-1 bg-gradient-to-r from-brand-500 via-accent to-gold" aria-hidden="true"></div>
+  <div class="absolute inset-0 bg-dots-light opacity-25" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-brand-500/10 blur-[100px]" aria-hidden="true"></div>
+
+  <div class="relative mx-auto max-w-7xl px-5 py-16 sm:px-6 lg:px-8">
+    <!-- Newsletter band -->
+    <div class="mb-14 flex flex-col gap-6 rounded-[var(--radius-card)] bg-gradient-to-r from-white/[0.08] to-white/[0.04] p-8 ring-1 ring-white/10 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <p class="font-heading text-2xl font-extrabold text-white">Stay connected</p>
+        <p class="mt-1.5 text-sm text-navy-200">Get Juma news and youth success stories in your inbox.</p>
+      </div>
+      <div class="shrink-0">
+        <Button href="/newsletter/" variant="brand" size="md" arrow>Join the Newsletter</Button>
+      </div>
+    </div>
+
     <div class="grid gap-10 lg:grid-cols-[1.4fr_repeat(3,1fr)]">
       <div>
         <Image src={logoSlogan} alt="Juma Ventures" class="h-20 w-auto brightness-0 invert" loading="lazy" />
-        <p class="mt-4 max-w-xs text-sm leading-relaxed text-navy-200">{site.tagline}</p>
+        <p class="mt-5 max-w-xs text-sm leading-relaxed text-navy-200">{site.tagline}</p>
         <div class="mt-6 flex gap-3">
           {
             social.map((s) => (
@@ -22,7 +38,7 @@ const year = new Date().getFullYear();
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-brand-500"
+                class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:-translate-y-1 hover:bg-brand-500 hover:shadow-[var(--shadow-glow)]"
               >
                 <Icon name={s.platform} size={18} />
               </a>
@@ -34,11 +50,11 @@ const year = new Date().getFullYear();
       {
         footerNav.map((col) => (
           <div>
-            <h3 class="font-heading text-sm font-bold uppercase tracking-wider text-white">{col.heading}</h3>
-            <ul class="mt-4 space-y-2.5">
+            <h3 class="font-heading text-xs font-bold uppercase tracking-[0.2em] text-gold">{col.heading}</h3>
+            <ul class="mt-5 space-y-3">
               {col.links.map((l) => (
                 <li>
-                  <a href={l.href} class="text-sm text-navy-200 transition hover:text-white">
+                  <a href={l.href} class="text-sm text-navy-200 transition hover:pl-1 hover:text-white">
                     {l.label}
                   </a>
                 </li>
@@ -49,17 +65,7 @@ const year = new Date().getFullYear();
       }
     </div>
 
-    <div class="mt-12 rounded-2xl bg-white/5 p-6 sm:flex sm:items-center sm:justify-between sm:gap-6">
-      <div>
-        <p class="font-heading text-lg font-bold text-white">Stay connected</p>
-        <p class="mt-1 text-sm text-navy-200">Get Juma news and youth success stories in your inbox.</p>
-      </div>
-      <div class="mt-4 shrink-0 sm:mt-0">
-        <Button href="/newsletter/" variant="brand" size="md">Join the Newsletter</Button>
-      </div>
-    </div>
-
-    <div class="mt-10 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-navy-300 sm:flex-row sm:items-center sm:justify-between">
+    <div class="mt-14 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm text-navy-300 sm:flex-row sm:items-center sm:justify-between">
       <p>&copy; {year} {site.name}. All rights reserved.</p>
       <div class="flex flex-wrap items-center gap-x-6 gap-y-2">
         <a href="/donor-privacy-policy/" class="transition hover:text-white">Privacy Policy</a>
