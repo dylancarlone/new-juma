@@ -1,0 +1,780 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import Icon from "@/components/Icon.astro";
+import Button from "@/components/ui/Button.astro";
+---
+
+<BaseLayout
+  title="Juma: Game Day — Serve Your Community"
+  description="Play Juma: Game Day — work a concession stand at real Juma venues, earn wages, build money skills, and climb the career ladder. Experience the Earn, Learn, Connect model as a game."
+>
+  <!-- Compact hero -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white">
+    <div class="absolute inset-0 bg-dots-light opacity-40" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-brand-500/15 blur-[100px]" aria-hidden="true"></div>
+    <Container class="relative py-14 text-center md:py-20">
+      <p class="eyebrow eyebrow-center justify-center text-gold">Play · Earn · Learn · Connect</p>
+      <h1 class="mt-3 text-4xl text-white md:text-6xl">Juma: <span class="mark-brand">Game Day</span></h1>
+      <p class="mx-auto mt-5 max-w-2xl text-lg text-navy-100">
+        Step into the shoes of a Juma youth: work the concession stand at four real venues, earn wages and tips,
+        grow your money skills, and get promoted — all the way from Oracle Park to Lumen Field.
+      </p>
+    </Container>
+  </section>
+
+  <!-- Game -->
+  <section class="relative overflow-hidden bg-cream">
+    <div class="absolute inset-0 bg-dots-dark opacity-50" aria-hidden="true"></div>
+    <Container class="relative py-10 md:py-16">
+      <div
+        id="gameday"
+        class="relative mx-auto max-w-4xl select-none overflow-hidden rounded-[var(--radius-card)] bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white shadow-[var(--shadow-lift)] ring-1 ring-navy-100"
+      >
+        <div class="absolute inset-0 bg-dots-light opacity-30" aria-hidden="true"></div>
+
+        <!-- TITLE SCREEN -->
+        <div data-screen="title" class="relative px-6 py-14 text-center md:py-20">
+          <p class="text-6xl md:text-7xl" aria-hidden="true">🏟️</p>
+          <h2 class="mt-4 font-heading text-3xl font-extrabold text-white md:text-5xl">Game Day</h2>
+          <div class="mx-auto mt-4 h-1.5 w-20 rounded-full bg-gradient-to-r from-brand-500 to-gold" aria-hidden="true"></div>
+          <p class="mx-auto mt-5 max-w-lg text-navy-100">
+            Fans are hungry and the clock is running. Serve your community, stack your paycheck,
+            ace the Money Minute, and earn the season's top job.
+          </p>
+          <p id="g-best" class="mt-4 hidden font-heading text-sm font-bold uppercase tracking-widest text-gold"></p>
+          <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <button id="g-start" class="rounded-full bg-brand-500 px-9 py-4 font-heading text-sm font-bold uppercase tracking-wider text-white shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-600 md:text-base">▶ Start Your Shift</button>
+            <button id="g-howto-btn" class="rounded-full border-2 border-white/70 px-9 py-4 font-heading text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-navy-900 md:text-base">How to Play</button>
+          </div>
+        </div>
+
+        <!-- HOW TO PLAY -->
+        <div data-screen="howto" class="relative px-6 py-12 md:px-12" hidden>
+          <h2 class="text-center font-heading text-2xl font-extrabold text-white md:text-3xl">How to Play</h2>
+          <div class="mx-auto mt-8 grid max-w-2xl gap-4">
+            <div class="flex items-start gap-4 rounded-2xl bg-white/[0.07] p-5 ring-1 ring-white/10">
+              <span class="text-3xl" aria-hidden="true">🌭</span>
+              <p class="text-sm leading-relaxed text-navy-100"><strong class="text-white">Serve fans.</strong> Each fan shows the items they want. Tap the matching items on your counter (or press the number keys) before their patience runs out.</p>
+            </div>
+            <div class="flex items-start gap-4 rounded-2xl bg-white/[0.07] p-5 ring-1 ring-white/10">
+              <span class="text-3xl" aria-hidden="true">💵</span>
+              <p class="text-sm leading-relaxed text-navy-100"><strong class="text-white">Earn wages & tips.</strong> Fast, accurate service means bigger tips — and a service streak multiplies them. 20% of everything you earn goes straight into your college fund.</p>
+            </div>
+            <div class="flex items-start gap-4 rounded-2xl bg-white/[0.07] p-5 ring-1 ring-white/10">
+              <span class="text-3xl" aria-hidden="true">🧠</span>
+              <p class="text-sm leading-relaxed text-navy-100"><strong class="text-white">Ace the Money Minute.</strong> After each shift, answer a real financial-capability question. Every correct answer raises Juma's match on your savings — up to 100%.</p>
+            </div>
+            <div class="flex items-start gap-4 rounded-2xl bg-white/[0.07] p-5 ring-1 ring-white/10">
+              <span class="text-3xl" aria-hidden="true">📈</span>
+              <p class="text-sm leading-relaxed text-navy-100"><strong class="text-white">Get promoted.</strong> Four shifts, four cities, four jobs. Keep the crowd happy — every missed fan hurts your community rating and your final stars.</p>
+            </div>
+          </div>
+          <div class="mt-8 text-center">
+            <button id="g-howto-back" class="rounded-full border-2 border-white/70 px-8 py-3 font-heading text-sm font-bold uppercase tracking-wider text-white transition hover:bg-white hover:text-navy-900">Back</button>
+          </div>
+        </div>
+
+        <!-- SHIFT INTRO (Connect) -->
+        <div data-screen="intro" class="relative px-6 py-14 text-center md:py-16" hidden>
+          <p id="g-intro-kicker" class="eyebrow eyebrow-center justify-center text-gold"></p>
+          <p id="g-intro-sport" class="mt-5 text-6xl" aria-hidden="true"></p>
+          <h2 id="g-intro-role" class="mt-3 font-heading text-3xl font-extrabold text-white md:text-4xl"></h2>
+          <p id="g-intro-venue" class="mt-3 font-heading text-lg font-bold text-brand-300"></p>
+          <p id="g-intro-blurb" class="mx-auto mt-4 max-w-md text-sm leading-relaxed text-navy-100"></p>
+          <div class="mt-8">
+            <button id="g-shift-go" class="rounded-full bg-brand-500 px-10 py-4 font-heading text-sm font-bold uppercase tracking-wider text-white shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-600 md:text-base">Clock In ⏰</button>
+          </div>
+        </div>
+
+        <!-- PLAY -->
+        <div data-screen="play" class="relative p-4 md:p-6" hidden>
+          <!-- HUD -->
+          <div class="flex flex-wrap items-center justify-between gap-2 rounded-2xl bg-white/[0.07] px-4 py-3 ring-1 ring-white/10">
+            <div class="min-w-0">
+              <p id="g-hud-venue" class="truncate font-heading text-xs font-bold uppercase tracking-widest text-gold"></p>
+              <p id="g-hud-role" class="truncate text-xs text-navy-200"></p>
+            </div>
+            <div class="flex items-center gap-2 md:gap-3">
+              <span id="g-hud-streak" class="hidden rounded-full bg-gold/20 px-3 py-1 font-heading text-sm font-bold text-gold"></span>
+              <span class="rounded-full bg-white/10 px-3 py-1 font-heading text-sm font-bold text-white">💵 <span id="g-hud-earned">$0</span></span>
+              <span class="rounded-full bg-white/10 px-3 py-1 font-heading text-sm font-bold text-sky">🎓 <span id="g-hud-fund">$0</span></span>
+              <span id="g-hud-timer" class="rounded-full bg-brand-500 px-3 py-1 font-heading text-sm font-bold text-white">75s</span>
+            </div>
+          </div>
+
+          <!-- Customers -->
+          <div id="g-custrow" class="mt-4 grid min-h-[150px] grid-cols-2 items-start gap-3 md:grid-cols-4 md:min-h-[160px]"></div>
+
+          <!-- Counter -->
+          <p class="mt-5 font-heading text-[0.65rem] font-bold uppercase tracking-[0.2em] text-navy-300">Your counter — tap to serve</p>
+          <div id="g-counter" class="mt-2 grid grid-cols-4 gap-2"></div>
+
+          <!-- Bottom bar -->
+          <div class="mt-4 flex items-center gap-3">
+            <div class="flex min-w-0 flex-1 items-center gap-2">
+              <span class="shrink-0 text-sm" aria-hidden="true">❤️</span>
+              <div class="h-2.5 w-full overflow-hidden rounded-full bg-white/10" role="meter" aria-label="Community happiness">
+                <div id="g-community" class="h-full rounded-full bg-gradient-to-r from-brand-500 to-gold" style="width:75%"></div>
+              </div>
+            </div>
+            <button id="g-pause" class="rounded-full bg-white/10 px-3 py-1.5 text-sm font-bold text-white transition hover:bg-white/20" aria-label="Pause game">⏸</button>
+            <button id="g-mute" class="rounded-full bg-white/10 px-3 py-1.5 text-sm font-bold text-white transition hover:bg-white/20" aria-label="Toggle sound">🔊</button>
+            <button id="g-quit" class="rounded-full bg-white/10 px-3 py-1.5 text-sm font-bold text-white transition hover:bg-white/20" aria-label="Quit to title">✕</button>
+          </div>
+
+          <!-- Pause overlay -->
+          <div id="g-pause-overlay" class="absolute inset-0 z-20 hidden flex-col items-center justify-center gap-5 bg-navy-950/90 backdrop-blur-sm">
+            <p class="font-heading text-3xl font-extrabold text-white">Paused</p>
+            <button id="g-resume" class="rounded-full bg-brand-500 px-9 py-3.5 font-heading text-sm font-bold uppercase tracking-wider text-white shadow-[var(--shadow-glow)] transition hover:bg-brand-600">Resume</button>
+          </div>
+        </div>
+
+        <!-- SHIFT SUMMARY + MONEY MINUTE (Learn) -->
+        <div data-screen="learn" class="relative px-5 py-10 md:px-10" hidden>
+          <p class="eyebrow eyebrow-center justify-center text-gold">Shift complete</p>
+          <h2 id="g-sum-title" class="mt-2 text-center font-heading text-2xl font-extrabold text-white md:text-3xl"></h2>
+          <dl id="g-sum-stats" class="mx-auto mt-6 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-4"></dl>
+
+          <div class="mx-auto mt-8 max-w-xl rounded-2xl bg-white/[0.07] p-6 ring-1 ring-white/10">
+            <p class="font-heading text-xs font-bold uppercase tracking-[0.2em] text-sky">🧠 Money Minute</p>
+            <p id="g-quiz-q" class="mt-3 font-heading text-lg font-bold leading-snug text-white"></p>
+            <div id="g-quiz-opts" class="mt-4 grid gap-2"></div>
+            <div id="g-quiz-result" class="mt-4 hidden rounded-xl p-4 text-sm leading-relaxed"></div>
+          </div>
+
+          <div class="mt-8 text-center">
+            <button id="g-learn-next" class="hidden rounded-full bg-brand-500 px-10 py-4 font-heading text-sm font-bold uppercase tracking-wider text-white shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-600"></button>
+          </div>
+        </div>
+
+        <!-- FINAL RESULTS -->
+        <div data-screen="final" class="relative px-5 py-12 text-center md:px-10" hidden>
+          <p class="eyebrow eyebrow-center justify-center text-gold">Season complete</p>
+          <p id="g-final-stars" class="mt-4 text-4xl tracking-wide" aria-label="Star rating"></p>
+          <h2 class="mt-3 font-heading text-3xl font-extrabold text-white md:text-4xl">What a season!</h2>
+          <p id="g-final-newbest" class="mt-2 hidden font-heading text-sm font-bold uppercase tracking-widest text-gold">🏆 New personal best!</p>
+
+          <div class="mx-auto mt-8 max-w-xl rounded-2xl bg-white/[0.07] p-6 text-left ring-1 ring-white/10">
+            <dl class="space-y-2.5 text-sm">
+              <div class="flex justify-between gap-4"><dt class="text-navy-200">Wages & tips earned</dt><dd id="g-final-earned" class="font-heading font-bold text-white"></dd></div>
+              <div class="flex justify-between gap-4"><dt class="text-navy-200">Saved to your college fund (20%)</dt><dd id="g-final-saved" class="font-heading font-bold text-white"></dd></div>
+              <div class="flex justify-between gap-4"><dt class="text-navy-200">Juma savings match</dt><dd id="g-final-match" class="font-heading font-bold text-sky"></dd></div>
+              <div class="flex justify-between gap-4 border-t border-white/15 pt-2.5"><dt class="font-heading font-bold text-white">Total season score</dt><dd id="g-final-score" class="font-heading text-lg font-extrabold text-gold"></dd></div>
+            </dl>
+            <p id="g-final-line" class="mt-4 border-t border-white/15 pt-4 text-xs leading-relaxed text-navy-200"></p>
+          </div>
+
+          <p class="mt-8 font-heading text-xs font-bold uppercase tracking-[0.2em] text-navy-300">Badges</p>
+          <div id="g-badges" class="mx-auto mt-3 flex max-w-xl flex-wrap justify-center gap-2"></div>
+
+          <div class="mx-auto mt-9 max-w-lg rounded-2xl bg-gradient-to-r from-brand-600/40 to-brand-500/20 p-5 ring-1 ring-brand-400/30">
+            <p class="text-sm leading-relaxed text-white">This is a game — but for <strong>462 young people last year</strong>, it was a real paycheck. Juma youth earned <strong>$1.3M in wages</strong> at venues just like these.</p>
+          </div>
+
+          <div class="mt-8 flex flex-wrap justify-center gap-3">
+            <button id="g-again" class="rounded-full bg-brand-500 px-8 py-3.5 font-heading text-sm font-bold uppercase tracking-wider text-white shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-600">Play Again</button>
+            <a href="/donate/" class="rounded-full bg-white px-8 py-3.5 font-heading text-sm font-bold uppercase tracking-wider text-navy-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold">Donate for Real</a>
+            <a href="/apply/" class="rounded-full border-2 border-white/70 px-8 py-3.5 font-heading text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-navy-900">Youth: Apply</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-4 text-center text-xs text-warmgray">Tip: on a keyboard, press <kbd class="rounded bg-white px-1.5 py-0.5 font-bold shadow-sm ring-1 ring-navy-200">1</kbd>–<kbd class="rounded bg-white px-1.5 py-0.5 font-bold shadow-sm ring-1 ring-navy-200">8</kbd> to serve items, <kbd class="rounded bg-white px-1.5 py-0.5 font-bold shadow-sm ring-1 ring-navy-200">P</kbd> to pause.</p>
+    </Container>
+  </section>
+
+  <!-- The real model behind the game -->
+  <section class="bg-white">
+    <Container class="py-16 md:py-24">
+      <div class="mx-auto mb-12 max-w-2xl text-center" data-reveal>
+        <p class="eyebrow eyebrow-center justify-center text-brand-600">More than a game</p>
+        <h2 class="mt-3 text-3xl md:text-4xl">Every mechanic is the real Juma model</h2>
+        <p class="mt-4 text-lg text-ink-soft">Game Day mirrors how Juma actually works with young people ages 16–24.</p>
+      </div>
+      <div class="grid gap-7 md:grid-cols-3">
+        <div class="card-lift relative overflow-hidden rounded-[var(--radius-card)] border border-navy-100 bg-white p-7 shadow-[var(--shadow-card)]" data-reveal>
+          <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-brand-500 to-brand-300" aria-hidden="true"></div>
+          <p class="text-3xl" aria-hidden="true">💵</p>
+          <h3 class="mt-3 text-xl">Serving fans = Earn</h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink-soft">Juma youth really do run concession stands at Oracle Park, Levi's Stadium, Golden 1 Center, and Lumen Field — earning a first paycheck in a supportive environment.</p>
+        </div>
+        <div class="card-lift relative overflow-hidden rounded-[var(--radius-card)] border border-navy-100 bg-white p-7 shadow-[var(--shadow-card)]" data-reveal style="--reveal-delay: 100ms">
+          <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-accent to-gold" aria-hidden="true"></div>
+          <p class="text-3xl" aria-hidden="true">🧠</p>
+          <h3 class="mt-3 text-xl">Money Minutes = Learn</h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink-soft">The quiz questions come from real financial-capability skills Juma teaches — budgeting, saving, credit, and reading your first paycheck. Matched savings is a real Juma practice.</p>
+        </div>
+        <div class="card-lift relative overflow-hidden rounded-[var(--radius-card)] border border-navy-100 bg-white p-7 shadow-[var(--shadow-card)]" data-reveal style="--reveal-delay: 200ms">
+          <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-navy-600 to-sky" aria-hidden="true"></div>
+          <p class="text-3xl" aria-hidden="true">📈</p>
+          <h3 class="mt-3 text-xl">Promotions = Connect</h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink-soft">Climbing from Crew Member to Enterprise Manager mirrors how Juma connects youth to their next job or education step — a lasting path, not just a shift.</p>
+        </div>
+      </div>
+      <div class="mt-12 text-center" data-reveal>
+        <Button href="/programs/" variant="outline" size="lg" arrow>Explore the real programs</Button>
+      </div>
+    </Container>
+  </section>
+</BaseLayout>
+
+<style is:global>
+  /* ---- Game Day styles (elements are created by JS, so these are global) ---- */
+  #gameday .gd-cust {
+    animation: gd-enter 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  #gameday .gd-cust.gd-leave {
+    animation: gd-exit 0.3s ease-in forwards;
+  }
+  #gameday .gd-cust.gd-angry {
+    animation: gd-exit 0.45s ease-in forwards;
+    filter: grayscale(1);
+  }
+  @keyframes gd-enter {
+    from { opacity: 0; transform: translateY(14px) scale(0.95); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes gd-exit {
+    to { opacity: 0; transform: translateY(-12px) scale(0.92); }
+  }
+  #gameday .gd-float {
+    position: absolute;
+    left: 50%;
+    top: 18%;
+    z-index: 10;
+    transform: translateX(-50%);
+    pointer-events: none;
+    white-space: nowrap;
+    animation: gd-float 0.9s ease-out forwards;
+  }
+  @keyframes gd-float {
+    from { opacity: 1; transform: translate(-50%, 0); }
+    to { opacity: 0; transform: translate(-50%, -34px); }
+  }
+  #gameday .gd-shake {
+    animation: gd-shake 0.3s ease;
+  }
+  @keyframes gd-shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+  }
+  #gameday .gd-timer-low {
+    animation: gd-pulse 1s ease-in-out infinite;
+  }
+  @keyframes gd-pulse {
+    50% { transform: scale(1.08); background-color: var(--color-brand-700); }
+  }
+  #gameday .gd-done {
+    opacity: 0.35;
+    text-decoration: line-through;
+  }
+</style>
+
+<script>
+  // ================================================================
+  // Juma: Game Day — a community-service arcade game.
+  // Earn (serve fans) · Learn (Money Minute) · Connect (promotions).
+  // ================================================================
+  const ITEMS = [
+    { id: "hotdog", name: "Hot Dog", emoji: "🌭", price: 6 },
+    { id: "popcorn", name: "Popcorn", emoji: "🍿", price: 5 },
+    { id: "soda", name: "Soda", emoji: "🥤", price: 4 },
+    { id: "pretzel", name: "Pretzel", emoji: "🥨", price: 5 },
+    { id: "peanuts", name: "Peanuts", emoji: "🥜", price: 4 },
+    { id: "nachos", name: "Nachos", emoji: "🧀", price: 7 },
+    { id: "icecream", name: "Ice Cream", emoji: "🍦", price: 5 },
+    { id: "coffee", name: "Coffee", emoji: "☕", price: 3 },
+  ];
+
+  const LEVELS = [
+    { city: "San Francisco", venue: "Oracle Park", sport: "⚾", role: "Crew Member", items: 4, duration: 75, maxCust: 2, spawnEvery: 3.4, patience: 15, orderMin: 1, orderMax: 2, blurb: "Your first shift! It's a sunny day game by the bay. Keep it simple: watch each fan's order and serve fast." },
+    { city: "San Jose", venue: "Levi's Stadium", sport: "🏈", role: "Team Lead", items: 5, duration: 75, maxCust: 3, spawnEvery: 2.9, patience: 13.5, orderMin: 1, orderMax: 3, blurb: "Football crowds are bigger and hungrier. You've got a new item on the menu and more fans at once — lead the line." },
+    { city: "Sacramento", venue: "Golden 1 Center", sport: "🏀", role: "Shift Supervisor", items: 6, duration: 80, maxCust: 3, spawnEvery: 2.5, patience: 12.5, orderMin: 2, orderMax: 3, blurb: "Halftime rush at the arena. Orders are longer and patience is shorter. Keep your streak alive for bigger tips." },
+    { city: "Seattle", venue: "Lumen Field", sport: "🏟️", role: "Enterprise Manager", items: 8, duration: 90, maxCust: 4, spawnEvery: 2.1, patience: 11.5, orderMin: 2, orderMax: 4, blurb: "The loudest stadium in the league — and the full menu, including Seattle's beloved coffee. Finish the season strong!" },
+  ];
+
+  const QUIZ = [
+    { q: "“Pay yourself first” means…", opts: ["Spend on fun stuff before bills", "Move money to savings as soon as you're paid", "Pay your rent before anything else", "Ask for your wages in cash"], a: 1, why: "Saving a slice of every paycheck before you spend makes saving automatic — exactly how your 20% college fund works in this game." },
+    { q: "Your paycheck's “net pay” is…", opts: ["Your hourly rate × hours", "Your pay before taxes", "Your take-home pay after taxes and deductions", "Your tips only"], a: 2, why: "Gross pay is what you earn; net pay is what actually lands in your account after taxes and deductions." },
+    { q: "Compound interest is when you earn interest on…", opts: ["Only the money you deposited", "Your deposits AND the interest they've already earned", "Your paycheck", "Money you borrowed"], a: 1, why: "Interest earning interest is how small savings grow big over time — the earlier you start, the more it compounds." },
+    { q: "In the 50/30/20 budget, the 20 stands for…", opts: ["Fun money", "Rent and bills", "Savings and paying down debt", "Groceries"], a: 2, why: "50% needs, 30% wants, 20% savings & debt — a simple starting framework for any paycheck." },
+    { q: "The biggest factor in your credit score is…", opts: ["Paying your bills on time", "How many credit cards you own", "Your salary", "Your age"], a: 0, why: "Payment history matters most. One simple habit — paying on time, every time — builds strong credit." },
+    { q: "A W-2 is…", opts: ["A job application", "A form showing your year's wages and taxes withheld", "A type of savings account", "A work permit"], a: 1, why: "Your employer sends a W-2 every January — you use it to file your taxes." },
+    { q: "Money in an FDIC-insured savings account is…", opts: ["At risk if the bank fails", "Protected up to $250,000", "Locked for 5 years", "Only safe over $1,000"], a: 1, why: "FDIC insurance protects your deposits up to $250,000 — safer than cash under a mattress, and it earns interest." },
+    { q: "An emergency fund is best used for…", opts: ["Concert tickets", "A surprise car repair or lost shifts", "A new phone upgrade", "Holiday gifts"], a: 1, why: "An emergency fund — even a small starter one — keeps a surprise expense from becoming a crisis or a debt." },
+  ];
+
+  const BADGES = [
+    { id: "first", emoji: "🛎️", name: "First Sale", desc: "Complete your first order" },
+    { id: "fire", emoji: "🔥", name: "On Fire", desc: "Reach an 8-order streak" },
+    { id: "tip", emoji: "💸", name: "Big Tipper", desc: "Earn a $6+ tip on one order" },
+    { id: "perfect", emoji: "⭐", name: "Perfect Shift", desc: "Finish a shift with no missed fans" },
+    { id: "crowd", emoji: "❤️", name: "Crowd Favorite", desc: "End a shift with 95%+ happiness" },
+    { id: "smart", emoji: "🧠", name: "Money Smart", desc: "Answer every Money Minute right" },
+    { id: "season", emoji: "🏆", name: "Full Season", desc: "Complete all four shifts" },
+  ];
+
+  const FACES = ["😀", "🤠", "👩‍🦱", "👨‍🦰", "🧓", "🧑‍🎓", "👩‍🎤", "🧔", "👦", "👵"];
+  const SAVE_RATE = 0.2;
+  const BEST_KEY = "jumaGameDayBest";
+
+  const $ = (s) => document.querySelector(s);
+  const game = $("#gameday");
+  if (game) {
+    // ---------- state ----------
+    let S = null;
+    let raf = 0;
+    let lastT = 0;
+    let muted = localStorage.getItem("jumaGameDayMuted") === "1";
+    let audio = null;
+
+    const freshRun = () => ({
+      level: 0,
+      earned: 0,
+      fund: 0,
+      match: 0,
+      matchRate: 0.25,
+      served: 0,
+      missed: 0,
+      streak: 0,
+      bestStreak: 0,
+      community: 75,
+      quizAsked: [],
+      quizRight: 0,
+      badges: new Set(),
+      // per-shift
+      sEarned: 0,
+      sFund: 0,
+      sServed: 0,
+      sMissed: 0,
+      // live
+      customers: [],
+      timeLeft: 0,
+      spawnIn: 0,
+      custId: 0,
+      playing: false,
+      paused: false,
+    });
+
+    // ---------- audio (tiny WebAudio blips) ----------
+    function beep(freq, dur = 0.09, type = "sine", gain = 0.05, when = 0) {
+      if (muted) return;
+      try {
+        audio = audio || new (window.AudioContext || window.webkitAudioContext)();
+        const t = audio.currentTime + when;
+        const o = audio.createOscillator();
+        const g = audio.createGain();
+        o.type = type;
+        o.frequency.value = freq;
+        g.gain.setValueAtTime(gain, t);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+        o.connect(g).connect(audio.destination);
+        o.start(t);
+        o.stop(t + dur + 0.02);
+      } catch {}
+    }
+    const sfx = {
+      tap: () => beep(660, 0.06, "triangle"),
+      complete: () => { beep(523, 0.09); beep(784, 0.12, "sine", 0.05, 0.08); },
+      wrong: () => beep(140, 0.18, "sawtooth", 0.06),
+      angry: () => { beep(330, 0.12, "square", 0.04); beep(220, 0.16, "square", 0.04, 0.1); },
+      right: () => { beep(523, 0.08); beep(659, 0.08, "sine", 0.05, 0.09); beep(784, 0.14, "sine", 0.05, 0.18); },
+      promo: () => { beep(392, 0.1); beep(523, 0.1, "sine", 0.05, 0.11); beep(659, 0.1, "sine", 0.05, 0.22); beep(784, 0.2, "sine", 0.06, 0.33); },
+      whistle: () => { beep(880, 0.25, "square", 0.03); beep(880, 0.25, "square", 0.03, 0.3); },
+    };
+
+    // ---------- helpers ----------
+    const money = (n) => "$" + Math.round(n).toLocaleString("en-US");
+    const rand = (a, b) => a + Math.random() * (b - a);
+    const randInt = (a, b) => Math.floor(rand(a, b + 1));
+    const lvl = () => LEVELS[S.level];
+    const pool = () => ITEMS.slice(0, lvl().items);
+
+    function show(name) {
+      game.querySelectorAll("[data-screen]").forEach((el) => {
+        el.hidden = el.dataset.screen !== name;
+      });
+    }
+
+    function floatText(parent, text, cls = "text-gold") {
+      const el = document.createElement("span");
+      el.className = `gd-float font-heading text-sm font-extrabold ${cls}`;
+      el.textContent = text;
+      parent.appendChild(el);
+      setTimeout(() => el.remove(), 900);
+    }
+
+    // ---------- HUD ----------
+    function updateHud() {
+      $("#g-hud-earned").textContent = money(S.earned);
+      $("#g-hud-fund").textContent = money(S.fund + S.match);
+      const t = Math.max(0, Math.ceil(S.timeLeft));
+      const timer = $("#g-hud-timer");
+      timer.textContent = t + "s";
+      timer.classList.toggle("gd-timer-low", t <= 10 && S.playing);
+      const st = $("#g-hud-streak");
+      if (S.streak >= 2) {
+        st.textContent = `🔥 x${S.streak}`;
+        st.classList.remove("hidden");
+      } else st.classList.add("hidden");
+      $("#g-community").style.width = S.community + "%";
+    }
+
+    // ---------- customers ----------
+    function spawnCustomer() {
+      const L = lvl();
+      const order = Array.from({ length: randInt(L.orderMin, L.orderMax) }, () => pool()[randInt(0, pool().length - 1)]);
+      const el = document.createElement("div");
+      el.className = "gd-cust relative overflow-hidden rounded-2xl bg-white/10 p-3 ring-1 ring-white/15";
+      el.innerHTML = `
+        <div class="flex items-center gap-2">
+          <span class="text-3xl">${FACES[randInt(0, FACES.length - 1)]}</span>
+          <div class="flex flex-wrap gap-1 text-xl leading-none">
+            ${order.map((it) => `<span data-want="${it.id}">${it.emoji}</span>`).join("")}
+          </div>
+        </div>
+        <div class="mt-2.5 h-1.5 w-full overflow-hidden rounded-full bg-white/15">
+          <div class="gd-pbar h-full w-full rounded-full bg-gradient-to-r from-brand-400 to-gold"></div>
+        </div>`;
+      $("#g-custrow").appendChild(el);
+      S.customers.push({
+        id: ++S.custId,
+        remaining: order.map((it) => it.id),
+        total: order.reduce((s, it) => s + it.price, 0),
+        p: 1,
+        rate: 1 / (L.patience * rand(0.9, 1.15)),
+        el,
+      });
+    }
+
+    function removeCustomer(c, angry) {
+      S.customers = S.customers.filter((x) => x.id !== c.id);
+      c.el.classList.add(angry ? "gd-angry" : "gd-leave");
+      setTimeout(() => c.el.remove(), 460);
+    }
+
+    function award(badgeId) {
+      S.badges.add(badgeId);
+    }
+
+    function serve(itemId) {
+      if (!S.playing || S.paused) return;
+      const c = S.customers.find((x) => x.remaining.includes(itemId));
+      if (!c) {
+        S.streak = 0;
+        S.community = Math.max(0, S.community - 2);
+        $("#g-counter").classList.remove("gd-shake");
+        void $("#g-counter").offsetWidth;
+        $("#g-counter").classList.add("gd-shake");
+        sfx.wrong();
+        updateHud();
+        return;
+      }
+      c.remaining.splice(c.remaining.indexOf(itemId), 1);
+      const icon = c.el.querySelector(`[data-want="${itemId}"]:not(.gd-done)`);
+      icon && icon.classList.add("gd-done");
+      sfx.tap();
+
+      if (c.remaining.length === 0) {
+        const tip = Math.round(c.p * 4 + Math.min(S.streak, 10) * 0.3);
+        const total = c.total + tip;
+        S.earned += total;
+        S.sEarned += total;
+        S.fund += total * SAVE_RATE;
+        S.sFund += total * SAVE_RATE;
+        S.streak++;
+        S.bestStreak = Math.max(S.bestStreak, S.streak);
+        S.served++;
+        S.sServed++;
+        S.community = Math.min(100, S.community + 3);
+        award("first");
+        if (S.streak >= 8) award("fire");
+        if (tip >= 6) award("tip");
+        floatText(c.el, `+${money(total)}${tip >= 4 ? " 🤩" : ""}`);
+        sfx.complete();
+        setTimeout(() => removeCustomer(c, false), 320);
+      }
+      updateHud();
+    }
+
+    // ---------- counter ----------
+    function buildCounter() {
+      const wrap = $("#g-counter");
+      wrap.innerHTML = "";
+      pool().forEach((it, i) => {
+        const b = document.createElement("button");
+        b.className =
+          "group flex flex-col items-center gap-0.5 rounded-2xl bg-white/10 px-1 py-2.5 ring-1 ring-white/15 transition hover:bg-white/20 active:scale-95 md:py-3";
+        b.setAttribute("aria-label", `Serve ${it.name}, $${it.price}`);
+        b.innerHTML = `
+          <span class="text-2xl md:text-3xl">${it.emoji}</span>
+          <span class="hidden font-heading text-[0.6rem] font-bold uppercase tracking-wider text-navy-100 sm:block">${it.name}</span>
+          <span class="text-[0.65rem] font-bold text-gold">$${it.price} <span class="ml-0.5 hidden rounded bg-white/15 px-1 text-white/70 md:inline">${i + 1}</span></span>`;
+        b.addEventListener("click", () => serve(it.id));
+        wrap.appendChild(b);
+      });
+    }
+
+    // ---------- game loop ----------
+    function tick(t) {
+      raf = requestAnimationFrame(tick);
+      const dt = Math.min(0.05, (t - lastT) / 1000 || 0);
+      lastT = t;
+      if (!S.playing || S.paused) return;
+
+      S.timeLeft -= dt;
+      if (S.timeLeft <= 0) return endShift();
+
+      // patience
+      for (const c of [...S.customers]) {
+        c.p -= c.rate * dt;
+        const bar = c.el.querySelector(".gd-pbar");
+        if (bar) {
+          bar.style.width = Math.max(0, c.p * 100) + "%";
+          bar.style.opacity = c.p < 0.35 ? "1" : "0.85";
+        }
+        if (c.p <= 0) {
+          S.missed++;
+          S.sMissed++;
+          S.streak = 0;
+          S.community = Math.max(0, S.community - 12);
+          floatText(c.el, "😡", "");
+          sfx.angry();
+          removeCustomer(c, true);
+        }
+      }
+
+      // spawning
+      S.spawnIn -= dt;
+      if (S.spawnIn <= 0 && S.customers.length < lvl().maxCust) {
+        spawnCustomer();
+        S.spawnIn = lvl().spawnEvery * rand(0.75, 1.25);
+      }
+      updateHud();
+    }
+
+    // ---------- flow ----------
+    function showIntro() {
+      const L = lvl();
+      $("#g-intro-kicker").textContent = `Shift ${S.level + 1} of ${LEVELS.length} · ${L.city}`;
+      $("#g-intro-sport").textContent = L.sport;
+      $("#g-intro-role").textContent = S.level === 0 ? `You're hired: ${L.role}` : `Promoted: ${L.role}!`;
+      $("#g-intro-venue").textContent = `📍 ${L.venue}, ${L.city}`;
+      $("#g-intro-blurb").textContent = L.blurb;
+      if (S.level > 0) sfx.promo();
+      show("intro");
+    }
+
+    function startShift() {
+      const L = lvl();
+      S.timeLeft = L.duration;
+      S.spawnIn = 0.4;
+      S.sEarned = 0;
+      S.sFund = 0;
+      S.sServed = 0;
+      S.sMissed = 0;
+      S.customers = [];
+      S.playing = true;
+      S.paused = false;
+      $("#g-custrow").innerHTML = "";
+      $("#g-hud-venue").textContent = `${L.sport} ${L.venue}`;
+      $("#g-hud-role").textContent = `${L.role} · ${L.city}`;
+      buildCounter();
+      updateHud();
+      show("play");
+      cancelAnimationFrame(raf);
+      lastT = performance.now();
+      raf = requestAnimationFrame(tick);
+    }
+
+    function endShift() {
+      S.playing = false;
+      cancelAnimationFrame(raf);
+      sfx.whistle();
+      for (const c of [...S.customers]) removeCustomer(c, false);
+      if (S.sMissed === 0 && S.sServed >= 5) award("perfect");
+      if (S.community >= 95) award("crowd");
+      showLearn();
+    }
+
+    function showLearn() {
+      const L = lvl();
+      $("#g-sum-title").textContent = `Nice work at ${L.venue}!`;
+      const stats = [
+        ["Fans served", S.sServed],
+        ["Missed", S.sMissed],
+        ["Shift earnings", money(S.sEarned)],
+        ["Best streak", "🔥 " + S.bestStreak],
+      ];
+      $("#g-sum-stats").innerHTML = stats
+        .map(
+          ([k, v]) => `
+        <div class="rounded-xl bg-white/[0.07] p-3 text-center ring-1 ring-white/10">
+          <dt class="text-[0.6rem] font-bold uppercase tracking-wider text-navy-300">${k}</dt>
+          <dd class="mt-1 font-heading text-xl font-extrabold text-white">${v}</dd>
+        </div>`
+        )
+        .join("");
+
+      // pick an unused question
+      let qi = randInt(0, QUIZ.length - 1);
+      while (S.quizAsked.includes(qi)) qi = (qi + 1) % QUIZ.length;
+      S.quizAsked.push(qi);
+      const Q = QUIZ[qi];
+      $("#g-quiz-q").textContent = Q.q;
+      const opts = $("#g-quiz-opts");
+      const result = $("#g-quiz-result");
+      result.classList.add("hidden");
+      $("#g-learn-next").classList.add("hidden");
+      opts.innerHTML = "";
+      Q.opts.forEach((opt, i) => {
+        const b = document.createElement("button");
+        b.className =
+          "rounded-xl bg-white/10 px-4 py-3 text-left text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/20";
+        b.textContent = opt;
+        b.addEventListener("click", () => answerQuiz(Q, i, b, opts));
+        opts.appendChild(b);
+      });
+      show("learn");
+    }
+
+    function answerQuiz(Q, i, btn, opts) {
+      [...opts.children].forEach((b, j) => {
+        b.disabled = true;
+        b.classList.remove("hover:bg-white/20");
+        if (j === Q.a) b.classList.add("!bg-emerald-500/30", "!ring-emerald-300/60");
+      });
+      const correct = i === Q.a;
+      if (correct) {
+        S.quizRight++;
+        S.matchRate = Math.min(1, S.matchRate + 0.25);
+        sfx.right();
+      } else {
+        btn.classList.add("!bg-brand-600/40", "!ring-brand-400/60");
+        sfx.wrong();
+      }
+      const matchAmt = S.sFund * S.matchRate;
+      S.match += matchAmt;
+      const result = $("#g-quiz-result");
+      result.className = `mt-4 rounded-xl p-4 text-sm leading-relaxed ring-1 ${correct ? "bg-emerald-500/15 ring-emerald-300/40 text-emerald-100" : "bg-brand-600/20 ring-brand-400/40 text-navy-100"}`;
+      result.innerHTML = `<strong>${correct ? "✅ Correct!" : "Not quite."}</strong> ${Q.why}<br/><span class="mt-2 inline-block font-heading font-bold text-sky">🎓 Juma matched ${Math.round(S.matchRate * 100)}% of this shift's savings: +${money(matchAmt)}</span>`;
+      result.classList.remove("hidden");
+
+      const next = $("#g-learn-next");
+      next.textContent = S.level + 1 < LEVELS.length ? `Next stop: ${LEVELS[S.level + 1].city} →` : "See season results 🏆";
+      next.classList.remove("hidden");
+    }
+
+    function showFinal() {
+      award("season");
+      if (S.quizRight === LEVELS.length) award("smart");
+      const ratio = S.served / Math.max(1, S.served + S.missed);
+      const stars = Math.max(1, Math.min(5, Math.round((ratio * 0.7 + (S.community / 100) * 0.3) * 5)));
+      $("#g-final-stars").textContent = "⭐".repeat(stars) + "☆".repeat(5 - stars);
+      $("#g-final-earned").textContent = money(S.earned);
+      $("#g-final-saved").textContent = money(S.fund);
+      $("#g-final-match").textContent = "+" + money(S.match);
+      const score = Math.round(S.earned + S.match);
+      $("#g-final-score").textContent = money(score);
+      $("#g-final-line").textContent = `You served ${S.served} fans across 4 cities, kept the crowd at ${Math.round(S.community)}% happy, and answered ${S.quizRight}/4 Money Minutes correctly.`;
+
+      $("#g-badges").innerHTML = BADGES.map((b) => {
+        const got = S.badges.has(b.id);
+        return `<span title="${b.desc}" class="inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-heading text-xs font-bold ${got ? "bg-gold/20 text-gold ring-1 ring-gold/40" : "bg-white/5 text-white/30 ring-1 ring-white/10"}">${b.emoji} ${b.name}</span>`;
+      }).join("");
+
+      let best = 0;
+      try { best = JSON.parse(localStorage.getItem(BEST_KEY) || "{}").score || 0; } catch {}
+      const newBest = score > best;
+      $("#g-final-newbest").classList.toggle("hidden", !newBest);
+      if (newBest) localStorage.setItem(BEST_KEY, JSON.stringify({ score, date: Date.now() }));
+      sfx.promo();
+      show("final");
+    }
+
+    // ---------- pause / quit / mute ----------
+    function setPaused(p) {
+      if (!S.playing) return;
+      S.paused = p;
+      $("#g-pause-overlay").classList.toggle("hidden", !p);
+      $("#g-pause-overlay").classList.toggle("flex", p);
+    }
+
+    function quitToTitle() {
+      S.playing = false;
+      cancelAnimationFrame(raf);
+      setPausedSafe();
+      refreshBest();
+      show("title");
+    }
+    function setPausedSafe() {
+      $("#g-pause-overlay").classList.add("hidden");
+      $("#g-pause-overlay").classList.remove("flex");
+    }
+
+    function refreshBest() {
+      let best = null;
+      try { best = JSON.parse(localStorage.getItem(BEST_KEY) || "null"); } catch {}
+      const el = $("#g-best");
+      if (best && best.score) {
+        el.textContent = `🏆 Your best season: ${money(best.score)}`;
+        el.classList.remove("hidden");
+      }
+    }
+
+    function updateMuteBtn() {
+      $("#g-mute").textContent = muted ? "🔇" : "🔊";
+      $("#g-mute").setAttribute("aria-label", muted ? "Unmute sound" : "Mute sound");
+    }
+
+    // ---------- wire up ----------
+    $("#g-start").addEventListener("click", () => {
+      S = freshRun();
+      showIntro();
+    });
+    $("#g-howto-btn").addEventListener("click", () => show("howto"));
+    $("#g-howto-back").addEventListener("click", () => show("title"));
+    $("#g-shift-go").addEventListener("click", startShift);
+    $("#g-learn-next").addEventListener("click", () => {
+      S.level++;
+      if (S.level < LEVELS.length) showIntro();
+      else showFinal();
+    });
+    $("#g-again").addEventListener("click", () => {
+      S = freshRun();
+      showIntro();
+    });
+    $("#g-pause").addEventListener("click", () => setPaused(true));
+    $("#g-resume").addEventListener("click", () => setPaused(false));
+    $("#g-quit").addEventListener("click", () => {
+      if (confirm("Quit this shift? Your season progress will be lost.")) quitToTitle();
+    });
+    $("#g-mute").addEventListener("click", () => {
+      muted = !muted;
+      localStorage.setItem("jumaGameDayMuted", muted ? "1" : "0");
+      updateMuteBtn();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (!S || !S.playing) return;
+      if (e.key >= "1" && e.key <= "8") {
+        const it = pool()[Number(e.key) - 1];
+        if (it) serve(it.id);
+      } else if (e.key === "p" || e.key === "P") {
+        setPaused(!S.paused);
+      } else if (e.key === "m" || e.key === "M") {
+        $("#g-mute").click();
+      }
+    });
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden && S && S.playing) setPaused(true);
+    });
+
+    updateMuteBtn();
+    refreshBest();
+    show("title");
+  }
+</script>
