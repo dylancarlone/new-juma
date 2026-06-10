@@ -43,6 +43,7 @@ export const nav: NavItem[] = [
     href: "#",
     children: [
       { label: "Mission, Vision & History", href: "/our-mission-history/" },
+      { label: "30-Year Timeline", href: "/timeline/" },
       { label: "Our Programs", href: "/programs/" },
       { label: "Social Enterprise", href: "/social-enterprise/" },
       { label: "Impact & Stories", href: "/stories/" },
@@ -76,6 +77,7 @@ export const footerNav: { heading: string; links: NavItem[] }[] = [
     heading: "About",
     links: [
       { label: "Our Mission", href: "/our-mission-history/" },
+      { label: "30-Year Timeline", href: "/timeline/" },
       { label: "Programs", href: "/programs/" },
       { label: "Impact & Stories", href: "/stories/" },
       { label: "Leadership", href: "/leadership/" },
