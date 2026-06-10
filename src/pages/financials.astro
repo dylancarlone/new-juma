@@ -23,10 +23,10 @@ const DocLink = (href?: string) => href;
   <PageHeader eyebrow="Transparency" title="Financials" description="We're proud to share our annual reports, IRS Form 990s, and audited financial statements. Juma holds a Candid Platinum Transparency rating." />
 
   <Container class="py-12 md:py-16">
-    <div class="overflow-x-auto rounded-[var(--radius-card)] border border-navy-100">
+    <div class="overflow-x-auto rounded-[var(--radius-card)] border border-navy-100 bg-white shadow-[var(--shadow-card)]">
       <table class="w-full min-w-[640px] text-left">
         <thead class="bg-cream">
-          <tr class="font-heading text-sm uppercase tracking-wide text-navy-800">
+          <tr class="font-heading text-xs font-bold uppercase tracking-widest text-navy-800">
             <th class="px-6 py-4">Year</th>
             <th class="px-6 py-4">Annual Report</th>
             <th class="px-6 py-4">Form 990</th>
@@ -36,7 +36,7 @@ const DocLink = (href?: string) => href;
         <tbody class="divide-y divide-navy-100">
           {
             years.map(([year, e]) => (
-              <tr class="text-sm">
+              <tr class="text-sm transition hover:bg-cream/40">
                 <td class="px-6 py-4 font-heading font-bold text-navy-900">{year}</td>
                 {[e.annual, e.form990, e.audit].map((href) => (
                   <td class="px-6 py-4">

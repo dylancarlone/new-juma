@@ -41,7 +41,7 @@ export default function ContactForm() {
     );
   }
 
-  const field = "w-full rounded-lg border border-navy-200 px-4 py-3 text-navy-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-200";
+  const field = "w-full rounded-xl border border-navy-200 px-4 py-3 text-navy-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-200";
 
   return (
     <form onSubmit={onSubmit} className="space-y-4">

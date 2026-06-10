@@ -48,8 +48,8 @@ const totalPages = Math.ceil(posts.length / PAGE_SIZE);
     {
       totalPages > 1 && (
         <nav class="mt-12 flex items-center justify-center gap-4" aria-label="Pagination">
-          <span class="text-sm text-warmgray">Page 1 of {totalPages}</span>
-          <a href="/news/page/2/" class="rounded-md bg-navy-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-navy-700">Next →</a>
+          <span class="text-sm font-semibold text-warmgray">Page 1 of {totalPages}</span>
+          <a href="/news/page/2/" class="rounded-full bg-navy-900 px-6 py-2.5 font-heading text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-navy-700 hover:shadow-[var(--shadow-lift)]">Next →</a>
         </nav>
       )
     }

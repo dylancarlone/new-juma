@@ -10,9 +10,10 @@ interface Props {
 }
 // Bias the square crop slightly toward the top so headshots center on the face.
 const { name, role, photo, href, position = "center 25%" } = Astro.props;
+const Tag = href ? "a" : "div";
 ---
 
-<div class="group text-center">
+<Tag href={href} class="group block text-center">
   <div class="mx-auto aspect-square w-full max-w-[220px] overflow-hidden rounded-[1.75rem] bg-cream shadow-[var(--shadow-card)] ring-2 ring-transparent transition-all duration-300 group-hover:-translate-y-1.5 group-hover:shadow-[var(--shadow-lift)] group-hover:ring-gold">
     {
       photo ? (
@@ -24,6 +25,6 @@ const { name, role, photo, href, position = "center 25%" } = Astro.props;
       )
     }
   </div>
-  <h3 class="mt-5 text-lg font-bold text-navy-900">{name}</h3>
+  <h3 class="mt-5 text-lg font-bold text-navy-900 transition group-hover:text-brand-600">{name}</h3>
   <p class="mt-1 text-sm font-semibold text-brand-600">{role}</p>
-</div>
+</Tag>

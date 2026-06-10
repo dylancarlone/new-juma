@@ -16,7 +16,10 @@ const bg =
       ? "bg-gradient-to-br from-brand-700 via-brand-600 to-brand-500 text-white"
       : "bg-cream";
 const valueColor = variant === "light" ? "text-brand-600" : "text-gold";
-const divider = variant === "light" ? "sm:divide-navy-200/70" : "sm:divide-white/15";
+// Only draw column dividers when the grid is a single row, so row starts never
+// pick up a stray left border (4 stats wrap 2×2 below lg; 5+ always wrap).
+const divideAt = stats.length <= 3 ? "sm:divide-x" : stats.length === 4 ? "lg:divide-x" : "";
+const divider = variant === "light" ? "divide-navy-200/70" : "divide-white/15";
 const cols = stats.length <= 2 ? "sm:grid-cols-2" : stats.length === 3 ? "sm:grid-cols-3" : "sm:grid-cols-2 lg:grid-cols-4";
 ---
 
@@ -24,7 +27,7 @@ const cols = stats.length <= 2 ? "sm:grid-cols-2" : stats.length === 3 ? "sm:gri
   {variant !== "light" && <div class="absolute inset-0 bg-dots-light opacity-30" aria-hidden="true" />}
   <Container class="relative py-16 md:py-24">
     {heading && <h2 class={`mb-12 text-center text-3xl md:text-4xl ${variant !== "light" ? "text-white" : ""}`} data-reveal>{heading}</h2>}
-    <dl class={`grid grid-cols-1 gap-10 sm:gap-6 sm:divide-x ${divider} ${cols}`}>
+    <dl class={`grid grid-cols-1 gap-10 sm:gap-6 ${divideAt} ${divider} ${cols}`}>
       {
         stats.map((s, i) => (
           <div class="px-4 text-center" data-reveal style={`--reveal-delay: ${i * 100}ms`}>

@@ -3,6 +3,7 @@ import { getCollection, render } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Container from "@/components/Container.astro";
 import Media from "@/components/Media.astro";
+import Icon from "@/components/Icon.astro";
 import CTABanner from "@/components/sections/CTABanner.astro";
 
 export async function getStaticPaths() {
@@ -18,32 +19,42 @@ const { Content } = await render(entry);
 <BaseLayout title={d.title ?? `${d.name}'s Story`} description={d.pullQuote} image={d.photo ? `/media/${d.photo}` : undefined} type="article">
   {
     d.photo && (
-      <section class="relative bg-navy-900 text-white">
+      <section class="relative overflow-hidden bg-navy-950 text-white">
         <Media src={d.photo} alt={d.name} class="absolute inset-0 h-full w-full opacity-40" fit="cover" loading="eager" />
-        <div class="absolute inset-0 bg-gradient-to-t from-navy-950 to-navy-900/40"></div>
-        <Container size="narrow" class="relative py-24">
-          <p class="font-heading text-sm font-bold uppercase tracking-widest text-gold">Youth Story{d.location ? ` · ${d.location}` : ""}</p>
-          <h1 class="mt-3 text-4xl text-white md:text-5xl">{d.name}</h1>
-          {d.pullQuote && <p class="mt-5 max-w-2xl text-xl text-navy-100">“{d.pullQuote}”</p>}
+        <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/60 to-navy-900/30"></div>
+        <div class="absolute inset-0 bg-dots-light opacity-30" aria-hidden="true"></div>
+        <Container size="narrow" class="relative py-24 md:py-32">
+          <p class="eyebrow text-gold">Youth Story{d.location ? ` · ${d.location}` : ""}</p>
+          <h1 class="mt-4 text-4xl text-white md:text-6xl">{d.name}</h1>
+          <div class="mt-5 h-1.5 w-20 rounded-full bg-gradient-to-r from-brand-500 to-gold" aria-hidden="true"></div>
+          {d.pullQuote && <p class="mt-6 max-w-2xl font-heading text-xl font-bold leading-snug text-navy-100 md:text-2xl">“{d.pullQuote}”</p>}
         </Container>
       </section>
     )
   }
   {
     !d.photo && (
-      <section class="bg-gradient-to-br from-navy-900 to-brand-800 text-white">
-        <Container size="narrow" class="py-20">
-          <h1 class="text-4xl text-white md:text-5xl">{d.name}</h1>
-          {d.pullQuote && <p class="mt-5 text-xl text-navy-100">“{d.pullQuote}”</p>}
+      <section class="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-brand-900 text-white">
+        <div class="absolute inset-0 bg-dots-light opacity-30" aria-hidden="true"></div>
+        <Container size="narrow" class="relative py-20 md:py-28">
+          <p class="eyebrow text-gold">Youth Story{d.location ? ` · ${d.location}` : ""}</p>
+          <h1 class="mt-4 text-4xl text-white md:text-6xl">{d.name}</h1>
+          <div class="mt-5 h-1.5 w-20 rounded-full bg-gradient-to-r from-brand-500 to-gold" aria-hidden="true"></div>
+          {d.pullQuote && <p class="mt-6 font-heading text-xl font-bold leading-snug text-navy-100 md:text-2xl">“{d.pullQuote}”</p>}
         </Container>
       </section>
     )
   }
 
-  <Container size="narrow" class="py-12">
-    {d.outcome && <p class="mb-6 inline-block rounded-full bg-brand-50 px-4 py-1.5 text-sm font-semibold text-brand-700">{d.outcome}</p>}
+  <Container size="narrow" class="py-12 md:py-16">
+    {d.outcome && <p class="mb-8 inline-block rounded-full bg-gradient-to-r from-brand-50 to-gold-soft px-5 py-2 text-sm font-bold text-brand-700 ring-1 ring-brand-200">{d.outcome}</p>}
     <div class="prose-juma"><Content /></div>
-    <div class="mt-10"><a href="/stories/" class="font-semibold text-brand-600 hover:underline">← More youth stories</a></div>
+    <div class="mt-10">
+      <a href="/stories/" class="link-back">
+        <Icon name="arrowLeft" size={15} />
+        More youth stories
+      </a>
+    </div>
   </Container>
   <CTABanner />
 </BaseLayout>

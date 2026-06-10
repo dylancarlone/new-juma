@@ -61,7 +61,7 @@ const headingMark = hasHighlight ? heading.slice(heading.toLowerCase().indexOf(h
         <Container>
           <dl class="grid grid-cols-2 overflow-hidden rounded-[var(--radius-card)] bg-white shadow-[var(--shadow-lift)] ring-1 ring-navy-100 lg:grid-cols-4" data-reveal>
             {home.stats.map((s, i) => (
-              <div class:list={["px-6 py-8 text-center md:py-10", i > 0 && "border-navy-100 max-lg:[&:nth-child(odd)]:border-l lg:border-l", i >= 2 && "max-lg:border-t"]}>
+              <div class:list={["px-6 py-8 text-center md:py-10", i > 0 && "border-navy-100 max-lg:[&:nth-child(even)]:border-l lg:border-l", i >= 2 && "max-lg:border-t"]}>
                 <dt class="bg-gradient-to-br from-brand-600 to-accent bg-clip-text font-heading text-4xl font-extrabold tracking-tight text-transparent md:text-5xl">{s.value}</dt>
                 <dd class="mx-auto mt-2.5 max-w-[12rem] text-xs font-bold uppercase tracking-wider text-warmgray md:text-sm">{s.label}</dd>
               </div>

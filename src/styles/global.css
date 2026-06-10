@@ -158,6 +158,13 @@
   .link-more svg { @apply transition-transform duration-300; }
   .link-more:hover svg { transform: translateX(4px); }
 
+  /* Back-navigation variant — the arrow nudges left instead. */
+  .link-back {
+    @apply inline-flex items-center gap-1.5 font-heading text-sm font-bold text-brand-600 transition-colors hover:text-brand-700;
+  }
+  .link-back svg { @apply transition-transform duration-300; }
+  .link-back:hover svg { transform: translateX(-4px); }
+
   /* Long-form article body (blog posts, legal prose, MDX page bodies). */
   .prose-juma {
     @apply max-w-none leading-relaxed text-ink-soft;
