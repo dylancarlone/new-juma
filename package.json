@@ -6,7 +6,7 @@
   "description": "Modern rebuild of juma.org — extracted from the legacy WordPress/Elementor site",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && pagefind --site dist/client && cp -r dist/client/pagefind .vercel/output/static/pagefind",
     "preview": "astro preview",
     "check": "astro check",
     "astro": "astro",
@@ -36,6 +36,7 @@
     "@types/react-dom": "^19.2.3",
     "he": "^1.2.0",
     "node-html-parser": "^7.1.0",
+    "pagefind": "^1.5.2",
     "turndown": "^7.2.4",
     "turndown-plugin-gfm": "^1.0.2",
     "typescript": "^6.0.3",

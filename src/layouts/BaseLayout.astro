@@ -6,6 +6,7 @@ import "@/styles/global.css";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import SEO from "@/components/SEO.astro";
+import Search from "@/components/Search.astro";
 import Analytics from "@/components/Analytics.astro";
 
 interface Props {
@@ -16,9 +17,11 @@ interface Props {
   publishedTime?: Date;
   noindex?: boolean;
   mainClass?: string;
+  /** Exclude this page from the site search index (pagination, 404, …). */
+  noSearch?: boolean;
 }
 
-const { title, description, image, type, publishedTime, noindex, mainClass } = Astro.props;
+const { title, description, image, type, publishedTime, noindex, mainClass, noSearch } = Astro.props;
 ---
 
 <!doctype html>
@@ -43,10 +46,11 @@ const { title, description, image, type, publishedTime, noindex, mainClass } = A
       Skip to content
     </a>
     <Header />
-    <main id="main" class:list={["flex-1", mainClass]}>
+    <main id="main" class:list={["flex-1", mainClass]} {...noSearch ? {} : { "data-pagefind-body": true }}>
       <slot />
     </main>
     <Footer />
+    <Search />
     <script>
       // Reveal-on-scroll for elements marked with data-reveal.
       const els = document.querySelectorAll("[data-reveal]");

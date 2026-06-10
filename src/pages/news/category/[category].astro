@@ -21,7 +21,7 @@ export async function getStaticPaths() {
 const { name, items } = Astro.props;
 ---
 
-<BaseLayout title={`${name} — News`} description={`Juma Ventures news in ${name}.`}>
+<BaseLayout title={`${name} — News`} description={`Juma Ventures news in ${name}.`} noSearch>
   <PageHeader eyebrow="Juma News" title={name} description={`${items.length} ${items.length === 1 ? "story" : "stories"} in this category.`} />
   <Container class="py-12 md:py-16">
     <a href="/news/" class="link-back mb-8"><Icon name="arrowLeft" size={15} /> All news</a>

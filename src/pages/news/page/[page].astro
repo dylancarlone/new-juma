@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 const { items, page, totalPages } = Astro.props;
 ---
 
-<BaseLayout title={`News — Page ${page}`} description="Stories, updates, and impact from Juma Ventures.">
+<BaseLayout title={`News — Page ${page}`} description="Stories, updates, and impact from Juma Ventures." noSearch>
   <PageHeader eyebrow="Juma News" title="Stories & Updates" description={`Page ${page} of ${totalPages}.`} />
   <Container class="py-12 md:py-16">
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
