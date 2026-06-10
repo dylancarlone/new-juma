@@ -40,9 +40,9 @@ const { items, page, totalPages } = Astro.props;
       ))}
     </div>
     <nav class="mt-12 flex items-center justify-center gap-4" aria-label="Pagination">
-      <a href={page === 2 ? "/news/" : `/news/page/${page - 1}/`} class="rounded-md border border-navy-200 px-5 py-2.5 text-sm font-semibold text-navy-700 transition hover:border-brand-400">← Prev</a>
-      <span class="text-sm text-warmgray">Page {page} of {totalPages}</span>
-      {page < totalPages && <a href={`/news/page/${page + 1}/`} class="rounded-md bg-navy-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-navy-700">Next →</a>}
+      <a href={page === 2 ? "/news/" : `/news/page/${page - 1}/`} class="rounded-full border-2 border-navy-200 px-6 py-2.5 font-heading text-sm font-bold text-navy-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400 hover:text-brand-600">← Prev</a>
+      <span class="text-sm font-semibold text-warmgray">Page {page} of {totalPages}</span>
+      {page < totalPages && <a href={`/news/page/${page + 1}/`} class="rounded-full bg-navy-900 px-6 py-2.5 font-heading text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-navy-700 hover:shadow-[var(--shadow-lift)]">Next →</a>}
     </nav>
   </Container>
 </BaseLayout>

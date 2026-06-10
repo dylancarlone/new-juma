@@ -1,0 +1,23 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import Button from "@/components/ui/Button.astro";
+---
+
+<BaseLayout title="Page not found" description="The page you're looking for doesn't exist." noindex>
+  <section class="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white">
+    <div class="absolute inset-0 bg-dots-light opacity-40" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-brand-500/15 blur-[100px]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -bottom-32 -left-24 h-80 w-80 rounded-full bg-gold/10 blur-[90px]" aria-hidden="true"></div>
+
+    <Container class="relative flex min-h-[60vh] flex-col items-center justify-center py-24 text-center">
+      <p class="bg-gradient-to-r from-brand-400 to-gold bg-clip-text font-heading text-8xl font-extrabold tracking-tight text-transparent md:text-9xl">404</p>
+      <h1 class="mt-4 text-3xl text-white md:text-4xl">This page took a different path.</h1>
+      <p class="mt-4 max-w-md text-navy-100">The page you're looking for doesn't exist or has moved — but there's plenty of opportunity ahead.</p>
+      <div class="mt-9 flex flex-wrap justify-center gap-4">
+        <Button href="/" variant="brand" size="lg" arrow>Back to Home</Button>
+        <Button href="/news/" variant="white" size="lg">Read Our News</Button>
+      </div>
+    </Container>
+  </section>
+</BaseLayout>

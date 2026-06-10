@@ -64,15 +64,17 @@ const hero = d.hero ?? { heading: d.title };
       <section class="bg-cream">
         <Container class="grid gap-8 py-14 md:grid-cols-2">
           {d.mission && (
-            <div class="rounded-[var(--radius-card)] bg-white p-8 shadow-[var(--shadow-card)]">
-              <h2 class="text-xl text-brand-600">Our Mission</h2>
-              <p class="mt-3 text-lg text-ink-soft">{d.mission}</p>
+            <div class="relative overflow-hidden rounded-[var(--radius-card)] bg-white p-8 shadow-[var(--shadow-card)]">
+              <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-brand-500 to-gold" aria-hidden="true" />
+              <p class="eyebrow text-brand-600">Our Mission</p>
+              <p class="mt-4 text-lg leading-relaxed text-ink-soft">{d.mission}</p>
             </div>
           )}
           {d.vision && (
-            <div class="rounded-[var(--radius-card)] bg-white p-8 shadow-[var(--shadow-card)]">
-              <h2 class="text-xl text-brand-600">Our Vision</h2>
-              <p class="mt-3 text-lg text-ink-soft">{d.vision}</p>
+            <div class="relative overflow-hidden rounded-[var(--radius-card)] bg-white p-8 shadow-[var(--shadow-card)]">
+              <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-navy-600 to-sky" aria-hidden="true" />
+              <p class="eyebrow text-navy-600">Our Vision</p>
+              <p class="mt-4 text-lg leading-relaxed text-ink-soft">{d.vision}</p>
             </div>
           )}
         </Container>
@@ -97,7 +99,9 @@ const hero = d.hero ?? { heading: d.title };
         <ul class="mt-6 space-y-3">
           {d.eligibility.map((e) => (
             <li class="flex gap-3 text-lg text-ink-soft">
-              <Icon name="chevronRight" size={22} class="mt-1 shrink-0 text-brand-600" />
+              <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-600">
+                <Icon name="check" size={14} />
+              </span>
               <span>{e}</span>
             </li>
           ))}
@@ -113,7 +117,9 @@ const hero = d.hero ?? { heading: d.title };
         <ul class="mt-6 grid gap-3 sm:grid-cols-2">
           {d.bullets.map((b) => (
             <li class="flex gap-3 text-ink-soft">
-              <Icon name="chevronRight" size={20} class="mt-1 shrink-0 text-brand-600" />
+              <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-600">
+                <Icon name="check" size={14} />
+              </span>
               <span>{b}</span>
             </li>
           ))}
@@ -128,7 +134,8 @@ const hero = d.hero ?? { heading: d.title };
         <h2 class="mb-8 text-center text-2xl md:text-3xl">Benefits</h2>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {d.benefits.map((b) => (
-            <div class="rounded-[var(--radius-card)] bg-white p-6 shadow-[var(--shadow-card)]">
+            <div class="card-lift relative overflow-hidden rounded-[var(--radius-card)] bg-white p-6 shadow-[var(--shadow-card)]">
+              <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-400 to-gold" aria-hidden="true" />
               <h3 class="text-lg">{b.title}</h3>
               {b.body && <p class="mt-2 text-sm text-ink-soft">{b.body}</p>}
             </div>
@@ -145,11 +152,17 @@ const hero = d.hero ?? { heading: d.title };
 
   {d.sections.length > 0 && <Sections sections={d.sections} />}
 
-  <section class="bg-white">
-    <Container size="narrow" class:list={["py-10", isLegal ? "" : ""]}>
-      <Content />
-    </Container>
-  </section>
+  {
+    entry.body?.trim() && (
+      <section class="bg-white">
+        <Container size="narrow" class="py-10">
+          <div class="prose-juma">
+            <Content />
+          </div>
+        </Container>
+      </section>
+    )
+  }
 
   {
     d.ctas.length > 0 && (

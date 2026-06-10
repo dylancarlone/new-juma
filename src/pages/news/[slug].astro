@@ -3,6 +3,7 @@ import { getCollection, render } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Container from "@/components/Container.astro";
 import Media from "@/components/Media.astro";
+import Icon from "@/components/Icon.astro";
 import CTABanner from "@/components/sections/CTABanner.astro";
 import PostCard from "@/components/cards/PostCard.astro";
 import { getAllPosts, postPath, slugifyTag } from "@/lib/content";
@@ -23,22 +24,24 @@ const related = all.filter((p) => p.id !== entry.id).slice(0, 3);
 
 <BaseLayout title={title} description={excerpt} image={heroImage ? `/media/${heroImage}` : undefined} type="article" publishedTime={publishDate}>
   <article>
-    <header class="border-b border-navy-100 bg-cream/50">
-      <Container size="narrow" class="py-12 md:py-16">
-        <div class="flex flex-wrap items-center gap-3 text-xs">
+    <header class="relative overflow-hidden border-b border-navy-100 bg-cream-soft">
+      <div class="absolute inset-0 bg-dots-dark opacity-40" aria-hidden="true"></div>
+      <Container size="narrow" class="relative py-12 md:py-16">
+        <div class="flex flex-wrap items-center gap-2.5">
           {categories.map((c) => (
-            <a href={`/news/category/${slugifyTag(c)}/`} class="font-heading font-bold uppercase tracking-wide text-brand-600 hover:underline">{c}</a>
+            <a href={`/news/category/${slugifyTag(c)}/`} class="rounded-full bg-white px-3.5 py-1.5 font-heading text-[0.65rem] font-bold uppercase tracking-widest text-brand-600 shadow-sm ring-1 ring-navy-100 transition hover:bg-brand-500 hover:text-white">{c}</a>
           ))}
-          <time datetime={publishDate.toISOString()} class="text-warmgray">{dateStr}</time>
+          <time datetime={publishDate.toISOString()} class="text-xs font-semibold uppercase tracking-wider text-warmgray">{dateStr}</time>
         </div>
-        <h1 class="mt-4 text-3xl md:text-5xl">{title}</h1>
-        <p class="mt-4 text-sm text-warmgray">By {author === "Juma" ? "the Juma Ventures team" : author}</p>
+        <h1 class="mt-5 text-3xl md:text-5xl">{title}</h1>
+        <div class="mt-5 h-1.5 w-20 rounded-full bg-gradient-to-r from-brand-500 to-gold" aria-hidden="true"></div>
+        <p class="mt-5 text-sm font-semibold text-warmgray">By {author === "Juma" ? "the Juma Ventures team" : author}</p>
       </Container>
     </header>
 
     {
       heroImage && (
-        <div class="bg-cream/50">
+        <div class="bg-cream-soft">
           <Container size="narrow" class="pb-2">
             <Media src={heroImage} alt={heroImageAlt ?? title} class="w-full rounded-2xl shadow-[var(--shadow-card)]" loading="eager" />
           </Container>
@@ -47,10 +50,13 @@ const related = all.filter((p) => p.id !== entry.id).slice(0, 3);
     }
 
     <Container size="narrow" class="py-12">
-      <Content />
+      <div class="prose-juma"><Content /></div>
       {updatedDate && <p class="mt-10 border-t border-navy-100 pt-4 text-sm text-warmgray">Last updated {updatedDate.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}.</p>}
       <div class="mt-10">
-        <a href="/news/" class="font-semibold text-brand-600 hover:underline">← Back to all news</a>
+        <a href="/news/" class="link-back">
+          <Icon name="arrowLeft" size={15} />
+          Back to all news
+        </a>
       </div>
     </Container>
   </article>
@@ -58,8 +64,11 @@ const related = all.filter((p) => p.id !== entry.id).slice(0, 3);
   {
     related.length > 0 && (
       <section class="border-t border-navy-100 bg-cream/40">
-        <Container class="py-14">
-          <h2 class="mb-8 text-2xl md:text-3xl">More stories</h2>
+        <Container class="py-16">
+          <div class="mb-10">
+            <p class="eyebrow text-brand-600">Keep reading</p>
+            <h2 class="mt-3 text-2xl md:text-4xl">More stories</h2>
+          </div>
           <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((p) => (
               <PostCard

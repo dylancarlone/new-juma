@@ -18,11 +18,15 @@ const team = (await getCollection("team", (t) => !t.data.draft)).sort((a, b) => 
       {team.map((m) => <TeamCard name={m.data.name} role={m.data.role} photo={m.data.photo} href={`/team/${m.id}/`} position={m.data.photoPosition} />)}
     </div>
 
-    <div class="mt-16 rounded-[var(--radius-card)] bg-cream p-8 text-center md:p-12">
-      <h2 class="text-2xl md:text-3xl">Our Board of Directors</h2>
-      <p class="mx-auto mt-3 max-w-xl text-ink-soft">Juma is guided by a dedicated national board of community and industry leaders.</p>
-      <div class="mt-6">
-        <Button href="/board-of-directors/" variant="primary" size="md">Meet the Board</Button>
+    <div class="relative mt-20 overflow-hidden rounded-[var(--radius-card)] bg-cream p-8 text-center md:p-12" data-reveal>
+      <div class="absolute inset-0 bg-dots-dark opacity-50" aria-hidden="true"></div>
+      <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-brand-500 via-accent to-gold" aria-hidden="true"></div>
+      <div class="relative">
+        <h2 class="text-2xl md:text-3xl">Our Board of Directors</h2>
+        <p class="mx-auto mt-3 max-w-xl text-ink-soft">Juma is guided by a dedicated national board of community and industry leaders.</p>
+        <div class="mt-7">
+          <Button href="/board-of-directors/" variant="primary" size="md" arrow>Meet the Board</Button>
+        </div>
       </div>
     </div>
   </Container>

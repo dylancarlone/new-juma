@@ -33,7 +33,7 @@ const jobs = (await getCollection("job", (j) => j.data.isOpen)).sort((a, b) => a
       <Container size="narrow" class="py-14">
         <h2 class="text-2xl md:text-3xl">You Are…</h2>
         <ul class="mt-6 grid gap-3 sm:grid-cols-2">
-          {d.bullets.map((b) => <li class="flex gap-3 text-ink-soft"><Icon name="chevronRight" size={20} class="mt-1 shrink-0 text-brand-600" /><span>{b}</span></li>)}
+          {d.bullets.map((b) => <li class="flex gap-3 text-ink-soft"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-600"><Icon name="check" size={14} /></span><span>{b}</span></li>)}
         </ul>
       </Container>
     </section>
@@ -66,12 +66,12 @@ const jobs = (await getCollection("job", (j) => j.data.isOpen)).sort((a, b) => a
           <ul class="mt-8 divide-y divide-navy-100 overflow-hidden rounded-[var(--radius-card)] border border-navy-100 bg-white">
             {jobs.map((j) => (
               <li>
-                <a href={`/careers/${j.id}/`} class="flex flex-col gap-2 p-6 transition hover:bg-cream/60 sm:flex-row sm:items-center sm:justify-between">
+                <a href={`/careers/${j.id}/`} class="group flex flex-col gap-2 p-6 transition hover:bg-cream/60 sm:flex-row sm:items-center sm:justify-between">
                   <div>
-                    <h3 class="text-lg font-bold text-navy-900">{j.data.jobTitle}</h3>
+                    <h3 class="text-lg font-bold text-navy-900 transition group-hover:text-brand-600">{j.data.jobTitle}</h3>
                     <p class="mt-1 text-sm text-warmgray">{[j.data.department, j.data.locations.join(" · ")].filter(Boolean).join("  •  ")}</p>
                   </div>
-                  <span class="shrink-0 font-semibold text-brand-600">View role →</span>
+                  <span class="link-more shrink-0">View role <Icon name="arrowRight" size={15} /></span>
                 </a>
               </li>
             ))}

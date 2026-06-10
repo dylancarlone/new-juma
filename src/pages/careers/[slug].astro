@@ -25,7 +25,7 @@ const apply = d.applyHref ?? "mailto:operations@juma.org?subject=Application: " 
   />
 
   <Container size="narrow" class="py-12">
-    <a href="/work-for-juma/" class="font-semibold text-brand-600 hover:underline">← All openings</a>
+    <a href="/work-for-juma/" class="link-back"><Icon name="arrowLeft" size={15} /> All openings</a>
 
     {!d.isOpen && <p class="mt-6 rounded-lg bg-cream px-4 py-3 text-sm text-warmgray">This position is no longer accepting applications.</p>}
 
@@ -35,21 +35,21 @@ const apply = d.applyHref ?? "mailto:operations@juma.org?subject=Application: " 
     {d.responsibilities.length > 0 && (
       <section class="mt-10">
         <h2 class="text-2xl">Responsibilities</h2>
-        <ul class="mt-4 space-y-2">{d.responsibilities.map((r) => <li class="flex gap-3 text-ink-soft"><Icon name="chevronRight" size={20} class="mt-1 shrink-0 text-brand-600" /><span>{r}</span></li>)}</ul>
+        <ul class="mt-4 space-y-2">{d.responsibilities.map((r) => <li class="flex gap-3 text-ink-soft"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-600"><Icon name="check" size={14} /></span><span>{r}</span></li>)}</ul>
       </section>
     )}
 
     {d.qualifications.length > 0 && (
       <section class="mt-10">
         <h2 class="text-2xl">Qualifications</h2>
-        <ul class="mt-4 space-y-2">{d.qualifications.map((q) => <li class="flex gap-3 text-ink-soft"><Icon name="chevronRight" size={20} class="mt-1 shrink-0 text-brand-600" /><span>{q}</span></li>)}</ul>
+        <ul class="mt-4 space-y-2">{d.qualifications.map((q) => <li class="flex gap-3 text-ink-soft"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-600"><Icon name="check" size={14} /></span><span>{q}</span></li>)}</ul>
       </section>
     )}
 
     {d.benefits.length > 0 && (
       <section class="mt-10">
         <h2 class="text-2xl">What we offer</h2>
-        <ul class="mt-4 space-y-2">{d.benefits.map((b) => <li class="flex gap-3 text-ink-soft"><Icon name="chevronRight" size={20} class="mt-1 shrink-0 text-brand-600" /><span>{b}</span></li>)}</ul>
+        <ul class="mt-4 space-y-2">{d.benefits.map((b) => <li class="flex gap-3 text-ink-soft"><span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-600"><Icon name="check" size={14} /></span><span>{b}</span></li>)}</ul>
       </section>
     )}
 

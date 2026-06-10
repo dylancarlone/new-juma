@@ -69,7 +69,7 @@ const audienceCtas = [
           <p class="mt-2 text-ink-soft">Juma youth earn paid work experience at venues including:</p>
           <ul class="mt-6 flex flex-wrap gap-3">
             {d.venues.map((v) => (
-              <li class="rounded-full bg-white px-5 py-2 text-sm font-semibold text-navy-800 shadow-[var(--shadow-card)]">{v}</li>
+              <li class="rounded-full bg-white px-5 py-2 text-sm font-bold text-navy-800 shadow-[var(--shadow-card)] ring-1 ring-navy-100 transition hover:ring-brand-300">{v}</li>
             ))}
           </ul>
         </Container>
@@ -79,10 +79,14 @@ const audienceCtas = [
 
   {
     d.testimonial && (
-      <section class="bg-navy-900 text-white">
-        <Container size="narrow" class="py-16 text-center">
-          <p class="font-heading text-2xl font-bold leading-snug md:text-3xl">“{d.testimonial.quote}”</p>
-          <p class="mt-5 text-gold">— {d.testimonial.name}</p>
+      <section class="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white">
+        <div class="absolute inset-0 bg-dots-light opacity-30" aria-hidden="true" />
+        <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand-500/15 blur-[90px]" aria-hidden="true" />
+        <Container size="narrow" class="relative py-16 text-center md:py-20" data-reveal>
+          <span class="font-heading text-7xl font-extrabold leading-none text-gold" aria-hidden="true">“</span>
+          <p class="-mt-4 font-heading text-2xl font-bold leading-snug md:text-3xl">{d.testimonial.quote}”</p>
+          <div class="mx-auto mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-brand-500 to-gold" aria-hidden="true" />
+          <p class="mt-4 font-heading font-bold text-gold">— {d.testimonial.name}</p>
         </Container>
       </section>
     )
@@ -105,11 +109,12 @@ const audienceCtas = [
     <Container class="grid gap-8 py-14 lg:grid-cols-3">
       {
         audienceCtas.map((c) => (
-          <a href={c.href} class="group flex items-center gap-4 rounded-[var(--radius-card)] bg-white p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-1 hover:shadow-[var(--shadow-lift)]">
-            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 group-hover:bg-brand-600 group-hover:text-white">
+          <a href={c.href} class="card-lift group flex items-center gap-4 rounded-[var(--radius-card)] bg-white p-6 shadow-[var(--shadow-card)]">
+            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-brand-50 text-brand-600 transition-all duration-300 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white">
               <Icon name={c.icon} size={24} />
             </span>
-            <span class="font-heading text-lg font-bold text-navy-900">{c.label}</span>
+            <span class="flex-1 font-heading text-lg font-bold text-navy-900">{c.label}</span>
+            <Icon name="arrowRight" size={18} class="shrink-0 -translate-x-1 text-brand-500 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100" />
           </a>
         ))
       }

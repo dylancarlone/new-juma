@@ -3,6 +3,7 @@ import { getCollection, render } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Container from "@/components/Container.astro";
 import Media from "@/components/Media.astro";
+import Icon from "@/components/Icon.astro";
 import CTABanner from "@/components/sections/CTABanner.astro";
 
 export async function getStaticPaths() {
@@ -17,15 +18,16 @@ const { Content } = await render(entry);
 
 <BaseLayout title={`${d.name} — ${d.role}`} description={`${d.name}, ${d.role} at Juma Ventures.`}>
   <Container size="narrow" class="py-14 md:py-20">
-    <a href="/leadership/" class="font-semibold text-brand-600 hover:underline">← Back to Leadership</a>
+    <a href="/leadership/" class="link-back"><Icon name="arrowLeft" size={15} /> Back to Leadership</a>
     <div class="mt-8 grid gap-8 sm:grid-cols-[200px_1fr] sm:items-start">
-      <div class="overflow-hidden rounded-2xl bg-cream shadow-[var(--shadow-card)]">
+      <div class="overflow-hidden rounded-[1.75rem] bg-cream shadow-[var(--shadow-card)] ring-2 ring-gold/60">
         <Media src={d.photo} alt={d.name} class="aspect-square w-full" fit="cover" position={d.photoPosition ?? "center 25%"} loading="eager" />
       </div>
       <div>
         <h1 class="text-3xl md:text-4xl">{d.name}</h1>
-        <p class="mt-1 text-lg font-semibold text-brand-600">{d.role}</p>
-        {d.email && <p class="mt-2"><a href={`mailto:${d.email}`} class="text-navy-700 hover:underline">{d.email}</a></p>}
+        <p class="mt-2 text-lg font-bold text-brand-600">{d.role}</p>
+        <div class="mt-4 h-1 w-14 rounded-full bg-gradient-to-r from-brand-500 to-gold" aria-hidden="true"></div>
+        {d.email && <p class="mt-4"><a href={`mailto:${d.email}`} class="font-medium text-navy-700 underline decoration-navy-200 underline-offset-2 hover:text-brand-600 hover:decoration-brand-300">{d.email}</a></p>}
       </div>
     </div>
     <div class="prose-juma mt-10"><Content /></div>
