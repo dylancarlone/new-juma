@@ -20,19 +20,30 @@ const {
   secondaryHref = "/volunteer/",
   variant = "brand",
 } = Astro.props;
-const bg = variant === "brand" ? "bg-brand-600" : "bg-navy-900";
+const bg =
+  variant === "brand"
+    ? "bg-gradient-to-br from-brand-700 via-brand-600 to-brand-500"
+    : "bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800";
 ---
 
-<section class={bg}>
-  <Container class="py-16 md:py-20">
-    <div class="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
-      <div class="max-w-2xl text-white">
-        <h2 class="text-3xl text-white md:text-4xl">{heading}</h2>
-        {text && <p class="mt-3 text-lg text-white/85">{text}</p>}
-      </div>
-      <div class="flex shrink-0 flex-wrap gap-4">
-        {ctaLabel && <Button href={ctaHref} variant="white" size="lg">{ctaLabel}</Button>}
-        {secondaryLabel && <Button href={secondaryHref} variant="outline" size="lg" class="border-white text-white hover:bg-white hover:text-navy-700">{secondaryLabel}</Button>}
+<section class={`relative overflow-hidden ${bg}`}>
+  <div class="absolute inset-0 bg-dots-light opacity-30" aria-hidden="true"></div>
+  <!-- Decorative rings -->
+  <div class="pointer-events-none absolute -left-24 -top-24 h-80 w-80 rounded-full border-[3rem] border-white/[0.06]" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -bottom-32 -right-20 h-96 w-96 rounded-full border-[3.5rem] border-white/[0.07]" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute right-1/4 -top-20 h-56 w-56 rounded-full bg-gold/15 blur-[80px]" aria-hidden="true"></div>
+
+  <Container class="relative py-20 md:py-28">
+    <div class="mx-auto max-w-3xl text-center" data-reveal>
+      <h2 class="text-3xl text-white md:text-5xl">{heading}</h2>
+      {text && <p class="mx-auto mt-5 max-w-2xl text-lg text-white/85 md:text-xl">{text}</p>}
+      <div class="mt-10 flex flex-wrap justify-center gap-4">
+        {ctaLabel && <Button href={ctaHref} variant="white" size="lg" arrow>{ctaLabel}</Button>}
+        {secondaryLabel && (
+          <Button href={secondaryHref} variant="outline" size="lg" class="border-white/80 text-white hover:border-white hover:bg-white hover:text-navy-900">
+            {secondaryLabel}
+          </Button>
+        )}
       </div>
     </div>
   </Container>

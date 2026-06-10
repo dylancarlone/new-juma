@@ -7,24 +7,26 @@ interface Props {
   type?: "button" | "submit";
   target?: string;
   rel?: string;
+  /** Append an arrow that nudges right on hover. */
+  arrow?: boolean;
 }
-const { href, variant = "primary", size = "md", class: className, type = "button", target, rel } = Astro.props;
+const { href, variant = "primary", size = "md", class: className, type = "button", target, rel, arrow = false } = Astro.props;
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-[var(--radius-btn)] font-heading font-bold uppercase tracking-wide transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-60 disabled:pointer-events-none";
+  "group/btn inline-flex items-center justify-center gap-2 rounded-[var(--radius-btn)] font-heading font-bold uppercase tracking-wider transition-all duration-300 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-60 disabled:pointer-events-none";
 
 const variants = {
-  primary: "bg-navy-600 text-white hover:bg-navy-700 shadow-sm hover:shadow-md",
-  brand: "bg-brand-500 text-white hover:bg-brand-600 shadow-sm hover:shadow-md",
-  outline: "border-2 border-navy-600 text-navy-700 hover:bg-navy-600 hover:text-white",
+  primary: "bg-navy-800 text-white shadow-sm hover:bg-navy-900 hover:shadow-[var(--shadow-lift)] hover:-translate-y-0.5",
+  brand: "bg-brand-500 text-white shadow-[var(--shadow-glow)] hover:bg-brand-600 hover:-translate-y-0.5",
+  outline: "border-2 border-navy-700 text-navy-800 hover:bg-navy-800 hover:border-navy-800 hover:text-white hover:-translate-y-0.5",
   ghost: "text-navy-700 hover:bg-navy-50",
-  white: "bg-white text-navy-700 hover:bg-cream shadow-sm",
+  white: "bg-white text-navy-800 shadow-sm hover:bg-gold hover:text-navy-950 hover:-translate-y-0.5 hover:shadow-[var(--shadow-lift)]",
 };
 
 const sizes = {
-  sm: "px-4 py-2 text-xs",
-  md: "px-6 py-3 text-sm",
-  lg: "px-8 py-4 text-sm md:text-base",
+  sm: "px-5 py-2 text-xs",
+  md: "px-7 py-3 text-sm",
+  lg: "px-9 py-4 text-sm md:text-base",
 };
 
 const cls = [base, variants[variant], sizes[size], className].filter(Boolean).join(" ");
@@ -35,10 +37,16 @@ const external = target === "_blank";
   href ? (
     <a href={href} class={cls} target={target} rel={rel ?? (external ? "noopener noreferrer" : undefined)}>
       <slot />
+      {arrow && (
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover/btn:translate-x-1" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      )}
     </a>
   ) : (
     <button type={type} class={cls}>
       <slot />
+      {arrow && (
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300 group-hover/btn:translate-x-1" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      )}
     </button>
   )
 }

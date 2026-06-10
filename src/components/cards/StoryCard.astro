@@ -14,17 +14,19 @@ const { href, name, photo, pullQuote, outcome, location } = Astro.props;
 
 <a
   href={href}
-  class="group relative flex flex-col justify-end overflow-hidden rounded-[var(--radius-card)] bg-navy-900 shadow-[var(--shadow-card)] transition hover:-translate-y-1 hover:shadow-[var(--shadow-lift)] aspect-[3/4]"
+  class="card-lift group relative flex aspect-[3/4] flex-col justify-end overflow-hidden rounded-[var(--radius-card)] bg-navy-900 shadow-[var(--shadow-card)]"
 >
   {
     photo && (
-      <Media src={photo} alt={name} class="absolute inset-0 h-full w-full transition duration-500 group-hover:scale-105" fit="cover" />
+      <Media src={photo} alt={name} class="absolute inset-0 h-full w-full transition duration-700 group-hover:scale-[1.06]" fit="cover" />
     )
   }
-  <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-900/50 to-transparent"></div>
+  <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/55 to-transparent transition-opacity duration-300 group-hover:via-navy-950/70"></div>
   <div class="relative p-6 text-white">
-    {pullQuote && <p class="font-heading text-lg font-bold leading-snug">“{pullQuote}”</p>}
-    <p class="mt-3 text-sm font-semibold text-gold">{name}{location ? ` · ${location}` : ""}</p>
+    <span class="font-heading text-5xl font-extrabold leading-none text-gold/90" aria-hidden="true">“</span>
+    {pullQuote && <p class="-mt-3 font-heading text-lg font-bold leading-snug">{pullQuote}”</p>}
+    <div class="mt-4 h-0.5 w-10 rounded-full bg-gradient-to-r from-brand-400 to-gold" aria-hidden="true"></div>
+    <p class="mt-3 text-sm font-bold text-gold">{name}{location ? ` · ${location}` : ""}</p>
     {outcome && <p class="mt-1 text-sm text-white/80">{outcome}</p>}
   </div>
 </a>

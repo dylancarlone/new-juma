@@ -8,6 +8,12 @@
     "ctaHref": "/donate/"
   },
   "intro": "Juma Ventures is a nonprofit social enterprise that breaks the cycle of poverty by paving the way to work, education, and financial capability for youth across America. We operate businesses at major sports and entertainment venues — employing young people ages 16–24 who face significant barriers to opportunity.",
+  "stats": [
+    { "value": "30+", "label": "Years of impact" },
+    { "value": "10,000+", "label": "Youth employed" },
+    { "value": "$13M", "label": "Earned in wages by Juma youth" },
+    { "value": "$6.4M", "label": "Saved for higher education" }
+  ],
   "pillars": [
     {
       "title": "Earn",

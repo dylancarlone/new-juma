@@ -2,39 +2,41 @@
 import { Image } from "astro:assets";
 import logo from "@/assets/media/juma-logo.png";
 import { nav } from "@/lib/site";
-import Button from "@/components/ui/Button.astro";
 import Icon from "@/components/Icon.astro";
 
 const path = Astro.url.pathname;
 const isActive = (href: string) => href !== "#" && href !== "/" && path.startsWith(href);
 ---
 
-<header class="sticky top-0 z-50 border-b border-navy-100 bg-white/95 backdrop-blur">
-  <nav class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3 sm:px-6 lg:px-8" aria-label="Primary">
-    <a href="/" class="flex shrink-0 items-center" aria-label="Juma Ventures home">
+<header id="site-header" class="sticky top-0 z-50 bg-white/90 backdrop-blur-md transition-shadow duration-300">
+  <!-- Brand accent strip -->
+  <div class="h-1 bg-gradient-to-r from-brand-500 via-accent to-gold" aria-hidden="true"></div>
+
+  <nav class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-3.5 sm:px-6 lg:px-8" aria-label="Primary">
+    <a href="/" class="flex shrink-0 items-center transition-transform duration-300 hover:scale-[1.03]" aria-label="Juma Ventures home">
       <Image src={logo} alt="Juma Ventures" class="h-9 w-auto" loading="eager" />
     </a>
 
     <!-- Desktop nav -->
-    <ul class="hidden items-center gap-1 lg:flex">
+    <ul class="hidden items-center gap-0.5 lg:flex">
       {
         nav.map((item) =>
           item.children ? (
             <li class="group relative">
               <button
-                class="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-semibold text-navy-800 transition hover:bg-navy-50 hover:text-brand-600"
+                class="flex items-center gap-1 rounded-md px-3 py-2 font-heading text-sm font-bold text-navy-800 transition hover:text-brand-600"
                 aria-haspopup="true"
               >
                 {item.label}
-                <Icon name="chevronDown" size={16} class="transition group-hover:rotate-180" />
+                <Icon name="chevronDown" size={15} class="transition duration-300 group-hover:rotate-180 group-hover:text-brand-500" />
               </button>
-              <div class="invisible absolute left-0 top-full min-w-60 translate-y-1 rounded-xl border border-navy-100 bg-white p-2 opacity-0 shadow-[var(--shadow-lift)] transition-all duration-150 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+              <div class="invisible absolute left-0 top-full min-w-64 translate-y-2 rounded-2xl border border-navy-100 bg-white p-2 opacity-0 shadow-[var(--shadow-lift)] transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
                 <ul>
                   {item.children.map((child) => (
                     <li>
                       <a
                         href={child.href}
-                        class="block rounded-lg px-3 py-2 text-sm text-navy-700 transition hover:bg-cream hover:text-brand-600"
+                        class="block rounded-xl px-4 py-2.5 text-sm font-medium text-navy-700 transition hover:bg-cream hover:pl-5 hover:text-brand-600"
                       >
                         {child.label}
                       </a>
@@ -48,8 +50,9 @@ const isActive = (href: string) => href !== "#" && href !== "/" && path.startsWi
               <a
                 href={item.href}
                 class:list={[
-                  "block rounded-md px-3 py-2 text-sm font-semibold transition hover:bg-navy-50 hover:text-brand-600",
-                  isActive(item.href) ? "text-brand-600" : "text-navy-800",
+                  "relative block px-3 py-2 font-heading text-sm font-bold transition hover:text-brand-600",
+                  "after:absolute after:bottom-0.5 after:left-3 after:right-3 after:h-0.5 after:origin-left after:scale-x-0 after:rounded-full after:bg-brand-500 after:transition-transform after:duration-300 hover:after:scale-x-100",
+                  isActive(item.href) ? "text-brand-600 after:scale-x-100" : "text-navy-800",
                 ]}
               >
                 {item.label}
@@ -61,7 +64,13 @@ const isActive = (href: string) => href !== "#" && href !== "/" && path.startsWi
     </ul>
 
     <div class="hidden lg:block">
-      <Button href="/donate/" variant="brand" size="sm">Donate</Button>
+      <a
+        href="/donate/"
+        class="inline-flex items-center gap-2 rounded-full bg-brand-500 px-6 py-2.5 font-heading text-sm font-bold uppercase tracking-wider text-white shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-600"
+      >
+        <Icon name="heart" size={15} />
+        Donate
+      </a>
     </div>
 
     <!-- Mobile toggle -->
@@ -83,14 +92,14 @@ const isActive = (href: string) => href !== "#" && href !== "/" && path.startsWi
         nav.map((item) =>
           item.children ? (
             <details class="border-b border-navy-50 py-1">
-              <summary class="flex cursor-pointer list-none items-center justify-between py-2 text-base font-semibold text-navy-800">
+              <summary class="flex cursor-pointer list-none items-center justify-between py-2 font-heading text-base font-bold text-navy-800">
                 {item.label}
                 <Icon name="chevronDown" size={18} />
               </summary>
               <ul class="pb-2 pl-3">
                 {item.children.map((child) => (
                   <li>
-                    <a href={child.href} class="block py-2 text-sm text-navy-700 hover:text-brand-600">
+                    <a href={child.href} class="block py-2 text-sm font-medium text-navy-700 hover:text-brand-600">
                       {child.label}
                     </a>
                   </li>
@@ -98,14 +107,20 @@ const isActive = (href: string) => href !== "#" && href !== "/" && path.startsWi
               </ul>
             </details>
           ) : (
-            <a href={item.href} class="block border-b border-navy-50 py-3 text-base font-semibold text-navy-800 hover:text-brand-600">
+            <a href={item.href} class="block border-b border-navy-50 py-3 font-heading text-base font-bold text-navy-800 hover:text-brand-600">
               {item.label}
             </a>
           )
         )
       }
       <div class="pt-4">
-        <Button href="/donate/" variant="brand" size="md" class="w-full">Donate</Button>
+        <a
+          href="/donate/"
+          class="flex w-full items-center justify-center gap-2 rounded-full bg-brand-500 px-6 py-3.5 font-heading text-sm font-bold uppercase tracking-wider text-white shadow-[var(--shadow-glow)] transition hover:bg-brand-600"
+        >
+          <Icon name="heart" size={16} />
+          Donate
+        </a>
       </div>
     </div>
   </div>
@@ -126,4 +141,10 @@ const isActive = (href: string) => href !== "#" && href !== "/" && path.startsWi
     toggle.setAttribute("aria-expanded", String(!!open));
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
   });
+
+  // Add a shadow once the page scrolls beneath the sticky header.
+  const header = document.getElementById("site-header");
+  const onScroll = () => header?.classList.toggle("shadow-[0_4px_24px_-8px_rgb(43_46_73/0.18)]", window.scrollY > 8);
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
 </script>

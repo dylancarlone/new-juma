@@ -13,10 +13,10 @@ const { name, role, photo, href, position = "center 25%" } = Astro.props;
 ---
 
 <div class="group text-center">
-  <div class="mx-auto aspect-square w-full max-w-[220px] overflow-hidden rounded-2xl bg-cream shadow-[var(--shadow-card)]">
+  <div class="mx-auto aspect-square w-full max-w-[220px] overflow-hidden rounded-[1.75rem] bg-cream shadow-[var(--shadow-card)] ring-2 ring-transparent transition-all duration-300 group-hover:-translate-y-1.5 group-hover:shadow-[var(--shadow-lift)] group-hover:ring-gold">
     {
       photo ? (
-        <Media src={photo} alt={name} class="h-full w-full transition duration-500 group-hover:scale-105" fit="cover" position={position} />
+        <Media src={photo} alt={name} class="h-full w-full transition duration-700 group-hover:scale-[1.06]" fit="cover" position={position} />
       ) : (
         <div class="flex h-full w-full items-center justify-center bg-gradient-to-br from-navy-100 to-brand-100 font-heading text-3xl font-bold text-navy-300">
           {name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
@@ -24,6 +24,6 @@ const { name, role, photo, href, position = "center 25%" } = Astro.props;
       )
     }
   </div>
-  <h3 class="mt-4 text-lg font-bold text-navy-900">{name}</h3>
-  <p class="mt-0.5 text-sm font-medium text-brand-600">{role}</p>
+  <h3 class="mt-5 text-lg font-bold text-navy-900">{name}</h3>
+  <p class="mt-1 text-sm font-semibold text-brand-600">{role}</p>
 </div>

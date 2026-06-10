@@ -11,12 +11,17 @@ const { eyebrow, title, description, align = "left" } = Astro.props;
 const a = align === "center" ? "text-center mx-auto" : "";
 ---
 
-<section class="border-b border-navy-100 bg-cream/50">
-  <Container class="py-12 md:py-16">
-    <div class={`max-w-3xl ${a}`}>
-      {eyebrow && <p class="font-heading text-xs font-bold uppercase tracking-widest text-brand-600">{eyebrow}</p>}
-      <h1 class="mt-2 text-3xl md:text-5xl">{title}</h1>
-      {description && <p class="mt-4 text-lg text-ink-soft">{description}</p>}
+<section class="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white">
+  <div class="absolute inset-0 bg-dots-light opacity-40" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -right-32 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-brand-500/15 blur-[100px]" aria-hidden="true"></div>
+  <div class="pointer-events-none absolute -left-24 -bottom-32 h-72 w-72 rounded-full bg-gold/10 blur-[90px]" aria-hidden="true"></div>
+
+  <Container class="relative py-16 md:py-24">
+    <div class={`max-w-3xl ${a}`} data-reveal>
+      {eyebrow && <p class={`eyebrow text-gold ${align === "center" ? "eyebrow-center" : ""}`}>{eyebrow}</p>}
+      <h1 class="mt-3 text-4xl text-white md:text-5xl lg:text-6xl">{title}</h1>
+      <div class={`mt-5 h-1.5 w-20 rounded-full bg-gradient-to-r from-brand-500 to-gold ${align === "center" ? "mx-auto" : ""}`} aria-hidden="true"></div>
+      {description && <p class="mt-5 text-lg leading-relaxed text-navy-100">{description}</p>}
     </div>
   </Container>
 </section>

@@ -41,19 +41,22 @@
   --color-accent: #e95d00;
   --color-accent-dark: #c44d00;
   --color-gold: #fdbf51;
+  --color-gold-soft: #fee9c2;
   --color-sky: #9bdbf3;
 
   /* Warm neutrals */
   --color-ink: #2c2c2a;
   --color-ink-soft: #483f34;
   --color-cream: #f9f1e6;
+  --color-cream-soft: #fcf7ef;
   --color-warmgray: #53504c;
 
-  --radius-card: 1rem;
-  --radius-btn: 0.5rem;
+  --radius-card: 1.25rem;
+  --radius-btn: 999px;
 
-  --shadow-card: 0 1px 2px rgb(43 46 73 / 0.04), 0 8px 24px -12px rgb(43 46 73 / 0.18);
-  --shadow-lift: 0 12px 40px -16px rgb(43 46 73 / 0.28);
+  --shadow-card: 0 1px 2px rgb(43 46 73 / 0.05), 0 10px 30px -12px rgb(43 46 73 / 0.16);
+  --shadow-lift: 0 18px 50px -18px rgb(43 46 73 / 0.32);
+  --shadow-glow: 0 8px 32px -8px rgb(227 58 94 / 0.45);
 }
 
 /* ------------------------------------------------------------------ *
@@ -76,9 +79,9 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.01em;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
     color: var(--color-navy-900);
     text-wrap: balance;
   }
@@ -86,6 +89,11 @@
   p { text-wrap: pretty; }
 
   a { color: inherit; }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-navy-950);
+  }
 
   :focus-visible {
     outline: 2px solid var(--color-brand-500);
@@ -107,6 +115,49 @@
  * Reusable component utilities
  * ------------------------------------------------------------------ */
 @layer components {
+  /* Small-caps section kicker, e.g. "Youth Voices". */
+  .eyebrow {
+    @apply inline-flex items-center gap-2.5 font-heading text-xs font-bold uppercase tracking-[0.2em];
+  }
+  .eyebrow::before {
+    content: "";
+    @apply h-px w-8 bg-current opacity-60;
+  }
+  .eyebrow-center::before { content: none; }
+
+  /* Gold "marker" underline for a key phrase inside a heading. */
+  .mark-gold {
+    background-image: linear-gradient(to top, var(--color-gold) 0%, var(--color-gold) 28%, transparent 28%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  /* Brand variant for use on dark backgrounds. */
+  .mark-brand {
+    background-image: linear-gradient(to top, var(--color-brand-500) 0%, var(--color-brand-500) 26%, transparent 26%);
+  }
+
+  /* Subtle dot texture for dark sections. */
+  .bg-dots-light {
+    background-image: radial-gradient(rgb(255 255 255 / 0.10) 1px, transparent 1.5px);
+    background-size: 22px 22px;
+  }
+  .bg-dots-dark {
+    background-image: radial-gradient(rgb(43 46 73 / 0.10) 1px, transparent 1.5px);
+    background-size: 22px 22px;
+  }
+
+  /* Card hover lift, shared across all card components. */
+  .card-lift {
+    @apply transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[var(--shadow-lift)];
+  }
+
+  /* Inline "text + arrow" link that nudges on hover. */
+  .link-more {
+    @apply inline-flex items-center gap-1.5 font-heading text-sm font-bold text-brand-600 transition-colors hover:text-brand-700;
+  }
+  .link-more svg { @apply transition-transform duration-300; }
+  .link-more:hover svg { transform: translateX(4px); }
+
   /* Long-form article body (blog posts, legal prose, MDX page bodies). */
   .prose-juma {
     @apply max-w-none leading-relaxed text-ink-soft;
@@ -118,7 +169,24 @@
   .prose-juma a { @apply font-medium text-brand-600 underline decoration-brand-200 underline-offset-2 hover:text-brand-700 hover:decoration-brand-400; }
   .prose-juma ul { @apply list-disc space-y-2 pl-6; }
   .prose-juma ol { @apply list-decimal space-y-2 pl-6; }
-  .prose-juma blockquote { @apply border-l-4 border-brand-300 bg-cream/60 py-2 pl-5 pr-4 text-lg italic text-navy-800; }
-  .prose-juma img { @apply rounded-xl shadow-card; }
+  .prose-juma blockquote { @apply rounded-r-2xl border-l-4 border-gold bg-cream/70 py-4 pl-6 pr-5 text-lg italic text-navy-800; }
+  .prose-juma img { @apply rounded-2xl shadow-[var(--shadow-card)]; }
   .prose-juma figcaption { @apply mt-2 text-center text-sm text-warmgray; }
+}
+
+/* ------------------------------------------------------------------ *
+ * Scroll-reveal — opt-in via data-reveal. Elements stay visible when
+ * JS is unavailable; BaseLayout adds `js` to <html> before paint.
+ * ------------------------------------------------------------------ */
+@media (prefers-reduced-motion: no-preference) {
+  html.js [data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  html.js [data-reveal].is-revealed {
+    opacity: 1;
+    transform: none;
+  }
 }
