@@ -1,13 +1,12 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Container from "@/components/Container.astro";
-import Icon from "@/components/Icon.astro";
 import Button from "@/components/ui/Button.astro";
 ---
 
 <BaseLayout
   title="Juma: Game Day — Serve Your Community"
-  description="Play Juma: Game Day — work a concession stand at real Juma venues, earn wages, build money skills, and climb the career ladder. Experience the Earn, Learn, Connect model as a game."
+  description="Play Juma: Game Day — a stadium arcade game where you work the concession counters at real Juma venues, earn wages, build money skills, and climb the career ladder."
 >
   <!-- Compact hero -->
   <section class="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white">
@@ -17,8 +16,8 @@ import Button from "@/components/ui/Button.astro";
       <p class="eyebrow eyebrow-center justify-center text-gold">Play · Earn · Learn · Connect</p>
       <h1 class="mt-3 text-4xl text-white md:text-6xl">Juma: <span class="mark-brand">Game Day</span></h1>
       <p class="mx-auto mt-5 max-w-2xl text-lg text-navy-100">
-        Step into the shoes of a Juma youth: work the concession stand at four real venues, earn wages and tips,
-        grow your money skills, and get promoted — all the way from Oracle Park to Lumen Field.
+        A stadium arcade game built on Juma's real model. Work the counters at four real venues,
+        slide orders down the lane before fans reach the front, and turn a first paycheck into a career.
       </p>
     </Container>
   </section>
@@ -26,48 +25,68 @@ import Button from "@/components/ui/Button.astro";
   <!-- Game -->
   <section class="relative overflow-hidden bg-cream">
     <div class="absolute inset-0 bg-dots-dark opacity-50" aria-hidden="true"></div>
-    <Container class="relative py-10 md:py-16">
+    <Container size="wide" class="relative py-10 md:py-16">
       <div
         id="gameday"
-        class="relative mx-auto max-w-4xl select-none overflow-hidden rounded-[var(--radius-card)] bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white shadow-[var(--shadow-lift)] ring-1 ring-navy-100"
+        class="relative mx-auto max-w-5xl select-none overflow-hidden rounded-[var(--radius-card)] bg-navy-950 text-white shadow-[var(--shadow-lift)] ring-1 ring-navy-100"
       >
-        <div class="absolute inset-0 bg-dots-light opacity-30" aria-hidden="true"></div>
+        <!-- STAGE: canvas + overlays (title + pause live on top of the canvas) -->
+        <div id="g-stage" class="relative">
+          <canvas id="g-canvas" class="block w-full touch-none" width="960" height="620" aria-label="Juma Game Day playfield"></canvas>
 
-        <!-- TITLE SCREEN -->
-        <div data-screen="title" class="relative px-6 py-14 text-center md:py-20">
-          <p class="text-6xl md:text-7xl" aria-hidden="true">🏟️</p>
-          <h2 class="mt-4 font-heading text-3xl font-extrabold text-white md:text-5xl">Game Day</h2>
-          <div class="mx-auto mt-4 h-1.5 w-20 rounded-full bg-gradient-to-r from-brand-500 to-gold" aria-hidden="true"></div>
-          <p class="mx-auto mt-5 max-w-lg text-navy-100">
-            Fans are hungry and the clock is running. Serve your community, stack your paycheck,
-            ace the Money Minute, and earn the season's top job.
-          </p>
-          <p id="g-best" class="mt-4 hidden font-heading text-sm font-bold uppercase tracking-widest text-gold"></p>
-          <div class="mt-8 flex flex-wrap justify-center gap-4">
-            <button id="g-start" class="rounded-full bg-brand-500 px-9 py-4 font-heading text-sm font-bold uppercase tracking-wider text-white shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-600 md:text-base">▶ Start Your Shift</button>
-            <button id="g-howto-btn" class="rounded-full border-2 border-white/70 px-9 py-4 font-heading text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-navy-900 md:text-base">How to Play</button>
+          <!-- Title overlay -->
+          <div id="g-title-overlay" class="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-navy-950/85 via-navy-950/35 to-transparent px-6 text-center">
+            <p class="eyebrow eyebrow-center justify-center text-gold">Juma presents</p>
+            <h2 class="mt-2 font-heading text-4xl font-extrabold tracking-tight text-white drop-shadow-lg md:text-6xl">GAME DAY</h2>
+            <p class="mx-auto mt-3 max-w-md text-sm text-navy-100 md:text-base">
+              Fans are marching toward your counter. Pick the right item, slide it down the lane, keep the crowd happy.
+            </p>
+            <p id="g-best" class="mt-3 hidden font-heading text-xs font-bold uppercase tracking-widest text-gold md:text-sm"></p>
+            <div class="mt-6 flex flex-wrap justify-center gap-3">
+              <button id="g-start" class="rounded-full bg-brand-500 px-8 py-3.5 font-heading text-sm font-bold uppercase tracking-wider text-white shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-600 md:px-10 md:py-4">▶ Start Your Shift</button>
+              <button id="g-howto-btn" class="rounded-full border-2 border-white/70 bg-navy-950/40 px-8 py-3.5 font-heading text-sm font-bold uppercase tracking-wider text-white backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:text-navy-900 md:px-10 md:py-4">How to Play</button>
+            </div>
           </div>
+
+          <!-- Pause overlay -->
+          <div id="g-pause-overlay" class="absolute inset-0 z-20 hidden flex-col items-center justify-center gap-5 bg-navy-950/90 backdrop-blur-sm">
+            <p class="font-heading text-3xl font-extrabold text-white">Paused</p>
+            <button id="g-resume" class="rounded-full bg-brand-500 px-9 py-3.5 font-heading text-sm font-bold uppercase tracking-wider text-white shadow-[var(--shadow-glow)] transition hover:bg-brand-600">Resume</button>
+          </div>
+        </div>
+
+        <!-- In-game controls (visible during play) -->
+        <div id="g-controls" class="hidden items-center gap-2 border-t border-white/10 bg-navy-950/80 px-3 py-2.5 md:px-4">
+          <div id="g-items" class="flex flex-1 flex-wrap items-center gap-1.5 md:gap-2"></div>
+          <button id="g-serve" class="rounded-full bg-brand-500 px-5 py-2.5 font-heading text-xs font-bold uppercase tracking-wider text-white shadow-[var(--shadow-glow)] transition hover:bg-brand-600 active:scale-95 md:px-6 md:text-sm" aria-label="Serve selected item">Serve</button>
+          <button id="g-pause" class="rounded-full bg-white/10 px-3 py-2 text-sm font-bold text-white transition hover:bg-white/20" aria-label="Pause game">⏸</button>
+          <button id="g-mute" class="rounded-full bg-white/10 px-3 py-2 text-sm font-bold text-white transition hover:bg-white/20" aria-label="Toggle sound">♪</button>
+          <button id="g-quit" class="rounded-full bg-white/10 px-3 py-2 text-sm font-bold text-white transition hover:bg-white/20" aria-label="Quit to title">✕</button>
         </div>
 
         <!-- HOW TO PLAY -->
         <div data-screen="howto" class="relative px-6 py-12 md:px-12" hidden>
           <h2 class="text-center font-heading text-2xl font-extrabold text-white md:text-3xl">How to Play</h2>
           <div class="mx-auto mt-8 grid max-w-2xl gap-4">
-            <div class="flex items-start gap-4 rounded-2xl bg-white/[0.07] p-5 ring-1 ring-white/10">
-              <span class="text-3xl" aria-hidden="true">🌭</span>
-              <p class="text-sm leading-relaxed text-navy-100"><strong class="text-white">Serve fans.</strong> Each fan shows the items they want. Tap the matching items on your counter (or press the number keys) before their patience runs out.</p>
+            <div class="rounded-2xl bg-white/[0.07] p-5 ring-1 ring-white/10">
+              <p class="font-heading text-sm font-bold uppercase tracking-wider text-gold">1 · Read the line</p>
+              <p class="mt-1.5 text-sm leading-relaxed text-navy-100">Fans walk up the counter lanes toward you. The bubble over each fan shows what they want. If a fan reaches the front and waits too long, they storm off — and the crowd gets unhappy.</p>
             </div>
-            <div class="flex items-start gap-4 rounded-2xl bg-white/[0.07] p-5 ring-1 ring-white/10">
-              <span class="text-3xl" aria-hidden="true">💵</span>
-              <p class="text-sm leading-relaxed text-navy-100"><strong class="text-white">Earn wages & tips.</strong> Fast, accurate service means bigger tips — and a service streak multiplies them. 20% of everything you earn goes straight into your college fund.</p>
+            <div class="rounded-2xl bg-white/[0.07] p-5 ring-1 ring-white/10">
+              <p class="font-heading text-sm font-bold uppercase tracking-wider text-gold">2 · Move & serve</p>
+              <p class="mt-1.5 text-sm leading-relaxed text-navy-100">
+                <strong class="text-white">Keyboard:</strong> <kbd class="rounded bg-white/15 px-1.5 font-bold">↑</kbd>/<kbd class="rounded bg-white/15 px-1.5 font-bold">↓</kbd> switch lanes,
+                <kbd class="rounded bg-white/15 px-1.5 font-bold">1</kbd>–<kbd class="rounded bg-white/15 px-1.5 font-bold">6</kbd> pick an item,
+                <kbd class="rounded bg-white/15 px-1.5 font-bold">Space</kbd> serves.
+                <strong class="text-white">Touch:</strong> tap an item below, then tap a lane to move there and serve. The right item slides down the counter to the front fan; the wrong one ends up on the floor.</p>
             </div>
-            <div class="flex items-start gap-4 rounded-2xl bg-white/[0.07] p-5 ring-1 ring-white/10">
-              <span class="text-3xl" aria-hidden="true">🧠</span>
-              <p class="text-sm leading-relaxed text-navy-100"><strong class="text-white">Ace the Money Minute.</strong> After each shift, answer a real financial-capability question. Every correct answer raises Juma's match on your savings — up to 100%.</p>
+            <div class="rounded-2xl bg-white/[0.07] p-5 ring-1 ring-white/10">
+              <p class="font-heading text-sm font-bold uppercase tracking-wider text-gold">3 · Earn & save</p>
+              <p class="mt-1.5 text-sm leading-relaxed text-navy-100">Serving fans early in the lane earns bigger tips, and a service streak multiplies them. 20% of everything you earn goes straight into your college fund — just like Juma's real savings program.</p>
             </div>
-            <div class="flex items-start gap-4 rounded-2xl bg-white/[0.07] p-5 ring-1 ring-white/10">
-              <span class="text-3xl" aria-hidden="true">📈</span>
-              <p class="text-sm leading-relaxed text-navy-100"><strong class="text-white">Get promoted.</strong> Four shifts, four cities, four jobs. Keep the crowd happy — every missed fan hurts your community rating and your final stars.</p>
+            <div class="rounded-2xl bg-white/[0.07] p-5 ring-1 ring-white/10">
+              <p class="font-heading text-sm font-bold uppercase tracking-wider text-gold">4 · Learn & climb</p>
+              <p class="mt-1.5 text-sm leading-relaxed text-navy-100">After each shift, a Money Minute question raises Juma's match on your savings — up to 100%. Four shifts, four real venues, four promotions: Crew Member to Enterprise Manager.</p>
             </div>
           </div>
           <div class="mt-8 text-center">
@@ -78,55 +97,12 @@ import Button from "@/components/ui/Button.astro";
         <!-- SHIFT INTRO (Connect) -->
         <div data-screen="intro" class="relative px-6 py-14 text-center md:py-16" hidden>
           <p id="g-intro-kicker" class="eyebrow eyebrow-center justify-center text-gold"></p>
-          <p id="g-intro-sport" class="mt-5 text-6xl" aria-hidden="true"></p>
-          <h2 id="g-intro-role" class="mt-3 font-heading text-3xl font-extrabold text-white md:text-4xl"></h2>
+          <h2 id="g-intro-role" class="mt-5 font-heading text-3xl font-extrabold text-white md:text-4xl"></h2>
           <p id="g-intro-venue" class="mt-3 font-heading text-lg font-bold text-brand-300"></p>
           <p id="g-intro-blurb" class="mx-auto mt-4 max-w-md text-sm leading-relaxed text-navy-100"></p>
+          <p id="g-intro-menu" class="mx-auto mt-5 max-w-md font-heading text-xs font-bold uppercase tracking-widest text-navy-300"></p>
           <div class="mt-8">
-            <button id="g-shift-go" class="rounded-full bg-brand-500 px-10 py-4 font-heading text-sm font-bold uppercase tracking-wider text-white shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-600 md:text-base">Clock In ⏰</button>
-          </div>
-        </div>
-
-        <!-- PLAY -->
-        <div data-screen="play" class="relative p-4 md:p-6" hidden>
-          <!-- HUD -->
-          <div class="flex flex-wrap items-center justify-between gap-2 rounded-2xl bg-white/[0.07] px-4 py-3 ring-1 ring-white/10">
-            <div class="min-w-0">
-              <p id="g-hud-venue" class="truncate font-heading text-xs font-bold uppercase tracking-widest text-gold"></p>
-              <p id="g-hud-role" class="truncate text-xs text-navy-200"></p>
-            </div>
-            <div class="flex items-center gap-2 md:gap-3">
-              <span id="g-hud-streak" class="hidden rounded-full bg-gold/20 px-3 py-1 font-heading text-sm font-bold text-gold"></span>
-              <span class="rounded-full bg-white/10 px-3 py-1 font-heading text-sm font-bold text-white">💵 <span id="g-hud-earned">$0</span></span>
-              <span class="rounded-full bg-white/10 px-3 py-1 font-heading text-sm font-bold text-sky">🎓 <span id="g-hud-fund">$0</span></span>
-              <span id="g-hud-timer" class="rounded-full bg-brand-500 px-3 py-1 font-heading text-sm font-bold text-white">75s</span>
-            </div>
-          </div>
-
-          <!-- Customers -->
-          <div id="g-custrow" class="mt-4 grid min-h-[150px] grid-cols-2 items-start gap-3 md:grid-cols-4 md:min-h-[160px]"></div>
-
-          <!-- Counter -->
-          <p class="mt-5 font-heading text-[0.65rem] font-bold uppercase tracking-[0.2em] text-navy-300">Your counter — tap to serve</p>
-          <div id="g-counter" class="mt-2 grid grid-cols-4 gap-2"></div>
-
-          <!-- Bottom bar -->
-          <div class="mt-4 flex items-center gap-3">
-            <div class="flex min-w-0 flex-1 items-center gap-2">
-              <span class="shrink-0 text-sm" aria-hidden="true">❤️</span>
-              <div class="h-2.5 w-full overflow-hidden rounded-full bg-white/10" role="meter" aria-label="Community happiness">
-                <div id="g-community" class="h-full rounded-full bg-gradient-to-r from-brand-500 to-gold" style="width:75%"></div>
-              </div>
-            </div>
-            <button id="g-pause" class="rounded-full bg-white/10 px-3 py-1.5 text-sm font-bold text-white transition hover:bg-white/20" aria-label="Pause game">⏸</button>
-            <button id="g-mute" class="rounded-full bg-white/10 px-3 py-1.5 text-sm font-bold text-white transition hover:bg-white/20" aria-label="Toggle sound">🔊</button>
-            <button id="g-quit" class="rounded-full bg-white/10 px-3 py-1.5 text-sm font-bold text-white transition hover:bg-white/20" aria-label="Quit to title">✕</button>
-          </div>
-
-          <!-- Pause overlay -->
-          <div id="g-pause-overlay" class="absolute inset-0 z-20 hidden flex-col items-center justify-center gap-5 bg-navy-950/90 backdrop-blur-sm">
-            <p class="font-heading text-3xl font-extrabold text-white">Paused</p>
-            <button id="g-resume" class="rounded-full bg-brand-500 px-9 py-3.5 font-heading text-sm font-bold uppercase tracking-wider text-white shadow-[var(--shadow-glow)] transition hover:bg-brand-600">Resume</button>
+            <button id="g-shift-go" class="rounded-full bg-brand-500 px-10 py-4 font-heading text-sm font-bold uppercase tracking-wider text-white shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-600 md:text-base">Clock In</button>
           </div>
         </div>
 
@@ -137,7 +113,7 @@ import Button from "@/components/ui/Button.astro";
           <dl id="g-sum-stats" class="mx-auto mt-6 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-4"></dl>
 
           <div class="mx-auto mt-8 max-w-xl rounded-2xl bg-white/[0.07] p-6 ring-1 ring-white/10">
-            <p class="font-heading text-xs font-bold uppercase tracking-[0.2em] text-sky">🧠 Money Minute</p>
+            <p class="font-heading text-xs font-bold uppercase tracking-[0.2em] text-sky">Money Minute</p>
             <p id="g-quiz-q" class="mt-3 font-heading text-lg font-bold leading-snug text-white"></p>
             <div id="g-quiz-opts" class="mt-4 grid gap-2"></div>
             <div id="g-quiz-result" class="mt-4 hidden rounded-xl p-4 text-sm leading-relaxed"></div>
@@ -153,7 +129,7 @@ import Button from "@/components/ui/Button.astro";
           <p class="eyebrow eyebrow-center justify-center text-gold">Season complete</p>
           <p id="g-final-stars" class="mt-4 text-4xl tracking-wide" aria-label="Star rating"></p>
           <h2 class="mt-3 font-heading text-3xl font-extrabold text-white md:text-4xl">What a season!</h2>
-          <p id="g-final-newbest" class="mt-2 hidden font-heading text-sm font-bold uppercase tracking-widest text-gold">🏆 New personal best!</p>
+          <p id="g-final-newbest" class="mt-2 hidden font-heading text-sm font-bold uppercase tracking-widest text-gold">New personal best!</p>
 
           <div class="mx-auto mt-8 max-w-xl rounded-2xl bg-white/[0.07] p-6 text-left ring-1 ring-white/10">
             <dl class="space-y-2.5 text-sm">
@@ -180,7 +156,10 @@ import Button from "@/components/ui/Button.astro";
         </div>
       </div>
 
-      <p class="mt-4 text-center text-xs text-warmgray">Tip: on a keyboard, press <kbd class="rounded bg-white px-1.5 py-0.5 font-bold shadow-sm ring-1 ring-navy-200">1</kbd>–<kbd class="rounded bg-white px-1.5 py-0.5 font-bold shadow-sm ring-1 ring-navy-200">8</kbd> to serve items, <kbd class="rounded bg-white px-1.5 py-0.5 font-bold shadow-sm ring-1 ring-navy-200">P</kbd> to pause.</p>
+      <p class="mt-4 text-center text-xs text-warmgray">
+        <span class="hidden md:inline">Keyboard: <kbd class="rounded bg-white px-1.5 py-0.5 font-bold shadow-sm ring-1 ring-navy-200">↑</kbd><kbd class="ml-1 rounded bg-white px-1.5 py-0.5 font-bold shadow-sm ring-1 ring-navy-200">↓</kbd> lanes · <kbd class="rounded bg-white px-1.5 py-0.5 font-bold shadow-sm ring-1 ring-navy-200">1</kbd>–<kbd class="rounded bg-white px-1.5 py-0.5 font-bold shadow-sm ring-1 ring-navy-200">6</kbd> items · <kbd class="rounded bg-white px-1.5 py-0.5 font-bold shadow-sm ring-1 ring-navy-200">Space</kbd> serve · <kbd class="rounded bg-white px-1.5 py-0.5 font-bold shadow-sm ring-1 ring-navy-200">P</kbd> pause</span>
+        <span class="md:hidden">Tap an item, then tap a lane to move and serve. Best played in landscape.</span>
+      </p>
     </Container>
   </section>
 
@@ -195,20 +174,17 @@ import Button from "@/components/ui/Button.astro";
       <div class="grid gap-7 md:grid-cols-3">
         <div class="card-lift relative overflow-hidden rounded-[var(--radius-card)] border border-navy-100 bg-white p-7 shadow-[var(--shadow-card)]" data-reveal>
           <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-brand-500 to-brand-300" aria-hidden="true"></div>
-          <p class="text-3xl" aria-hidden="true">💵</p>
-          <h3 class="mt-3 text-xl">Serving fans = Earn</h3>
+          <h3 class="text-xl">Serving fans = Earn</h3>
           <p class="mt-2 text-sm leading-relaxed text-ink-soft">Juma youth really do run concession stands at Oracle Park, Levi's Stadium, Golden 1 Center, and Lumen Field — earning a first paycheck in a supportive environment.</p>
         </div>
         <div class="card-lift relative overflow-hidden rounded-[var(--radius-card)] border border-navy-100 bg-white p-7 shadow-[var(--shadow-card)]" data-reveal style="--reveal-delay: 100ms">
           <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-accent to-gold" aria-hidden="true"></div>
-          <p class="text-3xl" aria-hidden="true">🧠</p>
-          <h3 class="mt-3 text-xl">Money Minutes = Learn</h3>
+          <h3 class="text-xl">Money Minutes = Learn</h3>
           <p class="mt-2 text-sm leading-relaxed text-ink-soft">The quiz questions come from real financial-capability skills Juma teaches — budgeting, saving, credit, and reading your first paycheck. Matched savings is a real Juma practice.</p>
         </div>
         <div class="card-lift relative overflow-hidden rounded-[var(--radius-card)] border border-navy-100 bg-white p-7 shadow-[var(--shadow-card)]" data-reveal style="--reveal-delay: 200ms">
           <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-navy-600 to-sky" aria-hidden="true"></div>
-          <p class="text-3xl" aria-hidden="true">📈</p>
-          <h3 class="mt-3 text-xl">Promotions = Connect</h3>
+          <h3 class="text-xl">Promotions = Connect</h3>
           <p class="mt-2 text-sm leading-relaxed text-ink-soft">Climbing from Crew Member to Enterprise Manager mirrors how Juma connects youth to their next job or education step — a lasting path, not just a shift.</p>
         </div>
       </div>
@@ -219,80 +195,34 @@ import Button from "@/components/ui/Button.astro";
   </section>
 </BaseLayout>
 
-<style is:global>
-  /* ---- Game Day styles (elements are created by JS, so these are global) ---- */
-  #gameday .gd-cust {
-    animation: gd-enter 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-  #gameday .gd-cust.gd-leave {
-    animation: gd-exit 0.3s ease-in forwards;
-  }
-  #gameday .gd-cust.gd-angry {
-    animation: gd-exit 0.45s ease-in forwards;
-    filter: grayscale(1);
-  }
-  @keyframes gd-enter {
-    from { opacity: 0; transform: translateY(14px) scale(0.95); }
-    to { opacity: 1; transform: none; }
-  }
-  @keyframes gd-exit {
-    to { opacity: 0; transform: translateY(-12px) scale(0.92); }
-  }
-  #gameday .gd-float {
-    position: absolute;
-    left: 50%;
-    top: 18%;
-    z-index: 10;
-    transform: translateX(-50%);
-    pointer-events: none;
-    white-space: nowrap;
-    animation: gd-float 0.9s ease-out forwards;
-  }
-  @keyframes gd-float {
-    from { opacity: 1; transform: translate(-50%, 0); }
-    to { opacity: 0; transform: translate(-50%, -34px); }
-  }
-  #gameday .gd-shake {
-    animation: gd-shake 0.3s ease;
-  }
-  @keyframes gd-shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    75% { transform: translateX(5px); }
-  }
-  #gameday .gd-timer-low {
-    animation: gd-pulse 1s ease-in-out infinite;
-  }
-  @keyframes gd-pulse {
-    50% { transform: scale(1.08); background-color: var(--color-brand-700); }
-  }
-  #gameday .gd-done {
-    opacity: 0.35;
-    text-decoration: line-through;
-  }
-</style>
-
 <script>
   // ================================================================
-  // Juma: Game Day — a community-service arcade game.
+  // Juma: Game Day — a canvas arcade game in the spirit of Tapper.
+  // All art is drawn procedurally; sound is synthesized with ZzFX
+  // (MIT, by Frank Force) — no binary assets shipped at all.
   // Earn (serve fans) · Learn (Money Minute) · Connect (promotions).
   // ================================================================
-  const ITEMS = [
-    { id: "hotdog", name: "Hot Dog", emoji: "🌭", price: 6 },
-    { id: "popcorn", name: "Popcorn", emoji: "🍿", price: 5 },
-    { id: "soda", name: "Soda", emoji: "🥤", price: 4 },
-    { id: "pretzel", name: "Pretzel", emoji: "🥨", price: 5 },
-    { id: "peanuts", name: "Peanuts", emoji: "🥜", price: 4 },
-    { id: "nachos", name: "Nachos", emoji: "🧀", price: 7 },
-    { id: "icecream", name: "Ice Cream", emoji: "🍦", price: 5 },
-    { id: "coffee", name: "Coffee", emoji: "☕", price: 3 },
-  ];
+  import { zzfx, ZZFX } from "zzfx";
+  const W = 960;
+  const H = 620;
+  const SAVE_RATE = 0.2;
+  const BEST_KEY = "jumaGameDayBest";
+
+  // ---------- food catalog (procedurally drawn) ----------
+  const FOODS = {
+    hotdog: { name: "Hot Dog", price: 6 },
+    soda: { name: "Soda", price: 4 },
+    popcorn: { name: "Popcorn", price: 5 },
+    pretzel: { name: "Pretzel", price: 5 },
+    nachos: { name: "Nachos", price: 7 },
+    coffee: { name: "Coffee", price: 3 },
+  };
 
   const LEVELS = [
-    { city: "San Francisco", venue: "Oracle Park", sport: "⚾", role: "Crew Member", items: 4, duration: 75, maxCust: 2, spawnEvery: 3.4, patience: 15, orderMin: 1, orderMax: 2, blurb: "Your first shift! It's a sunny day game by the bay. Keep it simple: watch each fan's order and serve fast." },
-    { city: "San Jose", venue: "Levi's Stadium", sport: "🏈", role: "Team Lead", items: 5, duration: 75, maxCust: 3, spawnEvery: 2.9, patience: 13.5, orderMin: 1, orderMax: 3, blurb: "Football crowds are bigger and hungrier. You've got a new item on the menu and more fans at once — lead the line." },
-    { city: "Sacramento", venue: "Golden 1 Center", sport: "🏀", role: "Shift Supervisor", items: 6, duration: 80, maxCust: 3, spawnEvery: 2.5, patience: 12.5, orderMin: 2, orderMax: 3, blurb: "Halftime rush at the arena. Orders are longer and patience is shorter. Keep your streak alive for bigger tips." },
-    { city: "Seattle", venue: "Lumen Field", sport: "🏟️", role: "Enterprise Manager", items: 8, duration: 90, maxCust: 4, spawnEvery: 2.1, patience: 11.5, orderMin: 2, orderMax: 4, blurb: "The loudest stadium in the league — and the full menu, including Seattle's beloved coffee. Finish the season strong!" },
+    { city: "San Francisco", venue: "Oracle Park", sport: "baseball", role: "Crew Member", lanes: 2, menu: ["hotdog", "soda"], duration: 70, spawnEvery: 2.7, speed: [26, 36], blurb: "Your first shift — a sunny day game by the bay. Two lanes, two items. Watch the bubbles and don't let anyone reach the front unserved." },
+    { city: "San Jose", venue: "Levi's Stadium", sport: "football", role: "Team Lead", lanes: 3, menu: ["hotdog", "soda", "popcorn"], duration: 75, spawnEvery: 2.3, speed: [30, 42], blurb: "Football crowds are bigger and hungrier. A third lane opens and popcorn joins the menu — lead the line." },
+    { city: "Sacramento", venue: "Golden 1 Center", sport: "basketball", role: "Shift Supervisor", lanes: 3, menu: ["hotdog", "soda", "popcorn", "pretzel"], duration: 80, spawnEvery: 2.0, speed: [34, 48], blurb: "Halftime rush at the arena. Fans move faster and the menu grows. Keep your streak alive for bigger tips." },
+    { city: "Seattle", venue: "Lumen Field", sport: "soccer", role: "Enterprise Manager", lanes: 4, menu: ["hotdog", "soda", "popcorn", "pretzel", "nachos", "coffee"], duration: 90, spawnEvery: 1.75, speed: [38, 54], blurb: "The loudest stadium in the league — four lanes, the full menu, and Seattle's beloved coffee. Finish the season strong!" },
   ];
 
   const QUIZ = [
@@ -307,295 +237,881 @@ import Button from "@/components/ui/Button.astro";
   ];
 
   const BADGES = [
-    { id: "first", emoji: "🛎️", name: "First Sale", desc: "Complete your first order" },
-    { id: "fire", emoji: "🔥", name: "On Fire", desc: "Reach an 8-order streak" },
-    { id: "tip", emoji: "💸", name: "Big Tipper", desc: "Earn a $6+ tip on one order" },
-    { id: "perfect", emoji: "⭐", name: "Perfect Shift", desc: "Finish a shift with no missed fans" },
-    { id: "crowd", emoji: "❤️", name: "Crowd Favorite", desc: "End a shift with 95%+ happiness" },
-    { id: "smart", emoji: "🧠", name: "Money Smart", desc: "Answer every Money Minute right" },
-    { id: "season", emoji: "🏆", name: "Full Season", desc: "Complete all four shifts" },
+    { id: "first", name: "First Sale", desc: "Complete your first order" },
+    { id: "fire", name: "On Fire", desc: "Reach an 8-serve streak" },
+    { id: "tip", name: "Big Tipper", desc: "Earn a $6+ tip on one serve" },
+    { id: "perfect", name: "Perfect Shift", desc: "Finish a shift with no missed fans" },
+    { id: "crowd", name: "Crowd Favorite", desc: "End a shift with 95%+ happiness" },
+    { id: "smart", name: "Money Smart", desc: "Answer every Money Minute right" },
+    { id: "season", name: "Full Season", desc: "Complete all four shifts" },
   ];
 
-  const FACES = ["😀", "🤠", "👩‍🦱", "👨‍🦰", "🧓", "🧑‍🎓", "👩‍🎤", "🧔", "👦", "👵"];
-  const SAVE_RATE = 0.2;
-  const BEST_KEY = "jumaGameDayBest";
-
+  // ---------- DOM ----------
   const $ = (s) => document.querySelector(s);
-  const game = $("#gameday");
-  if (game) {
-    // ---------- state ----------
-    let S = null;
-    let raf = 0;
-    let lastT = 0;
+  const root = $("#gameday");
+  if (root) init();
+
+  function init() {
+    const canvas = $("#g-canvas");
+    const ctx = canvas.getContext("2d");
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    ctx.scale(dpr, dpr);
+
+    // ---------- audio (ZzFX synth + tiny sequenced music loop) ----------
     let muted = localStorage.getItem("jumaGameDayMuted") === "1";
-    let audio = null;
+    let musicTimer = 0;
+    const audio = () => ZZFX.audioContext;
+    function unlockAudio() {
+      try { if (ZZFX.audioContext.state === "suspended") ZZFX.audioContext.resume(); } catch {}
+    }
+    document.addEventListener("pointerdown", unlockAudio, { once: true });
+    document.addEventListener("keydown", unlockAudio, { once: true });
 
-    const freshRun = () => ({
-      level: 0,
-      earned: 0,
-      fund: 0,
-      match: 0,
-      matchRate: 0.25,
-      served: 0,
-      missed: 0,
-      streak: 0,
-      bestStreak: 0,
-      community: 75,
-      quizAsked: [],
-      quizRight: 0,
-      badges: new Set(),
-      // per-shift
-      sEarned: 0,
-      sFund: 0,
-      sServed: 0,
-      sMissed: 0,
-      // live
-      customers: [],
-      timeLeft: 0,
-      spawnIn: 0,
-      custId: 0,
-      playing: false,
-      paused: false,
-    });
+    const play = (params) => { if (!muted) try { zzfx(...params); } catch {} };
+    const sfx = {
+      move: () => play([0.2, , 1300, , , 0.04, 2, 1.6, , , 800, 0.06]),
+      slide: () => play([0.25, , 469, , 0.03, 0.1, 4, 1.5, 7, , , , , , , 0.04]),
+      serve: () => play([0.35, , 1675, , 0.06, 0.24, 1, 1.82, , , 837, 0.06]),
+      coin: () => play([0.3, , 1875, , 0.05, 0.2, 1, 1.9, , , 950, 0.05]),
+      wrong: () => play([0.4, , 154, 0.05, , 0.18, 4, 1.9, , , , , , , 1.2, , 0.1]),
+      angry: () => play([0.4, , 392, 0.01, 0.1, 0.3, 1, 1.5, -6, , , , , 0.2]),
+      right: () => play([0.4, , 539, 0, 0.04, 0.29, 1, 1.92, , , 567, 0.02, 0.02, , , , 0.04]),
+      promo: () => {
+        play([0.4, , 539, 0, 0.04, 0.29, 1, 1.92, , , 567, 0.02, 0.02, , , , 0.04]);
+        setTimeout(() => play([0.35, , 1675, , 0.06, 0.24, 1, 1.82, , , 837, 0.06]), 180);
+        setTimeout(() => play([0.3, , 1875, , 0.06, 0.3, 1, 1.8, , , 999, 0.06]), 360);
+      },
+      whistle: () => { play([0.3, , 880, 0.01, 0.18, 0.1, 2, 1]); setTimeout(() => play([0.3, , 880, 0.01, 0.22, 0.12, 2, 1]), 300); },
+    };
 
-    // ---------- audio (tiny WebAudio blips) ----------
-    function beep(freq, dur = 0.09, type = "sine", gain = 0.05, when = 0) {
-      if (muted) return;
+    function blipAt(a, freq, t, dur, type, gain) {
       try {
-        audio = audio || new (window.AudioContext || window.webkitAudioContext)();
-        const t = audio.currentTime + when;
-        const o = audio.createOscillator();
-        const g = audio.createGain();
+        const o = a.createOscillator();
+        const g = a.createGain();
         o.type = type;
         o.frequency.value = freq;
         g.gain.setValueAtTime(gain, t);
         g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
-        o.connect(g).connect(audio.destination);
+        o.connect(g).connect(a.destination);
         o.start(t);
         o.stop(t + dur + 0.02);
       } catch {}
     }
-    const sfx = {
-      tap: () => beep(660, 0.06, "triangle"),
-      complete: () => { beep(523, 0.09); beep(784, 0.12, "sine", 0.05, 0.08); },
-      wrong: () => beep(140, 0.18, "sawtooth", 0.06),
-      angry: () => { beep(330, 0.12, "square", 0.04); beep(220, 0.16, "square", 0.04, 0.1); },
-      right: () => { beep(523, 0.08); beep(659, 0.08, "sine", 0.05, 0.09); beep(784, 0.14, "sine", 0.05, 0.18); },
-      promo: () => { beep(392, 0.1); beep(523, 0.1, "sine", 0.05, 0.11); beep(659, 0.1, "sine", 0.05, 0.22); beep(784, 0.2, "sine", 0.06, 0.33); },
-      whistle: () => { beep(880, 0.25, "square", 0.03); beep(880, 0.25, "square", 0.03, 0.3); },
-    };
+
+    // Tiny chiptune loop: walking bass + pentatonic lead, scheduled per bar.
+    const BASS = [98, 98, 131, 98, 110, 110, 147, 110];
+    const LEAD = [392, 0, 440, 523, 0, 587, 523, 440, 392, 0, 330, 392, 440, 0, 330, 294];
+    function scheduleMusic() {
+      if (muted || G.mode !== "play" || G.paused) return;
+      const a = audio();
+      const beat = 60 / 112 / 2; // 8th notes at 112bpm
+      const start = Math.max(a.currentTime + 0.05, musicTimer);
+      for (let i = 0; i < 16; i++) {
+        const t = start + i * beat;
+        const b = BASS[i % 8];
+        blipAt(a, b, t, beat * 0.9, "triangle", 0.028);
+        const l = LEAD[i];
+        if (l) blipAt(a, l, t, beat * 0.7, "square", 0.014);
+      }
+      musicTimer = start + 16 * beat;
+    }
 
     // ---------- helpers ----------
     const money = (n) => "$" + Math.round(n).toLocaleString("en-US");
     const rand = (a, b) => a + Math.random() * (b - a);
     const randInt = (a, b) => Math.floor(rand(a, b + 1));
-    const lvl = () => LEVELS[S.level];
-    const pool = () => ITEMS.slice(0, lvl().items);
+    const pick = (arr) => arr[randInt(0, arr.length - 1)];
+    const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+    const lerp = (a, b, t) => a + (b - a) * t;
 
-    function show(name) {
-      game.querySelectorAll("[data-screen]").forEach((el) => {
-        el.hidden = el.dataset.screen !== name;
-      });
-    }
+    // ---------- game state ----------
+    const G = {
+      mode: "attract", // attract | play | off
+      time: 0,
+      paused: false,
+      level: 0,
+      // run totals
+      earned: 0, fund: 0, match: 0, matchRate: 0.25,
+      served: 0, missed: 0, streak: 0, bestStreak: 0,
+      community: 75, quizAsked: [], quizRight: 0, badges: new Set(),
+      // shift
+      sEarned: 0, sFund: 0, sServed: 0, sMissed: 0, timeLeft: 0, spawnIn: 1,
+      // entities
+      fans: [], items: [], particles: [], floats: [],
+      player: { lane: 0, y: 0, targetY: 0, serveAnim: 0, cooldown: 0, bob: 0 },
+      selected: 0,
+      shake: 0,
+      attractFans: [],
+    };
+    // Expose a read-only-ish handle for automated testing.
+    window.__GD = G;
 
-    function floatText(parent, text, cls = "text-gold") {
-      const el = document.createElement("span");
-      el.className = `gd-float font-heading text-sm font-extrabold ${cls}`;
-      el.textContent = text;
-      parent.appendChild(el);
-      setTimeout(() => el.remove(), 900);
-    }
+    // ---------- geometry ----------
+    const SCORE_H = 96;
+    const LANES_TOP = 168;
+    const LANES_BOT = 600;
+    const ENTRY_X = 30;
+    const STOP_X = 760;
+    const PLAYER_X = 856;
 
-    // ---------- HUD ----------
-    function updateHud() {
-      $("#g-hud-earned").textContent = money(S.earned);
-      $("#g-hud-fund").textContent = money(S.fund + S.match);
-      const t = Math.max(0, Math.ceil(S.timeLeft));
-      const timer = $("#g-hud-timer");
-      timer.textContent = t + "s";
-      timer.classList.toggle("gd-timer-low", t <= 10 && S.playing);
-      const st = $("#g-hud-streak");
-      if (S.streak >= 2) {
-        st.textContent = `🔥 x${S.streak}`;
-        st.classList.remove("hidden");
-      } else st.classList.add("hidden");
-      $("#g-community").style.width = S.community + "%";
-    }
+    const lvl = () => LEVELS[G.level];
+    const laneCount = () => (G.mode === "play" ? lvl().lanes : 3);
+    const laneH = () => (LANES_BOT - LANES_TOP) / laneCount();
+    const laneCenterY = (i) => LANES_TOP + laneH() * (i + 0.5);
 
-    // ---------- customers ----------
-    function spawnCustomer() {
+    // ---------- characters ----------
+    const SKINS = ["#f2c89b", "#e0a370", "#b97a4e", "#8d5a36", "#6e4226", "#f7d7b6"];
+    const SHIRTS = ["#4d588f", "#2f9e6e", "#d97f2e", "#7a4dab", "#3a8fb5", "#c2483e", "#5d6b25", "#9b3d6e"];
+    const HAIRC = ["#241c14", "#4a3320", "#9c5b2a", "#b8b8b8", "#1f2c4d", "#7a2c1d"];
+
+    function makeFan(lane) {
       const L = lvl();
-      const order = Array.from({ length: randInt(L.orderMin, L.orderMax) }, () => pool()[randInt(0, pool().length - 1)]);
-      const el = document.createElement("div");
-      el.className = "gd-cust relative overflow-hidden rounded-2xl bg-white/10 p-3 ring-1 ring-white/15";
-      el.innerHTML = `
-        <div class="flex items-center gap-2">
-          <span class="text-3xl">${FACES[randInt(0, FACES.length - 1)]}</span>
-          <div class="flex flex-wrap gap-1 text-xl leading-none">
-            ${order.map((it) => `<span data-want="${it.id}">${it.emoji}</span>`).join("")}
-          </div>
-        </div>
-        <div class="mt-2.5 h-1.5 w-full overflow-hidden rounded-full bg-white/15">
-          <div class="gd-pbar h-full w-full rounded-full bg-gradient-to-r from-brand-400 to-gold"></div>
-        </div>`;
-      $("#g-custrow").appendChild(el);
-      S.customers.push({
-        id: ++S.custId,
-        remaining: order.map((it) => it.id),
-        total: order.reduce((s, it) => s + it.price, 0),
-        p: 1,
-        rate: 1 / (L.patience * rand(0.9, 1.15)),
-        el,
-      });
+      return {
+        lane,
+        x: ENTRY_X - rand(0, 40),
+        want: pick(L.menu),
+        speed: rand(L.speed[0], L.speed[1]),
+        state: "walk", // walk | wait | happy | angry
+        t: 0,
+        waitMax: 3.6,
+        wait: 3.6,
+        phase: rand(0, 6),
+        skin: pick(SKINS),
+        shirt: pick(SHIRTS),
+        pants: pick(["#2b3148", "#3d3d3d", "#5a4632", "#34495e"]),
+        hair: pick(["short", "afro", "long", "bun", "none"]),
+        hairC: pick(HAIRC),
+        hat: Math.random() < 0.35 ? pick(["#e33a5e", "#1f6f50", "#2c5d8f", "#caa53d"]) : null,
+        foam: Math.random() < 0.22 ? pick(["#e33a5e", "#fdbf51"]) : null,
+        flip: false,
+        alpha: 1,
+      };
     }
 
-    function removeCustomer(c, angry) {
-      S.customers = S.customers.filter((x) => x.id !== c.id);
-      c.el.classList.add(angry ? "gd-angry" : "gd-leave");
-      setTimeout(() => c.el.remove(), 460);
+    // ---------- drawing primitives ----------
+    function rr(x, y, w, h, r) {
+      ctx.beginPath();
+      ctx.roundRect(x, y, w, h, r);
     }
 
-    function award(badgeId) {
-      S.badges.add(badgeId);
+    function drawFood(type, x, y, s, rot = 0) {
+      ctx.save();
+      if (rot) { ctx.translate(x, y); ctx.rotate(rot); ctx.translate(-x, -y); }
+      drawFoodGeneric(ctx, type, x, y, s);
+      ctx.restore();
     }
 
-    function serve(itemId) {
-      if (!S.playing || S.paused) return;
-      const c = S.customers.find((x) => x.remaining.includes(itemId));
-      if (!c) {
-        S.streak = 0;
-        S.community = Math.max(0, S.community - 2);
-        $("#g-counter").classList.remove("gd-shake");
-        void $("#g-counter").offsetWidth;
-        $("#g-counter").classList.add("gd-shake");
+    // A drawn person. baseline = feet y.
+    function drawPerson(o) {
+      const s = o.scale || 1;
+      ctx.save();
+      ctx.globalAlpha = o.alpha ?? 1;
+      ctx.translate(o.x, o.y);
+      ctx.scale(o.flip ? -s : s, s);
+      const bob = o.walking ? Math.sin(o.phase * 9) * 1.6 : Math.sin(o.phase * 2.4) * 0.8;
+      const swing = o.walking ? Math.sin(o.phase * 9) * 6 : 0;
+
+      // legs
+      ctx.strokeStyle = o.pants;
+      ctx.lineWidth = 5;
+      ctx.lineCap = "round";
+      ctx.beginPath(); ctx.moveTo(-3, -18); ctx.lineTo(-3 + swing * 0.5, -2); ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(3, -18); ctx.lineTo(3 - swing * 0.5, -2); ctx.stroke();
+      ctx.fillStyle = "#22253a";
+      ctx.beginPath(); ctx.ellipse(-3 + swing * 0.5, -1, 4, 2.4, 0, 0, 7); ctx.fill();
+      ctx.beginPath(); ctx.ellipse(3 - swing * 0.5, -1, 4, 2.4, 0, 0, 7); ctx.fill();
+
+      const ty = -38 + bob; // torso top
+      // torso
+      ctx.fillStyle = o.shirt;
+      rr(-9, ty, 18, 22, 6); ctx.fill();
+      // apron (player)
+      if (o.apron) {
+        ctx.fillStyle = "#2b2e49";
+        rr(-7, ty + 7, 14, 14, 3); ctx.fill();
+        ctx.fillStyle = "#fdbf51";
+        ctx.font = "800 8px 'Montserrat Variable', sans-serif";
+        ctx.textAlign = "center";
+        // un-mirror the letter when the character is flipped
+        ctx.save();
+        ctx.translate(0, ty + 17);
+        if (o.flip) ctx.scale(-1, 1);
+        ctx.fillText("J", 0, 0);
+        ctx.restore();
+      }
+      // arms
+      ctx.strokeStyle = o.shirt;
+      ctx.lineWidth = 4.5;
+      if (o.foam) {
+        ctx.beginPath(); ctx.moveTo(7, ty + 5); ctx.lineTo(13, ty - 8); ctx.stroke();
+        ctx.fillStyle = o.foam;
+        rr(10, ty - 18, 7, 11, 3); ctx.fill();
+        ctx.fillRect(12, ty - 22, 3, 6);
+        ctx.beginPath(); ctx.moveTo(-7, ty + 6); ctx.lineTo(-9, ty + 16); ctx.stroke();
+      } else if (o.tray != null) {
+        const ext = 8 + o.serve * 14;
+        ctx.beginPath(); ctx.moveTo(-7, ty + 6); ctx.lineTo(-ext - 4, ty + 10); ctx.stroke();
+        // tray
+        ctx.fillStyle = "#b8742f";
+        rr(-ext - 14, ty + 8, 20, 3.5, 2); ctx.fill();
+        if (o.tray) drawFood(o.tray, -ext - 4, ty - 2, 0.62);
+        ctx.beginPath(); ctx.moveTo(7, ty + 6); ctx.lineTo(9, ty + 16); ctx.stroke();
+      } else {
+        ctx.beginPath(); ctx.moveTo(-7, ty + 5); ctx.lineTo(-9 - swing * 0.3, ty + 16); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(7, ty + 5); ctx.lineTo(9 + swing * 0.3, ty + 16); ctx.stroke();
+      }
+
+      // head
+      const hy = ty - 8;
+      ctx.fillStyle = o.skin;
+      ctx.beginPath(); ctx.arc(0, hy, 9, 0, 7); ctx.fill();
+      // hair
+      ctx.fillStyle = o.hairC;
+      if (o.hair === "short") { ctx.beginPath(); ctx.arc(0, hy - 2, 9, Math.PI, 0); ctx.fill(); }
+      else if (o.hair === "afro") { ctx.beginPath(); ctx.arc(0, hy - 5, 11, 0, 7); ctx.fill(); ctx.fillStyle = o.skin; ctx.beginPath(); ctx.arc(0, hy + 1, 8, 0, 7); ctx.fill(); }
+      else if (o.hair === "long") { ctx.beginPath(); ctx.arc(0, hy - 2, 9.5, Math.PI, 0); ctx.fill(); ctx.fillRect(-9.5, hy - 2, 4, 14); ctx.fillRect(5.5, hy - 2, 4, 14); }
+      else if (o.hair === "bun") { ctx.beginPath(); ctx.arc(0, hy - 2, 9, Math.PI, 0); ctx.fill(); ctx.beginPath(); ctx.arc(0, hy - 12, 4, 0, 7); ctx.fill(); }
+      // hat
+      if (o.hat) {
+        ctx.fillStyle = o.hat;
+        ctx.beginPath(); ctx.arc(0, hy - 3, 9.5, Math.PI, 0); ctx.fill();
+        rr(2, hy - 5, 12, 3, 1.5); ctx.fill();
+        if (o.capJ) {
+          ctx.fillStyle = "#fff";
+          ctx.font = "800 7px 'Montserrat Variable', sans-serif";
+          ctx.textAlign = "center";
+          ctx.save();
+          ctx.translate(0, hy - 5);
+          if (o.flip) ctx.scale(-1, 1);
+          ctx.fillText("J", 0, 0);
+          ctx.restore();
+        }
+      }
+      // face (drawn on right side = facing direction before flip)
+      ctx.fillStyle = "#1d1d24";
+      ctx.beginPath(); ctx.arc(3.2, hy - 1, 1.3, 0, 7); ctx.fill();
+      ctx.beginPath(); ctx.arc(7.2, hy - 1, 1.3, 0, 7); ctx.fill();
+      ctx.strokeStyle = "#1d1d24";
+      ctx.lineWidth = 1.4;
+      if (o.mood === "happy") { ctx.beginPath(); ctx.arc(5, hy + 2.5, 2.6, 0.15, Math.PI - 0.15); ctx.stroke(); }
+      else if (o.mood === "angry") {
+        ctx.beginPath(); ctx.moveTo(2, hy + 4.5); ctx.quadraticCurveTo(5, hy + 2, 8, hy + 4.5); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(1.6, hy - 4); ctx.lineTo(4.6, hy - 2.6); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(8.6, hy - 4); ctx.lineTo(5.6, hy - 2.6); ctx.stroke();
+      } else { ctx.beginPath(); ctx.moveTo(3, hy + 3.4); ctx.lineTo(7.4, hy + 3.4); ctx.stroke(); }
+      // sweat drop when anxious
+      if (o.sweat) {
+        ctx.fillStyle = "#8fd8f5";
+        ctx.beginPath(); ctx.arc(-7, hy - 4 + Math.sin(o.phase * 12) * 1.2, 2.2, 0, 7); ctx.fill();
+      }
+      ctx.restore();
+    }
+
+    // ---------- stadium background ----------
+    const seats = [];
+    for (let row = 0; row < 4; row++) {
+      for (let col = 0; col < 60; col++) {
+        seats.push({ x: 8 + col * 16, y: 14 + row * 17, c: pick(["#5d6b9e", "#7c87b8", "#e3899e", "#d8b16a", "#6fa3c7", "#8a78b0"]), p: col * 0.22 + row });
+      }
+    }
+
+    const SPORTS = {
+      baseball: { field: "#3e7d4f", line: "#e8e3d4" },
+      football: { field: "#2f6e44", line: "#ffffff" },
+      basketball: { field: "#b97a3c", line: "#f0e0c0" },
+      soccer: { field: "#35784a", line: "#ffffff" },
+    };
+
+    function drawBall(sport, x, y, r) {
+      ctx.save();
+      ctx.translate(x, y);
+      if (sport === "baseball") {
+        ctx.fillStyle = "#f4f1e8"; ctx.beginPath(); ctx.arc(0, 0, r, 0, 7); ctx.fill();
+        ctx.strokeStyle = "#c2483e"; ctx.lineWidth = 1.6;
+        ctx.beginPath(); ctx.arc(-r * 1.1, 0, r * 1.15, -0.8, 0.8); ctx.stroke();
+        ctx.beginPath(); ctx.arc(r * 1.1, 0, r * 1.15, Math.PI - 0.8, Math.PI + 0.8); ctx.stroke();
+      } else if (sport === "football") {
+        ctx.fillStyle = "#8a5430"; ctx.beginPath(); ctx.ellipse(0, 0, r * 1.35, r * 0.85, -0.5, 0, 7); ctx.fill();
+        ctx.strokeStyle = "#fff"; ctx.lineWidth = 1.4;
+        ctx.beginPath(); ctx.moveTo(-r * 0.5, r * 0.45); ctx.lineTo(r * 0.7, -r * 0.6); ctx.stroke();
+      } else if (sport === "basketball") {
+        ctx.fillStyle = "#d97f2e"; ctx.beginPath(); ctx.arc(0, 0, r, 0, 7); ctx.fill();
+        ctx.strokeStyle = "#7a4520"; ctx.lineWidth = 1.4;
+        ctx.beginPath(); ctx.moveTo(-r, 0); ctx.lineTo(r, 0); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(0, -r); ctx.lineTo(0, r); ctx.stroke();
+      } else {
+        ctx.fillStyle = "#f4f1e8"; ctx.beginPath(); ctx.arc(0, 0, r, 0, 7); ctx.fill();
+        ctx.fillStyle = "#2b2e49";
+        ctx.beginPath(); ctx.moveTo(0, -r * 0.45);
+        for (let i = 1; i <= 5; i++) { const a = -Math.PI / 2 + (i * 2 * Math.PI) / 5; ctx.lineTo(Math.cos(a) * r * 0.45, Math.sin(a) * r * 0.45); }
+        ctx.closePath(); ctx.fill();
+      }
+      ctx.restore();
+    }
+
+    function drawBackground() {
+      const L = G.mode === "play" ? lvl() : LEVELS[0];
+      const sport = SPORTS[L.sport];
+      // sky / upper bowl
+      const grad = ctx.createLinearGradient(0, 0, 0, H);
+      grad.addColorStop(0, "#181b30");
+      grad.addColorStop(1, "#23274a");
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, W, H);
+
+      // stands + crowd doing the wave
+      ctx.fillStyle = "#202440";
+      ctx.fillRect(0, 0, W, 92);
+      for (const s of seats) {
+        const wave = Math.sin(G.time * 2.2 - s.x * 0.012);
+        const up = wave > 0.86 ? -5 : 0;
+        ctx.fillStyle = s.c;
+        ctx.beginPath(); ctx.arc(s.x, s.y + up + Math.sin(G.time * 3 + s.p) * 0.7, 4.4, 0, 7); ctx.fill();
+        ctx.fillStyle = "rgba(20,22,40,0.55)";
+        ctx.fillRect(s.x - 5, s.y + 5 + up, 10, 5);
+      }
+
+      // field strip
+      ctx.fillStyle = sport.field;
+      ctx.fillRect(0, 92, W, 26);
+      ctx.strokeStyle = sport.line;
+      ctx.globalAlpha = 0.55;
+      ctx.lineWidth = 2;
+      for (let x = 30; x < W; x += 90) {
+        ctx.beginPath(); ctx.moveTo(x, 94); ctx.lineTo(x + 14, 116); ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+
+      // concourse wall + ad boards
+      ctx.fillStyle = "#2b2e49";
+      ctx.fillRect(0, 118, W, LANES_TOP - 118);
+      const ads = ["JUMA VENTURES", "EARN · LEARN · CONNECT", "EST. 1993", "YOUTH POWERED"];
+      ctx.textAlign = "center";
+      for (let i = 0; i < 4; i++) {
+        const ax = 120 + i * 240;
+        ctx.fillStyle = i % 2 ? "#e33a5e" : "#fdbf51";
+        rr(ax - 105, 128, 210, 26, 6); ctx.fill();
+        ctx.fillStyle = i % 2 ? "#fff" : "#2b2e49";
+        ctx.font = "800 12px 'Montserrat Variable', sans-serif";
+        ctx.fillText(ads[i], ax, 145);
+      }
+    }
+
+    function drawScoreboard() {
+      const L = lvl();
+      ctx.save();
+      ctx.fillStyle = "rgba(12,14,28,0.92)";
+      rr(20, 10, W - 40, 72, 14); ctx.fill();
+      ctx.strokeStyle = "#fdbf51";
+      ctx.lineWidth = 2;
+      rr(20, 10, W - 40, 72, 14); ctx.stroke();
+
+      drawBall(L.sport, 52, 46, 11);
+      ctx.textAlign = "left";
+      ctx.fillStyle = "#fdbf51";
+      ctx.font = "800 15px 'Montserrat Variable', sans-serif";
+      ctx.fillText(L.venue.toUpperCase(), 74, 40);
+      ctx.fillStyle = "#9ba3c9";
+      ctx.font = "600 11px 'Plus Jakarta Sans Variable', sans-serif";
+      ctx.fillText(`${L.role} · ${L.city} · Shift ${G.level + 1}/4`, 74, 58);
+
+      // timer
+      const t = Math.max(0, Math.ceil(G.timeLeft));
+      ctx.textAlign = "center";
+      ctx.fillStyle = t <= 10 ? (Math.sin(G.time * 8) > 0 ? "#e33a5e" : "#ff7b9a") : "#ffffff";
+      ctx.font = "800 30px 'Montserrat Variable', sans-serif";
+      ctx.fillText(`${t}s`, W / 2 + 10, 52);
+
+      // money
+      ctx.textAlign = "right";
+      ctx.fillStyle = "#fff";
+      ctx.font = "800 17px 'Montserrat Variable', sans-serif";
+      ctx.fillText(money(G.earned), W - 44, 36);
+      ctx.fillStyle = "#9bdbf3";
+      ctx.font = "700 12px 'Plus Jakarta Sans Variable', sans-serif";
+      ctx.fillText(`FUND ${money(G.fund + G.match)}`, W - 44, 56);
+
+      // streak
+      if (G.streak >= 2) {
+        ctx.textAlign = "center";
+        ctx.fillStyle = "#fdbf51";
+        ctx.font = "800 14px 'Montserrat Variable', sans-serif";
+        ctx.fillText(`STREAK ×${G.streak}`, W / 2 + 10, 72);
+      }
+
+      // community heart bar
+      const bx = 640, bw = 150;
+      ctx.fillStyle = "#e33a5e";
+      ctx.beginPath();
+      ctx.moveTo(bx - 14, 44);
+      ctx.bezierCurveTo(bx - 14, 39, bx - 7, 38, bx - 7, 43);
+      ctx.bezierCurveTo(bx - 7, 38, bx, 39, bx, 44);
+      ctx.bezierCurveTo(bx, 48, bx - 7, 51, bx - 7, 53);
+      ctx.bezierCurveTo(bx - 7, 51, bx - 14, 48, bx - 14, 44);
+      ctx.fill();
+      ctx.fillStyle = "rgba(255,255,255,0.15)";
+      rr(bx + 6, 40, bw, 10, 5); ctx.fill();
+      const cw = (bw * G.community) / 100;
+      const cg = ctx.createLinearGradient(bx + 6, 0, bx + 6 + bw, 0);
+      cg.addColorStop(0, "#e33a5e");
+      cg.addColorStop(1, "#fdbf51");
+      ctx.fillStyle = cg;
+      if (cw > 2) { rr(bx + 6, 40, cw, 10, 5); ctx.fill(); }
+      ctx.restore();
+    }
+
+    function drawLanes() {
+      const n = laneCount();
+      for (let i = 0; i < n; i++) {
+        const cy = laneCenterY(i);
+        const counterY = cy + 16;
+        // floor shadow
+        ctx.fillStyle = "rgba(0,0,0,0.22)";
+        ctx.fillRect(0, cy - laneH() / 2 + 6, W, laneH() - 6);
+        // counter surface
+        const wood = ctx.createLinearGradient(0, counterY, 0, counterY + 18);
+        wood.addColorStop(0, "#d9a066");
+        wood.addColorStop(1, "#a96f3c");
+        ctx.fillStyle = wood;
+        ctx.fillRect(14, counterY, PLAYER_X - 0, 16);
+        ctx.fillStyle = "#7c4f28";
+        ctx.fillRect(14, counterY + 16, PLAYER_X - 0, 7);
+        // rail edge highlight
+        ctx.fillStyle = "rgba(255,255,255,0.25)";
+        ctx.fillRect(14, counterY, PLAYER_X - 0, 2);
+        // end cap / register at player end
+        ctx.fillStyle = "#383d68";
+        rr(PLAYER_X - 14, counterY - 16, 30, 32, 4); ctx.fill();
+        ctx.fillStyle = "#9bdbf3";
+        ctx.fillRect(PLAYER_X - 9, counterY - 11, 14, 7);
+      }
+    }
+
+    // ---------- entities ----------
+    function spawnFan() {
+      const n = lvl().lanes;
+      const counts = Array.from({ length: n }, (_, i) => G.fans.filter((f) => f.lane === i && (f.state === "walk" || f.state === "wait")).length);
+      const min = Math.min(...counts);
+      if (min >= 3) return;
+      const cand = counts.map((c, i) => ({ c, i })).filter((o) => o.c === min);
+      G.fans.push(makeFan(pick(cand).i));
+    }
+
+    function frontFan(lane) {
+      let best = null;
+      for (const f of G.fans) if (f.lane === lane && (f.state === "walk" || f.state === "wait")) if (!best || f.x > best.x) best = f;
+      return best;
+    }
+
+    function addFloat(x, y, text, color = "#fdbf51", size = 15) {
+      G.floats.push({ x, y, text, color, size, t: 0 });
+    }
+    function burst(x, y, kind) {
+      const colors = kind === "coin" ? ["#fdbf51", "#ffe9b0", "#e8a93a"] : kind === "heart" ? ["#e33a5e", "#ff7b9a"] : kind === "crumb" ? ["#d9a066", "#a96f3c", "#e8b06b"] : ["#8a8fa8", "#6b7088"];
+      const num = kind === "coin" ? 10 : 8;
+      for (let i = 0; i < num; i++) {
+        G.particles.push({ x, y, vx: rand(-70, 70), vy: rand(-150, -40), g: 320, r: kind === "coin" ? rand(2.5, 4) : rand(2, 3.6), c: pick(colors), t: 0, life: rand(0.5, 0.85), kind });
+      }
+    }
+
+    function serve() {
+      const p = G.player;
+      if (G.mode !== "play" || G.paused || p.cooldown > 0) return;
+      p.cooldown = 0.38;
+      p.serveAnim = 1;
+      const type = lvl().menu[G.selected];
+      G.items.push({ lane: p.lane, x: PLAYER_X - 36, type, vx: -440, t: 0 });
+      sfx.slide();
+    }
+
+    function resolveServe(fan, item) {
+      const cy = laneCenterY(fan.lane);
+      if (fan.want === item.type) {
+        const frac = clamp((STOP_X - fan.x) / (STOP_X - ENTRY_X), 0, 1);
+        const tip = Math.round(1 + frac * 5 + Math.min(G.streak, 10) * 0.3);
+        const total = FOODS[item.type].price + tip;
+        G.earned += total; G.sEarned += total;
+        G.fund += total * SAVE_RATE; G.sFund += total * SAVE_RATE;
+        G.streak++; G.bestStreak = Math.max(G.bestStreak, G.streak);
+        G.served++; G.sServed++;
+        G.community = clamp(G.community + 3, 0, 100);
+        G.badges.add("first");
+        if (G.streak >= 8) G.badges.add("fire");
+        if (tip >= 6) G.badges.add("tip");
+        fan.state = "happy"; fan.t = 0; fan.mood = "happy";
+        addFloat(fan.x, cy - 64, `+${money(total)}`, "#fdbf51");
+        if (tip >= 5) addFloat(fan.x, cy - 84, "BIG TIP!", "#9bdbf3", 11);
+        burst(fan.x, cy - 30, "coin");
+        sfx.serve();
+        setTimeout(() => sfx.coin(), 90);
+      } else {
+        G.streak = 0;
+        G.community = clamp(G.community - 2, 0, 100);
+        burst(item.x, cy + 8, "crumb");
+        addFloat(item.x, cy - 40, "WRONG ORDER", "#ff7b9a", 11);
+        G.shake = 0.25;
         sfx.wrong();
-        updateHud();
+      }
+    }
+
+    // ---------- update ----------
+    function update(dt) {
+      G.time += dt;
+      const p = G.player;
+      p.phase = (p.phase || 0) + dt;
+
+      if (G.mode === "attract") {
+        // ambient walkers
+        if (G.attractFans.length < 5 && Math.random() < dt * 0.7) {
+          const f = makeFan(randInt(0, 2));
+          f.speed = rand(18, 30);
+          G.attractFans.push(f);
+        }
+        for (const f of G.attractFans) {
+          f.phase += dt;
+          f.x += f.speed * dt;
+        }
+        G.attractFans = G.attractFans.filter((f) => f.x < W + 40);
         return;
       }
-      c.remaining.splice(c.remaining.indexOf(itemId), 1);
-      const icon = c.el.querySelector(`[data-want="${itemId}"]:not(.gd-done)`);
-      icon && icon.classList.add("gd-done");
-      sfx.tap();
+      if (G.mode !== "play" || G.paused) return;
 
-      if (c.remaining.length === 0) {
-        const tip = Math.round(c.p * 4 + Math.min(S.streak, 10) * 0.3);
-        const total = c.total + tip;
-        S.earned += total;
-        S.sEarned += total;
-        S.fund += total * SAVE_RATE;
-        S.sFund += total * SAVE_RATE;
-        S.streak++;
-        S.bestStreak = Math.max(S.bestStreak, S.streak);
-        S.served++;
-        S.sServed++;
-        S.community = Math.min(100, S.community + 3);
-        award("first");
-        if (S.streak >= 8) award("fire");
-        if (tip >= 6) award("tip");
-        floatText(c.el, `+${money(total)}${tip >= 4 ? " 🤩" : ""}`);
-        sfx.complete();
-        setTimeout(() => removeCustomer(c, false), 320);
+      G.timeLeft -= dt;
+      if (G.timeLeft <= 0) return endShift();
+      G.shake = Math.max(0, G.shake - dt * 2);
+
+      // player movement
+      p.targetY = laneCenterY(p.lane);
+      p.y = lerp(p.y, p.targetY, 1 - Math.exp(-dt * 13));
+      p.cooldown = Math.max(0, p.cooldown - dt);
+      p.serveAnim = Math.max(0, p.serveAnim - dt * 5);
+
+      // spawn
+      G.spawnIn -= dt;
+      if (G.spawnIn <= 0) {
+        spawnFan();
+        G.spawnIn = lvl().spawnEvery * rand(0.72, 1.28);
       }
-      updateHud();
+
+      // fans
+      for (const f of G.fans) {
+        f.phase += dt;
+        if (f.state === "walk") {
+          // queue behind the fan ahead
+          let limit = STOP_X;
+          for (const o of G.fans) if (o !== f && o.lane === f.lane && (o.state === "walk" || o.state === "wait") && o.x > f.x) limit = Math.min(limit, o.x - 52);
+          f.x = Math.min(f.x + f.speed * dt, limit);
+          f.walking = f.x < limit - 0.5;
+          f.sweat = f.x > STOP_X - 140;
+          if (f.x >= STOP_X - 0.5) { f.state = "wait"; f.wait = f.waitMax; }
+        } else if (f.state === "wait") {
+          f.walking = false;
+          f.wait -= dt;
+          f.sweat = true;
+          if (f.wait <= 0) {
+            f.state = "angry"; f.t = 0; f.mood = "angry"; f.flip = true; f.walking = true;
+            G.missed++; G.sMissed++;
+            G.streak = 0;
+            G.community = clamp(G.community - 12, 0, 100);
+            const cy = laneCenterY(f.lane);
+            addFloat(f.x, cy - 64, "FAN LOST", "#ff7b9a", 12);
+            burst(f.x, cy - 40, "smoke");
+            G.shake = 0.35;
+            sfx.angry();
+          }
+        } else if (f.state === "happy") {
+          f.t += dt;
+          f.walking = false;
+          f.alpha = 1 - f.t / 0.7;
+          if (f.t < 0.35) f.yJump = Math.sin((f.t / 0.35) * Math.PI) * 14;
+        } else if (f.state === "angry") {
+          f.t += dt;
+          f.phase += dt * 1.5;
+          f.x -= 180 * dt;
+          f.alpha = clamp(1.4 - f.t, 0, 1);
+        }
+      }
+      G.fans = G.fans.filter((f) => !((f.state === "happy" && f.t > 0.7) || (f.state === "angry" && (f.alpha <= 0 || f.x < -40))));
+
+      // items sliding down counters
+      for (const it of G.items) {
+        it.t += dt;
+        it.x += it.vx * dt;
+        const front = frontFan(it.lane);
+        if (front && it.x <= front.x + 22) {
+          it.dead = true;
+          resolveServe(front, it);
+        } else if (it.x < 24) {
+          it.dead = true;
+          burst(30, laneCenterY(it.lane) + 8, "crumb");
+        }
+      }
+      G.items = G.items.filter((it) => !it.dead);
+
+      // particles & floats
+      for (const pa of G.particles) {
+        pa.t += dt;
+        pa.x += pa.vx * dt;
+        pa.vy += pa.g * dt;
+        pa.y += pa.vy * dt;
+      }
+      G.particles = G.particles.filter((pa) => pa.t < pa.life);
+      for (const fl of G.floats) fl.t += dt;
+      G.floats = G.floats.filter((fl) => fl.t < 1);
+
+      scheduleMusic();
     }
 
-    // ---------- counter ----------
-    function buildCounter() {
-      const wrap = $("#g-counter");
-      wrap.innerHTML = "";
-      pool().forEach((it, i) => {
-        const b = document.createElement("button");
-        b.className =
-          "group flex flex-col items-center gap-0.5 rounded-2xl bg-white/10 px-1 py-2.5 ring-1 ring-white/15 transition hover:bg-white/20 active:scale-95 md:py-3";
-        b.setAttribute("aria-label", `Serve ${it.name}, $${it.price}`);
-        b.innerHTML = `
-          <span class="text-2xl md:text-3xl">${it.emoji}</span>
-          <span class="hidden font-heading text-[0.6rem] font-bold uppercase tracking-wider text-navy-100 sm:block">${it.name}</span>
-          <span class="text-[0.65rem] font-bold text-gold">$${it.price} <span class="ml-0.5 hidden rounded bg-white/15 px-1 text-white/70 md:inline">${i + 1}</span></span>`;
-        b.addEventListener("click", () => serve(it.id));
-        wrap.appendChild(b);
+    // ---------- render ----------
+    function render() {
+      ctx.save();
+      if (G.shake > 0) ctx.translate(rand(-1, 1) * G.shake * 9, rand(-1, 1) * G.shake * 9);
+      drawBackground();
+
+      if (G.mode === "attract") {
+        // demo lanes + walkers + idle player
+        drawLanes();
+        for (const f of G.attractFans) drawPerson({ ...f, x: f.x, y: laneCenterY(f.lane) + 26, walking: true, mood: "happy" });
+        drawPerson({ x: PLAYER_X + 34, y: laneCenterY(1) + 26, skin: "#b97a4e", shirt: "#e33a5e", pants: "#2b3148", hair: "short", hairC: "#241c14", hat: "#e33a5e", capJ: true, apron: true, tray: "hotdog", serve: 0, phase: G.time, flip: true, scale: 1.2 });
+        ctx.restore();
+        return;
+      }
+
+      drawScoreboard();
+      drawLanes();
+
+      // serving line hint on active lane
+      const p = G.player;
+      ctx.fillStyle = "rgba(253,191,81,0.12)";
+      ctx.fillRect(14, p.y - laneH() / 2 + 8, PLAYER_X + 16, laneH() - 10);
+
+      // fans (back-to-front per lane by x)
+      const sorted = [...G.fans].sort((a, b) => a.x - b.x);
+      for (const f of sorted) {
+        const cy = laneCenterY(f.lane) + 26;
+        drawPerson({ ...f, x: f.x, y: cy - (f.yJump || 0) });
+        // want bubble
+        if (f.state === "walk" || f.state === "wait") {
+          const bx = f.x, by = cy - 78;
+          ctx.save();
+          ctx.globalAlpha = 0.95;
+          ctx.fillStyle = "#ffffff";
+          rr(bx - 20, by - 18, 40, 36, 9); ctx.fill();
+          ctx.beginPath(); ctx.moveTo(bx - 5, by + 18); ctx.lineTo(bx + 5, by + 18); ctx.lineTo(bx, by + 25); ctx.closePath(); ctx.fill();
+          if (f.state === "wait") {
+            // urgency ring
+            const frac = f.wait / f.waitMax;
+            ctx.strokeStyle = frac < 0.4 ? "#e33a5e" : "#fdbf51";
+            ctx.lineWidth = 3;
+            ctx.beginPath(); ctx.arc(bx, by, 24, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * frac); ctx.stroke();
+          }
+          drawFood(f.want, bx, by + 2, 0.74);
+          ctx.restore();
+        }
+      }
+
+      // items
+      for (const it of G.items) {
+        const cy = laneCenterY(it.lane) + 10;
+        // motion streak
+        ctx.strokeStyle = "rgba(255,255,255,0.25)";
+        ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.moveTo(it.x + 14, cy); ctx.lineTo(it.x + 34, cy); ctx.stroke();
+        drawFood(it.type, it.x, cy - 6 + Math.sin(it.t * 22) * 1.4, 0.8, Math.sin(it.t * 14) * 0.06);
+      }
+
+      // player
+      drawPerson({
+        x: PLAYER_X + 34, y: p.y + 26,
+        skin: "#b97a4e", shirt: "#e33a5e", pants: "#2b3148",
+        hair: "short", hairC: "#241c14", hat: "#e33a5e", capJ: true,
+        apron: true, tray: lvl().menu[G.selected], serve: p.serveAnim,
+        phase: p.phase, flip: true, scale: 1.22, mood: G.streak >= 4 ? "happy" : "neutral",
+      });
+
+      // particles
+      for (const pa of G.particles) {
+        ctx.globalAlpha = 1 - pa.t / pa.life;
+        ctx.fillStyle = pa.c;
+        ctx.beginPath(); ctx.arc(pa.x, pa.y, pa.r, 0, 7); ctx.fill();
+        if (pa.kind === "coin") {
+          ctx.fillStyle = "rgba(120,80,10,0.6)";
+          ctx.font = "800 5px sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText("$", pa.x, pa.y + 1.8);
+        }
+      }
+      ctx.globalAlpha = 1;
+
+      // floating text
+      for (const fl of G.floats) {
+        ctx.globalAlpha = 1 - fl.t;
+        ctx.fillStyle = fl.color;
+        ctx.font = `800 ${fl.size}px 'Montserrat Variable', sans-serif`;
+        ctx.textAlign = "center";
+        ctx.fillText(fl.text, fl.x, fl.y - fl.t * 34);
+      }
+      ctx.globalAlpha = 1;
+      ctx.restore();
+    }
+
+    // ---------- main loop ----------
+    let lastT = 0;
+    function frame(t) {
+      requestAnimationFrame(frame);
+      const dt = Math.min(0.05, (t - lastT) / 1000 || 0);
+      lastT = t;
+      if (G.mode === "off") return;
+      update(dt);
+      render();
+    }
+    requestAnimationFrame(frame);
+
+    // ---------- flow (DOM screens) ----------
+    const stage = $("#g-stage");
+    const controls = $("#g-controls");
+    function show(name) {
+      root.querySelectorAll("[data-screen]").forEach((el) => { el.hidden = el.dataset.screen !== name; });
+      const onStage = name === "stage";
+      stage.classList.toggle("hidden", !onStage);
+      $("#g-title-overlay").classList.toggle("hidden", !(onStage && G.mode === "attract"));
+      controls.classList.toggle("hidden", !(onStage && G.mode === "play"));
+      controls.classList.toggle("flex", onStage && G.mode === "play");
+    }
+
+    function freshRun() {
+      Object.assign(G, {
+        level: 0, earned: 0, fund: 0, match: 0, matchRate: 0.25,
+        served: 0, missed: 0, streak: 0, bestStreak: 0, community: 75,
+        quizAsked: [], quizRight: 0, badges: new Set(), quizCount: 0,
       });
     }
 
-    // ---------- game loop ----------
-    function tick(t) {
-      raf = requestAnimationFrame(tick);
-      const dt = Math.min(0.05, (t - lastT) / 1000 || 0);
-      lastT = t;
-      if (!S.playing || S.paused) return;
-
-      S.timeLeft -= dt;
-      if (S.timeLeft <= 0) return endShift();
-
-      // patience
-      for (const c of [...S.customers]) {
-        c.p -= c.rate * dt;
-        const bar = c.el.querySelector(".gd-pbar");
-        if (bar) {
-          bar.style.width = Math.max(0, c.p * 100) + "%";
-          bar.style.opacity = c.p < 0.35 ? "1" : "0.85";
-        }
-        if (c.p <= 0) {
-          S.missed++;
-          S.sMissed++;
-          S.streak = 0;
-          S.community = Math.max(0, S.community - 12);
-          floatText(c.el, "😡", "");
-          sfx.angry();
-          removeCustomer(c, true);
-        }
-      }
-
-      // spawning
-      S.spawnIn -= dt;
-      if (S.spawnIn <= 0 && S.customers.length < lvl().maxCust) {
-        spawnCustomer();
-        S.spawnIn = lvl().spawnEvery * rand(0.75, 1.25);
-      }
-      updateHud();
-    }
-
-    // ---------- flow ----------
     function showIntro() {
       const L = lvl();
-      $("#g-intro-kicker").textContent = `Shift ${S.level + 1} of ${LEVELS.length} · ${L.city}`;
-      $("#g-intro-sport").textContent = L.sport;
-      $("#g-intro-role").textContent = S.level === 0 ? `You're hired: ${L.role}` : `Promoted: ${L.role}!`;
-      $("#g-intro-venue").textContent = `📍 ${L.venue}, ${L.city}`;
+      $("#g-intro-kicker").textContent = `Shift ${G.level + 1} of ${LEVELS.length} · ${L.city}`;
+      $("#g-intro-role").textContent = G.level === 0 ? `You're hired: ${L.role}` : `Promoted: ${L.role}!`;
+      $("#g-intro-venue").textContent = `${L.venue} · ${L.city}`;
       $("#g-intro-blurb").textContent = L.blurb;
-      if (S.level > 0) sfx.promo();
+      $("#g-intro-menu").textContent = `On the menu: ${L.menu.map((m) => FOODS[m].name).join(" · ")} — ${L.lanes} lanes`;
+      if (G.level > 0) sfx.promo();
+      G.mode = "off";
       show("intro");
+    }
+
+    function buildItemButtons() {
+      const wrap = $("#g-items");
+      wrap.innerHTML = "";
+      lvl().menu.forEach((type, i) => {
+        const b = document.createElement("button");
+        b.className = "g-item flex items-center gap-1.5 rounded-xl px-2 py-1 ring-1 transition active:scale-95 md:px-2.5 md:py-1.5";
+        b.dataset.idx = String(i);
+        b.setAttribute("aria-label", `Select ${FOODS[type].name}, $${FOODS[type].price}`);
+        const mini = document.createElement("canvas");
+        mini.width = 76; mini.height = 60;
+        mini.className = "h-8 w-10 md:h-9 md:w-11";
+        const mc = mini.getContext("2d");
+        mc.scale(2, 2);
+        drawFoodGeneric(mc, type, 19, 16, 0.78);
+        b.appendChild(mini);
+        const label = document.createElement("span");
+        label.className = "hidden flex-col items-start leading-tight sm:flex";
+        label.innerHTML = `<span class="font-heading text-[0.6rem] font-bold uppercase tracking-wide text-white">${FOODS[type].name}</span><span class="text-[0.6rem] font-bold text-gold">$${FOODS[type].price} · key ${i + 1}</span>`;
+        b.appendChild(label);
+        b.addEventListener("click", () => selectItem(i));
+        wrap.appendChild(b);
+      });
+      paintSelection();
+    }
+
+    function drawFoodGeneric(c, type, x, y, s) {
+      c.save();
+      c.translate(x, y);
+      c.scale(s, s);
+      c.lineCap = "round";
+      const RR = (px, py, w, h, r) => { c.beginPath(); c.roundRect(px, py, w, h, r); };
+      if (type === "hotdog") {
+        c.fillStyle = "#e8b06b"; c.beginPath(); c.ellipse(0, 4, 17, 7, 0, 0, 7); c.fill();
+        c.fillStyle = "#c4502e"; RR(-18, -6, 36, 9, 5); c.fill();
+        c.strokeStyle = "#f7c948"; c.lineWidth = 2;
+        c.beginPath(); c.moveTo(-13, -2);
+        for (let i = 0; i < 5; i++) c.lineTo(-13 + (i + 0.5) * 5.2, i % 2 ? -2 : -6);
+        c.stroke();
+      } else if (type === "soda") {
+        c.fillStyle = "#f4f4f6"; c.beginPath(); c.moveTo(-10, -8); c.lineTo(10, -8); c.lineTo(7, 14); c.lineTo(-7, 14); c.closePath(); c.fill();
+        c.fillStyle = "#e33a5e"; c.beginPath(); c.moveTo(-9.4, -3); c.lineTo(9.4, -3); c.lineTo(8.6, 3); c.lineTo(-8.6, 3); c.closePath(); c.fill();
+        c.fillStyle = "#c9cdd6"; RR(-11, -11, 22, 4, 2); c.fill();
+        c.strokeStyle = "#e33a5e"; c.lineWidth = 2.5;
+        c.beginPath(); c.moveTo(2, -11); c.lineTo(7, -20); c.stroke();
+      } else if (type === "popcorn") {
+        c.fillStyle = "#d94f4f"; c.beginPath(); c.moveTo(-11, -4); c.lineTo(11, -4); c.lineTo(8, 14); c.lineTo(-8, 14); c.closePath(); c.fill();
+        c.fillStyle = "#ffffff";
+        for (let i = -1; i <= 1; i++) c.fillRect(i * 6 - 1.5, -4, 3, 17);
+        c.fillStyle = "#fff3d0";
+        [[-7, -8], [0, -11], [7, -8], [-3, -6], [4, -5]].forEach(([px, py]) => { c.beginPath(); c.arc(px, py, 4.2, 0, 7); c.fill(); });
+      } else if (type === "pretzel") {
+        c.strokeStyle = "#a9683a"; c.lineWidth = 6;
+        c.beginPath(); c.arc(0, 0, 11, 0.6, Math.PI * 2 + 0.5); c.stroke();
+        c.beginPath(); c.moveTo(-8, -6); c.quadraticCurveTo(0, 4, 8, 12); c.stroke();
+        c.beginPath(); c.moveTo(8, -6); c.quadraticCurveTo(0, 4, -8, 12); c.stroke();
+        c.fillStyle = "#fff";
+        [[-6, -8], [6, -8], [0, 9], [9, 2], [-9, 2]].forEach(([px, py]) => { c.beginPath(); c.arc(px, py, 1.3, 0, 7); c.fill(); });
+      } else if (type === "nachos") {
+        c.fillStyle = "#c2483e"; c.beginPath(); c.moveTo(-13, 2); c.lineTo(13, 2); c.lineTo(9, 14); c.lineTo(-9, 14); c.closePath(); c.fill();
+        c.fillStyle = "#f2c14e";
+        [[-8, 2, -14, -12, -2], [0, 2, -6, -14, 6], [8, 2, 2, -11, 14]].forEach(([ax, ay, bx, by, cx]) => {
+          c.beginPath(); c.moveTo(ax, ay); c.lineTo(bx, by); c.lineTo(cx, ay); c.closePath(); c.fill();
+        });
+        c.strokeStyle = "#e0862e"; c.lineWidth = 2;
+        c.beginPath(); c.moveTo(-9, -4); c.quadraticCurveTo(0, 2, 9, -3); c.stroke();
+      } else if (type === "coffee") {
+        c.fillStyle = "#f4f4f6"; RR(-9, -8, 18, 22, 3); c.fill();
+        c.fillStyle = "#2f9e6e"; c.fillRect(-9, -1, 18, 8);
+        c.fillStyle = "#c9cdd6"; RR(-10.5, -11, 21, 4, 2); c.fill();
+        c.strokeStyle = "rgba(120,120,130,0.8)"; c.lineWidth = 1.8;
+        c.beginPath(); c.moveTo(-3, -14); c.quadraticCurveTo(-6, -18, -3, -22); c.stroke();
+        c.beginPath(); c.moveTo(3, -14); c.quadraticCurveTo(0, -18, 3, -22); c.stroke();
+      }
+      c.restore();
+    }
+
+    function paintSelection() {
+      document.querySelectorAll("#g-items .g-item").forEach((b, i) => {
+        const on = i === G.selected;
+        b.className = `g-item flex items-center gap-1.5 rounded-xl px-2 py-1 ring-1 transition active:scale-95 md:px-2.5 md:py-1.5 ${on ? "bg-gold/25 ring-gold" : "bg-white/10 ring-white/15 hover:bg-white/20"}`;
+      });
+    }
+    function selectItem(i) {
+      if (i < 0 || i >= lvl().menu.length) return;
+      G.selected = i;
+      paintSelection();
+      sfx.move();
     }
 
     function startShift() {
       const L = lvl();
-      S.timeLeft = L.duration;
-      S.spawnIn = 0.4;
-      S.sEarned = 0;
-      S.sFund = 0;
-      S.sServed = 0;
-      S.sMissed = 0;
-      S.customers = [];
-      S.playing = true;
-      S.paused = false;
-      $("#g-custrow").innerHTML = "";
-      $("#g-hud-venue").textContent = `${L.sport} ${L.venue}`;
-      $("#g-hud-role").textContent = `${L.role} · ${L.city}`;
-      buildCounter();
-      updateHud();
-      show("play");
-      cancelAnimationFrame(raf);
-      lastT = performance.now();
-      raf = requestAnimationFrame(tick);
+      Object.assign(G, {
+        mode: "play", paused: false, timeLeft: L.duration, spawnIn: 0.6,
+        sEarned: 0, sFund: 0, sServed: 0, sMissed: 0,
+        fans: [], items: [], particles: [], floats: [], selected: 0, shake: 0,
+      });
+      G.player.lane = 0;
+      G.player.y = laneCenterY(0);
+      G.player.cooldown = 0;
+      G.player.serveAnim = 0;
+      buildItemButtons();
+      show("stage");
+      musicTimer = 0;
+      scheduleMusic();
     }
 
     function endShift() {
-      S.playing = false;
-      cancelAnimationFrame(raf);
+      G.mode = "off";
       sfx.whistle();
-      for (const c of [...S.customers]) removeCustomer(c, false);
-      if (S.sMissed === 0 && S.sServed >= 5) award("perfect");
-      if (S.community >= 95) award("crowd");
+      if (G.sMissed === 0 && G.sServed >= 5) G.badges.add("perfect");
+      if (G.community >= 95) G.badges.add("crowd");
       showLearn();
     }
 
@@ -603,36 +1119,30 @@ import Button from "@/components/ui/Button.astro";
       const L = lvl();
       $("#g-sum-title").textContent = `Nice work at ${L.venue}!`;
       const stats = [
-        ["Fans served", S.sServed],
-        ["Missed", S.sMissed],
-        ["Shift earnings", money(S.sEarned)],
-        ["Best streak", "🔥 " + S.bestStreak],
+        ["Fans served", G.sServed],
+        ["Missed", G.sMissed],
+        ["Shift earnings", money(G.sEarned)],
+        ["Best streak", "×" + G.bestStreak],
       ];
       $("#g-sum-stats").innerHTML = stats
-        .map(
-          ([k, v]) => `
+        .map(([k, v]) => `
         <div class="rounded-xl bg-white/[0.07] p-3 text-center ring-1 ring-white/10">
           <dt class="text-[0.6rem] font-bold uppercase tracking-wider text-navy-300">${k}</dt>
           <dd class="mt-1 font-heading text-xl font-extrabold text-white">${v}</dd>
-        </div>`
-        )
-        .join("");
+        </div>`).join("");
 
-      // pick an unused question
       let qi = randInt(0, QUIZ.length - 1);
-      while (S.quizAsked.includes(qi)) qi = (qi + 1) % QUIZ.length;
-      S.quizAsked.push(qi);
+      while (G.quizAsked.includes(qi)) qi = (qi + 1) % QUIZ.length;
+      G.quizAsked.push(qi);
       const Q = QUIZ[qi];
       $("#g-quiz-q").textContent = Q.q;
       const opts = $("#g-quiz-opts");
-      const result = $("#g-quiz-result");
-      result.classList.add("hidden");
+      $("#g-quiz-result").classList.add("hidden");
       $("#g-learn-next").classList.add("hidden");
       opts.innerHTML = "";
       Q.opts.forEach((opt, i) => {
         const b = document.createElement("button");
-        b.className =
-          "rounded-xl bg-white/10 px-4 py-3 text-left text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/20";
+        b.className = "rounded-xl bg-white/10 px-4 py-3 text-left text-sm font-semibold text-white ring-1 ring-white/15 transition hover:bg-white/20";
         b.textContent = opt;
         b.addEventListener("click", () => answerQuiz(Q, i, b, opts));
         opts.appendChild(b);
@@ -648,41 +1158,42 @@ import Button from "@/components/ui/Button.astro";
       });
       const correct = i === Q.a;
       if (correct) {
-        S.quizRight++;
-        S.matchRate = Math.min(1, S.matchRate + 0.25);
+        G.quizRight++;
+        G.matchRate = Math.min(1, G.matchRate + 0.25);
         sfx.right();
       } else {
         btn.classList.add("!bg-brand-600/40", "!ring-brand-400/60");
         sfx.wrong();
       }
-      const matchAmt = S.sFund * S.matchRate;
-      S.match += matchAmt;
+      const matchAmt = G.sFund * G.matchRate;
+      G.match += matchAmt;
       const result = $("#g-quiz-result");
       result.className = `mt-4 rounded-xl p-4 text-sm leading-relaxed ring-1 ${correct ? "bg-emerald-500/15 ring-emerald-300/40 text-emerald-100" : "bg-brand-600/20 ring-brand-400/40 text-navy-100"}`;
-      result.innerHTML = `<strong>${correct ? "✅ Correct!" : "Not quite."}</strong> ${Q.why}<br/><span class="mt-2 inline-block font-heading font-bold text-sky">🎓 Juma matched ${Math.round(S.matchRate * 100)}% of this shift's savings: +${money(matchAmt)}</span>`;
+      result.innerHTML = `<strong>${correct ? "Correct!" : "Not quite."}</strong> ${Q.why}<br/><span class="mt-2 inline-block font-heading font-bold text-sky">Juma matched ${Math.round(G.matchRate * 100)}% of this shift's savings: +${money(matchAmt)}</span>`;
       result.classList.remove("hidden");
 
       const next = $("#g-learn-next");
-      next.textContent = S.level + 1 < LEVELS.length ? `Next stop: ${LEVELS[S.level + 1].city} →` : "See season results 🏆";
+      next.textContent = G.level + 1 < LEVELS.length ? `Next stop: ${LEVELS[G.level + 1].city} →` : "See season results";
       next.classList.remove("hidden");
     }
 
     function showFinal() {
-      award("season");
-      if (S.quizRight === LEVELS.length) award("smart");
-      const ratio = S.served / Math.max(1, S.served + S.missed);
-      const stars = Math.max(1, Math.min(5, Math.round((ratio * 0.7 + (S.community / 100) * 0.3) * 5)));
-      $("#g-final-stars").textContent = "⭐".repeat(stars) + "☆".repeat(5 - stars);
-      $("#g-final-earned").textContent = money(S.earned);
-      $("#g-final-saved").textContent = money(S.fund);
-      $("#g-final-match").textContent = "+" + money(S.match);
-      const score = Math.round(S.earned + S.match);
+      G.badges.add("season");
+      if (G.quizRight === LEVELS.length) G.badges.add("smart");
+      const ratio = G.served / Math.max(1, G.served + G.missed);
+      const stars = Math.max(1, Math.min(5, Math.round((ratio * 0.7 + (G.community / 100) * 0.3) * 5)));
+      $("#g-final-stars").textContent = "★".repeat(stars) + "☆".repeat(5 - stars);
+      $("#g-final-stars").style.color = "#fdbf51";
+      $("#g-final-earned").textContent = money(G.earned);
+      $("#g-final-saved").textContent = money(G.fund);
+      $("#g-final-match").textContent = "+" + money(G.match);
+      const score = Math.round(G.earned + G.match);
       $("#g-final-score").textContent = money(score);
-      $("#g-final-line").textContent = `You served ${S.served} fans across 4 cities, kept the crowd at ${Math.round(S.community)}% happy, and answered ${S.quizRight}/4 Money Minutes correctly.`;
+      $("#g-final-line").textContent = `You served ${G.served} fans across 4 cities, kept the crowd at ${Math.round(G.community)}% happy, and answered ${G.quizRight}/4 Money Minutes correctly.`;
 
       $("#g-badges").innerHTML = BADGES.map((b) => {
-        const got = S.badges.has(b.id);
-        return `<span title="${b.desc}" class="inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-heading text-xs font-bold ${got ? "bg-gold/20 text-gold ring-1 ring-gold/40" : "bg-white/5 text-white/30 ring-1 ring-white/10"}">${b.emoji} ${b.name}</span>`;
+        const got = G.badges.has(b.id);
+        return `<span title="${b.desc}" class="inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 font-heading text-xs font-bold ${got ? "bg-gold/20 text-gold ring-1 ring-gold/40" : "bg-white/5 text-white/30 ring-1 ring-white/10"}">${got ? "●" : "○"} ${b.name}</span>`;
       }).join("");
 
       let best = 0;
@@ -691,27 +1202,26 @@ import Button from "@/components/ui/Button.astro";
       $("#g-final-newbest").classList.toggle("hidden", !newBest);
       if (newBest) localStorage.setItem(BEST_KEY, JSON.stringify({ score, date: Date.now() }));
       sfx.promo();
+      G.mode = "off";
       show("final");
     }
 
     // ---------- pause / quit / mute ----------
     function setPaused(p) {
-      if (!S.playing) return;
-      S.paused = p;
+      if (G.mode !== "play") return;
+      G.paused = p;
       $("#g-pause-overlay").classList.toggle("hidden", !p);
       $("#g-pause-overlay").classList.toggle("flex", p);
+      if (!p) { musicTimer = 0; scheduleMusic(); }
     }
 
-    function quitToTitle() {
-      S.playing = false;
-      cancelAnimationFrame(raf);
-      setPausedSafe();
-      refreshBest();
-      show("title");
-    }
-    function setPausedSafe() {
+    function toTitle() {
+      G.mode = "attract";
+      G.fans = []; G.items = []; G.particles = []; G.floats = [];
       $("#g-pause-overlay").classList.add("hidden");
       $("#g-pause-overlay").classList.remove("flex");
+      refreshBest();
+      show("stage");
     }
 
     function refreshBest() {
@@ -719,62 +1229,87 @@ import Button from "@/components/ui/Button.astro";
       try { best = JSON.parse(localStorage.getItem(BEST_KEY) || "null"); } catch {}
       const el = $("#g-best");
       if (best && best.score) {
-        el.textContent = `🏆 Your best season: ${money(best.score)}`;
+        el.textContent = `Your best season: ${money(best.score)}`;
         el.classList.remove("hidden");
       }
     }
 
     function updateMuteBtn() {
-      $("#g-mute").textContent = muted ? "🔇" : "🔊";
+      $("#g-mute").textContent = muted ? "♪̸" : "♪";
       $("#g-mute").setAttribute("aria-label", muted ? "Unmute sound" : "Mute sound");
     }
 
-    // ---------- wire up ----------
-    $("#g-start").addEventListener("click", () => {
-      S = freshRun();
-      showIntro();
-    });
-    $("#g-howto-btn").addEventListener("click", () => show("howto"));
-    $("#g-howto-back").addEventListener("click", () => show("title"));
+    // ---------- input ----------
+    $("#g-start").addEventListener("click", () => { freshRun(); showIntro(); });
+    $("#g-howto-btn").addEventListener("click", () => { G.mode = "off"; show("howto"); });
+    $("#g-howto-back").addEventListener("click", toTitle);
     $("#g-shift-go").addEventListener("click", startShift);
     $("#g-learn-next").addEventListener("click", () => {
-      S.level++;
-      if (S.level < LEVELS.length) showIntro();
+      G.level++;
+      if (G.level < LEVELS.length) showIntro();
       else showFinal();
     });
-    $("#g-again").addEventListener("click", () => {
-      S = freshRun();
-      showIntro();
-    });
+    $("#g-again").addEventListener("click", () => { freshRun(); showIntro(); });
+    $("#g-serve").addEventListener("click", serve);
     $("#g-pause").addEventListener("click", () => setPaused(true));
     $("#g-resume").addEventListener("click", () => setPaused(false));
     $("#g-quit").addEventListener("click", () => {
-      if (confirm("Quit this shift? Your season progress will be lost.")) quitToTitle();
+      if (confirm("Quit this shift? Your season progress will be lost.")) toTitle();
     });
     $("#g-mute").addEventListener("click", () => {
       muted = !muted;
       localStorage.setItem("jumaGameDayMuted", muted ? "1" : "0");
       updateMuteBtn();
+      if (!muted) { musicTimer = 0; scheduleMusic(); }
     });
 
     document.addEventListener("keydown", (e) => {
-      if (!S || !S.playing) return;
-      if (e.key >= "1" && e.key <= "8") {
-        const it = pool()[Number(e.key) - 1];
-        if (it) serve(it.id);
+      if (G.mode !== "play") return;
+      if (["ArrowUp", "ArrowDown", " ", "Spacebar"].includes(e.key)) e.preventDefault();
+      if (e.key === "ArrowUp" || e.key === "w" || e.key === "W") {
+        G.player.lane = clamp(G.player.lane - 1, 0, lvl().lanes - 1);
+        sfx.move();
+      } else if (e.key === "ArrowDown" || e.key === "s" || e.key === "S") {
+        G.player.lane = clamp(G.player.lane + 1, 0, lvl().lanes - 1);
+        sfx.move();
+      } else if (e.key >= "1" && e.key <= "6") {
+        selectItem(Number(e.key) - 1);
+      } else if (e.key === " " || e.key === "Enter") {
+        serve();
       } else if (e.key === "p" || e.key === "P") {
-        setPaused(!S.paused);
+        setPaused(!G.paused);
       } else if (e.key === "m" || e.key === "M") {
         $("#g-mute").click();
       }
     });
 
-    document.addEventListener("visibilitychange", () => {
-      if (document.hidden && S && S.playing) setPaused(true);
+    // touch / click on canvas: tap a lane to move there and serve
+    canvas.addEventListener("pointerdown", (e) => {
+      if (G.mode !== "play" || G.paused) return;
+      const rect = canvas.getBoundingClientRect();
+      const my = ((e.clientY - rect.top) * H) / rect.height;
+      if (my < LANES_TOP) return;
+      const lane = clamp(Math.floor((my - LANES_TOP) / laneH()), 0, lvl().lanes - 1);
+      if (lane !== G.player.lane) {
+        G.player.lane = lane;
+        sfx.move();
+        // brief delay so the move reads before the throw
+        setTimeout(serve, 90);
+      } else {
+        serve();
+      }
     });
+
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden && G.mode === "play") setPaused(true);
+    });
+
+    // expose for automated testing
+    window.__GD = G;
+    window.__GDapi = { serve, selectItem, frontFan, laneCenterY, lvl: () => lvl(), startShift };
 
     updateMuteBtn();
     refreshBest();
-    show("title");
+    show("stage");
   }
 </script>
