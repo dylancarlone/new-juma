@@ -1,0 +1,340 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import Button from "@/components/ui/Button.astro";
+import CTABanner from "@/components/sections/CTABanner.astro";
+import Icon from "@/components/Icon.astro";
+
+/**
+ * 2025 Impact Report — an animated, data-driven year in review.
+ * Every number on this page comes from the mission/history page content
+ * (src/content/page/our-mission-history.md) — nothing is invented.
+ */
+
+const topline = [
+  { value: 462, label: "Youth employed in 2025" },
+  { value: 53475, label: "Hours of paid work" },
+  { value: 1.3, prefix: "$", suffix: "M", decimals: 1, label: "Earned in wages & stipends" },
+  { value: 186, label: "Workshops held" },
+];
+
+const ethnicity = [
+  { label: "Hispanic / Latinx", pct: 36, color: "#e33a5e" },
+  { label: "Asian", pct: 24, color: "#fdbf51" },
+  { label: "Black / African American", pct: 23, color: "#4d588f" },
+  { label: "Other", pct: 12, color: "#9bdbf3" },
+  { label: "White", pct: 5, color: "#e95d00" },
+];
+
+const ages = [
+  { label: "Ages 18–20", pct: 67, color: "#e33a5e" },
+  { label: "Ages 21+", pct: 18, color: "#fdbf51" },
+  { label: "Ages 16–17", pct: 15, color: "#4d588f" },
+];
+
+const barriers = [
+  { label: "Reduced income / unemployment", n: 122 },
+  { label: "Mental health", n: 85 },
+  { label: "Transportation access", n: 76 },
+  { label: "Food access", n: 59 },
+];
+const barrierMax = Math.max(...barriers.map((b) => b.n));
+
+const cumulative = [
+  { value: 10000, suffix: "+", label: "Youth employed since 1993" },
+  { value: 15.5, prefix: "$", suffix: "M", decimals: 1, label: "In wages generated" },
+  { value: 6.4, prefix: "$", suffix: "M", decimals: 1, label: "Saved for higher education" },
+  { value: 44, prefix: "$", suffix: "M", label: "In enterprise revenue" },
+];
+
+// SVG donut geometry
+const R = 70;
+const C = 2 * Math.PI * R;
+function segments(data: { pct: number; color: string }[]) {
+  let acc = 0;
+  return data.map((d) => {
+    const len = (d.pct / 100) * C;
+    const seg = { ...d, len, offset: -acc };
+    acc += len;
+    return seg;
+  });
+}
+const ethSegs = segments(ethnicity);
+const ageSegs = segments(ages);
+---
+
+<BaseLayout
+  title="2025 Impact Report"
+  description="Juma's 2025 year in review: 462 youth employed, 53,475 hours worked, $1.3M earned — explore the data behind a year of making possible, possible."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white">
+    <div class="absolute inset-0 bg-dots-light opacity-40" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-brand-500/15 blur-[100px]" aria-hidden="true"></div>
+    <Container class="relative py-20 text-center md:py-28">
+      <p class="eyebrow eyebrow-center justify-center text-gold" data-reveal>Year in review</p>
+      <h1 class="mt-4 text-4xl text-white md:text-6xl lg:text-7xl" data-reveal>
+        The <span class="mark-brand">2025</span> Impact Report
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg text-navy-100 md:text-xl" data-reveal style="--reveal-delay: 100ms">
+        A year of first paychecks, money skills, and new pathways — told through the numbers, and the young people behind them.
+      </p>
+    </Container>
+  </section>
+
+  <!-- Topline count-ups, overlapping hero -->
+  <section class="relative z-10 -mt-12 md:-mt-14" aria-label="2025 topline numbers">
+    <Container>
+      <dl class="grid grid-cols-2 overflow-hidden rounded-[var(--radius-card)] bg-white shadow-[var(--shadow-lift)] ring-1 ring-navy-100 lg:grid-cols-4" data-reveal>
+        {
+          topline.map((s, i) => (
+            <div class:list={["px-6 py-8 text-center md:py-10", i > 0 && "border-navy-100 max-lg:[&:nth-child(even)]:border-l lg:border-l", i >= 2 && "max-lg:border-t"]}>
+              <dt
+                class="bg-gradient-to-br from-brand-600 to-accent bg-clip-text font-heading text-4xl font-extrabold tracking-tight text-transparent md:text-5xl"
+                data-countup
+                data-value={s.value}
+                data-prefix={s.prefix ?? ""}
+                data-suffix={s.suffix ?? ""}
+                data-decimals={s.decimals ?? 0}
+              >
+                {s.prefix ?? ""}0{s.suffix ?? ""}
+              </dt>
+              <dd class="mx-auto mt-2.5 max-w-[12rem] text-xs font-bold uppercase tracking-wider text-warmgray md:text-sm">{s.label}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </Container>
+  </section>
+
+  <!-- Who we serve: donuts -->
+  <section class="bg-white">
+    <Container class="py-20 md:py-28">
+      <div class="mx-auto mb-14 max-w-2xl text-center" data-reveal>
+        <p class="eyebrow eyebrow-center justify-center text-brand-600">Who we serve</p>
+        <h2 class="mt-3 text-3xl md:text-5xl">462 young people, one mission</h2>
+        <p class="mt-5 text-lg text-ink-soft">
+          YouthConnect serves transition-aged youth (16–24) from low-income backgrounds facing systemic barriers — including foster care
+          and juvenile justice histories.
+        </p>
+      </div>
+
+      <div class="grid gap-10 lg:grid-cols-2">
+        {
+          [
+            { title: "By ethnicity", segs: ethSegs, legend: ethnicity, center: "2025", sub: "Youth demographics" },
+            { title: "By age", segs: ageSegs, legend: ages, center: "16–24", sub: "Transition-aged" },
+          ].map((chart) => (
+            <div class="card-lift rounded-[var(--radius-card)] border border-navy-100 bg-white p-8 shadow-[var(--shadow-card)]" data-reveal>
+              <h3 class="text-xl">{chart.title}</h3>
+              <div class="mt-6 flex flex-col items-center gap-8 sm:flex-row">
+                <svg viewBox="0 0 200 200" class="donut h-44 w-44 shrink-0 -rotate-90" role="img" aria-label={`${chart.title} donut chart`}>
+                  <circle cx="100" cy="100" r={R} fill="none" stroke="#f3f4f9" stroke-width="26" />
+                  {chart.segs.map((s) => (
+                    <circle
+                      cx="100"
+                      cy="100"
+                      r={R}
+                      fill="none"
+                      stroke={s.color}
+                      stroke-width="26"
+                      stroke-dasharray={`0 ${C}`}
+                      stroke-dashoffset={s.offset}
+                      data-seg={`${Math.max(0, s.len - 2)} ${C - Math.max(0, s.len - 2)}`}
+                      style="transition: stroke-dasharray 1s cubic-bezier(0.22, 1, 0.36, 1)"
+                    />
+                  ))}
+                  <g class="rotate-90" transform-origin="100 100">
+                    <text x="100" y="97" text-anchor="middle" class="fill-navy-900 font-heading text-2xl font-extrabold">{chart.center}</text>
+                    <text x="100" y="116" text-anchor="middle" class="fill-warmgray text-[10px] font-semibold uppercase tracking-wider">{chart.sub}</text>
+                  </g>
+                </svg>
+                <ul class="w-full space-y-2.5">
+                  {chart.legend.map((d) => (
+                    <li class="flex items-center justify-between gap-3 text-sm">
+                      <span class="flex items-center gap-2.5 font-medium text-navy-800">
+                        <span class="h-3 w-3 shrink-0 rounded-full" style={`background:${d.color}`} />
+                        {d.label}
+                      </span>
+                      <span class="font-heading font-extrabold text-navy-900">{d.pct}%</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </Container>
+  </section>
+
+  <!-- Barriers: animated bars -->
+  <section class="relative overflow-hidden bg-cream">
+    <div class="absolute inset-0 bg-dots-dark opacity-50" aria-hidden="true"></div>
+    <Container class="relative py-20 md:py-28">
+      <div class="grid items-start gap-12 lg:grid-cols-[1fr_1.2fr]">
+        <div data-reveal>
+          <p class="eyebrow text-brand-600">The barriers are real</p>
+          <h2 class="mt-3 text-3xl md:text-4xl">What our youth are up against</h2>
+          <p class="mt-5 leading-relaxed text-ink-soft">
+            In 2025, Juma youth reported these as active barriers in their lives — underscoring why wraparound support matters
+            as much as job training.
+          </p>
+          <div class="mt-8 grid grid-cols-2 gap-4">
+            <div class="rounded-[var(--radius-card)] bg-white p-5 text-center shadow-[var(--shadow-card)]">
+              <p class="font-heading text-4xl font-extrabold text-brand-600">96%</p>
+              <p class="mt-1 text-xs font-bold uppercase tracking-wider text-warmgray">of Juma youth are low-income</p>
+            </div>
+            <div class="rounded-[var(--radius-card)] bg-white p-5 text-center shadow-[var(--shadow-card)]">
+              <p class="font-heading text-4xl font-extrabold text-brand-600">69%</p>
+              <p class="mt-1 text-xs font-bold uppercase tracking-wider text-warmgray">rely on benefits for necessities</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-[var(--radius-card)] bg-white p-8 shadow-[var(--shadow-card)] ring-1 ring-navy-100" data-reveal style="--reveal-delay: 120ms">
+          <p class="font-heading text-xs font-bold uppercase tracking-[0.2em] text-warmgray">Youth reporting each barrier, 2025</p>
+          <div class="mt-6 space-y-6">
+            {
+              barriers.map((b) => (
+                <div>
+                  <div class="mb-2 flex items-end justify-between gap-3">
+                    <span class="text-sm font-semibold text-navy-800">{b.label}</span>
+                    <span class="font-heading text-lg font-extrabold text-navy-900" data-countup data-value={b.n} data-decimals="0">0</span>
+                  </div>
+                  <div class="h-3.5 w-full overflow-hidden rounded-full bg-navy-50">
+                    <div
+                      class="impact-bar h-full rounded-full bg-gradient-to-r from-brand-500 to-gold"
+                      style={`width:0%; transition: width 1.1s cubic-bezier(0.22,1,0.36,1)`}
+                      data-bar={`${Math.round((b.n / barrierMax) * 100)}`}
+                    />
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+          <p class="mt-6 text-xs text-warmgray">Self-reported by Juma youth during 2025 programming.</p>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- What changed -->
+  <section class="bg-white">
+    <Container class="py-20 md:py-28">
+      <div class="mx-auto mb-14 max-w-2xl text-center" data-reveal>
+        <p class="eyebrow eyebrow-center justify-center text-brand-600">What a job changes</p>
+        <h2 class="mt-3 text-3xl md:text-5xl">Outcomes that compound</h2>
+      </div>
+      <div class="grid gap-7 md:grid-cols-3">
+        <div class="card-lift relative overflow-hidden rounded-[var(--radius-card)] border border-navy-100 bg-white p-8 text-center shadow-[var(--shadow-card)]" data-reveal>
+          <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-brand-500 to-brand-300" aria-hidden="true"></div>
+          <p class="font-heading text-5xl font-extrabold text-brand-600" data-countup data-value="99" data-suffix="%">0%</p>
+          <p class="mt-3 text-sm font-semibold leading-relaxed text-ink-soft">of youth say they enjoy coming to their Juma job most days</p>
+        </div>
+        <div class="card-lift relative overflow-hidden rounded-[var(--radius-card)] border border-navy-100 bg-white p-8 text-center shadow-[var(--shadow-card)]" data-reveal style="--reveal-delay: 100ms">
+          <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-accent to-gold" aria-hidden="true"></div>
+          <p class="font-heading text-5xl font-extrabold text-brand-600" data-countup data-value="2896" data-prefix="$">$0</p>
+          <p class="mt-3 text-sm font-semibold leading-relaxed text-ink-soft">average earned per youth in wages and stipends in 2025</p>
+        </div>
+        <div class="card-lift relative overflow-hidden rounded-[var(--radius-card)] border border-navy-100 bg-white p-8 text-center shadow-[var(--shadow-card)]" data-reveal style="--reveal-delay: 200ms">
+          <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-navy-600 to-sky" aria-hidden="true"></div>
+          <p class="font-heading text-5xl font-extrabold text-brand-600" data-countup data-value="20" data-suffix="+">0+</p>
+          <p class="mt-3 text-sm font-semibold leading-relaxed text-ink-soft">social enterprise locations across our four cities</p>
+        </div>
+      </div>
+
+      <figure class="mx-auto mt-14 max-w-3xl rounded-[var(--radius-card)] bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 p-8 text-center text-white shadow-[var(--shadow-lift)] md:p-12" data-reveal>
+        <span class="font-heading text-7xl font-extrabold leading-none text-gold" aria-hidden="true">“</span>
+        <blockquote class="-mt-4 font-heading text-xl font-bold leading-snug md:text-2xl">
+          Juma is just one of those programs that is almost essential in learning and growing as an adult… it definitely helped me become a really well-rounded adult.
+        </blockquote>
+        <figcaption class="mt-5 font-heading text-sm font-bold uppercase tracking-widest text-gold">— Juma Youth, 2025</figcaption>
+      </figure>
+    </Container>
+  </section>
+
+  <!-- Cumulative -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white">
+    <div class="absolute inset-0 bg-dots-light opacity-30" aria-hidden="true"></div>
+    <Container class="relative py-20 md:py-28">
+      <div class="mx-auto mb-14 max-w-2xl text-center" data-reveal>
+        <p class="eyebrow eyebrow-center justify-center text-gold">Since 1993</p>
+        <h2 class="mt-3 text-3xl text-white md:text-5xl">Three decades of compounding impact</h2>
+      </div>
+      <dl class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+        {
+          cumulative.map((s, i) => (
+            <div class="text-center" data-reveal style={`--reveal-delay: ${i * 100}ms`}>
+              <dt
+                class="bg-gradient-to-br from-brand-400 to-gold bg-clip-text font-heading text-4xl font-extrabold tracking-tight text-transparent md:text-6xl"
+                data-countup
+                data-value={s.value}
+                data-prefix={s.prefix ?? ""}
+                data-suffix={s.suffix ?? ""}
+                data-decimals={s.decimals ?? 0}
+              >
+                {s.prefix ?? ""}0{s.suffix ?? ""}
+              </dt>
+              <dd class="mx-auto mt-3 max-w-[14rem] text-xs font-bold uppercase tracking-wider text-navy-200 md:text-sm">{s.label}</dd>
+            </div>
+          ))
+        }
+      </dl>
+      <div class="mt-14 flex flex-wrap justify-center gap-4" data-reveal>
+        <Button href="/timeline/" variant="white" size="lg">Explore the 30-year timeline</Button>
+        <Button href="/financials/" variant="outline" size="lg" class="border-white/80 text-white hover:border-white hover:bg-white hover:text-navy-900">
+          <Icon name="download" size={16} /> Full financials
+        </Button>
+      </div>
+    </Container>
+  </section>
+
+  <CTABanner heading="Power the 2026 report." text="Next year's numbers are written by what we do together now." />
+</BaseLayout>
+
+<script>
+  // ---------- shared count-up (mirrors the timeline page) ----------
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const fmt = (n, dec) => n.toLocaleString("en-US", { minimumFractionDigits: dec, maximumFractionDigits: dec });
+
+  function countUp(el) {
+    const value = parseFloat(el.dataset.value || "0");
+    const dec = parseInt(el.dataset.decimals || "0", 10);
+    const prefix = el.dataset.prefix || "";
+    const suffix = el.dataset.suffix || "";
+    const done = () => (el.textContent = prefix + fmt(value, dec) + suffix);
+    if (reduceMotion) return done();
+    const dur = 1400;
+    const t0 = performance.now();
+    function step(t) {
+      const p = Math.min((t - t0) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = prefix + fmt(value * eased, dec) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+      else done();
+    }
+    requestAnimationFrame(step);
+  }
+
+  // ---------- reveal-driven chart animations ----------
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        io.unobserve(e.target);
+        if (e.target.matches("[data-countup]")) countUp(e.target);
+        if (e.target.matches(".donut")) {
+          e.target.querySelectorAll("[data-seg]").forEach((seg, i) => {
+            setTimeout(() => seg.setAttribute("stroke-dasharray", seg.dataset.seg), reduceMotion ? 0 : i * 140);
+          });
+        }
+        if (e.target.matches(".impact-bar")) {
+          e.target.style.width = e.target.dataset.bar + "%";
+        }
+      }
+    },
+    { threshold: 0.4 }
+  );
+  document.querySelectorAll("[data-countup], .donut, .impact-bar").forEach((el) => io.observe(el));
+</script>
