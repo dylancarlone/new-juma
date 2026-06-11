@@ -32,7 +32,7 @@ const isVideo = d.kind === "video";
 const hero = d.hero ?? { heading: d.title };
 ---
 
-<BaseLayout title={d.title} description={d.seoDescription ?? d.intro} image={hero.image ? `/media/${hero.image}` : undefined}>
+<BaseLayout title={d.title} description={d.seoDescription ?? d.intro} image={hero.image ? `/media/${hero.image}` : `/og/${entry.id}.png`}>
   {
     isLegal ? (
       <PageHeader title={d.title} eyebrow="Juma Ventures" />
