@@ -22,7 +22,7 @@ const all = await getAllPosts();
 const related = all.filter((p) => p.id !== entry.id).slice(0, 3);
 ---
 
-<BaseLayout title={title} description={excerpt} image={heroImage ? `/media/${heroImage}` : undefined} type="article" publishedTime={publishDate}>
+<BaseLayout title={title} description={excerpt} image={heroImage ? `/media/${heroImage}` : `/og/news/${entry.id}.png`} type="article" publishedTime={publishDate}>
   <article>
     <header class="relative overflow-hidden border-b border-navy-100 bg-cream-soft">
       <div class="absolute inset-0 bg-dots-dark opacity-40" aria-hidden="true"></div>

@@ -16,7 +16,7 @@ const d = entry.data;
 const { Content } = await render(entry);
 ---
 
-<BaseLayout title={d.title ?? `${d.name}'s Story`} description={d.pullQuote} image={d.photo ? `/media/${d.photo}` : undefined} type="article">
+<BaseLayout title={d.title ?? `${d.name}'s Story`} description={d.pullQuote} image={d.photo ? `/media/${d.photo}` : `/og/stories/${entry.id}.png`} type="article">
   {
     d.photo && (
       <section class="relative overflow-hidden bg-navy-950 text-white">

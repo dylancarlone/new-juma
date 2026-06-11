@@ -1,0 +1,170 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Container from "@/components/Container.astro";
+import Media from "@/components/Media.astro";
+import Button from "@/components/ui/Button.astro";
+import CTABanner from "@/components/sections/CTABanner.astro";
+import home from "@/data/home.json";
+
+/**
+ * The Wall of Possible — every youth voice on the site, in one mosaic.
+ * Tiles are assembled from the story collection, homepage testimonials,
+ * and location-page testimonials; stat + CTA tiles are interleaved.
+ */
+const stories = (await getCollection("story", (s) => !s.data.draft)).sort(
+  (a, b) => (a.data.order ?? 99) - (b.data.order ?? 99)
+);
+
+type Tile =
+  | { kind: "photo"; quote: string; name: string; meta?: string; photo: string; href: string }
+  | { kind: "quote"; quote: string; name: string; meta?: string; style: number }
+  | { kind: "stat"; value: string; label: string }
+  | { kind: "cta"; heading: string; text: string; label: string; href: string };
+
+const photoTiles: Tile[] = stories.map((s) => ({
+  kind: "photo",
+  quote: s.data.pullQuote ?? "",
+  name: s.data.name,
+  meta: s.data.outcome ?? s.data.location,
+  photo: s.data.photo!,
+  href: `/stories/${s.id}/`,
+}));
+
+const quoteTiles: Tile[] = [
+  ...home.testimonials.map((t, i) => ({ kind: "quote" as const, quote: t.quote, name: t.name, meta: t.role, style: i })),
+  {
+    kind: "quote",
+    quote:
+      "Joining Juma… I was able to feel more comfortable in my skin. It changed everything. I was able to redefine who I was. I never believed in myself much. At Juma, I've had a feeling that I can do this.",
+    name: "Steven",
+    meta: "Juma Sacramento",
+    style: 1,
+  },
+  {
+    kind: "quote",
+    quote:
+      "I went from a couple of years of struggle to a few months of learning new skills that I will have the rest of my life. Juma gave me the opportunity to do more with my life.",
+    name: "Xavier",
+    meta: "Juma Graduate, Seattle",
+    style: 2,
+  },
+  {
+    kind: "quote",
+    quote:
+      "Juma is just one of those programs that is almost essential in learning and growing as an adult… it definitely helped me become a really well-rounded adult.",
+    name: "Juma Youth",
+    meta: "Class of 2025",
+    style: 0,
+  },
+];
+
+const statTiles: Tile[] = [
+  { kind: "stat", value: "10,000+", label: "young people have stood where they stood" },
+  { kind: "stat", value: "99%", label: "enjoy coming to their Juma job most days" },
+  { kind: "stat", value: "$6.4M", label: "saved for higher education" },
+];
+
+const ctaTiles: Tile[] = [
+  { kind: "cta", heading: "Your name could be here.", text: "Juma youth ages 16–24: a paid job with support built in is one application away.", label: "Apply now", href: "/apply/" },
+  { kind: "cta", heading: "Put a brick in the wall.", text: "Every gift funds the next first paycheck and the next story.", label: "Donate", href: "/donate/" },
+];
+
+// Interleave: photo, quote, stat… so the masonry feels hand-arranged.
+const tiles: Tile[] = [];
+const queues = [photoTiles, quoteTiles, statTiles];
+let qi = 0;
+while (queues.some((q) => q.length)) {
+  const q = queues[qi % queues.length];
+  if (q.length) tiles.push(q.shift()!);
+  qi++;
+}
+tiles.splice(5, 0, ctaTiles[0]);
+tiles.push(ctaTiles[1]);
+
+const quoteStyles = [
+  "bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white",
+  "bg-gradient-to-br from-brand-600 to-brand-500 text-white",
+  "bg-white text-navy-900 ring-1 ring-navy-100",
+  "bg-gold-soft text-navy-900 ring-1 ring-gold/40",
+];
+const quoteAccent = ["text-gold", "text-gold", "text-brand-500", "text-accent-dark"];
+---
+
+<BaseLayout
+  title="The Wall of Possible"
+  description="A wall of voices from 30 years of Juma youth — quotes, stories, and milestones from young people who turned a first job into a future."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 text-white">
+    <div class="absolute inset-0 bg-dots-light opacity-40" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -left-24 -top-24 h-80 w-80 rounded-full bg-brand-500/15 blur-[100px]" aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -bottom-24 -right-24 h-80 w-80 rounded-full bg-gold/10 blur-[90px]" aria-hidden="true"></div>
+    <Container class="relative py-16 text-center md:py-24">
+      <p class="eyebrow eyebrow-center justify-center text-gold" data-reveal>In their own words</p>
+      <h1 class="mt-4 text-4xl text-white md:text-6xl" data-reveal>The Wall of <span class="mark-brand">Possible</span></h1>
+      <p class="mx-auto mt-5 max-w-2xl text-lg text-navy-100" data-reveal style="--reveal-delay: 100ms">
+        Thirty years of first paychecks, second chances, and futures rewritten — told by the young people who lived them.
+      </p>
+    </Container>
+  </section>
+
+  <!-- Mosaic -->
+  <section class="relative overflow-hidden bg-cream">
+    <div class="absolute inset-0 bg-dots-dark opacity-50" aria-hidden="true"></div>
+    <Container size="wide" class="relative py-14 md:py-20">
+      <div class="columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5 [&>*]:break-inside-avoid">
+        {
+          tiles.map((t, i) => {
+            const delay = `--reveal-delay: ${(i % 3) * 90}ms`;
+            if (t.kind === "photo")
+              return (
+                <a href={t.href} class="card-lift group relative block overflow-hidden rounded-[var(--radius-card)] bg-navy-900 shadow-[var(--shadow-card)]" data-reveal style={delay}>
+                  <Media src={t.photo} alt={t.name} class="aspect-[4/5] w-full transition duration-700 group-hover:scale-[1.05]" fit="cover" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/45 to-transparent" />
+                  <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+                    <span class="font-heading text-5xl font-extrabold leading-none text-gold/90" aria-hidden="true">“</span>
+                    <p class="-mt-2 font-heading text-lg font-bold leading-snug">{t.quote}”</p>
+                    <p class="mt-3 text-sm font-bold text-gold">{t.name}</p>
+                    {t.meta && <p class="mt-0.5 text-xs text-white/80">{t.meta}</p>}
+                  </div>
+                </a>
+              );
+            if (t.kind === "quote")
+              return (
+                <figure class={`card-lift rounded-[var(--radius-card)] p-7 shadow-[var(--shadow-card)] ${quoteStyles[t.style % quoteStyles.length]}`} data-reveal style={delay}>
+                  <span class={`font-heading text-6xl font-extrabold leading-none ${quoteAccent[t.style % quoteAccent.length]}`} aria-hidden="true">“</span>
+                  <blockquote class="-mt-3 leading-relaxed">{t.quote}</blockquote>
+                  <figcaption class={`mt-4 font-heading text-sm font-bold ${quoteAccent[t.style % quoteAccent.length]}`}>
+                    {t.name}
+                    {t.meta && <span class="mt-0.5 block text-xs font-semibold uppercase tracking-wider opacity-70">{t.meta}</span>}
+                  </figcaption>
+                </figure>
+              );
+            if (t.kind === "stat")
+              return (
+                <div class="card-lift rounded-[var(--radius-card)] bg-white p-7 text-center shadow-[var(--shadow-card)] ring-1 ring-navy-100" data-reveal style={delay}>
+                  <p class="bg-gradient-to-br from-brand-600 to-accent bg-clip-text font-heading text-5xl font-extrabold tracking-tight text-transparent">{t.value}</p>
+                  <p class="mx-auto mt-2 max-w-[14rem] text-xs font-bold uppercase tracking-wider text-warmgray">{t.label}</p>
+                </div>
+              );
+            return (
+              <div class="card-lift relative overflow-hidden rounded-[var(--radius-card)] bg-gradient-to-br from-brand-700 via-brand-600 to-brand-500 p-7 text-white shadow-[var(--shadow-card)]" data-reveal style={delay}>
+                <div class="absolute inset-0 bg-dots-light opacity-30" aria-hidden="true" />
+                <div class="relative">
+                  <p class="font-heading text-2xl font-extrabold">{t.heading}</p>
+                  <p class="mt-2 text-sm text-white/90">{t.text}</p>
+                  <div class="mt-5">
+                    <Button href={t.href} variant="white" size="sm" arrow>{t.label}</Button>
+                  </div>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </Container>
+  </section>
+
+  <CTABanner heading="The wall has room for more." text="Help the next young person add their voice — or add your own." />
+</BaseLayout>

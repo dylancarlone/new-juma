@@ -15,7 +15,7 @@ const { title, description, image, type = "website", publishedTime, noindex = fa
 const pageTitle = title ? `${title} — ${site.name}` : `${site.name} — Pathways to Possibility`;
 const desc = description || site.description;
 const canonical = new URL(Astro.url.pathname, site.url).href;
-const ogImage = image ? new URL(image, site.url).href : new URL("/og-default.jpg", site.url).href;
+const ogImage = image ? new URL(image, site.url).href : new URL("/og/default.png", site.url).href;
 
 const orgJsonLd = {
   "@context": "https://schema.org",

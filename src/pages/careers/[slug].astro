@@ -17,7 +17,7 @@ const { Content } = await render(entry);
 const apply = d.applyHref ?? "mailto:operations@juma.org?subject=Application: " + encodeURIComponent(d.jobTitle);
 ---
 
-<BaseLayout title={d.jobTitle} description={d.summary} noindex={!d.isOpen}>
+<BaseLayout title={d.jobTitle} description={d.summary} image={`/og/careers/${entry.id}.png`} noindex={!d.isOpen}>
   <PageHeader
     eyebrow="Careers at Juma"
     title={d.jobTitle}

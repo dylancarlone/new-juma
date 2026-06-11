@@ -194,6 +194,28 @@ const page = defineCollection({
 });
 
 /* ------------------------------------------------------------------ *
+ * event — Galas, fundraisers, info sessions. MD body for full details.
+ * Upcoming vs. past is derived from `start` at build time; an event with
+ * rsvpUrl gets an RSVP button, otherwise the interest form is shown.
+ * ------------------------------------------------------------------ */
+const event = defineCollection({
+  loader: md("./src/content/event"),
+  schema: z.object({
+    title: z.string(),
+    start: z.coerce.date(),
+    end: z.coerce.date().optional(),
+    venue: z.string().optional(),
+    address: z.string().optional(),
+    city: z.string().optional(),
+    summary: z.string().optional(),
+    image: z.string().optional(),
+    rsvpUrl: z.string().optional(),
+    rsvpLabel: z.string().default("RSVP"),
+    draft: z.boolean().default(false),
+  }),
+});
+
+/* ------------------------------------------------------------------ *
  * document — Financial transparency PDFs (annual reports, 990s, audits).
  * Data only (no body); rendered by the Financials page.
  * ------------------------------------------------------------------ */
@@ -208,4 +230,4 @@ const document = defineCollection({
   }),
 });
 
-export const collections = { post, story, team, job, location, page, document };
+export const collections = { post, story, team, job, location, page, document, event };
