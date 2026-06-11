@@ -48,6 +48,7 @@ export const nav: NavItem[] = [
       { label: "Our Programs", href: "/programs/" },
       { label: "Social Enterprise", href: "/social-enterprise/" },
       { label: "Impact & Stories", href: "/stories/" },
+      { label: "Wall of Possible", href: "/wall-of-possible/" },
       { label: "Leadership", href: "/leadership/" },
       { label: "Board of Directors", href: "/board-of-directors/" },
       { label: "Partners & Supporters", href: "/our-partners-supporters/" },

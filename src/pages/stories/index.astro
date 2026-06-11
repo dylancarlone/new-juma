@@ -14,6 +14,24 @@ const stories = (await getCollection("story", (s) => !s.data.draft)).sort(
 <BaseLayout title="Impact & Stories" description="Meet the young people whose lives have been transformed through Juma Ventures.">
   <PageHeader eyebrow="Impact & Stories" title="Youth Voices" description="Behind every statistic is a young person writing their own success story." />
   <Container class="py-14 md:py-20">
+    <a
+      href="/wall-of-possible/"
+      class="card-lift relative mb-10 block overflow-hidden rounded-[var(--radius-card)] bg-gradient-to-r from-navy-950 via-navy-900 to-brand-900 p-7 text-white shadow-[var(--shadow-card)] md:p-8"
+      data-reveal
+    >
+      <div class="absolute inset-0 bg-dots-light opacity-30" aria-hidden="true"></div>
+      <div class="relative flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <p class="eyebrow text-gold">New</p>
+          <p class="mt-1 font-heading text-2xl font-extrabold">Visit the Wall of Possible</p>
+          <p class="mt-1 text-sm text-navy-100">Every youth voice on the site — quotes, milestones, and stories — in one mosaic.</p>
+        </div>
+        <span class="link-more text-gold hover:text-gold">
+          See the wall
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </div>
+    </a>
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {
         stories.map((s) => (

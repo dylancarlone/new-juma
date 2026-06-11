@@ -1,27 +1,221 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Container from "@/components/Container.astro";
 import Hero from "@/components/sections/Hero.astro";
+import Media from "@/components/Media.astro";
 import Button from "@/components/ui/Button.astro";
+import Icon from "@/components/Icon.astro";
+
+const events = (await getCollection("event", (e) => !e.data.draft)).sort(
+  (a, b) => b.data.start.getTime() - a.data.start.getTime()
+);
+const now = new Date();
+const upcoming = events.filter((e) => (e.data.end ?? e.data.start) >= now).reverse();
+const past = events.filter((e) => (e.data.end ?? e.data.start) < now);
+
+const fmtDate = (d: Date) =>
+  d.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric", timeZone: "America/Los_Angeles" });
+const fmtTime = (d: Date) =>
+  d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", timeZone: "America/Los_Angeles" });
+const monthShort = (d: Date) => d.toLocaleDateString("en-US", { month: "short", timeZone: "America/Los_Angeles" });
+const dayNum = (d: Date) => d.toLocaleDateString("en-US", { day: "numeric", timeZone: "America/Los_Angeles" });
+
+// Build an .ics "Add to calendar" payload per upcoming event.
+const icsStamp = (d: Date) => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+function icsFor(e: (typeof events)[number]) {
+  const d = e.data;
+  const lines = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Juma Ventures//Events//EN",
+    "BEGIN:VEVENT",
+    `UID:${e.id}@juma.org`,
+    `DTSTAMP:${icsStamp(new Date())}`,
+    `DTSTART:${icsStamp(d.start)}`,
+    `DTEND:${icsStamp(d.end ?? new Date(d.start.getTime() + 2 * 3600e3))}`,
+    `SUMMARY:${d.title}`,
+    d.summary ? `DESCRIPTION:${d.summary.replace(/\n/g, "\\n")}` : "",
+    d.venue ? `LOCATION:${[d.venue, d.address].filter(Boolean).join(", ")}` : "",
+    "END:VEVENT",
+    "END:VCALENDAR",
+  ].filter(Boolean);
+  return "data:text/calendar;charset=utf-8," + encodeURIComponent(lines.join("\r\n"));
+}
 ---
 
-<BaseLayout title="Events" description="Join Juma Ventures at our signature events, including the Paths to Possibility gala.">
+<BaseLayout title="Events" description="Join Juma Ventures at our signature events, including the Paths to Possibility gala — or sign up to hear about the next one first.">
   <Hero
     eyebrow="Events"
     heading="Paths to Possibility"
     subheading="Each year, our community comes together to celebrate the achievements of Juma youth and to invest in the next generation of leaders."
     align="center"
   />
-  <Container size="narrow" class="py-16 text-center">
-    <div class="rounded-[var(--radius-card)] border border-navy-100 bg-cream/50 p-10">
-      <h2 class="text-2xl md:text-3xl">No upcoming events right now</h2>
-      <p class="mx-auto mt-3 max-w-lg text-ink-soft">
-        We're planning our next gathering. Subscribe to our newsletter to be the first to know about the next Paths to Possibility gala and other events.
-      </p>
-      <div class="mt-6 flex flex-wrap justify-center gap-4">
-        <Button href="/newsletter/" variant="brand" size="lg">Join the Newsletter</Button>
-        <Button href="/donate/" variant="outline" size="lg">Donate</Button>
+
+  <!-- Upcoming -->
+  <section class="bg-white">
+    <Container class="py-16 md:py-20">
+      <div class="mb-10" data-reveal>
+        <p class="eyebrow text-brand-600">Mark your calendar</p>
+        <h2 class="mt-3 text-3xl md:text-4xl">Upcoming events</h2>
       </div>
-    </div>
-  </Container>
+
+      {
+        upcoming.length > 0 ? (
+          <div class="space-y-8">
+            {upcoming.map((e) => (
+              <article class="card-lift grid overflow-hidden rounded-[var(--radius-card)] border border-navy-100 bg-white shadow-[var(--shadow-card)] md:grid-cols-[1fr_1.4fr]" data-reveal>
+                {e.data.image && <Media src={e.data.image} alt={e.data.title} class="h-full min-h-56 w-full" fit="cover" />}
+                <div class="flex gap-6 p-7 md:p-9">
+                  <div class="hidden h-20 w-20 shrink-0 flex-col items-center justify-center rounded-2xl bg-gradient-to-br from-brand-600 to-brand-500 text-white shadow-[var(--shadow-glow)] sm:flex">
+                    <span class="font-heading text-xs font-bold uppercase tracking-widest">{monthShort(e.data.start)}</span>
+                    <span class="font-heading text-3xl font-extrabold leading-none">{dayNum(e.data.start)}</span>
+                  </div>
+                  <div class="min-w-0">
+                    <h3 class="text-2xl">{e.data.title}</h3>
+                    <p class="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm font-semibold text-warmgray">
+                      <span>{fmtDate(e.data.start)}</span>
+                      <span>{fmtTime(e.data.start)}{e.data.end ? ` – ${fmtTime(e.data.end)}` : ""}</span>
+                      {e.data.venue && (
+                        <span class="inline-flex items-center gap-1"><Icon name="mapPin" size={14} /> {e.data.venue}{e.data.city ? `, ${e.data.city}` : ""}</span>
+                      )}
+                    </p>
+                    {e.data.summary && <p class="mt-3 leading-relaxed text-ink-soft">{e.data.summary}</p>}
+                    <div class="mt-5 flex flex-wrap gap-3">
+                      {e.data.rsvpUrl && (
+                        <Button href={e.data.rsvpUrl} variant="brand" size="md" target="_blank" arrow>{e.data.rsvpLabel}</Button>
+                      )}
+                      <a
+                        href={icsFor(e)}
+                        download={`${e.id}.ics`}
+                        class="inline-flex items-center gap-2 rounded-full border-2 border-navy-200 px-6 py-2.5 font-heading text-xs font-bold uppercase tracking-wider text-navy-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400 hover:text-brand-600"
+                      >
+                        <Icon name="download" size={14} /> Add to calendar
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div class="relative overflow-hidden rounded-[var(--radius-card)] border border-navy-100 bg-cream/60 p-10 text-center" data-reveal>
+            <div class="absolute inset-0 bg-dots-dark opacity-50" aria-hidden="true" />
+            <div class="relative">
+              <h3 class="text-2xl">Nothing on the calendar — yet.</h3>
+              <p class="mx-auto mt-3 max-w-lg text-ink-soft">
+                We're planning our next gathering. Join the list below and you'll be the first to know when the next Paths to Possibility gala — or any Juma event — is announced.
+              </p>
+            </div>
+          </div>
+        )
+      }
+
+      <!-- Interest list -->
+      <div class="relative mt-12 overflow-hidden rounded-[var(--radius-card)] bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 p-8 text-white shadow-[var(--shadow-lift)] md:p-12" data-reveal>
+        <div class="absolute inset-0 bg-dots-light opacity-30" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-brand-500/20 blur-[80px]" aria-hidden="true"></div>
+        <div class="relative grid items-center gap-8 lg:grid-cols-[1.2fr_1fr]">
+          <div>
+            <p class="eyebrow text-gold">First to know</p>
+            <h2 class="mt-2 text-2xl text-white md:text-3xl">Get on the event list</h2>
+            <p class="mt-3 text-sm leading-relaxed text-navy-100">
+              Galas, youth showcases, volunteer days, and venue visits — tell us you're interested and our team will reach out when the next one is announced.
+            </p>
+          </div>
+          <form id="event-interest" class="space-y-3">
+            <input type="text" name="company" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+            <label class="block">
+              <span class="mb-1 block text-xs font-bold uppercase tracking-wider text-navy-200">Name *</span>
+              <input required name="name" class="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white outline-none transition placeholder:text-navy-300 focus:border-gold focus:ring-2 focus:ring-gold/30" placeholder="Your name" />
+            </label>
+            <label class="block">
+              <span class="mb-1 block text-xs font-bold uppercase tracking-wider text-navy-200">Email *</span>
+              <input required type="email" name="email" class="w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-white outline-none transition placeholder:text-navy-300 focus:border-gold focus:ring-2 focus:ring-gold/30" placeholder="you@example.com" />
+            </label>
+            <button type="submit" class="w-full rounded-full bg-brand-500 px-7 py-3.5 font-heading text-sm font-bold uppercase tracking-wider text-white shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-600 disabled:pointer-events-none disabled:opacity-60">
+              Keep me posted
+            </button>
+            <p id="event-interest-msg" class="hidden rounded-xl px-4 py-3 text-sm font-semibold"></p>
+          </form>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Past events -->
+  {
+    past.length > 0 && (
+      <section class="relative overflow-hidden bg-cream">
+        <div class="absolute inset-0 bg-dots-dark opacity-50" aria-hidden="true" />
+        <Container class="relative py-16 md:py-20">
+          <div class="mb-10" data-reveal>
+            <p class="eyebrow text-brand-600">The archive</p>
+            <h2 class="mt-3 text-3xl md:text-4xl">Past events</h2>
+          </div>
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {past.map((e) => (
+              <article class="card-lift group overflow-hidden rounded-[var(--radius-card)] border border-navy-100 bg-white shadow-[var(--shadow-card)]" data-reveal>
+                {e.data.image && (
+                  <div class="relative overflow-hidden">
+                    <Media src={e.data.image} alt={e.data.title} class="aspect-[16/10] w-full transition duration-700 group-hover:scale-[1.05]" fit="cover" />
+                    <span class="absolute left-4 top-4 rounded-full bg-navy-950/80 px-3.5 py-1.5 font-heading text-[0.65rem] font-bold uppercase tracking-widest text-gold backdrop-blur">Past event</span>
+                  </div>
+                )}
+                <div class="p-6">
+                  <p class="text-xs font-semibold uppercase tracking-wider text-warmgray">{fmtDate(e.data.start)}</p>
+                  <h3 class="mt-2 text-lg leading-snug">{e.data.title}</h3>
+                  {e.data.summary && <p class="mt-2 line-clamp-3 text-sm leading-relaxed text-ink-soft">{e.data.summary}</p>}
+                  {e.data.venue && (
+                    <p class="mt-3 flex items-center gap-1.5 text-xs font-semibold text-warmgray">
+                      <Icon name="mapPin" size={13} /> {e.data.venue}{e.data.city ? `, ${e.data.city}` : ""}
+                    </p>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+    )
+  }
 </BaseLayout>
+
+<script>
+  // Event interest list — reuses the existing contact serverless function.
+  const form = document.getElementById("event-interest");
+  const msg = document.getElementById("event-interest-msg");
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector("button[type=submit]");
+    const data = Object.fromEntries(new FormData(form).entries());
+    btn.disabled = true;
+    msg.classList.add("hidden");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          company: data.company,
+          subject: "Event updates list",
+          message: `Please add me to the events interest list.\n\nName: ${data.name}\nEmail: ${data.email}`,
+        }),
+      });
+      const body = await res.json();
+      if (res.ok && body.ok) {
+        msg.className = "rounded-xl bg-emerald-500/15 px-4 py-3 text-sm font-semibold text-emerald-200 ring-1 ring-emerald-300/40";
+        msg.textContent = "You're on the list! We'll reach out when the next event is announced.";
+        form.reset();
+      } else {
+        throw new Error(body.error || "failed");
+      }
+    } catch {
+      msg.className = "rounded-xl bg-brand-600/20 px-4 py-3 text-sm font-semibold text-white ring-1 ring-brand-400/40";
+      msg.textContent = "Something went wrong — email us at info@juma.org and we'll add you.";
+    }
+    msg.classList.remove("hidden");
+    btn.disabled = false;
+  });
+</script>
