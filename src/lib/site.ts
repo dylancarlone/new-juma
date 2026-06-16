@@ -60,7 +60,7 @@ export const nav: NavItem[] = [
   },
   { label: "News", href: "/news/" },
   { label: "Events", href: "/events/" },
-  { label: "Play", href: "/game/", description: "Juma: Game Day — serve your community." },
+  { label: "Play", href: "/game/", description: "Juma: Concourse Rush — a stadium doom-style run." },
 ];
 
 /** Footer link columns. */
@@ -72,7 +72,7 @@ export const footerNav: { heading: string; links: NavItem[] }[] = [
       { label: "Volunteer", href: "/volunteer/" },
       { label: "Newsletter", href: "/newsletter/" },
       { label: "Work for Juma", href: "/work-for-juma/" },
-      { label: "Play Game Day", href: "/game/" },
+      { label: "Play Concourse Rush", href: "/game/" },
     ],
   },
   {
