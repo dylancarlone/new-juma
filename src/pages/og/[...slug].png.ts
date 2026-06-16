@@ -41,7 +41,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     default: { title: "We believe in the power of work and the potential of young people.", eyebrow: "Est. 1993 · A nonprofit social enterprise" },
     impact: { title: "The 2025 Impact Report", eyebrow: "Year in review" },
     timeline: { title: "30 years of making possible, possible.", eyebrow: "Our story" },
-    game: { title: "Juma: Game Day — serve your community.", eyebrow: "Play · Earn · Learn · Connect" },
+    game: { title: "Juma: Concourse Rush — a stadium doom-style run.", eyebrow: "Move · Serve · Earn · Clock Out" },
     "wall-of-possible": { title: "The Wall of Possible", eyebrow: "In their own words" },
     events: { title: "Paths to Possibility — Juma events", eyebrow: "Events" },
     leadership: { title: "The people driving Juma's mission", eyebrow: "Leadership" },
